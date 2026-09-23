@@ -1,0 +1,36 @@
+name: ANM Access - audyt przegladarkowy
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'laboratorium.html'
+      - 'src/**'
+      - 'server.mjs'
+      - 'scripts/audit.mjs'
+      - '.github/workflows/audit.yml'
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Zainstaluj silnik przegladarki i axe-core
+        run: |
+          npm install --no-save --ignore-scripts playwright @axe-core/playwright
+          npx playwright install --with-deps chromium
+      - name: Audyt techniczny i raport
+        run: node scripts/audit.mjs
+      - name: Zachowaj raport i zrzuty
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: anm-access-wyniki-audytu
+          path: audit-artifacts/
+          if-no-files-found: warn
