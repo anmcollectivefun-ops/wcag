@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ANM Access — demonstracyjny, dostępny panel zgłoszeń firmy ANM Collective.">
+  <meta name="theme-color" content="#183b87">
+  <title>ANM Access — dostępny panel zgłoszeń</title>
+  <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/src/styles.css">
+  <script type="module" src="/src/app.mjs"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Przejdź do treści</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="#start" aria-label="ANM Access — strona główna">
+        <img src="/assets/logo.svg" alt="" width="40" height="40">
+        <span><strong>ANM <span class="brand-accent">Access</span></strong><small>Laboratorium dostępności</small></span>
+      </a>
+      <nav aria-label="Nawigacja główna" class="main-nav">
+        <a href="#start" data-view-link="start">Start</a>
+        <a href="#zgloszenie" data-view-link="zgloszenie">Nowe zgłoszenie</a>
+        <a href="#moje" data-view-link="moje">Moje zgłoszenia</a>
+        <a href="#obsluga" data-view-link="obsluga">Panel obsługi</a>
+        <a href="#dostepnosc" data-view-link="dostepnosc">Dostępność</a>
+      </nav>
+    </div>
+  </header>
+  <div class="demo-bar" role="note">
+    <div class="shell demo-bar-inner"><span class="demo-tag">DEMO</span><span>To projekt pokazowy. Nie wpisuj danych osobowych ani poufnych informacji. Zgłoszenia zapisują się tylko w tej przeglądarce.</span></div>
+  </div>
+  <main id="main-content" class="shell main-content" tabindex="-1">
+    <section class="view" id="view-start" data-page="start" aria-labelledby="heading-start">
+      <div class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow">PROJEKT DEMONSTRACYJNY · ANM COLLECTIVE</span>
+          <h1 id="heading-start" tabindex="-1">Pomoc, z której <span class="blue-text">każdy może skorzystać.</span></h1>
+          <p class="lead">Dostępny panel zgłoszeń: prosty formularz, czytelne statusy i obsługa klawiaturą. Zobacz, jak projektujemy usługi cyfrowe bez niepotrzebnych barier.</p>
+          <div class="hero-actions"><a href="#zgloszenie" class="button button-primary">Utwórz zgłoszenie <span aria-hidden="true">→</span></a><a href="#dostepnosc" class="button button-outline">Jak testujemy dostępność</a></div>
+          <p class="subtle hero-note">Bez logowania, bez zbierania danych. Wszystkie działania dotyczą wyłącznie demonstracji.</p>
+        </div>
+        <div class="hero-visual" aria-label="Podgląd demonstracyjnego panelu zgłoszeń" role="img">
+          <div class="mock-window"><div class="mock-header"><span class="mock-dots" aria-hidden="true">● ● ●</span><span>ANM Access / zgłoszenia</span></div>
+            <div class="mock-body"><div class="mock-small">ZGŁOSZENIE DEMO-002</div><div class="mock-title">Nie mogę przejść do menu klawiaturą</div><div class="mock-row"><span class="mock-pill">Nowe</span><span class="mock-muted">Priorytet: pilny</span></div><div class="mock-line"></div><div class="mock-line short"></div><div class="mock-complete"><span class="check-symbol" aria-hidden="true">✓</span> Etykiety, fokus i status są czytelne</div></div>
+          </div>
+        </div>
+      </div>
+      <div class="section-heading"><div><span class="eyebrow">PANEL W LICZBACH</span><h2>Wszystko w jednym miejscu</h2></div><p class="subtle">Przykładowe dane zapisane na Twoim urządzeniu.</p></div>
+      <div class="stats-grid" aria-label="Podsumowanie zgłoszeń">
+        <div class="stat"><span class="stat-label">Wszystkie zgłoszenia</span><strong id="count-all">0</strong><span class="subtle">w wersji demonstracyjnej</span></div>
+        <div class="stat"><span class="stat-label">Otwarte zgłoszenia</span><strong id="count-open">0</strong><span class="subtle">wymagają obsługi</span></div>
+        <div class="stat"><span class="stat-label">Pilne i otwarte</span><strong id="count-urgent">0</strong><span class="subtle">bez ukrywania informacji kolorem</span></div>
+      </div>
+      <div class="feature-grid">
+        <article class="feature"><span class="feature-icon" aria-hidden="true">⌨</span><h3>Obsługa klawiaturą</h3><p>Nawiguj przez formularze, listy i panel obsługi bez użycia myszy.</p></article>
+        <article class="feature"><span class="feature-icon" aria-hidden="true">Aa</span><h3>Czytelny interfejs</h3><p>Widoczne etykiety, informacyjne statusy i tryb podwyższonego kontrastu.</p></article>
+        <article class="feature"><span class="feature-icon" aria-hidden="true">✓</span><h3>Zrozumiałe komunikaty</h3><p>Błędy formularza opisujemy słowami i wskazujemy miejsce poprawki.</p></article>
+      </div>
+    </section>
+
+    <section class="view" id="view-zgloszenie" data-page="zgloszenie" aria-labelledby="heading-zgloszenie" hidden>
+      <div class="page-heading"><span class="eyebrow">KROK 01 / 02</span><h1 id="heading-zgloszenie" tabindex="-1">Nowe zgłoszenie</h1><p>Wypełnij formularz demonstracyjny. Pola oznaczone gwiazdką są wymagane.</p></div>
+      <div class="two-column">
+        <div class="panel panel-form">
+          <div id="error-summary" class="message message-error" role="alert" tabindex="-1" hidden><strong>Popraw formularz</strong><p>Sprawdź następujące pola:</p><ul id="error-list"></ul></div>
+          <div id="submit-success" class="message message-success" role="status" tabindex="-1" hidden></div>
+          <form id="ticket-form" novalidate>
+            <div class="field"><label for="name">Pseudonim <span aria-hidden="true">*</span></label><p class="field-hint" id="hint-name">Użyj fikcyjnej nazwy, np. „Klient demo”.</p><input id="name" name="name" type="text" autocomplete="off" maxlength="35" required aria-describedby="hint-name error-name"><p id="error-name" class="field-error" hidden></p></div>
+            <div class="field"><label for="title">Temat zgłoszenia <span aria-hidden="true">*</span></label><p class="field-hint" id="hint-title">Od 8 do 90 znaków.</p><input id="title" name="title" type="text" autocomplete="off" maxlength="90" required aria-describedby="hint-title error-title"><p id="error-title" class="field-error" hidden></p></div>
+            <div class="field"><label for="category">Kategoria <span aria-hidden="true">*</span></label><select id="category" name="category" required aria-describedby="error-category"><option value="">Wybierz kategorię</option><option>Strona internetowa</option><option>Sklep internetowy</option><option>Aplikacja webowa</option><option>Inne</option></select><p id="error-category" class="field-error" hidden></p></div>
+            <div class="field"><label for="description">Opis problemu <span aria-hidden="true">*</span></label><p class="field-hint" id="hint-description">Od 20 do 1200 znaków. Nie wpisuj prawdziwych danych ani haseł.</p><textarea id="description" name="description" rows="6" maxlength="1200" required aria-describedby="hint-description error-description"></textarea><p class="counter" id="description-count">0 / 1200 znaków</p><p id="error-description" class="field-error" hidden></p></div>
+            <fieldset class="field priority-field"><legend>Priorytet <span aria-hidden="true">*</span></legend><div class="radio-cards"><label><input type="radio" name="priority" value="Standardowy" checked><span><strong>Standardowy</strong><small>Może poczekać na odpowiedź</small></span></label><label><input type="radio" name="priority" value="Pilny"><span><strong>Pilny</strong><small>Wymaga szybszej reakcji</small></span></label></div><p id="error-priority" class="field-error" hidden></p></fieldset>
+            <div class="field checkbox-field"><label for="consent"><input id="consent" name="consent" type="checkbox" aria-describedby="error-consent"><span>Potwierdzam, że wpisuję wyłącznie dane testowe. <span aria-hidden="true">*</span></span></label><p id="error-consent" class="field-error" hidden></p></div>
+            <button class="button button-primary submit-button" type="submit">Zapisz zgłoszenie <span aria-hidden="true">→</span></button>
+          </form>
+        </div>
+        <aside class="side-note" aria-label="Pomoc przy formularzu"><span class="note-icon" aria-hidden="true">i</span><h2>Po co zbieramy te dane?</h2><p>To wyłącznie ćwiczenie działania dostępnego formularza. Zgłoszenie zobaczysz w „Moich zgłoszeniach”, a jego status zmienisz w panelu obsługi.</p><p class="subtle">W prawdziwym systemie dane klientów wymagałyby logowania, bazy danych i odpowiedniej polityki prywatności.</p><a href="#dostepnosc" class="text-link">Zobacz zasady dostępności <span aria-hidden="true">→</span></a></aside>
+      </div>
+    </section>
+
+    <section class="view" id="view-moje" data-page="moje" aria-labelledby="heading-moje" hidden>
+      <div class="page-heading"><span class="eyebrow">KROK 02 / 02</span><h1 id="heading-moje" tabindex="-1">Moje zgłoszenia</h1><p>Przeglądaj zgłoszenia testowe. W demonstracji widoczne są wszystkie zgłoszenia zapisane w tej przeglądarce.</p></div>
+      <div class="panel filter-panel"><form id="filter-form" role="search" aria-label="Wyszukiwanie zgłoszeń"><div class="field"><label for="search-tickets">Szukaj zgłoszenia</label><input id="search-tickets" type="search" placeholder="Temat, ID lub kategoria" autocomplete="off"></div><div class="field"><label for="filter-status">Status</label><select id="filter-status"><option>Wszystkie</option><option>Nowe</option><option>W trakcie</option><option>Oczekuje na klienta</option><option>Zamknięte</option></select></div></form></div>
+      <p id="result-count" class="results-info" role="status" aria-live="polite"></p>
+      <ol id="tickets-list" class="tickets-list" aria-label="Lista zgłoszeń"></ol>
+    </section>
+
+    <section class="view" id="view-obsluga" data-page="obsluga" aria-labelledby="heading-obsluga" hidden>
+      <div class="page-heading"><span class="eyebrow">WIDOK DEMONSTRACYJNY</span><h1 id="heading-obsluga" tabindex="-1">Panel obsługi</h1><p>Zmieniaj statusy zgłoszeń i zobacz, jak wygląda praca osoby obsługującej panel. Tu nie ma prawdziwego logowania ani uprawnień.</p></div>
+      <div class="message message-info"><strong>Uwaga: to nie jest panel produkcyjny.</strong> Wersja demonstracyjna celowo pozwala każdemu zmienić statusy wyłącznie lokalnych zgłoszeń testowych.</div>
+      <p id="admin-count" class="results-info" role="status" aria-live="polite"></p>
+      <ol id="admin-list" class="tickets-list" aria-label="Zgłoszenia do obsługi"></ol>
+      <div class="panel data-tools"><div><h2>Dane demonstracyjne</h2><p>Możesz pobrać zgłoszenia z tej przeglądarki lub przywrócić dane przykładowe.</p></div><div class="tool-actions"><button type="button" class="button button-outline" id="export-data">Eksportuj JSON</button><button type="button" class="button button-quiet" id="reset-data">Przywróć dane demo</button></div></div>
+    </section>
+
+    <section class="view" id="view-dostepnosc" data-page="dostepnosc" aria-labelledby="heading-dostepnosc" hidden>
+      <div class="page-heading"><span class="eyebrow">ANM ACCESS LAB</span><h1 id="heading-dostepnosc" tabindex="-1">Dostępność w praktyce</h1><p>Projektujemy interfejs z myślą o różnych sposobach korzystania z internetu, a następnie sprawdzamy go w testach.</p></div>
+      <div class="panel settings-panel"><h2>Dostosuj wyświetlanie</h2><p>Zmiany dotyczą tylko tej demonstracji i nie wymagają tworzenia konta.</p><div class="tool-actions"><button type="button" class="button button-outline" id="contrast-toggle" aria-pressed="false">Wysoki kontrast: wyłączony</button><button type="button" class="button button-outline" id="text-scale-toggle" aria-pressed="false">Większy tekst: wyłączony</button></div></div>
+      <div class="section-heading"><div><span class="eyebrow">CO SPRAWDZAMY</span><h2>Projektowanie i weryfikacja</h2></div></div>
+      <div class="feature-grid access-grid"><article class="feature"><span class="feature-icon" aria-hidden="true">01</span><h3>Nawigacja</h3><p>Logiczna kolejność Tab, widoczny fokus i łącze „Przejdź do treści”.</p></article><article class="feature"><span class="feature-icon" aria-hidden="true">02</span><h3>Formularze</h3><p>Etykiety pól, opisane błędy i podsumowanie z linkami do poprawy.</p></article><article class="feature"><span class="feature-icon" aria-hidden="true">03</span><h3>Komunikaty</h3><p>Status przekazujemy również tekstem, bez polegania wyłącznie na kolorze.</p></article></div>
+      <div class="panel audit-panel"><h2>Stan projektu i audytu</h2><p><strong>Cel projektowy:</strong> WCAG 2.2 AA.</p><p><strong>Stan weryfikacji:</strong> dostępne są testy jednostkowe i plan badań manualnych. Niezależny audyt dostępności nie został wykonany; nie deklarujemy pełnej zgodności.</p><p><strong>Do sprawdzenia:</strong> czytniki ekranu, kontrast rzeczywistych komponentów, powiększenie 400%, obsługa mobilna i testy użytkowników.</p><a class="text-link" href="https://www.w3.org/WAI/test-evaluate/" target="_blank" rel="noopener noreferrer">Materiały W3C o ocenie dostępności <span class="sr-only">(otwiera nową kartę)</span><span aria-hidden="true">↗</span></a></div>
+    </section>
+  </main>
+  <footer class="footer"><div class="shell footer-inner"><div><strong>ANM Access</strong><p>Projekt demonstracyjny ANM Collective. Bez zbierania danych na serwerze.</p></div><a href="#dostepnosc">Informacje o dostępności</a></div></footer>
+  <div id="announcer" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
+  <noscript><div class="noscript">Do obsługi demonstracyjnego panelu zgłoszeń potrzebny jest JavaScript.</div></noscript>
+</body>
+</html>

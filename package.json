@@ -1,0 +1,14 @@
+{
+  "name": "anm-access",
+  "private": true,
+  "version": "1.0.0",
+  "description": "ANM Access — dostępny, lokalny prototyp panelu zgłoszeń",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "dev": "node server.mjs",
+    "start": "node server.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "node --check server.mjs && node --check src/tickets.mjs && node --check src/app.mjs && npm test"
+  }
+}
