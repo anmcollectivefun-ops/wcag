@@ -19,8 +19,8 @@ test('typografia ma ustaloną bazę 18 px oraz A, AA i AAA 100/150/200 procent',
   assert.match(css, /Atkinson Hyperlegible Next Variable/);
 });
 
-test('każda obecna strona ma globalny komplet A AA AAA i wspólną typografię', async () => {
-  for (const file of ['../index.html','../laboratorium.html']) {
+test('każda publiczna strona ma globalny komplet A AA AAA i wspólną typografię', async () => {
+  for (const file of ["../index.html","../audyt.html","../o-nas.html","../kontakt.html","../aktualnosci.html"]) {
     const html = await readFile(new URL(file, import.meta.url), 'utf8');
     assert.match(html, /data-text-size="a"/);
     assert.match(html, /\/assets\/fonts\/atkinson\.css/);
