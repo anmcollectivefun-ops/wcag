@@ -14,6 +14,7 @@ body,button,input,textarea,select{
 body{font-size:1rem;line-height:1.6}
 p,li,dd,dt,label,input,textarea,select,button{line-height:1.6}
 p{max-width:75ch}
+
 h1,h2,h3,h4,h5,h6{
   font-family:"Atkinson Hyperlegible Next Variable","Atkinson Hyperlegible Next",Arial,sans-serif;
   line-height:1.2;
@@ -24,75 +25,33 @@ h1{font-size:1.6667rem;font-weight:500}
 h2{font-size:1.4444rem;font-weight:500}
 h3{font-size:1.2222rem;font-weight:500}
 h4{font-size:1.1111rem;font-weight:500}
-input,textarea,select,button,.button,.main-nav a,.topbar nav a{font-size:1rem}
+h5,h6{font-size:1rem;font-weight:600}
 
+input,textarea,select,button,.button,.main-nav a{font-size:1rem}
 :where(
-  small,.brand small,.eyebrow,.overline,.demo-tag,.hero-note,
-  .stat .subtle,.footer p,.mock-header,.mock-small,.mock-row,.mock-complete,
-  .field-hint,.counter,.radio-cards small,.side-note .subtle,.ticket-id,
-  .pill,.results-info,.ticket-meta,.small-menu,.preview-kicker,.preview-caption,
-  .hint,.compare-label p,.fine,.theme-switcher button,.text-size-switcher button,
-  .switcher-label
+  small,.brand-copy span,.kicker,.meta,.hero-note,.footer-copy p,
+  .theme-switcher button,.text-size-switcher button,.switcher-label
 ){font-size:1rem!important}
 
-.shell,.wrap,.hero-copy,.page-heading,.side-note,.audit-panel,.evidence-inner>div{min-width:0}
-.header-inner,.topbar-inner{flex-wrap:wrap}
-.main-nav,.topbar nav{min-width:0}
+.shell,.hero-copy,.page-heading,.audit-panel,.hero-frame>*,.card,.footer-copy{min-width:0}
 a,button,input,textarea,select{overflow-wrap:anywhere}
 
-  h2{font-size:1.6rem}
-}
-
-/* Reflow przy AA/AAA: elementy tekstowe w nagłówkach i paskach nie mogą wymuszać szerokości. */
-.brand{min-width:0;max-width:100%}
-.brand>span{min-width:0;max-width:100%;overflow-wrap:anywhere}
-.brand small{white-space:normal}
-.demo-bar-inner{flex-wrap:wrap}
-.demo-bar-inner>span{min-width:0;max-width:100%;overflow-wrap:anywhere}
-.header-inner>*,.topbar-inner>*{min-width:0}
-[data-text-size="aaa"] .main-nav a,
-[data-text-size="aaa"] .topbar nav a{white-space:normal}
-
-/* Długie etykiety również muszą reflowować przy 200%, bez obcinania i bez ukrywania overflow. */
 .skip-link{
   max-width:calc(100vw - 24px);
   white-space:normal;
   overflow-wrap:anywhere;
 }
-.choice,.choice span,.button,button,nav a{
+.button,button,nav a{
   min-width:0;
   max-width:100%;
   white-space:normal;
   overflow-wrap:anywhere;
 }
+
+[data-text-size="aaa"] .main-nav a{white-space:normal}
+[data-text-size="aaa"] :where(.kicker){letter-spacing:.03em}
+
 @media(max-width:760px){
   [data-text-size="aaa"] .theme-switcher button{flex:1 1 100%}
   [data-text-size="aaa"] .text-size-switcher button{flex:1 1 28%;padding-inline:6px}
-  [data-text-size="aaa"] .choice{width:100%}
-}
-
-/* Reflow treści przy dużym tekście: żadnych sztywnych boksów mniejszych niż ich tekst. */
-:where(
-  .eyebrow,.overline,.mock-small,.mock-title,.stat-label,
-  .stat,.feature,.compare,.compare-block,.compare-label,.compare-label>div,
-  .evidence-inner,.evidence-inner>div,.stats-grid,.stats-grid>*,
-  .feature-grid,.feature-grid>*
-){
-  min-width:0;
-  max-width:100%;
-  overflow-wrap:anywhere;
-}
-
-.feature-icon,.check-symbol,.marker{
-  width:auto!important;
-  height:auto!important;
-  min-width:1.5em;
-  min-height:1.5em;
-  padding:.12em .3em;
-  line-height:1.2;
-}
-
-[data-text-size="aaa"] .mock-window{transform:none}
-[data-text-size="aaa"] :where(.eyebrow,.overline,.mock-small){
-  letter-spacing:.04em;
 }
