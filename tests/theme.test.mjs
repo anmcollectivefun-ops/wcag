@@ -39,8 +39,8 @@ for (const [name, palette] of Object.entries(palettes)) {
   });
 }
 
-test('obie obecne strony używają wspólnego przełącznika trzech motywów', async () => {
-  for (const file of ['../index.html','../laboratorium.html']) {
+test('wszystkie publiczne strony używają wspólnego przełącznika trzech motywów', async () => {
+  for (const file of ["../index.html","../audyt.html","../o-nas.html","../kontakt.html","../aktualnosci.html"]) {
     const html = await readFile(new URL(file, import.meta.url), 'utf8');
     assert.match(html, /\/src\/theme\.css/);
     assert.match(html, /\/src\/theme\.mjs/);
@@ -51,11 +51,9 @@ test('obie obecne strony używają wspólnego przełącznika trzech motywów', a
   }
 });
 
-test('stronicowe arkusze stylów nie zawierają własnych kolorów hex', async () => {
-  for (const file of ['../src/styles.css','../src/lab.css']) {
-    const css = await readFile(new URL(file, import.meta.url), 'utf8');
-    assert.equal(css.match(/#[0-9a-fA-F]{3,8}\b/g), null, file);
-  }
+test('wspólny arkusz stron nie zawiera własnych kolorów hex', async () => {
+  const css = await readFile(new URL('../src/site.css', import.meta.url), 'utf8');
+  assert.equal(css.match(/#[0-9a-fA-F]{3,8}\b/g), null);
 });
 
 test('motywy używają wyłącznie zatwierdzonego zestawu hex', async () => {
