@@ -5,9 +5,10 @@ import { readFile } from 'node:fs/promises';
 const pages = [
   ['../index.html','Strona główna'],
   ['../audyt.html','Audyt WCAG'],
+  ['../szkolenia.html','Szkolenia'],
+  ['../baza-wiedzy.html','Baza wiedzy'],
   ['../o-nas.html','O nas'],
-  ['../kontakt.html','Kontakt'],
-  ['../aktualnosci.html','Aktualności']
+  ['../kontakt.html','Kontakt']
 ];
 
 test('każda publiczna strona ma skip link, main i dokładnie jedno H1', async () => {
@@ -19,8 +20,8 @@ test('każda publiczna strona ma skip link, main i dokładnie jedno H1', async (
   }
 });
 
-test('każda publiczna strona ma pełne menu pięciu stron i aktywną pozycję', async () => {
-  const expected = ['Strona główna','Audyt WCAG','O nas','Kontakt','Aktualności'];
+test('każda publiczna strona ma pełne menu sześciu stron i aktywną pozycję', async () => {
+  const expected = ['Strona główna','Audyt WCAG','Szkolenia','Baza wiedzy','O nas','Kontakt'];
   for (const [file, active] of pages) {
     const html = await readFile(new URL(file, import.meta.url), 'utf8');
     for (const label of expected) assert.ok(html.includes('>' + label + '</a>'), file + ': ' + label);
