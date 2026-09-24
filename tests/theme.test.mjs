@@ -5,19 +5,19 @@ import { contrastResult } from '../src/contrast.mjs';
 
 const palettes = {
   light: {
-    bg:'#FCFDFD', surface:'#FFFFFF', surfaceAlt:'#EDF5F6',
-    text:'#102126', text2:'#263B42', muted:'#40565E',
-    gold:'#174C6B', border:'#657880', danger:'#8B1E1E', onGold:'#FFFFFF'
+    bg:'#F7F3E8', surface:'#FFFDF8', surfaceAlt:'#EFE6D4',
+    text:'#1F1A14', text2:'#3B3329', muted:'#514638',
+    gold:'#5A4728', border:'#8A7657', danger:'#8B1E1E', onGold:'#FFFFFF'
   },
   dark: {
-    bg:'#0A1114', surface:'#101A1E', surfaceAlt:'#162329',
-    text:'#F6FAFB', text2:'#D8E4E7', muted:'#C4D1D5',
-    gold:'#A9DDF5', border:'#82959C', danger:'#FF9E96', onGold:'#111111'
+    bg:'#15120E', surface:'#1F1A14', surfaceAlt:'#2A231B',
+    text:'#FFF8E8', text2:'#F2E2C1', muted:'#E6D2AA',
+    gold:'#F2D28A', border:'#8F7B5A', danger:'#FFB0A8', onGold:'#1F1A14'
   },
   reading: {
-    bg:'#F5EBD7', surface:'#F0E4CB', surfaceAlt:'#F5EBD7',
-    text:'#2A241D', text2:'#4A4035', muted:'#4A4035',
-    gold:'#174C6B', border:'#7A6A56', danger:'#8B1E1E', onGold:'#FFFFFF'
+    bg:'#F3E7CF', surface:'#FAF2E3', surfaceAlt:'#E9D9BC',
+    text:'#2A2117', text2:'#413426', muted:'#544431',
+    gold:'#5A4728', border:'#7D6849', danger:'#8B1E1E', onGold:'#FFFFFF'
   }
 };
 
