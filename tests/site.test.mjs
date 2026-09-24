@@ -80,3 +80,12 @@ test('czytnik strony uwzględnia niepuste alty obrazów', async () => {
   assert.match(js, /img\[alt\]:not\(\[alt=""\]\)/);
   assert.match(js, /node\.getAttribute\('alt'\)/);
 });
+
+
+test('górny pasek ma kompaktową typografię i nie łamie etykiet po literach przy 200 procent', async () => {
+  const css = await readFile(new URL('../src/site.css', import.meta.url), 'utf8');
+  assert.match(css, /\.accessibility-bar :where\(\.access-group button,\.access-tool\)[\s\S]*?font-size:\.72rem/);
+  assert.match(css, /\.accessibility-bar :where\(\.access-group button,\.access-tool\)[\s\S]*?font-weight:500/);
+  assert.match(css, /white-space:nowrap/);
+  assert.match(css, /html\[data-text-size="aaa"\] \.accessibility-bar-inner[\s\S]*?flex-wrap:wrap/);
+});
