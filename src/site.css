@@ -1254,8 +1254,8 @@ html[data-text-size="aaa"] .navigation-row .main-nav a{
   grid-template-columns:minmax(0,1.08fr) minmax(320px,.92fr);
   overflow:hidden;
   border-radius:28px;
-  background:#5A2430;
-  color:#FFFFFF;
+  background:var(--promo-bg);
+  color:var(--promo-text);
   box-shadow:0 26px 70px color-mix(in srgb,var(--text) 16%,transparent);
 }
 .home-numbers-copy{
@@ -1266,13 +1266,13 @@ html[data-text-size="aaa"] .navigation-row .main-nav a{
   padding:clamp(34px,5vw,68px);
 }
 .home-numbers-copy .kicker{
-  color:#FFFFFF;
+  color:var(--promo-text);
   opacity:.82;
 }
 .home-numbers-copy h2{
   max-width:18ch;
   margin:0;
-  color:#FFFFFF;
+  color:var(--promo-text);
 }
 .home-numbers-copy h2 span{
   display:block;
@@ -1281,12 +1281,12 @@ html[data-text-size="aaa"] .navigation-row .main-nav a{
   line-height:.88;
   letter-spacing:-.045em;
   font-weight:650;
-  color:#FFFFFF;
+  color:var(--promo-text);
 }
 .home-numbers-copy>p:not(.kicker):not(.home-numbers-source){
   max-width:54ch;
   margin:1.15rem 0 0;
-  color:#FFFFFF;
+  color:var(--promo-text);
 }
 .home-numbers-copy strong{
   font-weight:650;
@@ -1294,7 +1294,7 @@ html[data-text-size="aaa"] .navigation-row .main-nav a{
 .home-numbers-source{
   margin:1rem 0 0;
   font-size:.78rem;
-  color:#FFFFFF;
+  color:var(--promo-text);
   opacity:.82;
 }
 .home-numbers-source a{
@@ -1309,17 +1309,17 @@ html[data-text-size="aaa"] .navigation-row .main-nav a{
   min-height:48px;
   margin-top:1.45rem;
   padding:12px 21px;
-  border:2px solid #FFFFFF;
+  border:2px solid var(--promo-text);
   border-radius:999px;
-  background:#FFFFFF;
-  color:#5A2430;
+  background:var(--promo-text);
+  color:var(--promo-bg);
   font-weight:650;
   text-decoration:none;
 }
 .home-numbers-button:hover,
 .home-numbers-button:focus-visible{
   background:transparent;
-  color:#FFFFFF;
+  color:var(--promo-text);
 }
 .home-numbers-photo{
   min-height:100%;
