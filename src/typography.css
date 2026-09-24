@@ -77,3 +77,29 @@ a,button,input,textarea,select{overflow-wrap:anywhere}
   [data-text-size="aaa"] .text-size-switcher button{flex:1 1 28%;padding-inline:6px}
   [data-text-size="aaa"] .choice{width:100%}
 }
+
+/* Reflow treści przy dużym tekście: żadnych sztywnych boksów mniejszych niż ich tekst. */
+:where(
+  .eyebrow,.overline,.mock-small,.mock-title,.stat-label,
+  .stat,.feature,.compare,.compare-block,.compare-label,.compare-label>div,
+  .evidence-inner,.evidence-inner>div,.stats-grid,.stats-grid>*,
+  .feature-grid,.feature-grid>*
+){
+  min-width:0;
+  max-width:100%;
+  overflow-wrap:anywhere;
+}
+
+.feature-icon,.check-symbol,.marker{
+  width:auto!important;
+  height:auto!important;
+  min-width:1.5em;
+  min-height:1.5em;
+  padding:.12em .3em;
+  line-height:1.2;
+}
+
+[data-text-size="aaa"] .mock-window{transform:none}
+[data-text-size="aaa"] :where(.eyebrow,.overline,.mock-small){
+  letter-spacing:.04em;
+}
