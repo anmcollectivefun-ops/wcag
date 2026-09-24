@@ -10,9 +10,9 @@ const defaults = {
   action: 'Wyślij zapytanie'
 };
 const palettes = {
-  light: { foreground: '#101828', background: '#ffffff' },
-  dark: { foreground: '#ffffff', background: '#111827' },
-  cream: { foreground: '#1b2430', background: '#fff9e8' }
+  light: { foreground: '#111111', background: '#FFFFFF' },
+  dark: { foreground: '#F5F5F0', background: '#0B0B0B' },
+  reading: { foreground: '#2A241D', background: '#F5EBD7' }
 };
 const scenarios = {
   contrast: {
