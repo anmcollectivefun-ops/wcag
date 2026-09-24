@@ -5,7 +5,7 @@ import AxeBuilder from '@axe-core/playwright';
 
 const base = 'http://127.0.0.1:4173';
 const output = 'audit-artifacts';
-const pages = [["/","home"],["/audyt.html","audit"],["/o-nas.html","about"],["/kontakt.html","contact"],["/aktualnosci.html","news"]];
+const pages = [["/","home"],["/audyt.html","audit"],["/szkolenia.html","training"],["/baza-wiedzy.html","knowledge"],["/o-nas.html","about"],["/kontakt.html","contact"]];
 const server = spawn(process.execPath, ['server.mjs'], {
   env: { ...process.env, HOST: '127.0.0.1', PORT: '4173' },
   stdio: ['ignore', 'pipe', 'pipe']
@@ -91,7 +91,7 @@ try {
 
   const outcome = {
     timestamp: new Date().toISOString(),
-    scope: 'Pięć publicznych stron ANM Access przy 1280 i 320 CSS px oraz globalny tryb AAA/200% przy 320 CSS px.',
+    scope: 'Sześć publicznych stron ANM Access przy 1280 i 320 CSS px oraz globalny tryb AAA/200% przy 320 CSS px.',
     environment: 'Playwright / Chromium headless + axe-core. Wyniki automatyczne nie zastępują testów manualnych.',
     results,
     aaaReflow,
