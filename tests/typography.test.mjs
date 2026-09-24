@@ -37,7 +37,7 @@ test('ustawienie wielkości tekstu jest wspólne i zapamiętywane', async () => 
   assert.match(js, /anm-access-text-size-v1/);
   assert.match(js, /TEXT_SIZES = new Set\(\['a','aa','aaa'\]\)/);
   assert.match(js, /localStorage\.setItem\(TEXT_KEY/);
-  assert.match(js, /dataTextSizeChoice/);
+  assert.match(js, /textSizeChoice/);
 });
 
 test('serwer obsługuje fonty woff i woff2 z własnej domeny', async () => {
