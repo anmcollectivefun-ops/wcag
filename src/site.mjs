@@ -61,10 +61,18 @@ function setupMotion() {
 
   document.documentElement.classList.add('motion-ready');
 
+  const header = document.querySelector('.site-header');
+  if (header) {
+    gsap.fromTo(header,
+      { y: -30, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' }
+    );
+  }
+
   const hero = targets.filter(el => el.closest('.page-hero'));
   if (hero.length) {
-    gsap.fromTo(hero, { y: 18 }, {
-      y: 0, duration: .65, stagger: .08, ease: 'power2.out'
+    gsap.fromTo(hero, { y: 30, opacity: 0 }, {
+      y: 0, opacity: 1, duration: 1, stagger: 0.15, ease: 'power3.out', delay: 0.2
     });
   }
 
@@ -76,7 +84,7 @@ function setupMotion() {
     const items = [...group.querySelectorAll('[data-reveal]')];
     if (!items.length) return;
 
-    gsap.set(items, { yPercent: 70 });
+    gsap.set(items, { y: 40, opacity: 0 });
 
     const sequenceObserver = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -84,15 +92,16 @@ function setupMotion() {
         sequenceObserver.unobserve(entry.target);
 
         gsap.to(items, {
-          yPercent: 0,
-          duration: 1.22,
-          stagger: .18,
-          ease: 'power2.out',
-          clearProps: 'willChange',
+          y: 0,
+          opacity: 1,
+          duration: 0.9,
+          stagger: 0.15,
+          ease: 'back.out(1.2)',
+          clearProps: 'willChange,opacity,transform',
           onComplete: () => items.forEach(item => item.classList.add('is-visible'))
         });
       });
-    }, { threshold: .16, rootMargin: '0px 0px -8% 0px' });
+    }, { threshold: 0.1, rootMargin: '0px 0px -5% 0px' });
 
     sequenceObserver.observe(group);
   });
@@ -105,12 +114,13 @@ function setupMotion() {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
       observer.unobserve(entry.target);
-      gsap.fromTo(entry.target, { y: 18 }, {
-        y: 0, duration: .55, ease: 'power2.out',
+      gsap.fromTo(entry.target, { y: 30, opacity: 0 }, {
+        y: 0, opacity: 1, duration: 0.8, ease: 'power3.out',
+        clearProps: 'willChange,opacity,transform',
         onComplete: () => entry.target.classList.add('is-visible')
       });
     });
-  }, { threshold: .12 });
+  }, { threshold: 0.1 });
 
   rest.forEach(el => observer.observe(el));
 }

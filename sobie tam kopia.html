@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="pl" data-theme="light" data-text-size="a">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ANM Access to platforma ANM Collective do audytu dostępności stron i aplikacji pod kątem WCAG 2.2, w tym kryteriów poziomu AAA.">
+  <meta name="theme-color" content="#FFFFFF">
+  <title>ANM Access — audyt dostępności cyfrowej</title>
+  <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/assets/fonts/atkinson.css">
+  <link rel="stylesheet" href="/src/theme.css">
+  <link rel="stylesheet" href="/src/typography.css">
+  <link rel="stylesheet" href="/src/site.css">
+  <script defer src="/assets/vendor/gsap.min.js"></script>
+  <script type="module" src="/src/theme.mjs"></script>
+  <script type="module" src="/src/site.mjs"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Przejdź do treści</a>
+  <header class="site-header">
+    <div class="accessibility-bar" aria-label="Ustawienia dostępności">
+      <div class="shell accessibility-bar-inner">
+        <div class="language-switcher access-group" aria-label="Język strony">
+          <span class="access-group-label" data-icon="languages">Język</span>
+          <button type="button" aria-pressed="true" aria-label="Język polski">PL</button>
+          <button type="button" disabled aria-label="Język angielski — w przygotowaniu">EN</button>
+          <button type="button" disabled aria-label="Język ukraiński — w przygotowaniu">UA</button>
+        </div>
+        <div class="text-size-switcher access-group" role="group" aria-label="Rozmiar tekstu">
+          <span class="access-group-label" data-icon="text-size">Tekst</span>
+          <button type="button" data-text-size-choice="a" aria-pressed="true" aria-label="Rozmiar tekstu A, 100 procent">A</button>
+          <button type="button" data-text-size-choice="aa" aria-pressed="false" aria-label="Rozmiar tekstu AA, 150 procent">AA</button>
+          <button type="button" data-text-size-choice="aaa" aria-pressed="false" aria-label="Rozmiar tekstu AAA, 200 procent">AAA</button>
+        </div>
+        <button class="access-tool" type="button" data-contrast-toggle data-icon="eye-contrast" aria-pressed="false">
+          <span>Wysoki kontrast</span>
+        </button>
+        <div class="theme-switcher access-group" role="group" aria-label="Motyw strony">
+          <button type="button" data-theme-choice="light" data-icon="sun" aria-pressed="true">Jasny</button>
+          <button type="button" data-theme-choice="dark" data-icon="moon" aria-pressed="false">Ciemny</button>
+          <button type="button" data-theme-choice="reading" data-icon="book-open" aria-pressed="false">Czytanie</button>
+        </div>
+        <button class="access-tool" type="button" data-read-page data-icon="volume-2" aria-pressed="false">
+          <span data-reader-label>Przeczytaj stronę</span>
+        </button>
+      </div>
+    </div>
+    <div class="shell navigation-row">
+      <a class="brand" href="/" aria-label="ANM Collective — strona główna">
+        <img class="brand-logo" src="/assets/images/ANM-Collective%20mobile.webp" alt="ANM Collective" decoding="async">
+      </a>
+      <button class="nav-toggle" type="button" data-nav-toggle data-icon="menu" aria-expanded="false" aria-controls="main-nav-list">Menu</button>
+      <nav class="main-nav" aria-label="Nawigacja główna" data-open="false">
+        <ul class="main-nav-list" id="main-nav-list">
+          <li><a href="/" aria-current="page">Strona główna</a></li>
+          <li><a href="/audyt.html">Audyt WCAG</a></li>
+          <li><a href="/szkolenia.html">Szkolenia</a></li>
+          <li><a href="/baza-wiedzy.html">Baza wiedzy</a></li>
+          <li><a href="/o-nas.html">O nas</a></li>
+          <li><a href="/kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="page-hero home-hero">
+      <div class="shell home-hero-shell">
+        <div class="hero-copy home-hero-copy">
+          <p class="kicker" data-reveal>Dostępność cyfrowa · WCAG 2.2</p>
+          <h1 data-reveal>Audyt WCAG 2.2, dzięki któremu zadbasz o dostępność cyfrową swojej strony</h1>
+          <p class="hero-lead" data-reveal>Sprawdzamy Twoją stronę internetową lub aplikację zgodnie z aktualnym standardem WCAG 2.2. Audyt obejmuje również wymagania znane z WCAG 2.1 i pokazuje, gdzie występują bariery oraz co wymaga poprawy.</p>
+          <p class="hero-lead" data-reveal>Otrzymasz czytelny raport z konkretnymi zaleceniami, który pomoże Ci lepiej przygotować serwis do wymagań dostępności cyfrowej, w tym EAA, i ograniczyć ryzyko problemów związanych z niedostępnością.</p>
+          <ul class="hero-meta" data-reveal aria-label="Najważniejsze elementy audytu">
+            <li data-icon="check">WCAG 2.2</li>
+            <li data-icon="check">testy automatyczne i manualne</li>
+            <li data-icon="check">raport z zaleceniami</li>
+          </ul>
+        </div>
+
+        <figure class="hero-photo hero-photo-wide" data-reveal>
+          <img src="/assets/images/hero.webp" alt="" width="1600" height="760" decoding="async" fetchpriority="high">
+          <svg class="hero-photo-wave" viewBox="0 0 1200 150" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+            <path d="M0,105 C170,38 330,142 515,104 C705,65 890,20 1200,86 L1200,150 L0,150 Z"></path>
+          </svg>
+        </figure>
+      </div>
+    </section>
+
+    <section class="home-audit-why" aria-labelledby="home-audit-why-title">
+      <div class="shell">
+        <div class="section-heading home-audit-why-heading" data-reveal>
+          <p class="kicker">Po co audyt WCAG?</p>
+          <h2 id="home-audit-why-title">Dostępność cyfrowa to konkretne obowiązki i konkretne decyzje.</h2>
+          <p>Audyt pokazuje, w jakim stanie jest Twój serwis i co trzeba zrobić dalej.</p>
+        </div>
+
+        <div class="home-audit-why-cards" data-reveal-sequence>
+          <article class="home-audit-why-card" data-reveal>
+            <span class="icon-box" data-icon="shield-check"></span>
+            <h3>Wymogi prawne</h3>
+            <p>Sprawdź, czy strona lub aplikacja spełnia wymagania dostępności cyfrowej, które dotyczą Twojej instytucji.</p>
+          </article>
+
+          <article class="home-audit-why-card" data-reveal>
+            <span class="icon-box" data-icon="file-check"></span>
+            <h3>Deklaracja dostępności</h3>
+            <p>Audyt daje Ci podstawę do rzetelnego określenia stanu dostępności serwisu i przygotowania deklaracji.</p>
+          </article>
+
+          <article class="home-audit-why-card" data-reveal>
+            <span class="icon-box" data-icon="search"></span>
+            <h3>Monitoring i kontrola</h3>
+            <p>Wykryj niezgodności wcześniej, zamiast dowiadywać się o nich dopiero podczas monitoringu lub kontroli.</p>
+          </article>
+
+          <article class="home-audit-why-card" data-reveal>
+            <span class="icon-box" data-icon="list-checks"></span>
+            <h3>Plan napraw</h3>
+            <p>Dostajesz listę problemów, ich priorytety oraz konkretne zalecenia, które można przekazać do wdrożenia.</p>
+          </article>
+
+          <article class="home-audit-why-card" data-reveal>
+            <span class="icon-box" data-icon="scan-search"></span>
+            <h3>WCAG 2.2</h3>
+            <p>Nie zatrzymujemy się na WCAG 2.1. Sprawdzamy również nowe kryteria wprowadzone w standardzie WCAG 2.2.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div class="trust-strip">
+      <div class="shell">
+        <ul class="trust-list" aria-label="Zakres ANM Access">
+          <li data-icon="shield-check">WCAG 2.2</li>
+          <li data-icon="scan-search">testy techniczne</li>
+          <li data-icon="users">weryfikacja manualna</li>
+          <li data-icon="file-check">raport i rekomendacje</li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="section wcag-explainer" id="co-sprawdzamy" aria-labelledby="wcag-explainer-title">
+      <div class="shell wcag-explainer-grid">
+        <div class="wcag-explainer-intro" data-reveal>
+          <p class="kicker">Czym jest WCAG?</p>
+          <p class="wcag-mark" aria-hidden="true">WCAG <span>2.2</span></p>
+          <h2 id="wcag-explainer-title">WCAG to standard dostępności stron internetowych i aplikacji.</h2>
+          <p>Wytyczne W3C opisują, jak tworzyć serwisy, z których mogą korzystać osoby o różnych potrzebach i sposobach obsługi internetu.</p>
+
+          <div class="wcag-principles" aria-label="Cztery zasady WCAG">
+            <span>Postrzegalność</span>
+            <span>Funkcjonalność</span>
+            <span>Zrozumiałość</span>
+            <span>Kompatybilność</span>
+          </div>
+        </div>
+
+        <div class="wcag-explainer-list">
+          <article class="wcag-explainer-row" data-reveal>
+            <span class="wcag-row-number" aria-hidden="true">01</span>
+            <div>
+              <h3>Co obejmuje WCAG?</h3>
+              <p>Między innymi kontrast i czytelność, obsługę klawiaturą, strukturę treści, formularze, multimedia, teksty alternatywne oraz współpracę z czytnikami ekranu i innymi technologiami wspomagającymi.</p>
+            </div>
+          </article>
+
+          <article class="wcag-explainer-row" data-reveal>
+            <span class="wcag-row-number" aria-hidden="true">02</span>
+            <div>
+              <h3>Co oznaczają poziomy A, AA i AAA?</h3>
+              <p>Kryteria WCAG są podzielone na trzy poziomy. A obejmuje wymagania podstawowe, AA rozszerza zakres dostępności, a AAA zawiera najbardziej wymagające kryteria.</p>
+            </div>
+          </article>
+
+          <article class="wcag-explainer-row" data-reveal>
+            <span class="wcag-row-number" aria-hidden="true">03</span>
+            <div>
+              <h3>Dlaczego sprawdzamy WCAG 2.2?</h3>
+              <p>WCAG 2.2 rozwija wcześniejszą wersję 2.1 o nowe kryteria, między innymi dotyczące fokusu, obsługi dotykowej, przeciągania elementów i dostępnego uwierzytelniania.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="home-numbers-cta" aria-labelledby="home-numbers-title">
+      <div class="shell">
+        <div class="home-numbers-cta-grid" data-reveal>
+          <div class="home-numbers-copy">
+            <p class="kicker">Dostępność w liczbach</p>
+            <h2 id="home-numbers-title"><span>95,9%</span> badanych stron miało wykrywalne błędy WCAG.</h2>
+            <p>W badaniu WebAIM Million 2026 na milionie najpopularniejszych stron głównych wykryto ponad 56 milionów błędów dostępności. To średnio <strong>56,1 błędu na jedną stronę</strong>.</p>
+            <p>Najczęściej wykrywano między innymi zbyt niski kontrast tekstu, brak tekstów alternatywnych przy obrazach oraz brak prawidłowych etykiet pól formularzy. Strona może wyglądać poprawnie i nadal zawierać bariery, które wymagają naprawy.</p>
+            <p class="home-numbers-source">Źródło: <a href="https://webaim.org/projects/million/">WebAIM Million 2026</a>.</p>
+            <a class="home-numbers-button" href="/audyt.html" data-icon="scan-search">Zamów audyt WCAG</a>
+          </div>
+
+          <figure class="home-numbers-photo">
+            <img src="/assets/images/audyt.webp" alt="Audytorka analizuje dostępność cyfrową serwisu internetowego przy stanowisku komputerowym." width="900" height="600" loading="lazy" decoding="async">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section practical-audit" aria-labelledby="practical-audit-title">
+      <div class="shell practical-audit-grid">
+        <div class="practical-audit-media" data-reveal>
+          <figure class="practical-audit-photo">
+            <img src="/assets/images/grupa4.webp" alt="Grupa osób o różnych potrzebach podczas wspólnego spotkania; jedna z osób komunikuje się językiem migowym." width="1200" height="900" loading="lazy" decoding="async">
+          </figure>
+
+        </div>
+
+        <div class="practical-audit-copy">
+          <div class="section-heading" data-reveal>
+            <p class="kicker">Dostępność sprawdzamy w praktyce</p>
+            <h2 id="practical-audit-title">Nie tylko wskazujemy błąd. Rozumiemy, skąd się bierze i jak go naprawić.</h2>
+            <p>Jako web developerzy sprawdzamy nie tylko to, co widać na ekranie, ale też kod, strukturę HTML, formularze, komponenty i zachowanie interfejsu.</p>
+            <p>Łączymy analizę techniczną z testami uwzględniającymi potrzeby osób starszych, niedowidzących, głuchych i słabosłyszących.</p>
+          </div>
+
+          <div class="practical-audit-list" data-reveal>
+            <div class="practical-audit-item">
+              <span class="practical-audit-index" aria-hidden="true">01</span>
+              <div><strong>Analiza kodu przez web developerów</strong><span>Sprawdzamy semantykę, strukturę, komponenty i zachowanie interfejsu.</span></div>
+            </div>
+            <div class="practical-audit-item">
+              <span class="practical-audit-index" aria-hidden="true">02</span>
+              <div><strong>Testy automatyczne i manualne</strong><span>Łączymy narzędzia techniczne z oceną elementów, których automat nie potrafi wiarygodnie zweryfikować.</span></div>
+            </div>
+            <div class="practical-audit-item">
+              <span class="practical-audit-index" aria-hidden="true">03</span>
+              <div><strong>Testy z osobami niedowidzącymi i starszymi</strong><span>Sprawdzamy czytelność, powiększenie, obsługę i odbiór treści w praktyce.</span></div>
+            </div>
+            <div class="practical-audit-item">
+              <span class="practical-audit-index" aria-hidden="true">04</span>
+              <div><strong>Konsultacje z osobami głuchymi i słabosłyszącymi</strong><span>Uwzględniamy bariery komunikacyjne oraz doświadczenie osób korzystających z aparatów słuchowych i języka migowego.</span></div>
+            </div>
+            <div class="practical-audit-item">
+              <span class="practical-audit-index" aria-hidden="true">05</span>
+              <div><strong>Różne urządzenia i systemy</strong><span>Serwis sprawdzamy w różnych warunkach, a nie wyłącznie w jednej przeglądarce na jednym komputerze.</span></div>
+            </div>
+            <div class="practical-audit-item">
+              <span class="practical-audit-index" aria-hidden="true">06</span>
+              <div><strong>Raport, zalecenia i możliwość wdrożenia poprawek</strong><span>Możesz przekazać rekomendacje swojemu zespołowi albo zlecić nam ich wdrożenie i ponowny test.</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="shell feature-split">
+        <div class="section-heading" data-reveal>
+          <p class="kicker">Automat to dopiero początek</p>
+          <h2>Nie udajemy, że jeden skaner może sprawdzić wszystko.</h2>
+          <p>Część kryteriów da się zmierzyć automatycznie. Inne wymagają testu człowieka. Dlatego ANM Access rozdziela wynik według sposobu weryfikacji i jasno pokazuje, czego nie można uczciwie ocenić automatem.</p>
+          <a class="card-link" href="/audyt.html" data-icon="arrow-right">Zobacz metodę audytu</a>
+        </div>
+        <div class="feature-panel" data-reveal>
+          <h3>Każdy wynik ma status</h3>
+          <div class="status-stack">
+            <div class="status-item"><span data-icon="check"></span><div class="status-copy"><strong>Sprawdzone automatycznie</strong><span>Reguła ma jednoznaczny wynik techniczny.</span></div></div>
+            <div class="status-item"><span data-icon="users"></span><div class="status-copy"><strong>Zweryfikowane manualnie</strong><span>Wynik potwierdzony przez test człowieka.</span></div></div>
+            <div class="status-item"><span data-icon="search"></span><div class="status-copy"><strong>Wymaga oceny</strong><span>System nie zgaduje zgodności.</span></div></div>
+            <div class="status-item danger"><span data-icon="alert"></span><div class="status-copy"><strong>Niespełnione</strong><span>Wskazujemy problem i sposób poprawy.</span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <div class="section-heading" data-reveal>
+          <p class="kicker">Jak wygląda audyt</p>
+          <h2>Od strony do konkretnej listy poprawek.</h2>
+          <p>Proces jest czytelny także dla osoby, która nie zajmuje się WCAG technicznie.</p>
+        </div>
+        <div class="process-grid">
+          <article class="process-step" data-reveal><h3>Ustalamy zakres</h3><p>Strony, kluczowe procesy i elementy, które muszą zostać przebadane.</p></article>
+          <article class="process-step" data-reveal><h3>Badamy technicznie</h3><p>Automatycznie sprawdzamy kryteria, które można wiarygodnie zmierzyć.</p></article>
+          <article class="process-step" data-reveal><h3>Weryfikujemy manualnie</h3><p>Klawiatura, logika procesu, technologie wspomagające i kryteria wymagające oceny.</p></article>
+          <article class="process-step" data-reveal><h3>Przekazujemy wynik</h3><p>Problem, kryterium WCAG, lokalizacja, rekomendacja i status ponownego testu.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="shell report-grid">
+        <div class="report-sheet" data-reveal>
+          <div class="report-sheet-head">
+            <div class="report-sheet-title"><span data-icon="file-check"></span><span>Raport audytu</span></div>
+            <span class="audit-level-badge">WCAG 2.2</span>
+          </div>
+          <div class="report-lines">
+            <div class="report-line"><span data-icon="list-checks"></span><div><strong>Kryterium i poziom</strong><span>A / AA / AAA</span></div></div>
+            <div class="report-line"><span data-icon="search"></span><div><strong>Miejsce problemu</strong><span>konkretny ekran lub element</span></div></div>
+            <div class="report-line"><span data-icon="wrench"></span><div><strong>Sposób naprawy</strong><span>rekomendacja dla zespołu</span></div></div>
+            <div class="report-line"><span data-icon="shield-check"></span><div><strong>Ponowna weryfikacja</strong><span>czy poprawka rzeczywiście rozwiązała problem</span></div></div>
+          </div>
+        </div>
+        <div class="section-heading" data-reveal>
+          <p class="kicker">Raport, z którym da się pracować</p>
+          <h2>Nie kończymy na komunikacie „masz błąd”.</h2>
+          <p>Wynik ma być użyteczny dla właściciela strony, projektanta i programisty. Pokazujemy, czego dotyczy problem, jaki ma poziom WCAG i co trzeba zrobić dalej.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="/audyt.html" data-icon="scan-search">Zobacz Audyt WCAG</a>
+            <a class="button button-secondary" href="/kontakt.html" data-icon="wrench">Zapytaj o poprawki</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <div class="section-heading" data-reveal>
+          <p class="kicker">Audyt i wdrożenie</p>
+          <h2>Nie musisz zostać sam z raportem.</h2>
+          <p>ANM Collective może wdrożyć wskazane poprawki w istniejącej stronie, sklepie lub aplikacji, a następnie przeprowadzić ponowną weryfikację.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card" data-reveal><span class="icon-box" data-icon="scan-search"></span><h3>Audyt</h3><p>Wykrywamy bariery i porządkujemy je według WCAG 2.2.</p></article>
+          <article class="card" data-reveal><span class="icon-box" data-icon="wrench"></span><h3>Poprawki</h3><p>Możemy przejąć wdrożenie albo przekazać precyzyjne zalecenia Twojemu zespołowi.</p></article>
+          <article class="card" data-reveal><span class="icon-box" data-icon="shield-check"></span><h3>Ponowny test</h3><p>Sprawdzamy, czy poprawka faktycznie usunęła barierę i nie stworzyła kolejnej.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="shell">
+        <div class="section-heading" data-reveal><p class="kicker">Najczęstsze pytania</p><h2>Audyt WCAG w kilku prostych odpowiedziach.</h2></div>
+        <div class="faq-list">
+          <details data-reveal><summary>Czy audyt ANM Access będzie płatny?</summary><p>Tak. Zakres i cena będą zależeć od wielkości serwisu, liczby procesów oraz zakresu testów manualnych. Przed rozpoczęciem badania klient pozna zakres i koszt.</p></details>
+          <details data-reveal><summary>Czy automat może potwierdzić pełną zgodność?</summary><p>Nie wszystkie kryteria WCAG można ocenić automatycznie. Dlatego raport oddziela testy techniczne od tych, które wymagają oceny człowieka.</p></details>
+          <details data-reveal><summary>Czy badacie również poziom AAA?</summary><p>Tak. Wyniki będą porządkowane według kryteriów A, AA i AAA, z informacją o sposobie przeprowadzenia testu.</p></details>
+          <details data-reveal><summary>Czy możecie poprawić wykryte błędy?</summary><p>Tak. ANM Collective może wdrożyć poprawki, a potem wykonać ponowną weryfikację.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section final-cta">
+      <div class="shell final-cta-inner" data-reveal>
+        <div><p class="kicker">ANM Access</p><h2>Sprawdź, gdzie Twoja strona stawia bariery.</h2><p>Audyt WCAG 2.2 pokaże, co działa, co wymaga poprawy i co trzeba zweryfikować manualnie.</p></div>
+        <a class="button button-primary" href="/audyt.html" data-icon="arrow-right">Przejdź do audytu</a>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div class="footer-copy"><strong>ANM Access</strong><p>Platforma ANM Collective do audytu i rozwoju dostępności cyfrowej zgodnie z WCAG 2.2.</p></div>
+      <nav class="footer-nav" aria-label="Nawigacja w stopce">
+        <a href="/audyt.html">Audyt WCAG</a>
+        <a href="/szkolenia.html">Szkolenia</a>
+        <a href="/baza-wiedzy.html">Baza wiedzy</a>
+        <a href="/o-nas.html">O nas</a>
+        <a href="/kontakt.html">Kontakt</a>
+      </nav>
+    </div>
+  </footer>
+  <div class="theme-announcer" data-theme-announcer role="status" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
