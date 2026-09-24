@@ -49,3 +49,13 @@ a,button,input,textarea,select{overflow-wrap:anywhere}
   h1{font-size:2rem}
   h2{font-size:1.6rem}
 }
+
+/* Reflow przy AA/AAA: elementy tekstowe w nagłówkach i paskach nie mogą wymuszać szerokości. */
+.brand{min-width:0;max-width:100%}
+.brand>span{min-width:0;max-width:100%;overflow-wrap:anywhere}
+.brand small{white-space:normal}
+.demo-bar-inner{flex-wrap:wrap}
+.demo-bar-inner>span{min-width:0;max-width:100%;overflow-wrap:anywhere}
+.header-inner>*,.topbar-inner>*{min-width:0}
+[data-text-size="aaa"] .main-nav a,
+[data-text-size="aaa"] .topbar nav a{white-space:normal}
