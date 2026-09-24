@@ -1202,6 +1202,7 @@ html[data-text-size="aaa"] .navigation-row .main-nav a{
 }
 .home-audit-why-heading h2{
   max-width:20ch;
+  font-size:1.5556rem;
 }
 .home-audit-why-cards{
   display:grid;
