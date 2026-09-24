@@ -98,3 +98,10 @@ test('nagłówek ma lekką typografię 16–18 px niezależną od presetów A AA
   assert.match(css, /\.navigation-row \.main-nav a[\s\S]*?font-size:17px[\s\S]*?font-weight:400/);
   assert.match(css, /html\[data-text-size="aaa"\][\s\S]*?font-size:16px/);
 });
+
+
+test('etykiety sekcji są lekkie i bez dekoracyjnych myślników', async () => {
+  const css = await readFile(new URL('../src/site.css', import.meta.url), 'utf8');
+  assert.match(css, /\.kicker\{[\s\S]*?font-size:\.72rem!important[\s\S]*?font-weight:500/);
+  assert.match(css, /\.kicker::before\{[\s\S]*?content:none!important[\s\S]*?display:none!important/);
+});
