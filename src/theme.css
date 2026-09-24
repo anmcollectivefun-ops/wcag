@@ -138,8 +138,8 @@ input::placeholder,textarea::placeholder{color:var(--muted);opacity:1}
 /* Globalny panel dostępności: rozmiar tekstu A/AA/AAA + trzy motywy. */
 .accessibility-toolbar{display:flex;align-items:center;justify-content:flex-end;gap:10px;flex-wrap:wrap;min-width:0}
 .theme-switcher,.text-size-switcher{display:inline-flex;align-items:center;gap:4px;padding:4px;border:1px solid var(--border);border-radius:999px;background:var(--surface);color:var(--text);flex:0 1 auto}
-.switcher-label{padding:0 8px;font-weight:700;white-space:nowrap}
-.theme-switcher button,.text-size-switcher button{min-width:44px;min-height:44px;border:2px solid transparent;border-radius:999px;padding:7px 12px;background:transparent;color:var(--text);font:inherit;font-weight:800;cursor:pointer}
+.switcher-label{padding:0 8px;font-weight:350;white-space:nowrap}
+.theme-switcher button,.text-size-switcher button{min-width:44px;min-height:44px;border:2px solid transparent;border-radius:999px;padding:7px 12px;background:transparent;color:var(--text);font:inherit;font-weight:350;cursor:pointer}
 .theme-switcher button:hover,.text-size-switcher button:hover{border-color:var(--gold)}
 .theme-switcher button[aria-pressed="true"],.text-size-switcher button[aria-pressed="true"]{background:var(--gold);color:var(--on-gold);border-color:var(--gold)}
 .theme-switcher button:focus-visible,.text-size-switcher button:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
