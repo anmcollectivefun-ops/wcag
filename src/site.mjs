@@ -2,6 +2,11 @@ document.documentElement.classList.add('js');
 
 const iconHref = name => '/assets/icons.svg#' + name;
 
+function announce(message) {
+  const live = document.querySelector('[data-theme-announcer]');
+  if (live) live.textContent = message;
+}
+
 function setupNavigation() {
   const nav = document.querySelector('.main-nav');
   const list = document.querySelector('.main-nav-list');
@@ -75,17 +80,6 @@ function setupMotion() {
   }, { threshold: .12 });
 
   rest.forEach(el => observer.observe(el));
-
-  const scanLine = document.querySelector('.scan-line');
-  if (scanLine) {
-    gsap.fromTo(scanLine, { yPercent: -120 }, {
-      yPercent: 820,
-      duration: 4.8,
-      repeat: -1,
-      ease: 'none',
-      repeatDelay: .7
-    });
-  }
 }
 
 function setupAuditVisual() {
@@ -97,9 +91,107 @@ function setupAuditVisual() {
   });
 }
 
+function collectReadableContent() {
+  const selector = [
+    'main h1','main h2','main h3','main h4',
+    'main p','main li','main summary','main figcaption',
+    'main a.button','main img[alt]:not([alt=""])'
+  ].join(',');
+  return [...document.querySelectorAll(selector)]
+    .filter(node => {
+      if (node.closest('[aria-hidden="true"]')) return false;
+      const style = getComputedStyle(node);
+      return style.display !== 'none' && style.visibility !== 'hidden';
+    })
+    .map(node => node.tagName === 'IMG' ? node.getAttribute('alt') : node.textContent.trim().replace(/\s+/g,' '))
+    .filter(Boolean);
+}
+
+function setupPageReader() {
+  const button = document.querySelector('[data-read-page]');
+  if (!button) return;
+
+  if (!('speechSynthesis' in window) || !('SpeechSynthesisUtterance' in window)) {
+    button.disabled = true;
+    button.setAttribute('aria-label', 'Czytanie strony nie jest obsługiwane przez tę przeglądarkę');
+    return;
+  }
+
+  const synth = window.speechSynthesis;
+  let queue = [];
+  let index = 0;
+  let reading = false;
+  let session = 0;
+
+  const setButtonState = active => {
+    reading = active;
+    button.setAttribute('aria-pressed', String(active));
+    const label = button.querySelector('[data-reader-label]');
+    if (label) label.textContent = active ? 'Zatrzymaj czytanie' : 'Przeczytaj stronę';
+  };
+
+  const preferredVoice = () => {
+    const lang = document.documentElement.lang || 'pl';
+    const prefix = lang.toLowerCase().slice(0,2);
+    return synth.getVoices().find(voice => voice.lang.toLowerCase().startsWith(prefix)) || null;
+  };
+
+  const stop = (message = 'Zatrzymano czytanie strony.') => {
+    session += 1;
+    synth.cancel();
+    queue = [];
+    index = 0;
+    setButtonState(false);
+    announce(message);
+  };
+
+  const speakNext = currentSession => {
+    if (!reading || currentSession !== session || index >= queue.length) {
+      if (currentSession === session && reading) {
+        setButtonState(false);
+        announce('Zakończono czytanie strony.');
+      }
+      return;
+    }
+
+    const utterance = new SpeechSynthesisUtterance(queue[index++]);
+    const langMap = { pl:'pl-PL', en:'en-GB', uk:'uk-UA' };
+    utterance.lang = langMap[(document.documentElement.lang || 'pl').slice(0,2)] || document.documentElement.lang || 'pl-PL';
+    const voice = preferredVoice();
+    if (voice) utterance.voice = voice;
+    utterance.rate = 1;
+    utterance.pitch = 1;
+    utterance.onend = () => speakNext(currentSession);
+    utterance.onerror = () => stop('Czytanie strony zostało przerwane.');
+    synth.speak(utterance);
+  };
+
+  button.addEventListener('click', () => {
+    if (reading) {
+      stop();
+      return;
+    }
+    queue = collectReadableContent();
+    index = 0;
+    if (!queue.length) {
+      announce('Na tej stronie nie znaleziono treści do odczytania.');
+      return;
+    }
+    session += 1;
+    const currentSession = session;
+    synth.cancel();
+    setButtonState(true);
+    announce('Rozpoczęto czytanie strony.');
+    speakNext(currentSession);
+  });
+
+  window.addEventListener('beforeunload', () => synth.cancel());
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   setupNavigation();
   setupIcons();
   setupAuditVisual();
+  setupPageReader();
   setupMotion();
 });
