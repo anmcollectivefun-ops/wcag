@@ -1,0 +1,51 @@
+:root{
+  font-family:"Atkinson Hyperlegible Next Variable","Atkinson Hyperlegible Next",Arial,sans-serif;
+  font-size:18px;
+  line-height:1.6;
+  font-synthesis:none;
+}
+html[data-text-size="a"]{font-size:18px}
+html[data-text-size="aa"]{font-size:27px}
+html[data-text-size="aaa"]{font-size:36px}
+
+body,button,input,textarea,select{
+  font-family:"Atkinson Hyperlegible Next Variable","Atkinson Hyperlegible Next",Arial,sans-serif;
+}
+body{font-size:1rem;line-height:1.6}
+p,li,dd,dt,label,input,textarea,select,button{line-height:1.6}
+p{max-width:75ch}
+h1,h2,h3,h4,h5,h6{
+  font-family:"Atkinson Hyperlegible Next Variable","Atkinson Hyperlegible Next",Arial,sans-serif;
+  line-height:1.2;
+  overflow-wrap:anywhere;
+  text-wrap:balance;
+}
+h1{font-size:clamp(2.25rem,5vw,3rem);font-weight:700}
+h2{font-size:2rem;font-weight:700}
+h3{font-size:1.5rem;font-weight:700}
+h4{font-size:1.25rem;font-weight:700}
+input,textarea,select,button,.button,.main-nav a,.topbar nav a{font-size:1rem}
+
+:where(
+  small,.brand small,.eyebrow,.overline,.demo-tag,.hero-note,
+  .stat .subtle,.footer p,.mock-header,.mock-small,.mock-row,.mock-complete,
+  .field-hint,.counter,.radio-cards small,.side-note .subtle,.ticket-id,
+  .pill,.results-info,.ticket-meta,.small-menu,.preview-kicker,.preview-caption,
+  .hint,.compare-label p,.fine,.theme-switcher button,.text-size-switcher button,
+  .switcher-label
+){font-size:1rem!important}
+
+.shell,.wrap,.hero-copy,.page-heading,.side-note,.audit-panel,.evidence-inner>div{min-width:0}
+.header-inner,.topbar-inner{flex-wrap:wrap}
+.main-nav,.topbar nav{min-width:0}
+a,button,input,textarea,select{overflow-wrap:anywhere}
+
+@media(max-width:730px){
+  h1{font-size:2.25rem}
+  h2{font-size:1.75rem}
+  h3{font-size:1.4rem}
+}
+@media(max-width:480px){
+  h1{font-size:2rem}
+  h2{font-size:1.6rem}
+}
