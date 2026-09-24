@@ -21,7 +21,7 @@
 
   --theme-reading-bg:#F5EBD7;
   --theme-reading-surface:#F0E4CB;
-  --theme-reading-surface-alt:#E8D8B8;
+  --theme-reading-surface-alt:#F5EBD7;
   --theme-reading-text:#2A241D;
   --theme-reading-text-2:#4A4035;
   --theme-reading-muted:#4A4035;
@@ -41,7 +41,7 @@
   --border:var(--theme-light-border);
   --focus:var(--theme-light-gold);
   --danger:var(--theme-light-danger);
-  --danger-soft:#F9EDEC;
+  --danger-soft:color-mix(in srgb,var(--danger) 10%,var(--bg));
   --on-gold:#FFFFFF;
   --shadow-color:rgba(17,17,17,.18);
   --sample-muted:color-mix(in srgb,var(--text) 34%,var(--bg));
@@ -58,7 +58,7 @@
   --border:var(--theme-dark-border);
   --focus:var(--theme-dark-gold);
   --danger:var(--theme-dark-danger);
-  --danger-soft:#321819;
+  --danger-soft:color-mix(in srgb,var(--danger) 18%,var(--bg));
   --on-gold:#111111;
   --shadow-color:rgba(0,0,0,.55);
   --sample-muted:color-mix(in srgb,var(--text) 34%,var(--bg));
@@ -75,7 +75,7 @@
   --border:var(--theme-reading-border);
   --focus:var(--theme-reading-gold);
   --danger:var(--theme-reading-danger);
-  --danger-soft:#ECD7CC;
+  --danger-soft:color-mix(in srgb,var(--danger) 12%,var(--bg));
   --on-gold:#F5EBD7;
   --shadow-color:rgba(42,36,29,.2);
   --sample-muted:color-mix(in srgb,var(--text) 34%,var(--bg));
