@@ -56,15 +56,34 @@ async function inspectAAAReflow(page, path, name) {
   await page.setViewportSize({ width: 320, height: 860 });
   await page.goto(base + path, { waitUntil: 'networkidle' });
   await page.locator('[data-text-size-choice="aaa"]').click();
-  return page.evaluate(({ path, name }) => ({
-    path,
-    name,
-    rootFontSize: getComputedStyle(document.documentElement).fontSize,
-    activeSize: document.documentElement.dataset.textSize,
-    innerWidth,
-    scrollWidth: document.documentElement.scrollWidth,
-    overflow: document.documentElement.scrollWidth > innerWidth + 1
-  }), { path, name });
+  return page.evaluate(({ path, name }) => {
+    const overflowNodes = [...document.querySelectorAll('body *')].flatMap(element => {
+      const rect = element.getBoundingClientRect();
+      const internal = element.scrollWidth > element.clientWidth + 1;
+      const outside = rect.right > innerWidth + 1 || rect.left < -1;
+      if (!internal && !outside) return [];
+      return [{
+        tag: element.tagName.toLowerCase(),
+        id: element.id || null,
+        className: typeof element.className === 'string' ? element.className : null,
+        clientWidth: element.clientWidth,
+        scrollWidth: element.scrollWidth,
+        left: Math.round(rect.left),
+        right: Math.round(rect.right),
+        text: (element.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 100)
+      }];
+    }).slice(0, 30);
+    return {
+      path,
+      name,
+      rootFontSize: getComputedStyle(document.documentElement).fontSize,
+      activeSize: document.documentElement.dataset.textSize,
+      innerWidth,
+      scrollWidth: document.documentElement.scrollWidth,
+      overflow: document.documentElement.scrollWidth > innerWidth + 1,
+      overflowNodes
+    };
+  }, { path, name });
 }
 
 await mkdir(output, { recursive: true });
@@ -127,7 +146,13 @@ try {
   await writeFile(output + '/report.md', lines.join('\n'));
 
   console.log(JSON.stringify({
-    audited: results.map(r => ({ path: r.path, width: r.width, violations: r.axe.violations.map(v => v.id), incomplete: r.axe.incomplete.length, overflow: r.hasHorizontalOverflow })),
+    audited: results.map(r => ({
+      path: r.path,
+      width: r.width,
+      violations: r.axe.violations.map(v => ({ id: v.id, nodes: v.nodes })),
+      incomplete: r.axe.incomplete.length,
+      overflow: r.hasHorizontalOverflow
+    })),
     aaaReflow,
     violationCount: violations.length,
     incompleteCount: incomplete.length,
