@@ -122,11 +122,13 @@ main{display:block}
 
 /* REPORT */
 .report-grid{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:clamp(1.5rem,5vw,4rem);align-items:center}
-.report-sheet{position:relative;min-width:0;padding:1.2rem;border:1px solid var(--border);border-radius:.9rem;background:var(--bg);box-shadow:0 22px 70px -52px var(--shadow-color)}
-.report-sheet-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-bottom:.9rem;border-bottom:1px solid var(--border)}
-.report-sheet-title{display:flex;align-items:center;gap:.6rem;font-weight:650}
-.report-lines{display:grid;gap:.65rem;padding-top:.9rem}
-.report-line{display:grid;grid-template-columns:auto 1fr;gap:.6rem;align-items:start;padding:.7rem;border-radius:.55rem;background:var(--surface)}
+.report-sheet{position:relative;min-width:0;max-width:100%;padding:clamp(16px,2.5vw,24px);border:1px solid var(--border);border-radius:.9rem;background:var(--bg);box-shadow:0 22px 70px -52px var(--shadow-color);overflow-wrap:anywhere}
+.report-sheet-head{display:flex;align-items:center;justify-content:space-between;gap:12px;min-width:0;max-width:100%;padding-bottom:14px;border-bottom:1px solid var(--border);flex-wrap:wrap}
+.report-sheet-title{display:flex;align-items:center;gap:10px;min-width:0;max-width:100%;font-weight:650;flex-wrap:wrap}
+.report-lines{display:grid;gap:10px;min-width:0;max-width:100%;padding-top:14px}
+.report-line{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px;align-items:start;min-width:0;max-width:100%;padding:12px;border-radius:.55rem;background:var(--surface);overflow-wrap:anywhere}
+.report-line>*{min-width:0;max-width:100%}
+.report-line strong,.report-line span{overflow-wrap:anywhere}
 .report-line .icon{margin-top:.15rem;color:var(--gold)}
 .report-line strong{display:block;font-weight:600}
 .report-line span{display:block;color:var(--muted)}
@@ -230,4 +232,11 @@ main{display:block}
   [data-text-size="aaa"] .audit-row{grid-template-columns:1fr}
   [data-text-size="aaa"] .audit-row-icon{width:auto;height:auto;justify-content:start}
   [data-text-size="aaa"] .audit-row-status{grid-column:auto}
+}
+
+.report-sheet-head .audit-level-badge{min-width:0;max-width:100%;white-space:normal;overflow-wrap:anywhere}
+.faq-list details p{overflow-wrap:anywhere}
+@media(max-width:480px){
+  [data-text-size="aaa"] .report-sheet-head{align-items:flex-start;flex-direction:column}
+  [data-text-size="aaa"] .report-line{grid-template-columns:1fr}
 }
