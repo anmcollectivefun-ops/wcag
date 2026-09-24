@@ -7,7 +7,7 @@ const palettes = {
   light: {
     bg:'#F7F3E8', surface:'#FFFDF8', surfaceAlt:'#EFE6D4',
     text:'#1F1A14', text2:'#3B3329', muted:'#514638',
-    gold:'#5A4728', border:'#8A7657', danger:'#8B1E1E', onGold:'#FFFFFF'
+    gold:'#5A2430', border:'#8A7657', danger:'#8B1E1E', onGold:'#FFFFFF'
   },
   dark: {
     bg:'#15120E', surface:'#1F1A14', surfaceAlt:'#2A231B',
@@ -17,7 +17,7 @@ const palettes = {
   reading: {
     bg:'#F3E7CF', surface:'#FAF2E3', surfaceAlt:'#E9D9BC',
     text:'#2A2117', text2:'#413426', muted:'#544431',
-    gold:'#5A4728', border:'#7D6849', danger:'#8B1E1E', onGold:'#FFFFFF'
+    gold:'#5A2430', border:'#7D6849', danger:'#8B1E1E', onGold:'#FFFFFF'
   }
 };
 
