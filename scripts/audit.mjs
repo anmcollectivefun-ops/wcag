@@ -92,6 +92,20 @@ try {
           text: (element.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 120)
         }];
       }).slice(0, 20);
+      const internallyOverflowing = [...document.querySelectorAll('body *')].flatMap(element => {
+        if (element.scrollWidth <= element.clientWidth + 1) return [];
+        const style = getComputedStyle(element);
+        return [{
+          tag: element.tagName.toLowerCase(),
+          id: element.id || null,
+          className: typeof element.className === 'string' ? element.className : null,
+          clientWidth: element.clientWidth,
+          scrollWidth: element.scrollWidth,
+          overflowX: style.overflowX,
+          whiteSpace: style.whiteSpace,
+          text: (element.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 120)
+        }];
+      }).slice(0, 25);
       return {
         rootFontSize: getComputedStyle(document.documentElement).fontSize,
         innerWidth,
@@ -99,7 +113,8 @@ try {
         bodyScrollWidth: document.body.scrollWidth,
         bodyOverflow: document.documentElement.scrollWidth > innerWidth + 1,
         activeSize: document.documentElement.dataset.textSize,
-        overflowing
+        overflowing,
+        internallyOverflowing
       };
     });
     pageTextScale.push({ path, name, ...scaleResult });
