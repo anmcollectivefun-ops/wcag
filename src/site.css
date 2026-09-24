@@ -1076,3 +1076,33 @@ html[data-text-size="aaa"] .kicker{
   font-size:.72rem!important;
   font-weight:500;
 }
+
+
+/* Lekka typografia górnej nawigacji — finalne nadpisanie starych wag. */
+.accessibility-bar .access-group button,
+.accessibility-bar .access-tool{
+  font-weight:350!important;
+}
+.accessibility-bar .access-group button[aria-pressed="true"],
+.accessibility-bar .access-tool[aria-pressed="true"]{
+  font-weight:400!important;
+}
+.accessibility-bar .access-group-label{
+  font-weight:350!important;
+}
+.navigation-row .brand-copy strong,
+.navigation-row .brand-copy span,
+.navigation-row .main-nav a{
+  font-weight:350!important;
+}
+.navigation-row .main-nav a[aria-current="page"]{
+  font-weight:400!important;
+}
+html[data-text-size="aa"] .accessibility-bar .access-group button,
+html[data-text-size="aaa"] .accessibility-bar .access-group button,
+html[data-text-size="aa"] .accessibility-bar .access-tool,
+html[data-text-size="aaa"] .accessibility-bar .access-tool,
+html[data-text-size="aa"] .navigation-row .main-nav a,
+html[data-text-size="aaa"] .navigation-row .main-nav a{
+  font-weight:350!important;
+}
