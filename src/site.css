@@ -1056,3 +1056,23 @@ html[data-text-size="aaa"] .navigation-row .main-nav a{
   font-size:17px;
   font-weight:400;
 }
+
+
+/* Etykiety nad sekcjami — bez dekoracyjnych kresek, mniejsze i lżejsze. */
+.kicker{
+  margin-bottom:.65rem;
+  font-size:.72rem!important;
+  font-weight:500;
+  line-height:1.35;
+  letter-spacing:.055em;
+  text-transform:uppercase;
+}
+.kicker::before{
+  content:none!important;
+  display:none!important;
+}
+html[data-text-size="aa"] .kicker,
+html[data-text-size="aaa"] .kicker{
+  font-size:.72rem!important;
+  font-weight:500;
+}
