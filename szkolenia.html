@@ -12,7 +12,9 @@
   <link rel="stylesheet" href="/src/theme.css">
   <link rel="stylesheet" href="/src/typography.css">
   <link rel="stylesheet" href="/src/site.css">
+  <script defer src="/assets/vendor/gsap.min.js"></script>
   <script type="module" src="/src/theme.mjs"></script>
+  <script type="module" src="/src/site.mjs"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Przejdź do treści</a>
@@ -36,9 +38,10 @@
         </div>
       </div>
     </div>
-    <nav class="main-nav" aria-label="Nawigacja główna">
-      <div class="shell">
-        <ul class="main-nav-list">
+    <nav class="main-nav" aria-label="Nawigacja główna" data-open="false">
+      <div class="shell nav-shell">
+        <button class="nav-toggle" type="button" data-nav-toggle data-icon="menu" aria-expanded="false" aria-controls="main-nav-list">Menu</button>
+        <ul class="main-nav-list" id="main-nav-list">
           <li><a href="/">Strona główna</a></li>
           <li><a href="/audyt.html">Audyt WCAG</a></li>
           <li><a href="/szkolenia.html" aria-current="page">Szkolenia</a></li>
@@ -51,7 +54,7 @@
   </header>
   <main id="main">
     <section class="page-hero">
-      <div class="shell hero-frame">
+      <div class="shell hero-frame" data-reveal>
         <div>
           <p class="kicker">SZKOLENIA</p>
           <h1>Dostępność, którą zespół potrafi stosować w codziennej pracy.</h1>
@@ -65,17 +68,17 @@
     </section>
     <section class="section">
       <div class="shell">
-        <div class="section-heading"><h2>Dla kogo</h2><p>Zakres szkolenia będzie można dopasować do roli zespołu i poziomu odpowiedzialności za dostępność.</p></div>
+        <div class="section-heading" data-reveal><h2>Dla kogo</h2><p>Zakres szkolenia będzie można dopasować do roli zespołu i poziomu odpowiedzialności za dostępność.</p></div>
         <div class="grid-3">
-          <article class="card"><h3>Właściciele i zespoły firmowe</h3><p>Jak rozpoznawać bariery, zlecać poprawki i odbierać prace związane z dostępnością.</p></article>
-          <article class="card"><h3>Projektanci i twórcy treści</h3><p>Kontrast, hierarchia, komponenty, teksty, formularze i materiały publikowane na stronie.</p></article>
-          <article class="card"><h3>Programiści</h3><p>Semantyczny HTML, klawiatura, fokus, ARIA, komunikaty statusu i testowanie komponentów.</p></article>
+          <article class="card" data-reveal><h3>Właściciele i zespoły firmowe</h3><p>Jak rozpoznawać bariery, zlecać poprawki i odbierać prace związane z dostępnością.</p></article>
+          <article class="card" data-reveal><h3>Projektanci i twórcy treści</h3><p>Kontrast, hierarchia, komponenty, teksty, formularze i materiały publikowane na stronie.</p></article>
+          <article class="card" data-reveal><h3>Programiści</h3><p>Semantyczny HTML, klawiatura, fokus, ARIA, komunikaty statusu i testowanie komponentów.</p></article>
         </div>
       </div>
     </section>
     <section class="section section-alt">
       <div class="shell split-section">
-        <div class="section-heading"><h2>Szkolenie może być połączone z audytem</h2><p>Zespół może pracować na własnej stronie lub aplikacji. Dzięki temu szkolenie nie kończy się na przykładach — uczestnicy widzą problemy w swoim produkcie i uczą się je poprawiać.</p></div>
+        <div class="section-heading" data-reveal><h2>Szkolenie może być połączone z audytem</h2><p>Zespół może pracować na własnej stronie lub aplikacji. Dzięki temu szkolenie nie kończy się na przykładach — uczestnicy widzą problemy w swoim produkcie i uczą się je poprawiać.</p></div>
         <a class="button button-primary" href="/kontakt.html">Zapytaj o szkolenie</a>
       </div>
     </section>
