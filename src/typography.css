@@ -29,7 +29,7 @@ h5,h6{font-size:1rem;font-weight:600}
 
 input,textarea,select,button,.button,.main-nav a{font-size:1rem}
 :where(
-  small,.brand-copy span,.kicker,.meta,.hero-note,.footer-copy p
+  small,.brand-copy span,.meta,.hero-note,.footer-copy p
 ){font-size:1rem!important}
 
 .shell,.hero-copy,.page-heading,.audit-panel,.hero-frame>*,.card,.footer-copy{min-width:0}
