@@ -62,3 +62,13 @@ test('motywy używają wyłącznie zatwierdzonego zestawu hex', async () => {
   const approved = new Set(Object.values(palettes).flatMap(Object.values).map(x => x.toUpperCase()));
   for (const color of actual) assert.ok(approved.has(color), 'Niezaakceptowany kolor: ' + color);
 });
+
+
+test('wysoki kontrast jest osobnym zapamiętywanym ustawieniem', async () => {
+  const js = await readFile(new URL('../src/theme.mjs', import.meta.url), 'utf8');
+  const css = await readFile(new URL('../src/theme.css', import.meta.url), 'utf8');
+  assert.match(js, /anm-access-high-contrast-v1/);
+  assert.match(js, /data\.contrast|dataset\.contrast/);
+  assert.match(js, /data-contrast-toggle/);
+  assert.match(css, /data-contrast="high"/);
+});
