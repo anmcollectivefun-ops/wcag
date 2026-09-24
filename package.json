@@ -2,7 +2,7 @@
   "name": "anm-access",
   "private": true,
   "version": "1.0.0",
-  "description": "ANM Access — dostępny, lokalny prototyp panelu zgłoszeń",
+  "description": "ANM Access — platforma dostępności i audytu WCAG 2.2",
   "type": "module",
   "engines": {
     "node": ">=20"
@@ -11,6 +11,10 @@
     "dev": "node server.mjs",
     "start": "node server.mjs",
     "test": "node --test tests/*.test.mjs",
-    "check": "node --check server.mjs && node --check src/tickets.mjs && node --check src/app.mjs && node --check src/lab.mjs && node --check src/contrast.mjs && npm test"
+    "check": "node --check server.mjs && node --check scripts/install-font.mjs && node --check src/theme.mjs && node --check src/tickets.mjs && node --check src/app.mjs && node --check src/lab.mjs && node --check src/contrast.mjs && npm test",
+    "postinstall": "node scripts/install-font.mjs"
+  },
+  "dependencies": {
+    "@fontsource-variable/atkinson-hyperlegible-next": "5.3.0"
   }
 }
