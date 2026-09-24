@@ -78,11 +78,26 @@ try {
     await page.setViewportSize({ width: 320, height: 860 });
     await page.goto(base + path, { waitUntil: 'networkidle' });
     await page.locator('[data-text-size-choice="aaa"]').click();
-    const scaleResult = await page.evaluate(() => ({
-      rootFontSize: getComputedStyle(document.documentElement).fontSize,
-      bodyOverflow: document.documentElement.scrollWidth > innerWidth + 1,
-      activeSize: document.documentElement.dataset.textSize
-    }));
+    const scaleResult = await page.evaluate(() => {
+      const overflowing = [...document.querySelectorAll('body *')].flatMap(element => {
+        const rect = element.getBoundingClientRect();
+        if (rect.right <= innerWidth + 1 && rect.left >= -1) return [];
+        return [{
+          tag: element.tagName.toLowerCase(),
+          id: element.id || null,
+          className: typeof element.className === 'string' ? element.className : null,
+          left: Math.round(rect.left),
+          right: Math.round(rect.right),
+          width: Math.round(rect.width)
+        }];
+      }).slice(0, 20);
+      return {
+        rootFontSize: getComputedStyle(document.documentElement).fontSize,
+        bodyOverflow: document.documentElement.scrollWidth > innerWidth + 1,
+        activeSize: document.documentElement.dataset.textSize,
+        overflowing
+      };
+    });
     pageTextScale.push({ path, name, ...scaleResult });
   }
   const interactions = { zoom200, warnsInvalidColours, buttonKeyboardResult, pageTextScale };
