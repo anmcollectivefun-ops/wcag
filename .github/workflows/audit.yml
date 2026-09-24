@@ -4,8 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'index.html'
-      - 'laboratorium.html'
+      - '*.html'
       - 'src/**'
       - 'server.mjs'
       - 'package.json'
