@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pl" data-theme="light">
+<html lang="pl" data-theme="light" data-text-size="a">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,8 +8,10 @@
   <title>ANM Access — dostępny panel zgłoszeń</title>
   <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
   <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/assets/fonts/atkinson.css">
   <link rel="stylesheet" href="/src/styles.css">
   <link rel="stylesheet" href="/src/theme.css">
+  <link rel="stylesheet" href="/src/typography.css">
   <script type="module" src="/src/theme.mjs"></script>
   <script type="module" src="/src/app.mjs"></script>
 </head>
@@ -29,10 +31,18 @@
         <a href="#dostepnosc" data-view-link="dostepnosc">Dostępność</a>
         <a href="/laboratorium.html">Laboratorium WCAG</a>
       </nav>
-      <div class="theme-switcher" role="group" aria-label="Motyw strony">
-        <button type="button" data-theme-choice="light" aria-pressed="true">Jasny</button>
-        <button type="button" data-theme-choice="dark" aria-pressed="false">Ciemny</button>
-        <button type="button" data-theme-choice="reading" aria-pressed="false">Czytanie</button>
+      <div class="accessibility-toolbar" role="group" aria-label="Ustawienia dostępności">
+        <div class="text-size-switcher" role="group" aria-label="Rozmiar tekstu">
+          <span class="switcher-label">Rozmiar tekstu</span>
+          <button type="button" data-text-size-choice="a" aria-pressed="true" aria-label="Rozmiar tekstu A, 100 procent">A</button>
+          <button type="button" data-text-size-choice="aa" aria-pressed="false" aria-label="Rozmiar tekstu AA, 150 procent">AA</button>
+          <button type="button" data-text-size-choice="aaa" aria-pressed="false" aria-label="Rozmiar tekstu AAA, 200 procent">AAA</button>
+        </div>
+        <div class="theme-switcher" role="group" aria-label="Motyw strony">
+          <button type="button" data-theme-choice="light" aria-pressed="true">Jasny</button>
+          <button type="button" data-theme-choice="dark" aria-pressed="false">Ciemny</button>
+          <button type="button" data-theme-choice="reading" aria-pressed="false">Czytanie</button>
+        </div>
       </div>
     </div>
   </header>
@@ -105,7 +115,7 @@
 
     <section class="view" id="view-dostepnosc" data-page="dostepnosc" aria-labelledby="heading-dostepnosc" hidden>
       <div class="page-heading"><span class="eyebrow">ANM ACCESS LAB</span><h1 id="heading-dostepnosc" tabindex="-1">Dostępność w praktyce</h1><p>Projektujemy interfejs z myślą o różnych sposobach korzystania z internetu, a następnie sprawdzamy go w testach.</p></div>
-      <div class="panel settings-panel"><h2>Dostosuj wyświetlanie</h2><p>Motyw całego serwisu zmienisz w przełączniku na górze strony. Tutaj możesz dodatkowo zwiększyć tekst.</p><div class="tool-actions"><button type="button" class="button button-outline" id="text-scale-toggle" aria-pressed="false">Większy tekst: wyłączony</button></div></div>
+      <div class="panel settings-panel"><h2>Dostosuj wyświetlanie</h2><p>Motyw i rozmiar tekstu ustawisz w stałym panelu dostępności na górze każdej strony. Ustawienia A, AA i AAA są zapamiętywane w całym ANM Access.</p></div>
       <div class="section-heading"><div><span class="eyebrow">CO SPRAWDZAMY</span><h2>Projektowanie i weryfikacja</h2></div></div>
       <div class="feature-grid access-grid"><article class="feature"><span class="feature-icon" aria-hidden="true">01</span><h3>Nawigacja</h3><p>Logiczna kolejność Tab, widoczny fokus i łącze „Przejdź do treści”.</p></article><article class="feature"><span class="feature-icon" aria-hidden="true">02</span><h3>Formularze</h3><p>Etykiety pól, opisane błędy i podsumowanie z linkami do poprawy.</p></article><article class="feature"><span class="feature-icon" aria-hidden="true">03</span><h3>Komunikaty</h3><p>Status przekazujemy również tekstem, bez polegania wyłącznie na kolorze.</p></article></div>
       <div class="panel audit-panel"><h2>Stan projektu i audytu</h2><p><strong>Cel projektowy:</strong> WCAG 2.2 AA.</p><p><strong>Stan weryfikacji:</strong> dostępne są testy jednostkowe i plan badań manualnych. Niezależny audyt dostępności nie został wykonany; nie deklarujemy pełnej zgodności.</p><p><strong>Do sprawdzenia:</strong> czytniki ekranu, kontrast rzeczywistych komponentów, powiększenie 400%, obsługa mobilna i testy użytkowników.</p><a class="text-link" href="https://www.w3.org/WAI/test-evaluate/" target="_blank" rel="noopener noreferrer">Materiały W3C o ocenie dostępności <span class="sr-only">(otwiera nową kartę)</span><span aria-hidden="true">↗</span></a></div>
