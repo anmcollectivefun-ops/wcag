@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="pl" data-theme="light" data-text-size="a">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Baza wiedzy ANM Access: praktyczne materiały o WCAG 2.2, dostępności cyfrowej, audytach i wdrażaniu poprawek.">
+  <meta name="theme-color" content="#FFFFFF">
+  <title>Baza wiedzy — ANM Access</title>
+  <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/assets/fonts/atkinson.css">
+  <link rel="stylesheet" href="/src/theme.css">
+  <link rel="stylesheet" href="/src/typography.css">
+  <link rel="stylesheet" href="/src/site.css">
+  <script type="module" src="/src/theme.mjs"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Przejdź do treści</a>
+  <header class="site-header">
+    <div class="shell header-primary">
+      <a class="brand" href="/" aria-label="ANM Access — strona główna">
+        <img src="/assets/logo.svg" alt="" width="44" height="44">
+        <span class="brand-copy"><strong>ANM Access</strong><span>Audyt dostępności cyfrowej</span></span>
+      </a>
+      <div class="accessibility-toolbar" role="group" aria-label="Ustawienia dostępności">
+        <div class="text-size-switcher" role="group" aria-label="Rozmiar tekstu">
+          <span class="switcher-label">Rozmiar tekstu</span>
+          <button type="button" data-text-size-choice="a" aria-pressed="true" aria-label="Rozmiar tekstu A, 100 procent">A</button>
+          <button type="button" data-text-size-choice="aa" aria-pressed="false" aria-label="Rozmiar tekstu AA, 150 procent">AA</button>
+          <button type="button" data-text-size-choice="aaa" aria-pressed="false" aria-label="Rozmiar tekstu AAA, 200 procent">AAA</button>
+        </div>
+        <div class="theme-switcher" role="group" aria-label="Motyw strony">
+          <button type="button" data-theme-choice="light" aria-pressed="true">Jasny</button>
+          <button type="button" data-theme-choice="dark" aria-pressed="false">Ciemny</button>
+          <button type="button" data-theme-choice="reading" aria-pressed="false">Czytanie</button>
+        </div>
+      </div>
+    </div>
+    <nav class="main-nav" aria-label="Nawigacja główna">
+      <div class="shell">
+        <ul class="main-nav-list">
+          <li><a href="/">Strona główna</a></li>
+          <li><a href="/audyt.html">Audyt WCAG</a></li>
+          <li><a href="/szkolenia.html">Szkolenia</a></li>
+          <li><a href="/baza-wiedzy.html" aria-current="page">Baza wiedzy</a></li>
+          <li><a href="/o-nas.html">O nas</a></li>
+          <li><a href="/kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="page-hero">
+      <div class="shell hero-frame">
+        <div>
+          <p class="kicker">BAZA WIEDZY</p>
+          <h1>WCAG bez języka, który trzeba tłumaczyć drugi raz.</h1>
+          <p class="hero-lead">Praktyczne materiały o dostępności cyfrowej: kryteria WCAG 2.2, przykłady błędów, sposoby naprawy oraz informacje dla właścicieli stron, projektantów i programistów.</p>
+        </div>
+        <aside class="hero-note" aria-label="Zakres bazy wiedzy">
+          <strong>A · AA · AAA</strong>
+          <p>Materiały porządkujemy według kryteriów, problemów i sposobu ich weryfikacji.</p>
+        </aside>
+      </div>
+    </section>
+    <section class="section">
+      <div class="shell">
+        <div class="section-heading"><h2>Znajdź temat według problemu</h2><p>Baza wiedzy będzie rozwijana razem z audytorem, tak aby z wyniku audytu można było przejść bezpośrednio do wyjaśnienia i sposobu naprawy.</p></div>
+        <div class="grid-3">
+          <article class="card"><span class="card-mark" aria-hidden="true">01</span><h3>Widoczność i czytelność</h3><p>Kontrast, kolory, tekst, powiększenie, reflow i elementy graficzne.</p></article>
+          <article class="card"><span class="card-mark" aria-hidden="true">02</span><h3>Klawiatura i fokus</h3><p>Nawigacja bez myszy, kolejność fokusu, modale, menu i elementy interaktywne.</p></article>
+          <article class="card"><span class="card-mark" aria-hidden="true">03</span><h3>Formularze i komunikaty</h3><p>Etykiety, błędy, instrukcje, statusy i poprawne przekazywanie informacji.</p></article>
+          <article class="card"><span class="card-mark" aria-hidden="true">04</span><h3>Czytniki ekranu</h3><p>Semantyka, nazwy, role, wartości i obsługa technologii wspomagających.</p></article>
+          <article class="card"><span class="card-mark" aria-hidden="true">05</span><h3>Prawo i wymagania</h3><p>WCAG 2.2, obowiązki dostępności i praktyczne znaczenie wymagań dla firm i instytucji.</p></article>
+          <article class="card"><span class="card-mark" aria-hidden="true">06</span><h3>Audyt i poprawki</h3><p>Jak wygląda badanie, co może sprawdzić automat i kiedy potrzebna jest ocena manualna.</p></article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div class="footer-copy"><strong>ANM Access</strong><p>Platforma ANM Collective do audytu i rozwoju dostępności cyfrowej zgodnie z WCAG 2.2.</p></div>
+      <nav class="footer-nav" aria-label="Nawigacja w stopce">
+        <a href="/audyt.html">Audyt WCAG</a>
+        <a href="/szkolenia.html">Szkolenia</a>
+        <a href="/baza-wiedzy.html">Baza wiedzy</a>
+        <a href="/o-nas.html">O nas</a>
+        <a href="/kontakt.html">Kontakt</a>
+      </nav>
+    </div>
+  </footer>
+  <div class="theme-announcer" data-theme-announcer role="status" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
