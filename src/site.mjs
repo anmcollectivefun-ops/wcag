@@ -57,8 +57,8 @@ function setupMotion() {
 
   const hero = targets.filter(el => el.closest('.page-hero'));
   if (hero.length) {
-    gsap.fromTo(hero, { autoAlpha: 0, y: 18 }, {
-      autoAlpha: 1, y: 0, duration: .65, stagger: .08, ease: 'power2.out'
+    gsap.fromTo(hero, { y: 18 }, {
+      y: 0, duration: .65, stagger: .08, ease: 'power2.out'
     });
   }
 
@@ -67,8 +67,8 @@ function setupMotion() {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
       observer.unobserve(entry.target);
-      gsap.fromTo(entry.target, { autoAlpha: 0, y: 18 }, {
-        autoAlpha: 1, y: 0, duration: .55, ease: 'power2.out',
+      gsap.fromTo(entry.target, { y: 18 }, {
+        y: 0, duration: .55, ease: 'power2.out',
         onComplete: () => entry.target.classList.add('is-visible')
       });
     });
