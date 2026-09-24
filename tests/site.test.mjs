@@ -89,3 +89,12 @@ test('górny pasek ma kompaktową typografię i nie łamie etykiet po literach p
   assert.match(css, /white-space:nowrap/);
   assert.match(css, /html\[data-text-size="aaa"\] \.accessibility-bar-inner[\s\S]*?flex-wrap:wrap/);
 });
+
+
+test('nagłówek ma lekką typografię 16–18 px niezależną od presetów A AA AAA', async () => {
+  const css = await readFile(new URL('../src/site.css', import.meta.url), 'utf8');
+  assert.match(css, /\.accessibility-bar :where\(\.access-group button,\.access-tool\)[\s\S]*?font-size:16px[\s\S]*?font-weight:400/);
+  assert.match(css, /\.navigation-row \.brand-copy strong[\s\S]*?font-size:18px[\s\S]*?font-weight:400/);
+  assert.match(css, /\.navigation-row \.main-nav a[\s\S]*?font-size:17px[\s\S]*?font-weight:400/);
+  assert.match(css, /html\[data-text-size="aaa"\][\s\S]*?font-size:16px/);
+});
