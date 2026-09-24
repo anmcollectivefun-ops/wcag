@@ -1358,3 +1358,118 @@ html[data-text-size="aaa"] .navigation-row .main-nav a{
     min-height:240px;
   }
 }
+
+
+/* Czym jest WCAG — editorial, bez kafelków. */
+.wcag-explainer{
+  padding-block:clamp(58px,7vw,100px);
+}
+.wcag-explainer-grid{
+  display:grid;
+  grid-template-columns:minmax(300px,.82fr) minmax(0,1.18fr);
+  gap:clamp(42px,7vw,96px);
+  align-items:start;
+}
+.wcag-explainer-intro{
+  position:relative;
+  min-width:0;
+}
+.wcag-mark{
+  margin:.25rem 0 1.1rem;
+  font-size:clamp(3.8rem,7.5vw,7.4rem);
+  font-weight:650;
+  line-height:.82;
+  letter-spacing:-.055em;
+  color:var(--gold);
+}
+.wcag-mark span{
+  display:block;
+  font-size:.43em;
+  margin-top:.2em;
+  letter-spacing:-.03em;
+}
+.wcag-explainer-intro h2{
+  max-width:16ch;
+  margin:0 0 1rem;
+}
+.wcag-explainer-intro>p:not(.kicker):not(.wcag-mark){
+  max-width:48ch;
+  margin:0;
+  color:var(--text2);
+}
+.wcag-principles{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px 14px;
+  margin-top:1.55rem;
+  padding-top:1.25rem;
+  border-top:1px solid var(--border);
+}
+.wcag-principles span{
+  position:relative;
+  padding-left:14px;
+  font-size:.86rem;
+  font-weight:500;
+  color:var(--text2);
+}
+.wcag-principles span::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:.58em;
+  width:5px;
+  height:5px;
+  border-radius:50%;
+  background:var(--gold);
+}
+.wcag-explainer-list{
+  border-top:1px solid var(--border);
+}
+.wcag-explainer-row{
+  display:grid;
+  grid-template-columns:72px minmax(0,1fr);
+  gap:clamp(18px,3vw,34px);
+  padding:clamp(28px,4vw,42px) 0;
+  border-bottom:1px solid var(--border);
+}
+.wcag-row-number{
+  font-size:1rem;
+  font-weight:600;
+  line-height:1.2;
+  color:var(--gold);
+}
+.wcag-explainer-row h3{
+  margin:0 0 .65rem;
+  font-size:1.22rem;
+  font-weight:550;
+}
+.wcag-explainer-row p{
+  max-width:62ch;
+  margin:0;
+  color:var(--text2);
+}
+@media(max-width:900px){
+  .wcag-explainer-grid{
+    grid-template-columns:1fr;
+    gap:38px;
+  }
+  .wcag-explainer-intro h2{
+    max-width:22ch;
+  }
+  .wcag-mark{
+    font-size:clamp(3.6rem,16vw,6rem);
+  }
+}
+@media(max-width:560px){
+  .wcag-explainer{
+    padding-block:44px;
+  }
+  .wcag-explainer-row{
+    grid-template-columns:44px minmax(0,1fr);
+    gap:14px;
+    padding:26px 0;
+  }
+  .wcag-explainer-row h3{
+    font-size:1.08rem;
+  }
+}
