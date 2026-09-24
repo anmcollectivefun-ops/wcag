@@ -1188,131 +1188,172 @@ html[data-text-size="aaa"] .navigation-row .main-nav a{
 
 
 
-/* Po co audyt — sekcja pod hero, konkretnie dla podmiotów publicznych. */
+
+
+/* Po co audyt — pięć konkretnych argumentów bezpośrednio pod hero. */
 .home-audit-why{
-  padding:clamp(44px,6vw,82px) 0;
+  padding:clamp(42px,5vw,72px) 0;
   border-top:1px solid var(--border);
   border-bottom:1px solid var(--border);
 }
-.home-audit-why-grid{
+.home-audit-why-heading{
+  max-width:760px;
+  margin-bottom:clamp(26px,4vw,42px);
+}
+.home-audit-why-heading h2{
+  max-width:20ch;
+}
+.home-audit-why-cards{
   display:grid;
-  grid-template-columns:minmax(300px,.82fr) minmax(0,1.18fr);
-  gap:clamp(34px,6vw,84px);
-  align-items:center;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:14px;
 }
-.home-audit-why-photo{
-  margin:0;
-}
-.home-audit-why-photo img{
-  display:block;
-  width:100%;
-  aspect-ratio:4/3;
-  object-fit:cover;
-  border-radius:24px;
-}
-.home-audit-why-copy{
+.home-audit-why-card{
   min-width:0;
+  padding:24px 20px 26px;
+  border:1px solid var(--border);
+  border-radius:18px;
+  background:var(--surface);
 }
-.home-audit-why-copy h2{
+.home-audit-why-card .icon-box{
+  margin-bottom:18px;
+}
+.home-audit-why-card h3{
+  margin:0 0 10px;
+}
+.home-audit-why-card p{
+  margin:0;
+  color:var(--text2);
+}
+@media(max-width:1100px){
+  .home-audit-why-cards{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+  .home-audit-why-card:last-child{
+    grid-column:1 / -1;
+  }
+}
+@media(max-width:620px){
+  .home-audit-why{
+    padding:34px 0;
+  }
+  .home-audit-why-cards{
+    grid-template-columns:1fr;
+  }
+  .home-audit-why-card:last-child{
+    grid-column:auto;
+  }
+}
+
+/* Osobny, mocny CTA sprzedażowy oparty na danych WebAIM 2026. */
+.home-numbers-cta{
+  padding:clamp(34px,5vw,70px) 0;
+}
+.home-numbers-cta-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1.08fr) minmax(320px,.92fr);
+  overflow:hidden;
+  border-radius:28px;
+  background:#5A2430;
+  color:#FFFFFF;
+  box-shadow:0 26px 70px color-mix(in srgb,var(--text) 16%,transparent);
+}
+.home-numbers-copy{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:center;
+  padding:clamp(34px,5vw,68px);
+}
+.home-numbers-copy .kicker{
+  color:#FFFFFF;
+  opacity:.82;
+}
+.home-numbers-copy h2{
   max-width:18ch;
-  margin-bottom:1rem;
-}
-.home-audit-why-lead{
-  max-width:62ch;
   margin:0;
+  color:#FFFFFF;
 }
-.home-audit-stat{
-  display:grid;
-  grid-template-columns:auto 1fr;
-  gap:20px;
-  align-items:center;
-  margin:1.7rem 0;
-  padding:18px 20px;
-  border-left:5px solid var(--gold);
-  background:var(--surface-alt);
-}
-.home-audit-stat strong{
-  font-size:clamp(2.5rem,5vw,4.6rem);
+.home-numbers-copy h2 span{
+  display:block;
+  margin-bottom:.06em;
+  font-size:clamp(3.8rem,7vw,7rem);
+  line-height:.88;
+  letter-spacing:-.045em;
   font-weight:650;
-  line-height:.9;
-  letter-spacing:-.04em;
-  color:var(--gold);
+  color:#FFFFFF;
 }
-.home-audit-stat span{
-  max-width:38ch;
-  font-weight:500;
+.home-numbers-copy>p:not(.kicker):not(.home-numbers-source){
+  max-width:54ch;
+  margin:1.15rem 0 0;
+  color:#FFFFFF;
 }
-.home-audit-why-list{
-  display:grid;
-  gap:13px;
-  margin:0;
-  padding:0;
-  list-style:none;
-}
-.home-audit-why-list li{
-  position:relative;
-  padding-left:30px;
-}
-.home-audit-why-list li::before{
-  content:"✓";
-  position:absolute;
-  left:0;
-  top:.05em;
-  font-weight:700;
-  color:var(--gold);
-}
-.home-audit-why-list strong{
+.home-numbers-copy strong{
   font-weight:650;
 }
-.home-audit-source{
-  margin:1.25rem 0 0;
+.home-numbers-source{
+  margin:1rem 0 0;
   font-size:.78rem;
-  color:var(--muted);
+  color:#FFFFFF;
+  opacity:.82;
 }
-.home-audit-source a{
+.home-numbers-source a{
   color:inherit;
   text-underline-offset:.18em;
 }
-.home-stat-button{
+.home-numbers-button{
   display:inline-flex;
   align-items:center;
   justify-content:center;
   gap:10px;
   min-height:48px;
-  margin-top:1.4rem;
-  padding:12px 20px;
-  border:2px solid var(--gold);
+  margin-top:1.45rem;
+  padding:12px 21px;
+  border:2px solid #FFFFFF;
   border-radius:999px;
-  background:var(--gold);
-  color:var(--on-gold);
-  font-weight:600;
+  background:#FFFFFF;
+  color:#5A2430;
+  font-weight:650;
   text-decoration:none;
 }
-.home-stat-button:hover,
-.home-stat-button:focus-visible{
+.home-numbers-button:hover,
+.home-numbers-button:focus-visible{
   background:transparent;
-  color:var(--gold);
+  color:#FFFFFF;
+}
+.home-numbers-photo{
+  min-height:100%;
+  margin:0;
+  background:var(--surface);
+}
+.home-numbers-photo img{
+  display:block;
+  width:100%;
+  height:100%;
+  min-height:520px;
+  object-fit:cover;
+  object-position:center;
 }
 @media(max-width:900px){
-  .home-audit-why-grid{
+  .home-numbers-cta-grid{
     grid-template-columns:1fr;
   }
-  .home-audit-why-photo{
-    order:2;
-  }
-  .home-audit-why-copy{
-    order:1;
-  }
-  .home-audit-why-copy h2{
-    max-width:22ch;
+  .home-numbers-photo img{
+    min-height:300px;
+    max-height:460px;
   }
 }
 @media(max-width:560px){
-  .home-audit-why{
-    padding:34px 0;
+  .home-numbers-cta{
+    padding:28px 0 36px;
   }
-  .home-audit-stat{
-    grid-template-columns:1fr;
-    gap:10px;
+  .home-numbers-cta-grid{
+    border-radius:20px;
+  }
+  .home-numbers-copy{
+    padding:28px 22px 30px;
+  }
+  .home-numbers-photo img{
+    min-height:240px;
   }
 }
