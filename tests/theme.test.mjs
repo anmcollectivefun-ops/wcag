@@ -5,14 +5,14 @@ import { contrastResult } from '../src/contrast.mjs';
 
 const palettes = {
   light: {
-    bg:'#F7F3E8', surface:'#FFFDF8', surfaceAlt:'#EFE6D4',
+    bg:'#FBF8F1', surface:'#FFFDFC', surfaceAlt:'#F4EDE2',
     text:'#1F1A14', text2:'#3B3329', muted:'#514638',
     gold:'#5A2430', border:'#8A7657', danger:'#8B1E1E', onGold:'#FFFFFF'
   },
   dark: {
-    bg:'#15120E', surface:'#1F1A14', surfaceAlt:'#2A231B',
-    text:'#FFF8E8', text2:'#F2E2C1', muted:'#E6D2AA',
-    gold:'#F2D28A', border:'#8F7B5A', danger:'#FFB0A8', onGold:'#1F1A14'
+    bg:'#16090D', surface:'#211016', surfaceAlt:'#2B141C',
+    text:'#FFF8F0', text2:'#F0DDE4', muted:'#E5C8D2',
+    gold:'#F2D28A', border:'#8D6975', danger:'#FFB0A8', onGold:'#1F1A14'
   },
   reading: {
     bg:'#F3E7CF', surface:'#FAF2E3', surfaceAlt:'#E9D9BC',
