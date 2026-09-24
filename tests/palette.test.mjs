@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { contrastResult } from '../src/contrast.mjs';
 
-const css = readFileSync(new URL('../src/styles.css', import.meta.url), 'utf8');
+const css = readFileSync(new URL('../src/site.css', import.meta.url), 'utf8');
 
 test('podstawowe kontrolki korzystają ze wspólnych tokenów kolorystycznych', () => {
   assert.match(css, /border:\s*2px solid var\(--border\)/);
