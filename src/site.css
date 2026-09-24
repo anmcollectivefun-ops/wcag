@@ -1212,31 +1212,20 @@ html[data-text-size="aaa"] .navigation-row .main-nav a{
 }
 .home-stat-cta-copy h2{
   margin:0;
-  max-width:15ch;
+  max-width:18ch;
   color:inherit;
-}
-.home-stat-number{
-  display:block;
-  margin-bottom:.08em;
-  font-size:clamp(3.4rem,7vw,6.7rem);
-  font-weight:650;
-  line-height:.9;
-  letter-spacing:-.045em;
 }
 .home-stat-cta-copy>p:not(.kicker):not(.home-stat-source){
   max-width:48ch;
   margin:1.3rem 0 0;
   color:inherit;
 }
-.home-stat-source{
+.home-stat-promise{
   margin:1rem 0 0;
-  font-size:.78rem;
   color:inherit;
 }
-.home-stat-source a{
-  color:inherit;
-  text-decoration-thickness:.09em;
-  text-underline-offset:.18em;
+.home-stat-promise strong{
+  font-weight:650;
 }
 .home-stat-button{
   display:inline-flex;
