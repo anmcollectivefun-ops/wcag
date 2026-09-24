@@ -1,23 +1,23 @@
 :root{
-  --theme-light-bg:#FFFFFF;
-  --theme-light-surface:#F7F7F5;
-  --theme-light-surface-alt:#EFEDEA;
-  --theme-light-text:#111111;
-  --theme-light-text-2:#333333;
-  --theme-light-muted:#4A4A4A;
-  --theme-light-gold:#574000;
-  --theme-light-border:#6B6B6B;
+  --theme-light-bg:#FCFDFD;
+  --theme-light-surface:#FFFFFF;
+  --theme-light-surface-alt:#EDF5F6;
+  --theme-light-text:#102126;
+  --theme-light-text-2:#263B42;
+  --theme-light-muted:#40565E;
+  --theme-light-gold:#174C6B;
+  --theme-light-border:#657880;
   --theme-light-danger:#8B1E1E;
 
-  --theme-dark-bg:#0B0B0B;
-  --theme-dark-surface:#161616;
-  --theme-dark-surface-alt:#202020;
-  --theme-dark-text:#F5F5F0;
-  --theme-dark-text-2:#D6D6D0;
-  --theme-dark-muted:#D6D6D0;
-  --theme-dark-gold:#D4AF37;
-  --theme-dark-border:#8B8B86;
-  --theme-dark-danger:#FF8A80;
+  --theme-dark-bg:#0A1114;
+  --theme-dark-surface:#101A1E;
+  --theme-dark-surface-alt:#162329;
+  --theme-dark-text:#F6FAFB;
+  --theme-dark-text-2:#D8E4E7;
+  --theme-dark-muted:#C4D1D5;
+  --theme-dark-gold:#A9DDF5;
+  --theme-dark-border:#82959C;
+  --theme-dark-danger:#FF9E96;
 
   --theme-reading-bg:#F5EBD7;
   --theme-reading-surface:#F0E4CB;
@@ -25,7 +25,7 @@
   --theme-reading-text:#2A241D;
   --theme-reading-text-2:#4A4035;
   --theme-reading-muted:#4A4035;
-  --theme-reading-gold:#574000;
+  --theme-reading-gold:#174C6B;
   --theme-reading-border:#7A6A56;
   --theme-reading-danger:#8B1E1E;
 }
@@ -42,7 +42,7 @@
   --focus:var(--theme-light-gold);
   --danger:var(--theme-light-danger);
   --danger-soft:color-mix(in srgb,var(--danger) 10%,var(--bg));
-  --on-gold:#FFFFFF;
+  --on-gold:#FCFDFD;
   --shadow-color:rgba(17,17,17,.18);
   --sample-muted:color-mix(in srgb,var(--text) 34%,var(--bg));
 }
@@ -59,7 +59,7 @@
   --focus:var(--theme-dark-gold);
   --danger:var(--theme-dark-danger);
   --danger-soft:color-mix(in srgb,var(--danger) 18%,var(--bg));
-  --on-gold:#111111;
+  --on-gold:#102126;
   --shadow-color:rgba(0,0,0,.55);
   --sample-muted:color-mix(in srgb,var(--text) 34%,var(--bg));
 }
@@ -76,7 +76,7 @@
   --focus:var(--theme-reading-gold);
   --danger:var(--theme-reading-danger);
   --danger-soft:color-mix(in srgb,var(--danger) 12%,var(--bg));
-  --on-gold:#F5EBD7;
+  --on-gold:#FFFFFF;
   --shadow-color:rgba(42,36,29,.2);
   --sample-muted:color-mix(in srgb,var(--text) 34%,var(--bg));
 }
