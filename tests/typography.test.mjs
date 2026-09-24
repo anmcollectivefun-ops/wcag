@@ -45,3 +45,11 @@ test('serwer obsługuje fonty woff i woff2 z własnej domeny', async () => {
   assert.match(server, /font\/woff2/);
   assert.match(server, /font\/woff/);
 });
+
+test('nagłówki mają spokojniejszą skalę i wagę 500', async () => {
+  const css = await readFile(new URL('../src/typography.css', import.meta.url), 'utf8');
+  assert.match(css, /h1\{font-size:1\.6667rem;font-weight:500\}/);
+  assert.match(css, /h2\{font-size:1\.4444rem;font-weight:500\}/);
+  assert.match(css, /h3\{font-size:1\.2222rem;font-weight:500\}/);
+  assert.match(css, /h4\{font-size:1\.1111rem;font-weight:500\}/);
+});
