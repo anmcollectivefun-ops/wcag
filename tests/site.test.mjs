@@ -45,3 +45,38 @@ test('każda publiczna strona korzysta z jednego arkusza układu', async () => {
     assert.match(html, /\/src\/site\.css/);
   }
 });
+
+
+test('każdy obraz na publicznych stronach ma jawny atrybut alt', async () => {
+  for (const [file] of pages) {
+    const html = await readFile(new URL(file, import.meta.url), 'utf8');
+    const images = html.match(/<img\b[^>]*>/g) || [];
+    for (const image of images) {
+      assert.match(image, /\balt="[^"]*"/, file + ': ' + image);
+    }
+  }
+});
+
+test('zdjęcia użytkowników na stronie głównej mają opisowe alty', async () => {
+  const html = await readFile(new URL('../index.html', import.meta.url), 'utf8');
+  assert.match(html, /niewidomadziewczyna\.webp" alt="Uśmiechnięta kobieta w okularach trzyma białą laskę używaną przez osoby niewidome i słabowidzące\."/);
+  assert.match(html, /niewidzacy\.webp" alt="Mężczyzna siedzi przy biurku i korzysta ze specjalistycznej klawiatury wspomagającej obsługę komputera przez osoby z dysfunkcją wzroku\."/);
+});
+
+test('każda publiczna strona ma wspólny górny pasek dostępności', async () => {
+  for (const [file] of pages) {
+    const html = await readFile(new URL(file, import.meta.url), 'utf8');
+    assert.match(html, /class="accessibility-bar"/);
+    assert.match(html, /data-contrast-toggle/);
+    assert.match(html, /data-read-page/);
+    assert.match(html, />PL<\/button>/);
+    assert.match(html, />EN<\/button>/);
+    assert.match(html, />UA<\/button>/);
+  }
+});
+
+test('czytnik strony uwzględnia niepuste alty obrazów', async () => {
+  const js = await readFile(new URL('../src/site.mjs', import.meta.url), 'utf8');
+  assert.match(js, /img\[alt\]:not\(\[alt=""\]\)/);
+  assert.match(js, /node\.getAttribute\('alt'\)/);
+});
