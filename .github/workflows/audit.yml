@@ -8,6 +8,8 @@ on:
       - 'laboratorium.html'
       - 'src/**'
       - 'server.mjs'
+      - 'package.json'
+      - 'scripts/install-font.mjs'
       - 'scripts/audit.mjs'
       - '.github/workflows/audit.yml'
 permissions:
