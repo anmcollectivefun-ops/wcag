@@ -34,6 +34,9 @@ for (const [name, palette] of Object.entries(palettes)) {
   test(name + ': tekst na złotym przycisku osiąga 7:1', () => {
     assert.equal(contrastResult(palette.onGold, palette.gold).aaaNormalText, true);
   });
+  test(name + ': obramowania kontrolek mają co najmniej 3:1 względem powierzchni', () => {
+    assert.ok(contrastResult(palette.border, palette.surface).ratio >= 3);
+  });
 }
 
 test('obie obecne strony używają wspólnego przełącznika trzech motywów', async () => {
