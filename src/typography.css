@@ -59,3 +59,21 @@ a,button,input,textarea,select{overflow-wrap:anywhere}
 .header-inner>*,.topbar-inner>*{min-width:0}
 [data-text-size="aaa"] .main-nav a,
 [data-text-size="aaa"] .topbar nav a{white-space:normal}
+
+/* Długie etykiety również muszą reflowować przy 200%, bez obcinania i bez ukrywania overflow. */
+.skip-link{
+  max-width:calc(100vw - 24px);
+  white-space:normal;
+  overflow-wrap:anywhere;
+}
+.choice,.choice span,.button,button,nav a{
+  min-width:0;
+  max-width:100%;
+  white-space:normal;
+  overflow-wrap:anywhere;
+}
+@media(max-width:760px){
+  [data-text-size="aaa"] .theme-switcher button{flex:1 1 100%}
+  [data-text-size="aaa"] .text-size-switcher button{flex:1 1 28%;padding-inline:6px}
+  [data-text-size="aaa"] .choice{width:100%}
+}
