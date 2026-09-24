@@ -76,7 +76,7 @@ function setupMotion() {
     const items = [...group.querySelectorAll('[data-reveal]')];
     if (!items.length) return;
 
-    gsap.set(items, { y: 82 });
+    gsap.set(items, { yPercent: 70 });
 
     const sequenceObserver = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -84,10 +84,10 @@ function setupMotion() {
         sequenceObserver.unobserve(entry.target);
 
         gsap.to(items, {
-          y: 0,
-          duration: 1.05,
-          stagger: .16,
-          ease: 'power3.out',
+          yPercent: 0,
+          duration: 1.22,
+          stagger: .18,
+          ease: 'power2.out',
           clearProps: 'willChange',
           onComplete: () => items.forEach(item => item.classList.add('is-visible'))
         });
