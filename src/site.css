@@ -48,13 +48,14 @@ main{display:block}
 .button-secondary{background:var(--surface);color:var(--gold)}
 .button:hover{background:var(--text);border-color:var(--text);color:var(--bg)}
 .hero-meta{display:flex;gap:.55rem 1rem;flex-wrap:wrap;margin:1.25rem 0 0;padding:0;list-style:none;color:var(--muted)}
-.hero-meta li{display:inline-flex;align-items:center;gap:.4rem}
+.hero-meta li{display:inline-flex;align-items:flex-start;gap:.4rem;min-width:0;max-width:100%;white-space:normal;overflow-wrap:anywhere}
 
 /* PANEL PRODUKTU W HERO */
 .audit-visual{position:relative;z-index:1;min-width:0;padding:1rem;border:1px solid var(--border);border-radius:1rem;background:var(--bg);box-shadow:0 26px 80px -54px var(--shadow-color);overflow:hidden}
 .audit-visual::before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,color-mix(in srgb,var(--gold) 8%,transparent),transparent 45%);pointer-events:none}
 .audit-visual-head{position:relative;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.35rem .2rem 1rem;border-bottom:1px solid var(--border)}
-.audit-visual-title{display:flex;align-items:center;gap:.65rem;font-weight:650}
+.audit-visual-title{display:flex;align-items:center;gap:.65rem;min-width:0;max-width:100%;font-weight:650;flex-wrap:wrap}
+.audit-visual-title>span:last-child{min-width:0;max-width:100%;overflow-wrap:anywhere}
 .audit-visual-icon{display:grid;place-items:center;width:2.3rem;height:2.3rem;border-radius:.55rem;background:var(--gold);color:var(--on-gold)}
 .audit-level-badges{display:flex;gap:.35rem;flex-wrap:wrap}
 .audit-level-badge{display:inline-grid;place-items:center;min-width:2.2rem;min-height:2.2rem;padding:.2rem .45rem;border:1px solid var(--border);border-radius:.45rem;font-weight:700}
@@ -62,9 +63,9 @@ main{display:block}
 .audit-visual-body{position:relative;display:grid;gap:.7rem;padding-top:1rem}
 .audit-row{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:.65rem;align-items:center;padding:.75rem;border:1px solid var(--border);border-radius:.6rem;background:var(--surface)}
 .audit-row-icon{display:grid;place-items:center;width:2rem;height:2rem;color:var(--gold)}
-.audit-row-copy{min-width:0}
-.audit-row-copy strong{display:block;font-weight:600}
-.audit-row-copy span{display:block;color:var(--muted)}
+.audit-row-copy{min-width:0;max-width:100%}
+.audit-row-copy strong{display:block;min-width:0;max-width:100%;font-weight:600;overflow-wrap:anywhere}
+.audit-row-copy span{display:block;min-width:0;max-width:100%;color:var(--muted);overflow-wrap:anywhere}
 .audit-row-status{font-weight:700;color:var(--gold)}
 .progress{height:.35rem;margin-top:.45rem;border-radius:999px;background:var(--surface-alt);overflow:hidden}
 .progress>span{display:block;width:var(--progress,0%);height:100%;background:var(--gold);border-radius:inherit}
@@ -170,8 +171,7 @@ main{display:block}
 .footer-copy p{margin:.35rem 0 0;color:var(--muted)}
 
 /* MOTION */
-.motion-ready [data-reveal]{visibility:hidden}
-.motion-ready [data-reveal].is-visible{visibility:visible}
+.motion-ready [data-reveal]{will-change:transform}
 
 /* RWD */
 @media(max-width:980px){
@@ -214,4 +214,19 @@ main{display:block}
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
   .scan-line{display:none}
+}
+
+@media(max-width:480px){
+  .audit-visual-head{align-items:flex-start;flex-direction:column}
+  .audit-level-badges{width:100%}
+}
+@media(max-width:480px){
+  [data-text-size="aaa"] .audit-visual{padding:.65rem}
+  [data-text-size="aaa"] .audit-visual-head{align-items:stretch}
+  [data-text-size="aaa"] .audit-visual-title{align-items:flex-start;flex-direction:column}
+  [data-text-size="aaa"] .audit-level-badges{display:grid;grid-template-columns:1fr}
+  [data-text-size="aaa"] .audit-level-badge{width:100%;min-width:0}
+  [data-text-size="aaa"] .audit-row{grid-template-columns:1fr}
+  [data-text-size="aaa"] .audit-row-icon{width:auto;height:auto;justify-content:start}
+  [data-text-size="aaa"] .audit-row-status{grid-column:auto}
 }
