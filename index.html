@@ -12,7 +12,9 @@
   <link rel="stylesheet" href="/src/theme.css">
   <link rel="stylesheet" href="/src/typography.css">
   <link rel="stylesheet" href="/src/site.css">
+  <script defer src="/assets/vendor/gsap.min.js"></script>
   <script type="module" src="/src/theme.mjs"></script>
+  <script type="module" src="/src/site.mjs"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Przejdź do treści</a>
@@ -36,9 +38,10 @@
         </div>
       </div>
     </div>
-    <nav class="main-nav" aria-label="Nawigacja główna">
-      <div class="shell">
-        <ul class="main-nav-list">
+    <nav class="main-nav" aria-label="Nawigacja główna" data-open="false">
+      <div class="shell nav-shell">
+        <button class="nav-toggle" type="button" data-nav-toggle data-icon="menu" aria-expanded="false" aria-controls="main-nav-list">Menu</button>
+        <ul class="main-nav-list" id="main-nav-list">
           <li><a href="/" aria-current="page">Strona główna</a></li>
           <li><a href="/audyt.html">Audyt WCAG</a></li>
           <li><a href="/szkolenia.html">Szkolenia</a></li>
@@ -51,33 +54,181 @@
   </header>
   <main id="main">
     <section class="page-hero">
-      <div class="shell">
-        <p class="kicker">WCAG 2.2 · A · AA · AAA</p>
-        <h1>Dostępność, którą da się sprawdzić.</h1>
-        <p class="hero-lead">ANM Access powstaje jako platforma do badania stron i aplikacji pod kątem WCAG 2.2. Łączymy testy automatyczne, weryfikację manualną i czytelny raport z dowodami.</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="/audyt.html">Przejdź do audytu WCAG</a>
-          <a class="button button-secondary" href="/o-nas.html">Poznaj ANM Access</a>
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <p class="kicker" data-reveal>WCAG 2.2 · A · AA · AAA</p>
+          <h1 data-reveal>Czy każdy może korzystać z Twojej strony?</h1>
+          <p class="hero-lead" data-reveal>Sprawdź stronę lub aplikację pod kątem WCAG 2.2. ANM Access łączy testy automatyczne z weryfikacją manualną i pokazuje nie tylko problem, ale też sposób jego naprawy.</p>
+          <div class="hero-actions" data-reveal>
+            <a class="button button-primary" href="/audyt.html" data-icon="scan-search">Rozpocznij audyt</a>
+            <a class="button button-secondary" href="#co-sprawdzamy" data-icon="arrow-right">Zobacz, co sprawdzamy</a>
+          </div>
+          <ul class="hero-meta" data-reveal aria-label="Najważniejsze elementy audytu">
+            <li data-icon="check">A / AA / AAA</li>
+            <li data-icon="check">testy automatyczne i manualne</li>
+            <li data-icon="check">raport z rekomendacjami</li>
+          </ul>
+        </div>
+
+        <div class="audit-visual" data-audit-visual data-reveal aria-label="Schemat wyniku audytu ANM Access">
+          <span class="scan-line" aria-hidden="true"></span>
+          <div class="audit-visual-head">
+            <div class="audit-visual-title">
+              <span class="audit-visual-icon" data-icon="scan-search"></span>
+              <span>Analiza dostępności</span>
+            </div>
+            <div class="audit-level-badges" aria-label="Poziomy WCAG">
+              <span class="audit-level-badge">A</span>
+              <span class="audit-level-badge">AA</span>
+              <span class="audit-level-badge">AAA</span>
+            </div>
+          </div>
+          <div class="audit-visual-body">
+            <div class="audit-row">
+              <span class="audit-row-icon" data-icon="eye"></span>
+              <div class="audit-row-copy"><strong>Postrzegalność</strong><span>kontrast, tekst, reflow</span><div class="progress"><span data-progress="84"></span></div></div>
+              <span class="audit-row-status">A–AAA</span>
+            </div>
+            <div class="audit-row">
+              <span class="audit-row-icon" data-icon="keyboard"></span>
+              <div class="audit-row-copy"><strong>Obsługa</strong><span>klawiatura, fokus, nawigacja</span><div class="progress"><span data-progress="71"></span></div></div>
+              <span class="audit-row-status">A–AAA</span>
+            </div>
+            <div class="audit-row">
+              <span class="audit-row-icon" data-icon="form"></span>
+              <div class="audit-row-copy"><strong>Formularze i procesy</strong><span>etykiety, błędy, logowanie</span><div class="progress"><span data-progress="63"></span></div></div>
+              <span class="audit-row-status">A–AAA</span>
+            </div>
+            <div class="audit-row">
+              <span class="audit-row-icon" data-icon="accessibility"></span>
+              <div class="audit-row-copy"><strong>Technologie wspomagające</strong><span>semantyka, role i komunikaty</span><div class="progress"><span data-progress="78"></span></div></div>
+              <span class="audit-row-status">A–AAA</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
+
+    <div class="trust-strip">
+      <div class="shell">
+        <ul class="trust-list" aria-label="Zakres ANM Access">
+          <li data-icon="shield-check">WCAG 2.2</li>
+          <li data-icon="scan-search">testy techniczne</li>
+          <li data-icon="users">weryfikacja manualna</li>
+          <li data-icon="file-check">raport i rekomendacje</li>
+        </ul>
+      </div>
+    </div>
+
+    <section class="section" id="co-sprawdzamy">
+      <div class="shell">
+        <div class="section-heading" data-reveal>
+          <p class="kicker">Bariery, których często nie widać</p>
+          <h2>Strona może wyglądać dobrze i nadal być niedostępna.</h2>
+          <p>Audyt bada nie tylko wygląd. Sprawdzamy, czy użytkownik może zobaczyć informacje, obsłużyć interfejs, zrozumieć komunikaty i korzystać z technologii wspomagających.</p>
+        </div>
+        <div class="grid-4">
+          <article class="card" data-reveal><span class="icon-box" data-icon="eye"></span><h3>Nie widzę</h3><p>Kontrast, powiększenie, reflow, tekst alternatywny i czytelność treści.</p></article>
+          <article class="card" data-reveal><span class="icon-box" data-icon="keyboard"></span><h3>Nie mogę obsłużyć</h3><p>Klawiatura, fokus, menu, modale, przyciski i cele dotykowe.</p></article>
+          <article class="card" data-reveal><span class="icon-box" data-icon="form"></span><h3>Nie rozumiem</h3><p>Formularze, instrukcje, błędy, logowanie i przewidywalność działania.</p></article>
+          <article class="card" data-reveal><span class="icon-box" data-icon="accessibility"></span><h3>Technologia mnie nie rozpoznaje</h3><p>Semantyka HTML, role, nazwy, stany i komunikaty dla czytników ekranu.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="shell feature-split">
+        <div class="section-heading" data-reveal>
+          <p class="kicker">Automat to dopiero początek</p>
+          <h2>Nie udajemy, że jeden skaner może sprawdzić wszystko.</h2>
+          <p>Część kryteriów da się zmierzyć automatycznie. Inne wymagają testu człowieka. Dlatego ANM Access rozdziela wynik według sposobu weryfikacji i jasno pokazuje, czego nie można uczciwie ocenić automatem.</p>
+          <a class="card-link" href="/audyt.html" data-icon="arrow-right">Zobacz metodę audytu</a>
+        </div>
+        <div class="feature-panel" data-reveal>
+          <h3>Każdy wynik ma status</h3>
+          <div class="status-stack">
+            <div class="status-item"><span data-icon="check"></span><div class="status-copy"><strong>Sprawdzone automatycznie</strong><span>Reguła ma jednoznaczny wynik techniczny.</span></div></div>
+            <div class="status-item"><span data-icon="users"></span><div class="status-copy"><strong>Zweryfikowane manualnie</strong><span>Wynik potwierdzony przez test człowieka.</span></div></div>
+            <div class="status-item"><span data-icon="search"></span><div class="status-copy"><strong>Wymaga oceny</strong><span>System nie zgaduje zgodności.</span></div></div>
+            <div class="status-item danger"><span data-icon="alert"></span><div class="status-copy"><strong>Niespełnione</strong><span>Wskazujemy problem i sposób poprawy.</span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section">
       <div class="shell">
-        <div class="section-heading"><h2>Jedno miejsce do pracy z dostępnością</h2><p>Projektujemy cały proces tak, aby wynik audytu był zrozumiały zarówno dla właściciela strony, jak i dla osoby technicznej odpowiedzialnej za poprawki.</p></div>
-        <div class="grid-3">
-          <article class="card"><span class="card-mark" aria-hidden="true">01</span><h3>Testy automatyczne</h3><p>Wykrywanie problemów, które można wiarygodnie sprawdzić programowo, wraz z przypisaniem do kryteriów WCAG.</p></article>
-          <article class="card"><span class="card-mark" aria-hidden="true">02</span><h3>Testy manualne</h3><p>Osobne miejsce na kryteria wymagające sprawdzenia klawiaturą, czytnikiem ekranu, powiększeniem i oceną człowieka.</p></article>
-          <article class="card"><span class="card-mark" aria-hidden="true">03</span><h3>Raport i poprawki</h3><p>Wynik ma wskazywać problem, lokalizację, poziom A/AA/AAA, sposób naprawy oraz status ponownego testu.</p></article>
+        <div class="section-heading" data-reveal>
+          <p class="kicker">Jak wygląda audyt</p>
+          <h2>Od strony do konkretnej listy poprawek.</h2>
+          <p>Proces jest czytelny także dla osoby, która nie zajmuje się WCAG technicznie.</p>
+        </div>
+        <div class="process-grid">
+          <article class="process-step" data-reveal><h3>Ustalamy zakres</h3><p>Strony, kluczowe procesy i elementy, które muszą zostać przebadane.</p></article>
+          <article class="process-step" data-reveal><h3>Badamy technicznie</h3><p>Automatycznie sprawdzamy kryteria, które można wiarygodnie zmierzyć.</p></article>
+          <article class="process-step" data-reveal><h3>Weryfikujemy manualnie</h3><p>Klawiatura, logika procesu, technologie wspomagające i kryteria wymagające oceny.</p></article>
+          <article class="process-step" data-reveal><h3>Przekazujemy wynik</h3><p>Problem, kryterium WCAG, lokalizacja, rekomendacja i status ponownego testu.</p></article>
         </div>
       </div>
     </section>
+
+    <section class="section section-alt">
+      <div class="shell report-grid">
+        <div class="report-sheet" data-reveal>
+          <div class="report-sheet-head">
+            <div class="report-sheet-title"><span data-icon="file-check"></span><span>Raport audytu</span></div>
+            <span class="audit-level-badge">WCAG 2.2</span>
+          </div>
+          <div class="report-lines">
+            <div class="report-line"><span data-icon="list-checks"></span><div><strong>Kryterium i poziom</strong><span>A / AA / AAA</span></div></div>
+            <div class="report-line"><span data-icon="search"></span><div><strong>Miejsce problemu</strong><span>konkretny ekran lub element</span></div></div>
+            <div class="report-line"><span data-icon="wrench"></span><div><strong>Sposób naprawy</strong><span>rekomendacja dla zespołu</span></div></div>
+            <div class="report-line"><span data-icon="shield-check"></span><div><strong>Ponowna weryfikacja</strong><span>czy poprawka rzeczywiście rozwiązała problem</span></div></div>
+          </div>
+        </div>
+        <div class="section-heading" data-reveal>
+          <p class="kicker">Raport, z którym da się pracować</p>
+          <h2>Nie kończymy na komunikacie „masz błąd”.</h2>
+          <p>Wynik ma być użyteczny dla właściciela strony, projektanta i programisty. Pokazujemy, czego dotyczy problem, jaki ma poziom WCAG i co trzeba zrobić dalej.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="/audyt.html" data-icon="scan-search">Zobacz Audyt WCAG</a>
+            <a class="button button-secondary" href="/kontakt.html" data-icon="wrench">Zapytaj o poprawki</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <div class="section-heading" data-reveal>
+          <p class="kicker">Audyt i wdrożenie</p>
+          <h2>Nie musisz zostać sam z raportem.</h2>
+          <p>ANM Collective może wdrożyć wskazane poprawki w istniejącej stronie, sklepie lub aplikacji, a następnie przeprowadzić ponowną weryfikację.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card" data-reveal><span class="icon-box" data-icon="scan-search"></span><h3>Audyt</h3><p>Wykrywamy bariery i porządkujemy je według WCAG 2.2.</p></article>
+          <article class="card" data-reveal><span class="icon-box" data-icon="wrench"></span><h3>Poprawki</h3><p>Możemy przejąć wdrożenie albo przekazać precyzyjne zalecenia Twojemu zespołowi.</p></article>
+          <article class="card" data-reveal><span class="icon-box" data-icon="shield-check"></span><h3>Ponowny test</h3><p>Sprawdzamy, czy poprawka faktycznie usunęła barierę i nie stworzyła kolejnej.</p></article>
+        </div>
+      </div>
+    </section>
+
     <section class="section section-alt">
       <div class="shell">
-        <div class="section-heading"><h2>Dostępność jest częścią samego ANM Access</h2><p>Interfejs platformy korzysta ze wspólnych zasad kontrastu, trzech motywów oraz globalnego skalowania tekstu A, AA i AAA. Kolejne wymagania WCAG wdrażamy i testujemy etapami.</p></div>
-        <div class="grid-2">
-          <article class="card"><h3>Trzy motywy</h3><p>Jasny, ciemny i tryb czytania korzystają z osobnych zestawów kolorów o sprawdzonym kontraście.</p></article>
-          <article class="card"><h3>Tekst do 200%</h3><p>Globalny przełącznik A / AA / AAA zmienia rozmiar tekstu w całym serwisie i zachowuje ustawienie między podstronami.</p></article>
+        <div class="section-heading" data-reveal><p class="kicker">Najczęstsze pytania</p><h2>Audyt WCAG w kilku prostych odpowiedziach.</h2></div>
+        <div class="faq-list">
+          <details data-reveal><summary>Czy audyt ANM Access będzie płatny?</summary><p>Tak. Zakres i cena będą zależeć od wielkości serwisu, liczby procesów oraz zakresu testów manualnych. Przed rozpoczęciem badania klient pozna zakres i koszt.</p></details>
+          <details data-reveal><summary>Czy automat może potwierdzić pełną zgodność?</summary><p>Nie wszystkie kryteria WCAG można ocenić automatycznie. Dlatego raport oddziela testy techniczne od tych, które wymagają oceny człowieka.</p></details>
+          <details data-reveal><summary>Czy badacie również poziom AAA?</summary><p>Tak. Wyniki będą porządkowane według kryteriów A, AA i AAA, z informacją o sposobie przeprowadzenia testu.</p></details>
+          <details data-reveal><summary>Czy możecie poprawić wykryte błędy?</summary><p>Tak. ANM Collective może wdrożyć poprawki, a potem wykonać ponowną weryfikację.</p></details>
         </div>
+      </div>
+    </section>
+
+    <section class="section final-cta">
+      <div class="shell final-cta-inner" data-reveal>
+        <div><p class="kicker">ANM Access</p><h2>Sprawdź, gdzie Twoja strona stawia bariery.</h2><p>Audyt WCAG 2.2 pokaże, co działa, co wymaga poprawy i co trzeba zweryfikować manualnie.</p></div>
+        <a class="button button-primary" href="/audyt.html" data-icon="arrow-right">Przejdź do audytu</a>
       </div>
     </section>
   </main>
