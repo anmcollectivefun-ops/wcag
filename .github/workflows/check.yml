@@ -13,5 +13,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Zainstaluj zaleznosci
+        run: npm install
       - name: Testy i kontrola skladni
         run: npm run check
