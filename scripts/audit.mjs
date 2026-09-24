@@ -88,11 +88,15 @@ try {
           className: typeof element.className === 'string' ? element.className : null,
           left: Math.round(rect.left),
           right: Math.round(rect.right),
-          width: Math.round(rect.width)
+          width: Math.round(rect.width),
+          text: (element.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 120)
         }];
       }).slice(0, 20);
       return {
         rootFontSize: getComputedStyle(document.documentElement).fontSize,
+        innerWidth,
+        rootScrollWidth: document.documentElement.scrollWidth,
+        bodyScrollWidth: document.body.scrollWidth,
         bodyOverflow: document.documentElement.scrollWidth > innerWidth + 1,
         activeSize: document.documentElement.dataset.textSize,
         overflowing
