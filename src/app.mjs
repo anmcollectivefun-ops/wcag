@@ -234,23 +234,16 @@ $('#reset-data').addEventListener('click', () => {
 function readPrefs() {
   try {
     const value = JSON.parse(storage?.getItem(prefKey) || '{}');
-    return { contrast: value.contrast === true, text: value.text === true };
-  } catch { return { contrast: false, text: false }; }
+    return { text: value.text === true };
+  } catch { return { text: false }; }
 }
 let preferences = readPrefs();
 function syncPrefs() {
-  document.documentElement.classList.toggle('high-contrast', preferences.contrast);
   document.documentElement.classList.toggle('large-text', preferences.text);
-  $('#contrast-toggle').setAttribute('aria-pressed', String(preferences.contrast));
-  $('#contrast-toggle').textContent = `Wysoki kontrast: ${preferences.contrast ? 'włączony' : 'wyłączony'}`;
   $('#text-scale-toggle').setAttribute('aria-pressed', String(preferences.text));
   $('#text-scale-toggle').textContent = `Większy tekst: ${preferences.text ? 'włączony' : 'wyłączony'}`;
   try { storage?.setItem(prefKey, JSON.stringify(preferences)); } catch { /* preferencje pozostają w bieżącej sesji */ }
 }
-$('#contrast-toggle').addEventListener('click', () => {
-  preferences = { ...preferences, contrast: !preferences.contrast };
-  syncPrefs(); announce(`Wysoki kontrast ${preferences.contrast ? 'włączony' : 'wyłączony'}.`);
-});
 $('#text-scale-toggle').addEventListener('click', () => {
   preferences = { ...preferences, text: !preferences.text };
   syncPrefs(); announce(`Większy tekst ${preferences.text ? 'włączony' : 'wyłączony'}.`);
