@@ -7,7 +7,7 @@ a{color:var(--gold);text-underline-offset:.18em;text-decoration-thickness:.08em}
 a:hover{text-decoration-thickness:.14em}
 :focus-visible{outline:3px solid var(--focus);outline-offset:4px}
 [hidden]{display:none!important}
-.shell{width:min(1180px,calc(100% - 48px));margin-inline:auto}
+.shell{width:min(1320px,calc(100% - 32px));margin-inline:auto}
 .icon{width:1.2em;height:1.2em;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
 .skip-link{position:fixed;z-index:100;top:12px;left:12px;max-width:calc(100vw - 24px);transform:translateY(-180%);padding:.65rem .9rem;border:3px solid var(--focus);border-radius:.5rem;background:var(--surface);color:var(--text);font-weight:700}
 .skip-link:focus{transform:none}
@@ -458,7 +458,7 @@ main{display:block}
 }
 .home-hero::after{display:none}
 .home-hero-shell{
-  width:min(1180px,calc(100% - 48px));
+  width:min(1320px,calc(100% - 32px));
   display:grid;
   gap:clamp(1.8rem,4vw,3rem);
 }
