@@ -115,3 +115,13 @@ test('górny pasek i menu nie dziedziczą starego font-weight 800', async () => 
   assert.match(site, /aria-pressed="true"\][\s\S]*?font-weight:400!important/);
   assert.match(site, /\.navigation-row \.main-nav a[\s\S]*?font-weight:350!important/);
 });
+
+
+test('wszystkie publiczne strony używają właściwego logo ANM Collective', async () => {
+  for (const [file] of pages) {
+    const html = await readFile(new URL(file, import.meta.url), 'utf8');
+    assert.match(html, /ANM-Collective%20mobile\.webp/);
+    assert.match(html, /alt="ANM Collective"/);
+    assert.doesNotMatch(html, /brand-copy/);
+  }
+});
