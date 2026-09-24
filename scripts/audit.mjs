@@ -73,7 +73,19 @@ try {
   await button.focus();
   await page.keyboard.press('Enter');
   const buttonKeyboardResult = /Przycisk w poprawionej próbce działa również z klawiatury/.test(await page.locator('#interaction-message').innerText());
-  const interactions = { zoom200, warnsInvalidColours, buttonKeyboardResult };
+  const pageTextScale = [];
+  for (const [path, name] of [['/', 'home'], ['/laboratorium.html', 'lab']]) {
+    await page.setViewportSize({ width: 320, height: 860 });
+    await page.goto(base + path, { waitUntil: 'networkidle' });
+    await page.locator('[data-text-size-choice="aaa"]').click();
+    const scaleResult = await page.evaluate(() => ({
+      rootFontSize: getComputedStyle(document.documentElement).fontSize,
+      bodyOverflow: document.documentElement.scrollWidth > innerWidth + 1,
+      activeSize: document.documentElement.dataset.textSize
+    }));
+    pageTextScale.push({ path, name, ...scaleResult });
+  }
+  const interactions = { zoom200, warnsInvalidColours, buttonKeyboardResult, pageTextScale };
   const violations = results.flatMap(page => page.axe.violations.map(v => ({
     path: page.path, width: page.width, ...v
   })));
@@ -106,6 +118,7 @@ try {
   lines.push('', '## Testy interakcji', '- Powiększenie 200%: ' + JSON.stringify(zoom200),
     '- Ostrzeżenie o niskim kontraście: ' + warnsInvalidColours,
     '- Aktywacja przycisku klawiaturą: ' + buttonKeyboardResult,
+    '- Globalny rozmiar AAA / 200%: ' + JSON.stringify(pageTextScale),
     '', '## Zakres niezweryfikowany', '- Ręczne testy czytników ekranu i nawigacji w całym procesie.',
     '- Obiektywny audyt wszystkich właściwych kryteriów A/AA/AAA.',
     '- Testy z osobami słabowidzącymi.', '',
