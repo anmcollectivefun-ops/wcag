@@ -3,7 +3,7 @@ const TEXT_KEY = 'anm-access-text-size-v1';
 const CONTRAST_KEY = 'anm-access-high-contrast-v1';
 const THEMES = new Set(['light','dark','reading']);
 const TEXT_SIZES = new Set(['a','aa','aaa']);
-const COLORS = { light:'#FCFDFD', dark:'#0A1114', reading:'#F5EBD7' };
+const COLORS = { light:'#F7F3E8', dark:'#15120E', reading:'#F3E7CF' };
 
 function storedTheme(){
   try {
