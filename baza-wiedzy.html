@@ -12,7 +12,9 @@
   <link rel="stylesheet" href="/src/theme.css">
   <link rel="stylesheet" href="/src/typography.css">
   <link rel="stylesheet" href="/src/site.css">
+  <script defer src="/assets/vendor/gsap.min.js"></script>
   <script type="module" src="/src/theme.mjs"></script>
+  <script type="module" src="/src/site.mjs"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Przejdź do treści</a>
@@ -36,9 +38,10 @@
         </div>
       </div>
     </div>
-    <nav class="main-nav" aria-label="Nawigacja główna">
-      <div class="shell">
-        <ul class="main-nav-list">
+    <nav class="main-nav" aria-label="Nawigacja główna" data-open="false">
+      <div class="shell nav-shell">
+        <button class="nav-toggle" type="button" data-nav-toggle data-icon="menu" aria-expanded="false" aria-controls="main-nav-list">Menu</button>
+        <ul class="main-nav-list" id="main-nav-list">
           <li><a href="/">Strona główna</a></li>
           <li><a href="/audyt.html">Audyt WCAG</a></li>
           <li><a href="/szkolenia.html">Szkolenia</a></li>
@@ -51,7 +54,7 @@
   </header>
   <main id="main">
     <section class="page-hero">
-      <div class="shell hero-frame">
+      <div class="shell hero-frame" data-reveal>
         <div>
           <p class="kicker">BAZA WIEDZY</p>
           <h1>WCAG bez języka, który trzeba tłumaczyć drugi raz.</h1>
@@ -65,14 +68,14 @@
     </section>
     <section class="section">
       <div class="shell">
-        <div class="section-heading"><h2>Znajdź temat według problemu</h2><p>Baza wiedzy będzie rozwijana razem z audytorem, tak aby z wyniku audytu można było przejść bezpośrednio do wyjaśnienia i sposobu naprawy.</p></div>
+        <div class="section-heading" data-reveal><h2>Znajdź temat według problemu</h2><p>Baza wiedzy będzie rozwijana razem z audytorem, tak aby z wyniku audytu można było przejść bezpośrednio do wyjaśnienia i sposobu naprawy.</p></div>
         <div class="grid-3">
-          <article class="card"><span class="card-mark" aria-hidden="true">01</span><h3>Widoczność i czytelność</h3><p>Kontrast, kolory, tekst, powiększenie, reflow i elementy graficzne.</p></article>
-          <article class="card"><span class="card-mark" aria-hidden="true">02</span><h3>Klawiatura i fokus</h3><p>Nawigacja bez myszy, kolejność fokusu, modale, menu i elementy interaktywne.</p></article>
-          <article class="card"><span class="card-mark" aria-hidden="true">03</span><h3>Formularze i komunikaty</h3><p>Etykiety, błędy, instrukcje, statusy i poprawne przekazywanie informacji.</p></article>
-          <article class="card"><span class="card-mark" aria-hidden="true">04</span><h3>Czytniki ekranu</h3><p>Semantyka, nazwy, role, wartości i obsługa technologii wspomagających.</p></article>
-          <article class="card"><span class="card-mark" aria-hidden="true">05</span><h3>Prawo i wymagania</h3><p>WCAG 2.2, obowiązki dostępności i praktyczne znaczenie wymagań dla firm i instytucji.</p></article>
-          <article class="card"><span class="card-mark" aria-hidden="true">06</span><h3>Audyt i poprawki</h3><p>Jak wygląda badanie, co może sprawdzić automat i kiedy potrzebna jest ocena manualna.</p></article>
+          <article class="card" data-reveal><span class="card-mark" aria-hidden="true">01</span><h3>Widoczność i czytelność</h3><p>Kontrast, kolory, tekst, powiększenie, reflow i elementy graficzne.</p></article>
+          <article class="card" data-reveal><span class="card-mark" aria-hidden="true">02</span><h3>Klawiatura i fokus</h3><p>Nawigacja bez myszy, kolejność fokusu, modale, menu i elementy interaktywne.</p></article>
+          <article class="card" data-reveal><span class="card-mark" aria-hidden="true">03</span><h3>Formularze i komunikaty</h3><p>Etykiety, błędy, instrukcje, statusy i poprawne przekazywanie informacji.</p></article>
+          <article class="card" data-reveal><span class="card-mark" aria-hidden="true">04</span><h3>Czytniki ekranu</h3><p>Semantyka, nazwy, role, wartości i obsługa technologii wspomagających.</p></article>
+          <article class="card" data-reveal><span class="card-mark" aria-hidden="true">05</span><h3>Prawo i wymagania</h3><p>WCAG 2.2, obowiązki dostępności i praktyczne znaczenie wymagań dla firm i instytucji.</p></article>
+          <article class="card" data-reveal><span class="card-mark" aria-hidden="true">06</span><h3>Audyt i poprawki</h3><p>Jak wygląda badanie, co może sprawdzić automat i kiedy potrzebna jest ocena manualna.</p></article>
         </div>
       </div>
     </section>
