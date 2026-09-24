@@ -21,7 +21,7 @@
 
   --theme-reading-bg:#F3E7CF;
   --theme-reading-surface:#FAF2E3;
-  --theme-reading-surface-alt:#F3E7CF;
+  --theme-reading-surface-alt:#E9D9BC;
   --theme-reading-text:#2A2117;
   --theme-reading-text-2:#413426;
   --theme-reading-muted:#544431;
@@ -42,7 +42,7 @@
   --focus:var(--theme-light-gold);
   --danger:var(--theme-light-danger);
   --danger-soft:color-mix(in srgb,var(--danger) 10%,var(--bg));
-  --on-gold:#F7F3E8;
+  --on-gold:#FFFFFF;
   --shadow-color:rgba(17,17,17,.18);
   --sample-muted:color-mix(in srgb,var(--text) 34%,var(--bg));
 }
