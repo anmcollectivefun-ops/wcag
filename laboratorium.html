@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pl" data-theme="light">
+<html lang="pl" data-theme="light" data-text-size="a">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,6 +9,7 @@
   <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
   <link rel="stylesheet" href="/src/lab.css">
   <link rel="stylesheet" href="/src/theme.css">
+  <link rel="stylesheet" href="/src/typography.css">
   <script type="module" src="/src/theme.mjs"></script>
   <script type="module" src="/src/lab.mjs"></script>
 </head>
@@ -18,10 +19,18 @@
     <div class="wrap topbar-inner">
       <a class="brand" href="/" aria-label="ANM Access — strona główna"><img src="/assets/logo.svg" width="36" height="36" alt=""><span>ANM <strong>Access</strong><small>Laboratorium dostępności</small></span></a>
       <nav aria-label="Nawigacja główna"><a href="/">ANM Access</a><a href="#laboratorium" aria-current="page">Laboratorium</a><a href="#co-dalej">Jak weryfikujemy</a></nav>
-      <div class="theme-switcher" role="group" aria-label="Motyw strony">
-        <button type="button" data-theme-choice="light" aria-pressed="true">Jasny</button>
-        <button type="button" data-theme-choice="dark" aria-pressed="false">Ciemny</button>
-        <button type="button" data-theme-choice="reading" aria-pressed="false">Czytanie</button>
+      <div class="accessibility-toolbar" role="group" aria-label="Ustawienia dostępności">
+        <div class="text-size-switcher" role="group" aria-label="Rozmiar tekstu">
+          <span class="switcher-label">Rozmiar tekstu</span>
+          <button type="button" data-text-size-choice="a" aria-pressed="true" aria-label="Rozmiar tekstu A, 100 procent">A</button>
+          <button type="button" data-text-size-choice="aa" aria-pressed="false" aria-label="Rozmiar tekstu AA, 150 procent">AA</button>
+          <button type="button" data-text-size-choice="aaa" aria-pressed="false" aria-label="Rozmiar tekstu AAA, 200 procent">AAA</button>
+        </div>
+        <div class="theme-switcher" role="group" aria-label="Motyw strony">
+          <button type="button" data-theme-choice="light" aria-pressed="true">Jasny</button>
+          <button type="button" data-theme-choice="dark" aria-pressed="false">Ciemny</button>
+          <button type="button" data-theme-choice="reading" aria-pressed="false">Czytanie</button>
+        </div>
       </div>
     </div>
   </header>
