@@ -1193,7 +1193,6 @@ html[data-text-size="aaa"] .navigation-row .main-nav a{
 /* Po co audyt — pięć konkretnych argumentów bezpośrednio pod hero. */
 .home-audit-why{
   padding:clamp(42px,5vw,72px) 0;
-  border-top:1px solid var(--border);
   border-bottom:1px solid var(--border);
 }
 .home-audit-why-heading{
