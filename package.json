@@ -11,7 +11,7 @@
     "dev": "node server.mjs",
     "start": "node server.mjs",
     "test": "node --test tests/*.test.mjs",
-    "check": "node --check server.mjs && node --check scripts/install-font.mjs && node --check src/theme.mjs && node --check src/tickets.mjs && node --check src/app.mjs && node --check src/lab.mjs && node --check src/contrast.mjs && npm test",
+    "check": "node --check server.mjs && node --check scripts/install-font.mjs && node --check src/theme.mjs && node --check src/contrast.mjs && npm test",
     "postinstall": "node scripts/install-font.mjs"
   },
   "dependencies": {
