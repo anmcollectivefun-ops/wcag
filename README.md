@@ -6,9 +6,10 @@ ANM Access to rozwijana przez ANM Collective platforma do audytu dostępności c
 
 - Strona główna: `/`
 - Audyt WCAG: `/audyt.html`
+- Szkolenia: `/szkolenia.html`
+- Baza wiedzy: `/baza-wiedzy.html`
 - O nas: `/o-nas.html`
 - Kontakt: `/kontakt.html`
-- Aktualności: `/aktualnosci.html`
 
 Wszystkie strony korzystają z jednego systemu kolorów, trzech motywów (jasny, ciemny, czytanie), Atkinson Hyperlegible Next oraz globalnego skalowania tekstu A / AA / AAA = 100% / 150% / 200%.
 
