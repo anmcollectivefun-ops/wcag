@@ -70,42 +70,16 @@
           </ul>
         </div>
 
-        <div class="audit-visual" data-audit-visual data-reveal aria-label="Schemat wyniku audytu ANM Access">
-          <span class="scan-line" aria-hidden="true"></span>
-          <div class="audit-visual-head">
-            <div class="audit-visual-title">
-              <span class="audit-visual-icon" data-icon="scan-search"></span>
-              <span>Analiza dostępności</span>
-            </div>
-            <div class="audit-level-badges" aria-label="Poziomy WCAG">
-              <span class="audit-level-badge">A</span>
-              <span class="audit-level-badge">AA</span>
-              <span class="audit-level-badge">AAA</span>
-            </div>
-          </div>
-          <div class="audit-visual-body">
-            <div class="audit-row">
-              <span class="audit-row-icon" data-icon="eye"></span>
-              <div class="audit-row-copy"><strong>Postrzegalność</strong><span>kontrast, tekst, reflow</span><div class="progress"><span data-progress="84"></span></div></div>
-              <span class="audit-row-status">A–AAA</span>
-            </div>
-            <div class="audit-row">
-              <span class="audit-row-icon" data-icon="keyboard"></span>
-              <div class="audit-row-copy"><strong>Obsługa</strong><span>klawiatura, fokus, nawigacja</span><div class="progress"><span data-progress="71"></span></div></div>
-              <span class="audit-row-status">A–AAA</span>
-            </div>
-            <div class="audit-row">
-              <span class="audit-row-icon" data-icon="form"></span>
-              <div class="audit-row-copy"><strong>Formularze i procesy</strong><span>etykiety, błędy, logowanie</span><div class="progress"><span data-progress="63"></span></div></div>
-              <span class="audit-row-status">A–AAA</span>
-            </div>
-            <div class="audit-row">
-              <span class="audit-row-icon" data-icon="accessibility"></span>
-              <div class="audit-row-copy"><strong>Technologie wspomagające</strong><span>semantyka, role i komunikaty</span><div class="progress"><span data-progress="78"></span></div></div>
-              <span class="audit-row-status">A–AAA</span>
-            </div>
-          </div>
-        </div>
+        <figure class="hero-photo" data-reveal>
+          <img src="/assets/images/hero.webp" alt="" width="1200" height="900" decoding="async" fetchpriority="high">
+          <figcaption class="hero-photo-badge" data-icon="accessibility">
+            <strong>Dostępność od pierwszego ekranu</strong>
+            <span>WCAG 2.2 · A · AA · AAA</span>
+          </figcaption>
+          <svg class="hero-photo-wave" viewBox="0 0 1200 170" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+            <path d="M0,112 C180,38 335,154 526,104 C724,52 840,12 1200,88 L1200,170 L0,170 Z"></path>
+          </svg>
+        </figure>
       </div>
     </section>
 
@@ -132,6 +106,32 @@
           <article class="card" data-reveal><span class="icon-box" data-icon="keyboard"></span><h3>Nie mogę obsłużyć</h3><p>Klawiatura, fokus, menu, modale, przyciski i cele dotykowe.</p></article>
           <article class="card" data-reveal><span class="icon-box" data-icon="form"></span><h3>Nie rozumiem</h3><p>Formularze, instrukcje, błędy, logowanie i przewidywalność działania.</p></article>
           <article class="card" data-reveal><span class="icon-box" data-icon="accessibility"></span><h3>Technologia mnie nie rozpoznaje</h3><p>Semantyka HTML, role, nazwy, stany i komunikaty dla czytników ekranu.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section people-section" aria-labelledby="people-title">
+      <div class="shell">
+        <div class="section-heading" data-reveal>
+          <p class="kicker">Dostępność dotyczy ludzi</p>
+          <h2 id="people-title">Ta sama strona może być dla jednej osoby prosta, a dla innej pełna barier.</h2>
+          <p>Dlatego audyt nie kończy się na wyniku narzędzia. Sprawdzamy, jak interfejs działa również wtedy, gdy użytkownik korzysta z innych sposobów poruszania się po stronie i odczytywania treści.</p>
+        </div>
+        <div class="people-grid">
+          <figure class="people-photo people-photo-tall" data-reveal>
+            <img src="/assets/images/niewidomadziewczyna.webp" alt="Uśmiechnięta kobieta w okularach trzyma białą laskę używaną przez osoby niewidome i słabowidzące." width="900" height="1100" loading="lazy" decoding="async">
+            <figcaption>
+              <strong>Treść musi być dostępna także bez polegania wyłącznie na wzroku.</strong>
+              <span>Struktura, opisy alternatywne, kontrast i logiczna kolejność treści mają realne znaczenie.</span>
+            </figcaption>
+          </figure>
+          <figure class="people-photo" data-reveal>
+            <img src="/assets/images/niewidzacy.webp" alt="Mężczyzna siedzi przy biurku i korzysta ze specjalistycznej klawiatury wspomagającej obsługę komputera przez osoby z dysfunkcją wzroku." width="1000" height="760" loading="lazy" decoding="async">
+            <figcaption>
+              <strong>Interfejs powinien działać z różnymi sposobami obsługi komputera.</strong>
+              <span>Klawiatura, fokus, semantyka i technologie wspomagające nie mogą być dodatkiem po zakończeniu projektu.</span>
+            </figcaption>
+          </figure>
         </div>
       </div>
     </section>
