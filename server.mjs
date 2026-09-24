@@ -14,7 +14,9 @@ const contentTypes = new Map([
   ['.svg', 'image/svg+xml'],
   ['.webmanifest', 'application/manifest+json'],
   ['.json', 'application/json; charset=utf-8'],
-  ['.ico', 'image/x-icon']
+  ['.ico', 'image/x-icon'],
+  ['.woff2', 'font/woff2'],
+  ['.woff', 'font/woff']
 ]);
 
 function resolveResource(requestUrl) {
