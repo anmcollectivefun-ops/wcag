@@ -157,3 +157,23 @@ input::placeholder,textarea::placeholder{color:var(--muted);opacity:1}
 }
 
 .theme-announcer{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+
+/* Niezależny tryb wysokiego kontrastu. Zachowuje wybrany motyw, ale upraszcza powierzchnie. */
+html[data-contrast="high"]{
+  --surface:var(--bg);
+  --surface-alt:var(--bg);
+  --text-2:var(--text);
+  --muted:var(--text);
+  --border:var(--text);
+  --focus:var(--gold);
+  --shadow:none;
+}
+html[data-contrast="high"] :where(.card,.audit-panel,.contact-box,.feature-panel,.report-sheet,.people-photo,.hero-note,.faq-list details,.audit-row,.status-item,.report-line){
+  box-shadow:none!important;
+  border-color:var(--text)!important;
+}
+html[data-contrast="high"] :where(.button,.access-tool,.access-group button,.nav-toggle){
+  border-width:2px!important;
+}
+html[data-contrast="high"] a{text-decoration-thickness:.12em}
