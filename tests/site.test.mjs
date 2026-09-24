@@ -105,3 +105,13 @@ test('etykiety sekcji są lekkie i bez dekoracyjnych myślników', async () => {
   assert.match(css, /\.kicker\{[\s\S]*?font-size:\.72rem!important[\s\S]*?font-weight:500/);
   assert.match(css, /\.kicker::before\{[\s\S]*?content:none!important[\s\S]*?display:none!important/);
 });
+
+
+test('górny pasek i menu nie dziedziczą starego font-weight 800', async () => {
+  const theme = await readFile(new URL('../src/theme.css', import.meta.url), 'utf8');
+  const site = await readFile(new URL('../src/site.css', import.meta.url), 'utf8');
+  assert.doesNotMatch(theme, /theme-switcher button,[\s\S]*?font-weight:800/);
+  assert.match(site, /\.accessibility-bar \.access-group button,[\s\S]*?font-weight:350!important/);
+  assert.match(site, /aria-pressed="true"\][\s\S]*?font-weight:400!important/);
+  assert.match(site, /\.navigation-row \.main-nav a[\s\S]*?font-weight:350!important/);
+});
