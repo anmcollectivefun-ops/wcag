@@ -12,7 +12,9 @@
   <link rel="stylesheet" href="/src/theme.css">
   <link rel="stylesheet" href="/src/typography.css">
   <link rel="stylesheet" href="/src/site.css">
+  <script defer src="/assets/vendor/gsap.min.js"></script>
   <script type="module" src="/src/theme.mjs"></script>
+  <script type="module" src="/src/site.mjs"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Przejdź do treści</a>
@@ -36,9 +38,10 @@
         </div>
       </div>
     </div>
-    <nav class="main-nav" aria-label="Nawigacja główna">
-      <div class="shell">
-        <ul class="main-nav-list">
+    <nav class="main-nav" aria-label="Nawigacja główna" data-open="false">
+      <div class="shell nav-shell">
+        <button class="nav-toggle" type="button" data-nav-toggle data-icon="menu" aria-expanded="false" aria-controls="main-nav-list">Menu</button>
+        <ul class="main-nav-list" id="main-nav-list">
           <li><a href="/">Strona główna</a></li>
           <li><a href="/audyt.html">Audyt WCAG</a></li>
           <li><a href="/szkolenia.html">Szkolenia</a></li>
@@ -51,7 +54,7 @@
   </header>
   <main id="main">
     <section class="page-hero">
-      <div class="shell">
+      <div class="shell" data-reveal>
         <p class="kicker">KONTAKT</p>
         <h1>Porozmawiajmy o dostępności Twojej strony lub aplikacji.</h1>
         <p class="hero-lead">Możesz skontaktować się z nami w sprawie audytu WCAG, poprawy wykrytych barier albo wdrożenia dostępności w nowym projekcie.</p>
@@ -59,7 +62,7 @@
     </section>
     <section class="section">
       <div class="shell">
-        <div class="contact-box">
+        <div class="contact-box" data-reveal>
           <h2>Zapytania ofertowe</h2>
           <address>
             <p>Napisz na adres:</p>
