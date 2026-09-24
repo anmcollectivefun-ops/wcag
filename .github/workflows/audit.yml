@@ -23,7 +23,8 @@ jobs:
           node-version: '22'
       - name: Zainstaluj silnik przegladarki i axe-core
         run: |
-          npm install --no-save --ignore-scripts playwright @axe-core/playwright
+          npm install
+          npm install --no-save playwright @axe-core/playwright
           npx playwright install --with-deps chromium
       - name: Audyt techniczny i raport
         run: node scripts/audit.mjs
