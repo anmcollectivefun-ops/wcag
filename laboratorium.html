@@ -1,13 +1,15 @@
 <!doctype html>
-<html lang="pl">
+<html lang="pl" data-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="ANM Access Lab: zobacz ten sam fragment własnej strony przed poprawkami dostępności i po nich. Interaktywna demonstracja wymagań WCAG dla osób słabowidzących.">
-  <meta name="theme-color" content="#101a30">
+  <meta name="theme-color" content="#FFFFFF">
   <title>Zobacz swoją stronę inaczej — ANM Access Lab</title>
   <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
   <link rel="stylesheet" href="/src/lab.css">
+  <link rel="stylesheet" href="/src/theme.css">
+  <script type="module" src="/src/theme.mjs"></script>
   <script type="module" src="/src/lab.mjs"></script>
 </head>
 <body>
@@ -15,7 +17,12 @@
   <header class="topbar">
     <div class="wrap topbar-inner">
       <a class="brand" href="/" aria-label="ANM Access — strona główna"><img src="/assets/logo.svg" width="36" height="36" alt=""><span>ANM <strong>Access</strong><small>Laboratorium dostępności</small></span></a>
-      <nav aria-label="Nawigacja główna"><a href="/">Panel demonstracyjny</a><a href="#laboratorium" aria-current="page">Laboratorium</a><a href="#co-dalej">Jak weryfikujemy</a></nav>
+      <nav aria-label="Nawigacja główna"><a href="/">ANM Access</a><a href="#laboratorium" aria-current="page">Laboratorium</a><a href="#co-dalej">Jak weryfikujemy</a></nav>
+      <div class="theme-switcher" role="group" aria-label="Motyw strony">
+        <button type="button" data-theme-choice="light" aria-pressed="true">Jasny</button>
+        <button type="button" data-theme-choice="dark" aria-pressed="false">Ciemny</button>
+        <button type="button" data-theme-choice="reading" aria-pressed="false">Czytanie</button>
+      </div>
     </div>
   </header>
   <main id="main" tabindex="-1">
@@ -83,7 +90,7 @@
         </fieldset>
         <fieldset class="settings-card">
           <legend>Kolory i kontrast</legend>
-          <div class="field"><label for="palette">Zestaw kolorów</label><select id="palette"><option value="light">Jasny i kontrastowy</option><option value="dark">Ciemny i kontrastowy</option><option value="cream">Ciepły, kremowy</option><option value="custom">Własne kolory</option></select></div>
+          <div class="field"><label for="palette">Zestaw kolorów</label><select id="palette"><option value="light">Jasny i kontrastowy</option><option value="dark">Ciemny i kontrastowy</option><option value="reading">Czytanie / sepia</option><option value="custom">Własne kolory</option></select></div>
           <div class="color-fields">
             <div class="field"><label for="foreground">Kolor tekstu</label><input type="color" id="foreground" value="#101828"></div>
             <div class="field"><label for="background">Kolor tła</label><input type="color" id="background" value="#ffffff"></div>
@@ -114,5 +121,6 @@
     </section>
   </main>
   <footer><div class="wrap footer-inner"><span>ANM Access Lab · Projekt demonstracyjny ANM Collective</span><a href="/">Wróć do panelu</a></div></footer>
+  <div class="theme-announcer" data-theme-announcer role="status" aria-live="polite" aria-atomic="true"></div>
 </body>
 </html>
