@@ -12,7 +12,9 @@
   <link rel="stylesheet" href="/src/theme.css">
   <link rel="stylesheet" href="/src/typography.css">
   <link rel="stylesheet" href="/src/site.css">
+  <script defer src="/assets/vendor/gsap.min.js"></script>
   <script type="module" src="/src/theme.mjs"></script>
+  <script type="module" src="/src/site.mjs"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Przejdź do treści</a>
@@ -36,9 +38,10 @@
         </div>
       </div>
     </div>
-    <nav class="main-nav" aria-label="Nawigacja główna">
-      <div class="shell">
-        <ul class="main-nav-list">
+    <nav class="main-nav" aria-label="Nawigacja główna" data-open="false">
+      <div class="shell nav-shell">
+        <button class="nav-toggle" type="button" data-nav-toggle data-icon="menu" aria-expanded="false" aria-controls="main-nav-list">Menu</button>
+        <ul class="main-nav-list" id="main-nav-list">
           <li><a href="/">Strona główna</a></li>
           <li><a href="/audyt.html" aria-current="page">Audyt WCAG</a></li>
           <li><a href="/szkolenia.html">Szkolenia</a></li>
@@ -51,7 +54,7 @@
   </header>
   <main id="main">
     <section class="page-hero">
-      <div class="shell">
+      <div class="shell" data-reveal>
         <p class="kicker">AUDYT WCAG 2.2</p>
         <h1>Sprawdzamy nie tylko błędy. Sprawdzamy cały sposób korzystania ze strony.</h1>
         <p class="hero-lead">Audyt ANM Access będzie łączył wyniki automatyczne z testami manualnymi. Kryteria A, AA i AAA będą raportowane osobno, wraz z informacją, co zostało sprawdzone i jak.</p>
@@ -60,14 +63,14 @@
     <section class="section">
       <div class="shell audit-overview">
         <div>
-          <div class="section-heading"><h2>Zakres audytu</h2><p>Każdy wynik ma wskazywać konkretną regułę, element strony, metodę testu i sposób naprawy.</p></div>
+          <div class="section-heading" data-reveal><h2>Zakres audytu</h2><p>Każdy wynik ma wskazywać konkretną regułę, element strony, metodę testu i sposób naprawy.</p></div>
           <dl class="definition-list">
             <dt>Poziom A</dt><dd>Podstawowe kryteria dostępności, bez których część użytkowników może w ogóle nie móc skorzystać z treści lub funkcji.</dd>
             <dt>Poziom AA</dt><dd>Kryteria A i AA — najczęściej stosowany poziom wymagań dla usług cyfrowych.</dd>
             <dt>Poziom AAA</dt><dd>Kryteria A, AA i AAA — najbardziej rozbudowany poziom WCAG 2.2, sprawdzany tam, gdzie dane kryterium ma zastosowanie.</dd>
           </dl>
         </div>
-        <aside class="audit-panel" aria-labelledby="audit-panel-title">
+        <aside class="audit-panel" data-reveal aria-labelledby="audit-panel-title">
           <h2 id="audit-panel-title">Poziomy raportu</h2>
           <div class="audit-levels" aria-label="Poziomy WCAG"><span class="audit-level">A</span><span class="audit-level">AA</span><span class="audit-level">AAA</span></div>
           <p>Silnik audytu dołączymy do tej strony w kolejnych etapach budowy. Obecnie przygotowujemy jego reguły, strukturę wyników i testy samego ANM Access.</p>
@@ -76,11 +79,11 @@
     </section>
     <section class="section section-alt">
       <div class="shell">
-        <div class="section-heading"><h2>Co będzie sprawdzane</h2><p>Automatyzujemy to, co można zmierzyć wiarygodnie, a pozostałe kryteria kierujemy do testu manualnego zamiast zgadywać wynik.</p></div>
+        <div class="section-heading" data-reveal><h2>Co będzie sprawdzane</h2><p>Automatyzujemy to, co można zmierzyć wiarygodnie, a pozostałe kryteria kierujemy do testu manualnego zamiast zgadywać wynik.</p></div>
         <div class="grid-3">
-          <article class="card"><h3>Postrzegalność</h3><p>Kontrast, tekst alternatywny, struktura treści, reflow, powiększenie i sposób prezentacji informacji.</p></article>
-          <article class="card"><h3>Funkcjonalność</h3><p>Klawiatura, fokus, kolejność nawigacji, cele dotykowe, limity czasu i zachowanie elementów interaktywnych.</p></article>
-          <article class="card"><h3>Zrozumiałość i kompatybilność</h3><p>Formularze, błędy, przewidywalność interfejsu, semantyka i współpraca z technologiami wspomagającymi.</p></article>
+          <article class="card" data-reveal><h3>Postrzegalność</h3><p>Kontrast, tekst alternatywny, struktura treści, reflow, powiększenie i sposób prezentacji informacji.</p></article>
+          <article class="card" data-reveal><h3>Funkcjonalność</h3><p>Klawiatura, fokus, kolejność nawigacji, cele dotykowe, limity czasu i zachowanie elementów interaktywnych.</p></article>
+          <article class="card" data-reveal><h3>Zrozumiałość i kompatybilność</h3><p>Formularze, błędy, przewidywalność interfejsu, semantyka i współpraca z technologiami wspomagającymi.</p></article>
         </div>
       </div>
     </section>
