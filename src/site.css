@@ -1186,46 +1186,92 @@ html[data-text-size="aaa"] .navigation-row .main-nav a{
 }
 
 
-/* CTA pod hero — mocny argument oparty na danych WebAIM. */
-.home-stat-cta{
-  padding:clamp(28px,4vw,56px) 0;
+
+
+/* Po co audyt — sekcja pod hero, konkretnie dla podmiotów publicznych. */
+.home-audit-why{
+  padding:clamp(44px,6vw,82px) 0;
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
 }
-.home-stat-cta-grid{
+.home-audit-why-grid{
   display:grid;
-  grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);
-  overflow:hidden;
-  border-radius:28px;
-  background:var(--gold);
-  color:var(--on-gold);
-  box-shadow:0 24px 70px color-mix(in srgb,var(--text) 14%,transparent);
+  grid-template-columns:minmax(300px,.82fr) minmax(0,1.18fr);
+  gap:clamp(34px,6vw,84px);
+  align-items:center;
 }
-.home-stat-cta-copy{
-  display:flex;
-  flex-direction:column;
-  align-items:flex-start;
-  justify-content:center;
-  padding:clamp(34px,5vw,72px);
-}
-.home-stat-cta-copy .kicker{
-  color:inherit;
-  opacity:.86;
-}
-.home-stat-cta-copy h2{
+.home-audit-why-photo{
   margin:0;
+}
+.home-audit-why-photo img{
+  display:block;
+  width:100%;
+  aspect-ratio:4/3;
+  object-fit:cover;
+  border-radius:24px;
+}
+.home-audit-why-copy{
+  min-width:0;
+}
+.home-audit-why-copy h2{
   max-width:18ch;
-  color:inherit;
+  margin-bottom:1rem;
 }
-.home-stat-cta-copy>p:not(.kicker):not(.home-stat-source){
-  max-width:48ch;
-  margin:1.3rem 0 0;
-  color:inherit;
+.home-audit-why-lead{
+  max-width:62ch;
+  margin:0;
 }
-.home-stat-promise{
-  margin:1rem 0 0;
-  color:inherit;
+.home-audit-stat{
+  display:grid;
+  grid-template-columns:auto 1fr;
+  gap:20px;
+  align-items:center;
+  margin:1.7rem 0;
+  padding:18px 20px;
+  border-left:5px solid var(--gold);
+  background:var(--surface-alt);
 }
-.home-stat-promise strong{
+.home-audit-stat strong{
+  font-size:clamp(2.5rem,5vw,4.6rem);
   font-weight:650;
+  line-height:.9;
+  letter-spacing:-.04em;
+  color:var(--gold);
+}
+.home-audit-stat span{
+  max-width:38ch;
+  font-weight:500;
+}
+.home-audit-why-list{
+  display:grid;
+  gap:13px;
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+.home-audit-why-list li{
+  position:relative;
+  padding-left:30px;
+}
+.home-audit-why-list li::before{
+  content:"✓";
+  position:absolute;
+  left:0;
+  top:.05em;
+  font-weight:700;
+  color:var(--gold);
+}
+.home-audit-why-list strong{
+  font-weight:650;
+}
+.home-audit-source{
+  margin:1.25rem 0 0;
+  font-size:.78rem;
+  color:var(--muted);
+}
+.home-audit-source a{
+  color:inherit;
+  text-underline-offset:.18em;
 }
 .home-stat-button{
   display:inline-flex;
@@ -1233,56 +1279,40 @@ html[data-text-size="aaa"] .navigation-row .main-nav a{
   justify-content:center;
   gap:10px;
   min-height:48px;
-  margin-top:1.55rem;
+  margin-top:1.4rem;
   padding:12px 20px;
-  border:2px solid var(--on-gold);
+  border:2px solid var(--gold);
   border-radius:999px;
-  background:var(--on-gold);
-  color:var(--gold);
+  background:var(--gold);
+  color:var(--on-gold);
   font-weight:600;
   text-decoration:none;
 }
 .home-stat-button:hover,
 .home-stat-button:focus-visible{
   background:transparent;
-  color:var(--on-gold);
-}
-.home-stat-cta-photo{
-  min-height:100%;
-  margin:0;
-  background:var(--surface);
-}
-.home-stat-cta-photo img{
-  display:block;
-  width:100%;
-  height:100%;
-  min-height:420px;
-  object-fit:cover;
-  object-position:center;
+  color:var(--gold);
 }
 @media(max-width:900px){
-  .home-stat-cta-grid{
+  .home-audit-why-grid{
     grid-template-columns:1fr;
   }
-  .home-stat-cta-copy h2{
-    max-width:20ch;
+  .home-audit-why-photo{
+    order:2;
   }
-  .home-stat-cta-photo img{
-    min-height:300px;
-    max-height:440px;
+  .home-audit-why-copy{
+    order:1;
+  }
+  .home-audit-why-copy h2{
+    max-width:22ch;
   }
 }
 @media(max-width:560px){
-  .home-stat-cta{
-    padding:22px 0 34px;
+  .home-audit-why{
+    padding:34px 0;
   }
-  .home-stat-cta-grid{
-    border-radius:20px;
-  }
-  .home-stat-cta-copy{
-    padding:28px 22px 30px;
-  }
-  .home-stat-cta-photo img{
-    min-height:240px;
+  .home-audit-stat{
+    grid-template-columns:1fr;
+    gap:10px;
   }
 }
