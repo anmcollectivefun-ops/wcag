@@ -11,7 +11,6 @@ const initial = readTickets(storage);
 let tickets = initial.tickets;
 const VIEWS = new Set(['start', 'zgloszenie', 'moje', 'obsluga', 'dostepnosc']);
 const dateFormatter = new Intl.DateTimeFormat('pl-PL', { dateStyle: 'medium', timeStyle: 'short' });
-const prefKey = 'anm-access-preferences-v1';
 
 if (initial.isNew) writeTickets(storage, tickets);
 if (initial.error) announce('Nie udało się odczytać danych. Przywrócono zgłoszenia demonstracyjne.');
@@ -231,23 +230,6 @@ $('#reset-data').addEventListener('click', () => {
   announce(saved ? 'Przywrócono przykładowe zgłoszenia.' : 'Przywrócono dane tylko na czas tej sesji; zapis w przeglądarce nie powiódł się.');
 });
 
-function readPrefs() {
-  try {
-    const value = JSON.parse(storage?.getItem(prefKey) || '{}');
-    return { text: value.text === true };
-  } catch { return { text: false }; }
-}
-let preferences = readPrefs();
-function syncPrefs() {
-  document.documentElement.classList.toggle('large-text', preferences.text);
-  $('#text-scale-toggle').setAttribute('aria-pressed', String(preferences.text));
-  $('#text-scale-toggle').textContent = `Większy tekst: ${preferences.text ? 'włączony' : 'wyłączony'}`;
-  try { storage?.setItem(prefKey, JSON.stringify(preferences)); } catch { /* preferencje pozostają w bieżącej sesji */ }
-}
-$('#text-scale-toggle').addEventListener('click', () => {
-  preferences = { ...preferences, text: !preferences.text };
-  syncPrefs(); announce(`Większy tekst ${preferences.text ? 'włączony' : 'wyłączony'}.`);
-});
 
 window.addEventListener('hashchange', () => setView(true));
-renderAll(); syncPrefs(); setView(false);
+renderAll(); setView(false);
