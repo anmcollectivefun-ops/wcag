@@ -1,37 +1,34 @@
-# ANM Access — działający prototyp dostępnego panelu zgłoszeń
+# ANM Access
 
-Autorski projekt demonstracyjny ANM Collective, przygotowany jako część portfolio technologicznego i baza do przyszłego audytu dostępności. Nie jest to projekt LifeFlip i nie korzysta z jego kodu.
+ANM Access to rozwijana przez ANM Collective platforma do audytu dostępności cyfrowej pod kątem WCAG 2.2, w tym kryteriów poziomów A, AA i AAA.
+
+## Publiczne strony
+
+- Strona główna: `/`
+- Audyt WCAG: `/audyt.html`
+- O nas: `/o-nas.html`
+- Kontakt: `/kontakt.html`
+- Aktualności: `/aktualnosci.html`
+
+Wszystkie strony korzystają z jednego systemu kolorów, trzech motywów (jasny, ciemny, czytanie), Atkinson Hyperlegible Next oraz globalnego skalowania tekstu A / AA / AAA = 100% / 150% / 200%.
 
 ## Uruchomienie
 
-Wymagany Node.js 20 lub nowszy. **Nie trzeba instalować żadnych paczek.**
+Wymagany Node.js 20 lub nowszy.
 
 ```bash
+npm install
 npm run dev
 ```
 
-Otwórz `http://127.0.0.1:4173`. Testy automatyczne:
+Aplikacja działa domyślnie pod `http://127.0.0.1:4173`.
+
+## Testy
 
 ```bash
 npm run check
 ```
 
-## Co już działa
+Workflow audytu przeglądarkowego sprawdza wszystkie publiczne strony przy 1280 i 320 CSS px, reguły axe-core oraz reflow przy globalnym trybie AAA/200%.
 
-- Formularz zgłoszenia z własną walidacją i linkami do błędnych pól.
-- Lista zgłoszeń, filtrowanie po statusie i wyszukiwanie.
-- Demonstracyjny panel obsługi umożliwiający zmianę statusu.
-- Przełącznik wysokiego kontrastu i większej czcionki.
-- Skip link, obsługa klawiatury, komunikaty `role="status"`, semantyczne formularze i widoczne focusy.
-- Eksport zgłoszeń demo do JSON, reset danych testowych, przykładowe rekordy.
-- Dane przechowywane wyłącznie w `localStorage` przeglądarki. Serwer Node udostępnia wyłącznie statyczne pliki.
-
-## Ograniczenia — ważne
-
-**To jest prototyp, nie gotowy panel dla klientów.** Nie ma prawdziwego logowania, uprawnień użytkowników, serwera danych, powiadomień e-mail ani udokumentowanej zgodności WCAG. Widok administratora jest celowo otwarty w demonstracji; nie należy używać go do rzeczywistych zgłoszeń. Nie wpisuj danych osobowych, haseł ani poufnych informacji — dane pozostają w pamięci przeglądarki i mogą być widoczne dla każdej osoby korzystającej z tego samego profilu.
-
-Aby przejść do produkcji: dodać autoryzację serwerową i kontrolę dostępu, bazę danych (np. Supabase), politykę retencji, zabezpieczenie uploadu plików, monitoring, testy end-to-end i niezależny audyt dostępności.
-
-## Portfolio i dostępność
-
-Projekt można pokazać jako **własną realizację demonstracyjną**, nie jako referencję od zewnętrznego klienta ani certyfikowaną aplikację zgodną z WCAG. Plan ręcznych testów i wzór karty realizacji znajdują się w `docs/`.
+Pełna deklaracja zgodności WCAG 2.2 AAA będzie możliwa dopiero po zakończeniu całej checklisty oraz testów manualnych wymaganych dla odpowiednich kryteriów.
