@@ -76,7 +76,7 @@ function setupMotion() {
     const items = [...group.querySelectorAll('[data-reveal]')];
     if (!items.length) return;
 
-    gsap.set(items, { y: 24 });
+    gsap.set(items, { y: 82 });
 
     const sequenceObserver = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -85,9 +85,9 @@ function setupMotion() {
 
         gsap.to(items, {
           y: 0,
-          duration: .82,
-          stagger: .14,
-          ease: 'power2.out',
+          duration: 1.05,
+          stagger: .16,
+          ease: 'power3.out',
           clearProps: 'willChange',
           onComplete: () => items.forEach(item => item.classList.add('is-visible'))
         });
