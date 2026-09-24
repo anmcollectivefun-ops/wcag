@@ -1194,6 +1194,7 @@ html[data-text-size="aaa"] .navigation-row .main-nav a{
 .home-audit-why{
   padding:clamp(42px,5vw,72px) 0;
   border-bottom:1px solid var(--border);
+  overflow:clip;
 }
 .home-audit-why-heading{
   max-width:760px;
