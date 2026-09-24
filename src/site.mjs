@@ -51,6 +51,7 @@ function setupIcons() {
 function setupMotion() {
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const targets = [...document.querySelectorAll('[data-reveal]')];
+  const sequences = [...document.querySelectorAll('[data-reveal-sequence]')];
   const gsap = window.gsap;
 
   if (reduced || !gsap) {
@@ -67,7 +68,39 @@ function setupMotion() {
     });
   }
 
-  const rest = targets.filter(el => !el.closest('.page-hero'));
+  const sequenceItems = new Set(
+    sequences.flatMap(group => [...group.querySelectorAll('[data-reveal]')])
+  );
+
+  sequences.forEach(group => {
+    const items = [...group.querySelectorAll('[data-reveal]')];
+    if (!items.length) return;
+
+    gsap.set(items, { y: 24 });
+
+    const sequenceObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        sequenceObserver.unobserve(entry.target);
+
+        gsap.to(items, {
+          y: 0,
+          duration: .82,
+          stagger: .14,
+          ease: 'power2.out',
+          clearProps: 'willChange',
+          onComplete: () => items.forEach(item => item.classList.add('is-visible'))
+        });
+      });
+    }, { threshold: .16, rootMargin: '0px 0px -8% 0px' });
+
+    sequenceObserver.observe(group);
+  });
+
+  const rest = targets.filter(el =>
+    !el.closest('.page-hero') && !sequenceItems.has(el)
+  );
+
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (!entry.isIntersecting) return;
