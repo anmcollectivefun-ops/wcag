@@ -1167,3 +1167,20 @@ html[data-text-size="aaa"] .navigation-row .main-nav a{
     max-width:52ch;
   }
 }
+
+
+/* Właściwe logo ANM Collective w nagłówku. */
+.brand .brand-logo{
+  display:block;
+  width:auto;
+  height:52px;
+  max-width:min(220px,42vw);
+  object-fit:contain;
+  border-radius:0;
+}
+@media(max-width:730px){
+  .brand .brand-logo{
+    height:46px;
+    max-width:min(190px,52vw);
+  }
+}
