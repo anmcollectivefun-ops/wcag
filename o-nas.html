@@ -12,7 +12,9 @@
   <link rel="stylesheet" href="/src/theme.css">
   <link rel="stylesheet" href="/src/typography.css">
   <link rel="stylesheet" href="/src/site.css">
+  <script defer src="/assets/vendor/gsap.min.js"></script>
   <script type="module" src="/src/theme.mjs"></script>
+  <script type="module" src="/src/site.mjs"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Przejdź do treści</a>
@@ -36,9 +38,10 @@
         </div>
       </div>
     </div>
-    <nav class="main-nav" aria-label="Nawigacja główna">
-      <div class="shell">
-        <ul class="main-nav-list">
+    <nav class="main-nav" aria-label="Nawigacja główna" data-open="false">
+      <div class="shell nav-shell">
+        <button class="nav-toggle" type="button" data-nav-toggle data-icon="menu" aria-expanded="false" aria-controls="main-nav-list">Menu</button>
+        <ul class="main-nav-list" id="main-nav-list">
           <li><a href="/">Strona główna</a></li>
           <li><a href="/audyt.html">Audyt WCAG</a></li>
           <li><a href="/szkolenia.html">Szkolenia</a></li>
@@ -51,7 +54,7 @@
   </header>
   <main id="main">
     <section class="page-hero">
-      <div class="shell">
+      <div class="shell" data-reveal>
         <p class="kicker">O ANM ACCESS</p>
         <h1>Budujemy narzędzie, które ma być dostępne tak samo jak strony, które bada.</h1>
         <p class="hero-lead">ANM Access jest rozwijany przez ANM Collective jako wyspecjalizowana platforma do pracy z WCAG 2.2 — od wykrycia bariery, przez poprawkę, aż po ponowny test i dokumentację wyniku.</p>
@@ -59,17 +62,17 @@
     </section>
     <section class="section">
       <div class="shell">
-        <div class="section-heading"><h2>Nasze podejście</h2><p>Nie chcemy sprowadzać dostępności do jednego wyniku procentowego. Ważniejsze jest pokazanie, co naprawdę działa, co nie działa i co wymaga oceny człowieka.</p></div>
+        <div class="section-heading" data-reveal><h2>Nasze podejście</h2><p>Nie chcemy sprowadzać dostępności do jednego wyniku procentowego. Ważniejsze jest pokazanie, co naprawdę działa, co nie działa i co wymaga oceny człowieka.</p></div>
         <div class="grid-3">
-          <article class="card"><h3>Najpierw użytkownik</h3><p>Badamy realne zadania: znalezienie informacji, obsługę formularza, nawigację, logowanie czy wykonanie całego procesu.</p></article>
-          <article class="card"><h3>Potem dowód</h3><p>Wynik powinien mieć źródło: kryterium WCAG, metodę testu, element strony i informację o ponownej weryfikacji.</p></article>
-          <article class="card"><h3>Bez fałszywych skrótów</h3><p>Jeżeli kryterium wymaga oceny manualnej, system ma to jasno powiedzieć zamiast automatycznie oznaczać stronę jako zgodną.</p></article>
+          <article class="card" data-reveal><h3>Najpierw użytkownik</h3><p>Badamy realne zadania: znalezienie informacji, obsługę formularza, nawigację, logowanie czy wykonanie całego procesu.</p></article>
+          <article class="card" data-reveal><h3>Potem dowód</h3><p>Wynik powinien mieć źródło: kryterium WCAG, metodę testu, element strony i informację o ponownej weryfikacji.</p></article>
+          <article class="card" data-reveal><h3>Bez fałszywych skrótów</h3><p>Jeżeli kryterium wymaga oceny manualnej, system ma to jasno powiedzieć zamiast automatycznie oznaczać stronę jako zgodną.</p></article>
         </div>
       </div>
     </section>
     <section class="section section-alt">
       <div class="shell">
-        <div class="section-heading"><h2>ANM Collective</h2><p>Tworzymy strony, aplikacje webowe i systemy dla firm. ANM Access rozwijamy jako własny produkt oraz zaplecze do audytów i wdrożeń dostępności.</p></div>
+        <div class="section-heading" data-reveal><h2>ANM Collective</h2><p>Tworzymy strony, aplikacje webowe i systemy dla firm. ANM Access rozwijamy jako własny produkt oraz zaplecze do audytów i wdrożeń dostępności.</p></div>
         <a class="button button-secondary" href="https://anmcollective.pl">Przejdź do ANM Collective</a>
       </div>
     </section>
