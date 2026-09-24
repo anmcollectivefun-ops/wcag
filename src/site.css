@@ -1,0 +1,104 @@
+/* Główna architektura wszystkich publicznych stron ANM Access. */
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;min-width:280px;background:var(--bg);color:var(--text)}
+img,svg{max-width:100%;height:auto}
+a{color:var(--gold);text-underline-offset:.18em;text-decoration-thickness:.08em}
+a:hover{text-decoration-thickness:.14em}
+:focus-visible{outline:3px solid var(--focus);outline-offset:4px}
+[hidden]{display:none!important}
+.shell{width:min(1180px,calc(100% - 48px));margin-inline:auto}
+.skip-link{position:fixed;z-index:100;top:12px;left:12px;max-width:calc(100vw - 24px);transform:translateY(-180%);padding:.65rem .9rem;border:3px solid var(--focus);border-radius:.35rem;background:var(--surface);color:var(--text);font-weight:700}
+.skip-link:focus{transform:none}
+
+.site-header{position:relative;z-index:20;background:var(--surface);border-bottom:1px solid var(--border)}
+.header-primary{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:5rem;padding-block:.7rem}
+.brand{display:inline-flex;align-items:center;gap:.7rem;min-width:0;color:var(--text);text-decoration:none;font-weight:700}
+.brand img{width:2.45rem;height:2.45rem;flex:none}
+.brand-copy{min-width:0;line-height:1.12}
+.brand-copy strong{display:block;font-size:1.1rem}
+.brand-copy span{display:block;color:var(--muted);font-size:1rem;font-weight:400}
+.accessibility-toolbar{margin-left:auto}
+
+.main-nav{border-top:1px solid var(--border)}
+.main-nav-list{display:flex;align-items:stretch;gap:.15rem;list-style:none;padding:0;margin:0;flex-wrap:wrap}
+.main-nav a{display:flex;align-items:center;min-height:3.15rem;padding:.55rem .8rem;color:var(--text);font-weight:650;text-decoration:none;border-bottom:4px solid transparent}
+.main-nav a:hover{background:var(--surface-alt)}
+.main-nav a[aria-current="page"]{border-bottom-color:var(--gold);color:var(--gold);background:var(--surface-alt)}
+
+main{display:block}
+.page-hero{padding:clamp(3rem,7vw,6rem) 0 clamp(2.7rem,6vw,5rem);border-bottom:1px solid var(--border);background:var(--bg)}
+.kicker{margin:0 0 .8rem;color:var(--gold);font-weight:750;letter-spacing:.035em}
+.page-hero h1{max-width:16ch;margin:0 0 1rem}
+.hero-lead{max-width:68ch;margin:0;color:var(--text-2)}
+.hero-actions{display:flex;gap:.7rem;flex-wrap:wrap;margin-top:1.5rem}
+.button{display:inline-flex;align-items:center;justify-content:center;min-height:3rem;padding:.65rem 1rem;border:2px solid var(--gold);border-radius:.45rem;font-weight:750;text-decoration:none;text-align:center}
+.button-primary{background:var(--gold);color:var(--on-gold)}
+.button-secondary{background:var(--surface);color:var(--gold)}
+.button:hover{background:var(--text);border-color:var(--text);color:var(--bg)}
+
+.section{padding:clamp(2.8rem,6vw,5rem) 0}
+.section-alt{background:var(--surface)}
+.section-heading{max-width:72ch;margin-bottom:1.7rem}
+.section-heading h2{margin:0 0 .7rem}
+.section-heading p{margin:0;color:var(--text-2)}
+.grid-2,.grid-3{display:grid;gap:1rem}
+.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.card{min-width:0;padding:1.35rem;border:1px solid var(--border);border-radius:.55rem;background:var(--surface);color:var(--text)}
+.card h2,.card h3{margin-top:0}
+.card p:last-child{margin-bottom:0}
+.card-mark{display:inline-flex;align-items:center;justify-content:center;min-width:2.2rem;min-height:2.2rem;padding:.15rem .4rem;margin-bottom:.7rem;border:2px solid var(--gold);border-radius:.35rem;color:var(--gold);font-weight:800}
+.meta{color:var(--muted)}
+.status-line{display:flex;align-items:flex-start;gap:.5rem}
+.status-symbol{flex:none;font-weight:800;color:var(--gold)}
+.danger{color:var(--danger)}
+
+.audit-overview{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(16rem,.8fr);gap:1rem;align-items:start}
+.audit-panel{padding:1.4rem;border:2px solid var(--gold);border-radius:.55rem;background:var(--surface)}
+.audit-panel h2{margin-top:0}
+.audit-levels{display:flex;gap:.45rem;flex-wrap:wrap;margin:.9rem 0}
+.audit-level{display:inline-flex;align-items:center;justify-content:center;min-width:3rem;min-height:3rem;padding:.35rem .55rem;border:2px solid var(--border);border-radius:.35rem;font-weight:800}
+.audit-level:last-child{border-color:var(--gold);color:var(--gold)}
+
+.definition-list{display:grid;grid-template-columns:minmax(9rem,.35fr) minmax(0,1fr);gap:.6rem 1rem;margin:0}
+.definition-list dt{font-weight:750}
+.definition-list dd{margin:0;color:var(--text-2)}
+
+.contact-box{max-width:52rem;padding:1.5rem;border:2px solid var(--gold);border-radius:.55rem;background:var(--surface)}
+.contact-box address{font-style:normal}
+.contact-email{font-size:1.25rem;font-weight:750;overflow-wrap:anywhere}
+
+.news-empty{padding:2rem;border:1px solid var(--border);border-radius:.55rem;background:var(--surface)}
+.news-empty p{margin-bottom:0}
+
+.site-footer{border-top:1px solid var(--border);background:var(--surface)}
+.footer-inner{display:flex;justify-content:space-between;align-items:flex-start;gap:1.5rem;padding-block:2rem}
+.footer-nav{display:flex;gap:.7rem 1rem;flex-wrap:wrap}
+.footer-nav a{color:var(--text)}
+.footer-copy{max-width:42rem}
+.footer-copy p{margin:.35rem 0 0;color:var(--muted)}
+
+@media(max-width:900px){
+  .header-primary{align-items:flex-start;flex-wrap:wrap}
+  .accessibility-toolbar{width:100%;margin-left:0;justify-content:flex-start}
+  .audit-overview{grid-template-columns:1fr}
+  .grid-3{grid-template-columns:1fr 1fr}
+}
+@media(max-width:730px){
+  .shell{width:min(100% - 32px,1180px)}
+  .grid-2,.grid-3{grid-template-columns:1fr}
+  .main-nav-list{flex-direction:column;align-items:stretch}
+  .main-nav a{border-bottom:0;border-left:4px solid transparent}
+  .main-nav a[aria-current="page"]{border-left-color:var(--gold)}
+  .definition-list{grid-template-columns:1fr;gap:.2rem}
+  .definition-list dd{margin-bottom:.8rem}
+  .footer-inner{flex-direction:column}
+}
+@media(max-width:480px){
+  .shell{width:min(100% - 24px,1180px)}
+  .hero-actions .button{width:100%}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+}
