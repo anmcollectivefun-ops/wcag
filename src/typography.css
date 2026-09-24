@@ -20,10 +20,10 @@ h1,h2,h3,h4,h5,h6{
   overflow-wrap:anywhere;
   text-wrap:balance;
 }
-h1{font-size:clamp(2.25rem,5vw,3rem);font-weight:700}
-h2{font-size:2rem;font-weight:700}
-h3{font-size:1.5rem;font-weight:700}
-h4{font-size:1.25rem;font-weight:700}
+h1{font-size:1.6667rem;font-weight:500}
+h2{font-size:1.4444rem;font-weight:500}
+h3{font-size:1.2222rem;font-weight:500}
+h4{font-size:1.1111rem;font-weight:500}
 input,textarea,select,button,.button,.main-nav a,.topbar nav a{font-size:1rem}
 
 :where(
@@ -40,13 +40,6 @@ input,textarea,select,button,.button,.main-nav a,.topbar nav a{font-size:1rem}
 .main-nav,.topbar nav{min-width:0}
 a,button,input,textarea,select{overflow-wrap:anywhere}
 
-@media(max-width:730px){
-  h1{font-size:2.25rem}
-  h2{font-size:1.75rem}
-  h3{font-size:1.4rem}
-}
-@media(max-width:480px){
-  h1{font-size:2rem}
   h2{font-size:1.6rem}
 }
 
