@@ -2263,17 +2263,16 @@ html[data-contrast="high"] .home-hero{
   background:linear-gradient(
     90deg,
     var(--hero-fog) 0%,
-    color-mix(in srgb,var(--hero-fog) 94%,transparent) 27%,
-    color-mix(in srgb,var(--hero-fog) 62%,transparent) 43%,
-    color-mix(in srgb,var(--hero-fog) 18%,transparent) 58%,
-    transparent 69%
+    color-mix(in srgb,var(--hero-fog) 92%,transparent) 24%,
+    color-mix(in srgb,var(--hero-fog) 58%,transparent) 38%,
+    color-mix(in srgb,var(--hero-fog) 14%,transparent) 50%,
+    transparent 60%
   );
   pointer-events:none;
 }
 
 .home-hero-shell{
-  position:relative;
-  z-index:3;
+  position:static;
   width:min(1320px,calc(100% - 40px));
   min-height:inherit;
   display:flex;
@@ -2284,18 +2283,18 @@ html[data-contrast="high"] .home-hero{
 .home-hero-copy{
   position:relative;
   z-index:3;
-  width:min(100%,620px);
+  width:min(100%,700px);
   padding:clamp(64px,7vw,92px) 0 clamp(92px,9vw,120px);
 }
 .home-hero-copy h1{
-  max-width:22ch;
+  max-width:24ch;
   margin:.25rem 0 1rem;
   font-size:30px;
   line-height:1.12;
   letter-spacing:-.025em;
 }
 .home-hero-copy .hero-lead{
-  max-width:52ch;
+  max-width:46ch;
   margin:0;
   font-size:1rem;
   line-height:1.65;
@@ -2328,8 +2327,9 @@ html[data-contrast="high"] .home-hero{
   max-height:none;
   aspect-ratio:auto;
   object-fit:cover;
-  object-position:center center;
-  transform:none;
+  object-position:72% center;
+  transform:scale(1.08);
+  transform-origin:center right;
 }
 .home-hero .hero-photo-wave{
   display:block;
@@ -2400,7 +2400,7 @@ html[data-contrast="high"] .home-hero .hero-meta .icon{
     height:100%;
     aspect-ratio:auto;
     object-fit:cover;
-    object-position:center center;
+    object-position:68% center;
     transform:none;
   }
   .home-hero .hero-photo-wave{height:10%}
