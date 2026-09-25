@@ -2224,3 +2224,69 @@ html[data-contrast="high"] .audit-benefit-icon {
       );
   }
 }
+
+
+/* 2026-09-25 — artykuł: czysta biel, węższa treść hero i minimalna mgła */
+.article-summary{
+  width:min(100%,440px);
+  padding:clamp(22px,3vw,32px);
+  border:1px solid var(--gold);
+  border-radius:20px;
+  background:var(--surface);
+  box-shadow:none;
+}
+.article-opening{
+  grid-template-columns:minmax(0,440px) minmax(260px,1fr);
+}
+.article-note{
+  background:var(--surface);
+}
+.article-penalties section:last-child,
+.article-end{
+  background:var(--surface);
+  color:var(--text);
+  border:2px solid var(--gold);
+}
+.article-penalties section:last-child p,
+.article-penalties section:last-child span{
+  color:inherit;
+}
+.article-end .kicker{
+  color:var(--gold);
+}
+.article-end .button-primary{
+  background:var(--gold);
+  border-color:var(--gold);
+  color:var(--on-gold);
+}
+
+@media(min-width:901px){
+  .article-hero-copy{
+    width:min(100%,34rem);
+  }
+  .article-hero-copy h1{
+    max-width:13ch;
+  }
+  .article-hero-photo{
+    left:43%;
+    width:calc(57% + max(16px, (100vw - 1320px) / 2));
+  }
+  .article-hero-photo::after{
+    background:
+      linear-gradient(
+        90deg,
+        color-mix(in srgb,var(--surface) 38%,transparent) 0%,
+        color-mix(in srgb,var(--surface) 16%,transparent) 6%,
+        transparent 14%
+      );
+  }
+}
+
+@media(max-width:900px){
+  .article-opening{
+    grid-template-columns:1fr;
+  }
+  .article-summary{
+    width:100%;
+  }
+}
