@@ -1476,110 +1476,129 @@ html[data-text-size="aaa"] .navigation-row .main-nav a{
 
 
 
-/* Praktyczny audyt — duże zdjęcie, lekki układ editorial bez kart i ramek. */
+/* Praktyczny audyt — zaokrąglone zdjęcie i wyraźne kafelki w osobnym stylu. */
 .practical-audit{
-  padding-block:clamp(64px,8vw,116px);
-  overflow:hidden;
+  padding-block:clamp(64px,8vw,112px);
 }
 .practical-audit-grid{
   display:grid;
-  grid-template-columns:minmax(0,1.18fr) minmax(360px,.82fr);
-  gap:clamp(46px,6vw,88px);
+  grid-template-columns:minmax(320px,.78fr) minmax(0,1.22fr);
+  gap:clamp(42px,6vw,86px);
   align-items:start;
 }
-.practical-audit-media{
-  min-width:0;
-  align-self:stretch;
-}
 .practical-audit-photo{
+  position:sticky;
+  top:28px;
   margin:0;
-  height:100%;
-  min-height:620px;
+  overflow:hidden;
+  border-radius:28px;
+  box-shadow:0 24px 54px color-mix(in srgb,var(--text) 12%,transparent);
 }
 .practical-audit-photo img{
   display:block;
   width:100%;
-  height:100%;
   min-height:620px;
+  aspect-ratio:4 / 5;
   object-fit:cover;
   object-position:center;
 }
 .practical-audit-copy{
   min-width:0;
-  padding-top:clamp(10px,2vw,28px);
 }
 .practical-audit-copy .section-heading{
-  max-width:620px;
+  max-width:720px;
+  margin-bottom:clamp(28px,4vw,42px);
 }
 .practical-audit-copy .section-heading h2{
-  max-width:17ch;
-  margin-bottom:1.1rem;
+  max-width:20ch;
 }
 .practical-audit-copy .section-heading p{
-  max-width:56ch;
+  max-width:58ch;
 }
-.practical-audit-list{
+.practical-audit-cards{
   display:grid;
   grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:26px 28px;
-  margin-top:clamp(30px,4vw,46px);
+  gap:18px;
 }
-.practical-audit-item{
-  display:block;
+.practical-audit-card{
+  position:relative;
   min-width:0;
+  min-height:230px;
+  padding:24px 22px 26px;
+  border:1px solid color-mix(in srgb,var(--gold) 24%,var(--border));
+  border-radius:22px;
+  background:color-mix(in srgb,var(--surface) 82%,var(--surface-alt));
+  box-shadow:0 12px 30px color-mix(in srgb,var(--text) 5%,transparent);
+}
+.practical-audit-card:nth-child(2),
+.practical-audit-card:nth-child(5){
+  background:var(--surface-alt);
+}
+.practical-audit-card:nth-child(4){
+  background:color-mix(in srgb,var(--gold) 7%,var(--surface));
 }
 .practical-audit-index{
   display:block;
-  margin-bottom:8px;
+  margin-bottom:18px;
   color:var(--gold);
   font-size:.78rem;
   font-weight:650;
   letter-spacing:.08em;
 }
-.practical-audit-item>div{
-  display:grid;
-  gap:6px;
-}
-.practical-audit-item strong{
+.practical-audit-card h3{
+  margin:0 0 10px;
+  max-width:20ch;
+  font-size:1.08rem;
   font-weight:600;
   line-height:1.25;
 }
-.practical-audit-item span:not(.practical-audit-index){
-  color:var(--text2);
-  line-height:1.5;
+.practical-audit-card p{
+  margin:0;
+  color:var(--text-2);
+  line-height:1.55;
+}
+.practical-audit-card:focus-within{
+  outline:3px solid var(--focus);
+  outline-offset:4px;
 }
 @media(max-width:1040px){
   .practical-audit-grid{
     grid-template-columns:1fr;
     gap:38px;
   }
-  .practical-audit-photo,
+  .practical-audit-photo{
+    position:relative;
+    top:auto;
+    max-width:760px;
+  }
   .practical-audit-photo img{
     min-height:0;
-  }
-  .practical-audit-photo img{
-    aspect-ratio:16/9;
-  }
-  .practical-audit-copy{
-    padding-top:0;
+    aspect-ratio:16 / 9;
   }
   .practical-audit-copy .section-heading h2{
     max-width:22ch;
   }
 }
-@media(max-width:640px){
+@media(max-width:680px){
   .practical-audit{
     padding-block:48px;
   }
-  .practical-audit-list{
-    grid-template-columns:1fr;
-    gap:24px;
+  .practical-audit-photo{
+    border-radius:22px;
   }
   .practical-audit-photo img{
-    aspect-ratio:4/3;
+    aspect-ratio:4 / 3;
+  }
+  .practical-audit-cards{
+    grid-template-columns:1fr;
+    gap:14px;
+  }
+  .practical-audit-card{
+    min-height:0;
+    padding:21px 18px 22px;
+    border-radius:18px;
   }
 }
-
 
 /* Co otrzymujesz po audycie — bento z różnymi proporcjami i akcentami. */
 .audit-benefits{
