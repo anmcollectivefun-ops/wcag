@@ -11,7 +11,7 @@ const palettes = {
   },
   dark: {
     bg:'#281014', surface:'#35151A', surfaceAlt:'#431921',
-    text:'#FDF2F4', text2:'#E6C8CF', muted:'#BA8E98',
+    text:'#FDF2F4', text2:'#E6C8CF', muted:'#CBA1AB',
     gold:'#DCA373', border:'#AD6376', danger:'#FFB0A8', onGold:'#281014'
   },
   reading: {
