@@ -10,9 +10,9 @@ const palettes = {
     gold:'#5A2430', border:'#8A7657', danger:'#8B1E1E', onGold:'#FFFFFF'
   },
   dark: {
-    bg:'#16090D', surface:'#211016', surfaceAlt:'#2B141C',
-    text:'#FFF8F0', text2:'#F0DDE4', muted:'#E5C8D2',
-    gold:'#F2D28A', border:'#8D6975', danger:'#FFB0A8', onGold:'#1F1A14'
+    bg:'#281014', surface:'#35151A', surfaceAlt:'#431921',
+    text:'#FDF2F4', text2:'#E6C8CF', muted:'#BA8E98',
+    gold:'#DCA373', border:'#AD6376', danger:'#FFB0A8', onGold:'#281014'
   },
   reading: {
     bg:'#F3E7CF', surface:'#FAF2E3', surfaceAlt:'#E9D9BC',
