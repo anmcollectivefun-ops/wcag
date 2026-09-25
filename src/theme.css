@@ -2,14 +2,14 @@
   --promo-bg:#5A2430;
   --promo-text:#FFFFFF;
 
-  --theme-light-bg:#FBF8F1;
-  --theme-light-surface:#FFFDFC;
-  --theme-light-surface-alt:#F4EDE2;
-  --theme-light-text:#1F1A14;
-  --theme-light-text-2:#3B3329;
-  --theme-light-muted:#514638;
+  --theme-light-bg:#FFFFFF;
+  --theme-light-surface:#FFFFFF;
+  --theme-light-surface-alt:#FFFFFF;
+  --theme-light-text:#111111;
+  --theme-light-text-2:#222222;
+  --theme-light-muted:#444444;
   --theme-light-gold:#5A2430;
-  --theme-light-border:#8A7657;
+  --theme-light-border:#767676;
   --theme-light-danger:#8B1E1E;
 
   --theme-dark-bg:#281014;
@@ -164,13 +164,18 @@ input::placeholder,textarea::placeholder{color:var(--muted);opacity:1}
 
 /* Niezależny tryb wysokiego kontrastu. Zachowuje wybrany motyw, ale upraszcza powierzchnie. */
 html[data-contrast="high"]{
-  --surface:var(--bg);
-  --surface-alt:var(--bg);
-  --text-2:var(--text);
-  --muted:var(--text);
-  --border:var(--text);
-  --focus:var(--gold);
+  --bg:#FFFFFF;
+  --surface:#FFFFFF;
+  --surface-alt:#FFFFFF;
+  --text:#000000;
+  --text-2:#000000;
+  --muted:#000000;
+  --border:#000000;
+  --gold:#5A2430;
+  --focus:#5A2430;
+  --on-gold:#FFFFFF;
   --shadow:none;
+  --shadow-color:transparent;
 }
 html[data-contrast="high"] :where(.card,.audit-panel,.contact-box,.feature-panel,.report-sheet,.people-photo,.hero-note,.faq-list details,.audit-row,.status-item,.report-line,.audit-benefit-card){
   box-shadow:none!important;
