@@ -2226,58 +2226,87 @@ html[data-contrast="high"] .audit-benefit-icon {
 }
 
 
-/* 2026-09-25 — artykuł: czysta biel, węższa treść hero i minimalna mgła */
-.article-summary{
-  width:min(100%,440px);
-  padding:clamp(22px,3vw,32px);
-  border:1px solid var(--gold);
-  border-radius:20px;
-  background:var(--surface);
+/* 2026-09-25 — artykuł: biała powierzchnia, mniejszy kafelek, normalne hero, lekka mgła */
+/* Jasny widok artykułu: czysta biel i wyłącznie czarne/bordowe akcenty. */
+html:not([data-theme="dark"]):not([data-theme="reading"]) .article-hero,
+html:not([data-theme="dark"]):not([data-theme="reading"]) .article-page,
+html:not([data-theme="dark"]):not([data-theme="reading"]) .article-section,
+html:not([data-theme="dark"]):not([data-theme="reading"]) .article-section-tinted{
+  background:#fff;
+}
+
+/* Kafelek pod hero ma być mniejszy i spokojniejszy. */
+html:not([data-theme="dark"]):not([data-theme="reading"]) .article-summary{
+  width:min(100%,420px);
+  padding:22px 24px;
+  border:1px solid #5A2430;
+  border-radius:18px;
+  background:#fff;
   box-shadow:none;
 }
-.article-opening{
-  grid-template-columns:minmax(0,440px) minmax(260px,1fr);
+html:not([data-theme="dark"]):not([data-theme="reading"]) .article-opening{
+  grid-template-columns:minmax(0,420px) minmax(260px,1fr);
 }
-.article-note{
-  background:var(--surface);
+
+/* Pozostałe bloki artykułu również bez beżowych pól. */
+html:not([data-theme="dark"]):not([data-theme="reading"]) .article-compare section,
+html:not([data-theme="dark"]):not([data-theme="reading"]) .article-checklist>div,
+html:not([data-theme="dark"]):not([data-theme="reading"]) .article-impact>div,
+html:not([data-theme="dark"]):not([data-theme="reading"]) .article-note,
+html:not([data-theme="dark"]):not([data-theme="reading"]) .article-penalties section,
+html:not([data-theme="dark"]):not([data-theme="reading"]) .article-end{
+  background:#fff;
+  color:#111;
 }
-.article-penalties section:last-child,
-.article-end{
-  background:var(--surface);
-  color:var(--text);
-  border:2px solid var(--gold);
+html:not([data-theme="dark"]):not([data-theme="reading"]) .article-note{
+  border-left-color:#5A2430;
 }
-.article-penalties section:last-child p,
-.article-penalties section:last-child span{
-  color:inherit;
+html:not([data-theme="dark"]):not([data-theme="reading"]) .article-penalties section:last-child,
+html:not([data-theme="dark"]):not([data-theme="reading"]) .article-end{
+  border:2px solid #5A2430;
 }
-.article-end .kicker{
-  color:var(--gold);
+html:not([data-theme="dark"]):not([data-theme="reading"]) .article-end .kicker{
+  color:#5A2430;
 }
-.article-end .button-primary{
-  background:var(--gold);
-  border-color:var(--gold);
-  color:var(--on-gold);
+html:not([data-theme="dark"]):not([data-theme="reading"]) .article-end .button-primary{
+  background:#5A2430;
+  border-color:#5A2430;
+  color:#fff;
 }
 
 @media(min-width:901px){
+  /* Przywrócona normalna szerokość tekstu hero — bez gigantycznego łamania tytułu. */
   .article-hero-copy{
-    width:min(100%,34rem);
+    width:min(100%,42rem);
   }
   .article-hero-copy h1{
-    max-width:13ch;
+    max-width:15ch;
   }
+
+  /* Zdjęcie po prawej, bez wchodzenia pod tekst. */
   .article-hero-photo{
-    left:43%;
-    width:calc(57% + max(16px, (100vw - 1320px) / 2));
+    top:0;
+    bottom:0;
+    left:50%;
+    right:auto;
+    width:calc(50% + max(16px,(100vw - 1320px)/2));
+    height:100%;
   }
+  .article-hero-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:right center;
+  }
+
+  /* Tylko delikatne przejście na styku tekstu i zdjęcia. */
   .article-hero-photo::after{
     background:
       linear-gradient(
         90deg,
-        color-mix(in srgb,var(--surface) 38%,transparent) 0%,
-        color-mix(in srgb,var(--surface) 16%,transparent) 6%,
-        transparent 14%
+        rgba(255,255,255,.34) 0%,
+        rgba(255,255,255,.12) 5%,
+        rgba(255,255,255,0) 10%
       );
   }
 }
@@ -2286,7 +2315,7 @@ html[data-contrast="high"] .audit-benefit-icon {
   .article-opening{
     grid-template-columns:1fr;
   }
-  .article-summary{
+  html:not([data-theme="dark"]):not([data-theme="reading"]) .article-summary{
     width:100%;
   }
 }
