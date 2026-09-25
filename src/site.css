@@ -1646,7 +1646,8 @@ html[data-text-size="aaa"] .navigation-row .main-nav a{
   width:140px;
   height:140px;
   border-radius:50%;
-  background:color-mix(in srgb,var(--surface) 40%,transparent);
+  background:transparent;
+  border:1.5px solid color-mix(in srgb,var(--gold) 15%,transparent);
   pointer-events:none;
 }
 .audit-benefit-card::after{
@@ -1691,15 +1692,6 @@ html[data-text-size="aaa"] .navigation-row .main-nav a{
   font-size:.85rem;
   font-weight:750;
   letter-spacing:.05em;
-}
-.audit-benefit-no::after{
-  content:"";
-  display:inline-block;
-  width:36px;
-  height:1.5px;
-  margin-left:14px;
-  background:var(--gold);
-  opacity:0.65;
 }
 .audit-benefit-icon{
   display:grid;
