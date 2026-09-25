@@ -2165,3 +2165,62 @@ html[data-contrast="high"] .audit-benefit-icon {
     object-position:right center;
   }
 }
+
+
+/* 2026-09-25 — hero: tekst w siatce, zdjęcie przy prawej krawędzi bez bocznego marginesu */
+@media(min-width:901px){
+  /* Strona główna: fotografia zajmuje prawą część hero i dochodzi do krawędzi viewportu. */
+  .home-hero .hero-photo-wide{
+    top:0;
+    right:0;
+    bottom:0;
+    left:42%;
+    width:auto;
+    height:100%;
+  }
+  .home-hero .hero-photo-wide>img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:right center;
+    transform:none;
+  }
+  .home-hero::before{
+    background:
+      linear-gradient(
+        90deg,
+        var(--surface) 0%,
+        var(--surface) 34%,
+        color-mix(in srgb,var(--surface) 92%,transparent) 40%,
+        color-mix(in srgb,var(--surface) 54%,transparent) 49%,
+        color-mix(in srgb,var(--surface) 14%,transparent) 58%,
+        transparent 66%
+      );
+  }
+
+  /* Artykuł: tekst pozostaje w .shell, a zdjęcie zaczyna się po prawej i kończy na krawędzi ekranu. */
+  .article-hero-photo{
+    top:0;
+    bottom:0;
+    left:48%;
+    right:auto;
+    width:calc(52% + max(16px, (100vw - 1320px) / 2));
+    height:100%;
+  }
+  .article-hero-photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    object-position:right center;
+  }
+  .article-hero-photo::after{
+    background:
+      linear-gradient(
+        90deg,
+        var(--surface) 0%,
+        color-mix(in srgb,var(--surface) 86%,transparent) 8%,
+        color-mix(in srgb,var(--surface) 38%,transparent) 18%,
+        transparent 30%
+      );
+  }
+}
