@@ -87,6 +87,139 @@
         </figure>
       </div>
     </section>
+
+    <article class="article-page">
+      <div class="shell article-shell">
+        <section class="article-opening" aria-labelledby="dev-summary">
+          <div class="article-summary">
+            <p class="kicker">Najważniejsze</p>
+            <h2 id="dev-summary">Dostępny kod zaczyna się od zwykłych, dobrych decyzji programistycznych.</h2>
+            <p>Nie trzeba od razu znać każdego numeru kryterium WCAG na pamięć. Trzeba rozumieć, jak przeglądarka, klawiatura i technologie wspomagające odczytują to, co budujemy.</p>
+            <p><strong>Im mniej programista musi „naprawiać dostępność” na końcu, tym lepiej została uwzględniona w samym sposobie tworzenia produktu.</strong></p>
+          </div>
+          <nav class="article-toc" aria-label="Spis treści">
+            <strong>W tym artykule</strong>
+            <ol>
+              <li><a href="#dev-html">Zacznij od HTML</a></li>
+              <li><a href="#dev-keyboard">Klawiatura i fokus</a></li>
+              <li><a href="#dev-forms">Formularze i błędy</a></li>
+              <li><a href="#dev-aria">ARIA</a></li>
+              <li><a href="#dev-dynamic">Dynamiczne interfejsy</a></li>
+              <li><a href="#dev-test">Testuj podczas budowy</a></li>
+            </ol>
+          </nav>
+        </section>
+
+        <section class="article-section" id="dev-html" aria-labelledby="dev-html-title">
+          <div class="article-copy">
+            <p class="kicker">Najpierw fundament</p>
+            <h2 id="dev-html-title">Dobry HTML robi więcej dla dostępności, niż często się wydaje.</h2>
+            <p>Przeglądarka już zna znaczenie wielu elementów. Wie, czym jest przycisk, link, nagłówek, pole formularza czy lista.</p>
+            <p>Jeżeli programista używa tych elementów zgodnie z ich przeznaczeniem, dostaje część dostępności „w pakiecie”: właściwe zachowanie klawiatury, role rozpoznawane przez technologie wspomagające i przewidywalne działanie.</p>
+            <p>Problemy zaczynają się wtedy, gdy wszystko budujemy z neutralnych elementów i dopiero później próbujemy ręcznie odtworzyć ich zachowanie.</p>
+            <p><strong>Najprostsza zasada: jeśli HTML ma już element do danego zadania, użyj go.</strong></p>
+          </div>
+          <figure class="article-figure article-figure-wide">
+            <img src="/assets/images/heroinne.webp" alt="Programista pracuje nad kodem aplikacji internetowej." width="1200" height="800" loading="lazy" decoding="async">
+            <figcaption>Semantyczny kod jest łatwiejszy do zrozumienia dla przeglądarki, technologii wspomagających i kolejnego programisty.</figcaption>
+          </figure>
+        </section>
+
+        <section class="article-section article-section-tinted" id="dev-keyboard" aria-labelledby="dev-keyboard-title">
+          <div class="article-copy">
+            <p class="kicker">Bez myszy</p>
+            <h2 id="dev-keyboard-title">Jeśli funkcja działa tylko myszą, nie jest gotowa.</h2>
+            <p>Jednym z najprostszych testów podczas developmentu jest odłożenie myszy i przejście przez stronę klawiaturą.</p>
+            <p>Użytkownik powinien dotrzeć do wszystkich ważnych elementów, widzieć aktualny fokus i móc uruchomić funkcje bez utknięcia w komponencie.</p>
+            <p>To szczególnie ważne przy własnych menu, modalach, zakładkach, listach rozwijanych i innych elementach tworzonych od podstaw.</p>
+            <p>Fokus nie jest dekoracją. Jest odpowiednikiem kursora dla osoby korzystającej z klawiatury. Usunięcie jego widoczności dlatego, że „nie pasuje do designu”, usuwa ważną informację o stanie interfejsu.</p>
+          </div>
+        </section>
+
+        <section class="article-section" id="dev-forms" aria-labelledby="dev-forms-title">
+          <div class="article-copy">
+            <p class="kicker">Formularze</p>
+            <h2 id="dev-forms-title">Pole formularza potrzebuje nie tylko wyglądu, ale też znaczenia.</h2>
+            <p>Placeholder nie jest pełnym zamiennikiem etykiety. Czerwone obramowanie nie jest wystarczającą informacją o błędzie. Gwiazdka bez wyjaśnienia nie zawsze mówi użytkownikowi, czego system oczekuje.</p>
+            <p>Dostępny formularz powinien jasno powiedzieć, co wpisać, które pola są wymagane, co poszło nie tak i jak poprawić błąd.</p>
+            <p>Programista powinien zadbać także o techniczne powiązanie tych informacji, aby czytnik ekranu mógł przekazać je w odpowiednim momencie.</p>
+            <p><strong>Najlepszy komunikat o błędzie nie mówi tylko „błąd”. Mówi użytkownikowi, co zrobić dalej.</strong></p>
+          </div>
+          <figure class="article-figure article-figure-wide">
+            <img src="/assets/images/formularz.webp" alt="Formularz internetowy jako przykład elementu wymagającego poprawnych etykiet i komunikatów." width="1200" height="800" loading="lazy" decoding="async">
+            <figcaption>Formularz łączy treść, projekt i kod. Dlatego warto testować go jako cały proces, a nie zestaw osobnych pól.</figcaption>
+          </figure>
+        </section>
+
+        <section class="article-section article-section-tinted" id="dev-aria" aria-labelledby="dev-aria-title">
+          <div class="article-copy">
+            <p class="kicker">ARIA</p>
+            <h2 id="dev-aria-title">ARIA pomaga wtedy, gdy używa się jej świadomie.</h2>
+            <p>ARIA pozwala przekazać technologiom wspomagającym dodatkowe informacje o roli, stanie i zachowaniu elementów interfejsu.</p>
+            <p>Jest bardzo przydatna w bardziej złożonych komponentach. Nie powinna jednak służyć do naprawiania źle dobranego HTML tam, gdzie istnieje prostsze rozwiązanie.</p>
+            <p>Jeżeli zwykły element <em>button</em> robi dokładnie to, czego potrzebujesz, ręczne budowanie przycisku z neutralnego elementu i wielu atrybutów zwykle tylko zwiększa liczbę rzeczy, które mogą się zepsuć.</p>
+            <aside class="article-note">
+              <strong>Dobra kolejność myślenia:</strong>
+              <p>Najpierw natywny HTML. Potem zachowanie komponentu. ARIA dopiero tam, gdzie naprawdę trzeba przekazać dodatkową informację.</p>
+            </aside>
+          </div>
+        </section>
+
+        <section class="article-section" id="dev-dynamic" aria-labelledby="dev-dynamic-title">
+          <div class="article-copy">
+            <p class="kicker">Nowoczesne aplikacje</p>
+            <h2 id="dev-dynamic-title">W aplikacji zmienia się ekran, ale użytkownik też musi wiedzieć, że coś się zmieniło.</h2>
+            <p>Współczesne interfejsy często aktualizują fragment strony bez pełnego przeładowania. Pojawia się komunikat, otwiera modal, zmienia wynik wyszukiwania albo zapisuje formularz.</p>
+            <p>Użytkownik widzący zauważa zmianę od razu. Osoba korzystająca z czytnika ekranu może jej nie zauważyć, jeżeli aplikacja nie przekaże odpowiedniego komunikatu lub nie zarządzi prawidłowo fokusem.</p>
+            <p>Dlatego dostępność w React, Next.js czy innym frameworku nie sprowadza się do wyboru biblioteki. Najważniejsze jest zrozumienie, <strong>co użytkownik powinien wiedzieć po każdej zmianie stanu interfejsu</strong>.</p>
+          </div>
+          <figure class="article-figure article-figure-wide">
+            <img src="/assets/images/grupa4.webp" alt="Zespół developerski analizuje zachowanie aplikacji internetowej." width="1200" height="800" loading="lazy" decoding="async">
+            <figcaption>Framework nie gwarantuje dostępności. O efekcie decyduje sposób, w jaki zespół buduje komponenty i zarządza interakcją.</figcaption>
+          </figure>
+        </section>
+
+        <section class="article-section article-section-tinted" id="dev-test" aria-labelledby="dev-test-title">
+          <div class="article-copy">
+            <p class="kicker">Testuj wcześniej</p>
+            <h2 id="dev-test-title">Programista nie powinien czekać na końcowy audyt, żeby pierwszy raz sprawdzić dostępność.</h2>
+            <p>Automatyczne testy można włączać do codziennego developmentu. Klawiaturą można sprawdzać komponent od razu po jego napisaniu. Formularz można przetestować zanim trafi na produkcję.</p>
+            <p>To znacznie prostsze niż poprawianie tych samych błędów w kilkudziesięciu miejscach po zakończeniu projektu.</p>
+
+            <div class="article-checklist">
+              <div><strong>Automat</strong><span>Łapie część powtarzalnych problemów technicznych.</span></div>
+              <div><strong>Klawiatura</strong><span>Pokazuje, czy podstawowa obsługa interfejsu działa bez myszy.</span></div>
+              <div><strong>Czytnik ekranu</strong><span>Pomaga sprawdzić nazwy, role, komunikaty i kolejność informacji.</span></div>
+              <div><strong>Realne zadanie</strong><span>Pokazuje, czy użytkownik rzeczywiście może zakończyć cały proces.</span></div>
+            </div>
+
+            <p><strong>Dostępność jest łatwiejsza, gdy staje się częścią definicji „gotowe”.</strong> Komponent nie jest ukończony tylko dlatego, że wygląda zgodnie z projektem. Powinien też dać się użyć.</p>
+            <p>Więcej o tym podejściu opisujemy w artykule <a href="/baza-wiedzy/dostepnosc-jako-czesc-jakosci-kodu.html">„Dostępność jako część jakości kodu, a nie dodatkowa funkcja”</a>.</p>
+          </div>
+        </section>
+
+        <section class="article-end" aria-labelledby="dev-cta">
+          <div>
+            <p class="kicker">Budujesz produkt cyfrowy?</p>
+            <h2 id="dev-cta">Dostępność możemy uwzględnić już podczas developmentu, nie dopiero po oddaniu projektu.</h2>
+            <p>To zwykle prostsze dla zespołu, tańsze dla właściciela i lepsze dla użytkownika.</p>
+          </div>
+          <a class="button button-primary" href="/kontakt.html" data-icon="arrow-right">Porozmawiaj z nami</a>
+        </section>
+
+        <section class="article-sources article-section" aria-labelledby="dev-sources">
+          <div class="article-copy">
+            <p class="kicker">Źródła</p>
+            <h2 id="dev-sources">Materiały W3C dla developerów.</h2>
+            <ul>
+              <li><a href="https://www.w3.org/WAI/tips/developing/" rel="noopener noreferrer">W3C WAI — Tips for Developing</a></li>
+              <li><a href="https://www.w3.org/WAI/ARIA/apg/" rel="noopener noreferrer">W3C — ARIA Authoring Practices Guide</a></li>
+              <li><a href="https://www.w3.org/TR/WCAG22/" rel="noopener noreferrer">W3C — WCAG 2.2</a></li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </article>
   </main>
 
   <footer class="site-footer">
