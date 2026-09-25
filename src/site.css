@@ -1622,16 +1622,50 @@ html[data-text-size="aaa"] .navigation-row .main-nav a{
   gap:18px;
 }
 .audit-benefit-card{
+  position:relative;
+  overflow:hidden;
   min-width:0;
-  min-height:320px;
-  padding:26px 24px 28px;
-  border:1px solid color-mix(in srgb,var(--gold) 30%,var(--border));
-  border-radius:22px;
-  background:var(--surface);
-  box-shadow:0 14px 32px color-mix(in srgb,var(--text) 6%,transparent);
+  min-height:340px;
+  padding:32px 28px 32px;
+  border:1px solid color-mix(in srgb,var(--gold) 20%,var(--border));
+  border-radius:24px;
+  background:color-mix(in srgb,var(--gold) 3%,var(--surface));
+  box-shadow:0 18px 44px -22px color-mix(in srgb,var(--gold) 15%,transparent);
+  transition:transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.audit-benefit-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 26px 56px -24px color-mix(in srgb,var(--gold) 25%,transparent);
+  border-color:color-mix(in srgb,var(--gold) 50%,var(--border));
+}
+.audit-benefit-card::before{
+  content:"";
+  position:absolute;
+  top:-50px;
+  right:-50px;
+  width:160px;
+  height:160px;
+  border-radius:50%;
+  background:color-mix(in srgb,var(--gold) 6%,transparent);
+  pointer-events:none;
+}
+.audit-benefit-card::after{
+  content:"";
+  position:absolute;
+  bottom:-40px;
+  left:-30px;
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  border:1px solid color-mix(in srgb,var(--gold) 10%,transparent);
+  pointer-events:none;
+}
+.audit-benefit-card > * {
+  position:relative;
+  z-index:1;
 }
 .audit-benefit-card:nth-child(even){
-  background:color-mix(in srgb,var(--surface) 82%,var(--bg));
+  background:color-mix(in srgb,var(--gold) 1.5%,var(--surface-alt));
 }
 .audit-benefit-card-docs{
   background:color-mix(in srgb,var(--gold) 7%,var(--surface));
@@ -1639,6 +1673,13 @@ html[data-text-size="aaa"] .navigation-row .main-nav a{
 .audit-benefit-card-result{
   background:var(--promo-bg);
   color:var(--promo-text);
+  border-color:var(--promo-bg);
+}
+.audit-benefit-card-result::before{
+  background:color-mix(in srgb,var(--promo-text) 8%,transparent);
+}
+.audit-benefit-card-result::after{
+  border-color:color-mix(in srgb,var(--promo-text) 15%,transparent);
 }
 .audit-benefit-card-result h3,
 .audit-benefit-card-result p,
