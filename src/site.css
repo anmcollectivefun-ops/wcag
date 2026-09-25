@@ -2152,3 +2152,16 @@ html[data-contrast="high"] .audit-benefit-icon {
     padding-left:22px;
   }
 }
+
+
+/* Hero artykułu — tekst zostaje w siatce, zdjęcie dochodzi do prawej krawędzi ekranu. */
+@media(min-width:901px){
+  .article-hero-photo{
+    left:0;
+    right:auto;
+    width:calc(100vw - max(20px, (100vw - 1320px) / 2));
+  }
+  .article-hero-photo img{
+    object-position:right center;
+  }
+}
