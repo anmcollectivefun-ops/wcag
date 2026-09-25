@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="pl" data-theme="light" data-text-size="a">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Czym wyróżnia się dobry programista dostępności? Semantyczny kod, klawiatura, fokus, testowanie i myślenie o użytkowniku w praktyce.">
+  <meta name="theme-color" content="#FFFFFF">
+  <title>Czym wyróżnia się najlepszy programista budujący dostępne strony i aplikacje? | ANM Access</title>
+  <link rel="canonical" href="https://anm.anmcollective.fun/baza-wiedzy/najlepszy-programista-dostepnosci.html">
+  <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/assets/fonts/atkinson.css">
+  <link rel="stylesheet" href="/src/theme.css">
+  <link rel="stylesheet" href="/src/typography.css">
+  <link rel="stylesheet" href="/src/site.css">
+  <script defer src="/assets/vendor/gsap.min.js"></script>
+  <script type="module" src="/src/theme.mjs"></script>
+  <script type="module" src="/src/site.mjs"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Przejdź do treści</a>
+  <header class="site-header">
+    <div class="accessibility-bar" aria-label="Ustawienia dostępności">
+      <div class="shell accessibility-bar-inner">
+        <div class="language-switcher access-group" aria-label="Język strony">
+          <span class="access-group-label" data-icon="languages">Język</span>
+          <button type="button" aria-pressed="true" aria-label="Język polski">PL</button>
+          <button type="button" disabled aria-label="Język angielski — w przygotowaniu">EN</button>
+          <button type="button" disabled aria-label="Język ukraiński — w przygotowaniu">UA</button>
+        </div>
+        <div class="text-size-switcher access-group" role="group" aria-label="Rozmiar tekstu">
+          <span class="access-group-label" data-icon="text-size">Tekst</span>
+          <button type="button" data-text-size-choice="a" aria-pressed="true" aria-label="Rozmiar tekstu A, 100 procent">A</button>
+          <button type="button" data-text-size-choice="aa" aria-pressed="false" aria-label="Rozmiar tekstu AA, 150 procent">AA</button>
+          <button type="button" data-text-size-choice="aaa" aria-pressed="false" aria-label="Rozmiar tekstu AAA, 200 procent">AAA</button>
+        </div>
+        <button class="access-tool" type="button" data-contrast-toggle data-icon="eye-contrast" aria-pressed="false">
+          <span>Wysoki kontrast</span>
+        </button>
+        <div class="theme-switcher access-group" role="group" aria-label="Motyw strony">
+          <button type="button" data-theme-choice="light" data-icon="sun" aria-pressed="true">Jasny</button>
+          <button type="button" data-theme-choice="dark" data-icon="moon" aria-pressed="false">Ciemny</button>
+          <button type="button" data-theme-choice="reading" data-icon="book-open" aria-pressed="false">Czytanie</button>
+        </div>
+        <button class="access-tool" type="button" data-read-page data-icon="volume-2" aria-pressed="false">
+          <span data-reader-label>Przeczytaj stronę</span>
+        </button>
+      </div>
+    </div>
+    <div class="shell navigation-row">
+      <a class="brand" href="/" aria-label="ANM Collective — strona główna">
+        <img class="brand-logo" src="/assets/images/ANM-Collective%20mobile.webp" alt="ANM Collective" decoding="async">
+      </a>
+      <button class="nav-toggle" type="button" data-nav-toggle data-icon="menu" aria-expanded="false" aria-controls="main-nav-list">Menu</button>
+      <nav class="main-nav" aria-label="Nawigacja główna" data-open="false">
+        <ul class="main-nav-list" id="main-nav-list">
+          <li><a href="/">Strona główna</a></li>
+          <li><a href="/audyt.html">Audyt WCAG</a></li>
+          <li><a href="/szkolenia.html">Szkolenia</a></li>
+          <li><a href="/baza-wiedzy.html" aria-current="page">Baza wiedzy</a></li>
+          <li><a href="/o-nas.html">O nas</a></li>
+          <li><a href="/kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero home-hero">
+      <div class="shell home-hero-shell">
+        <div class="hero-copy home-hero-copy">
+          <p class="kicker" data-reveal>Baza wiedzy · dobry programista</p>
+          <h1 data-reveal>Czym wyróżnia się najlepszy programista budujący dostępne strony i aplikacje?</h1>
+          <p class="hero-lead" data-reveal>Dobry programista dostępności nie tylko zna WCAG — potrafi przełożyć wymagania na semantyczny kod, przewidywalne interakcje i wygodne doświadczenie użytkownika.</p>
+          <ul class="hero-meta" data-reveal aria-label="Najważniejsze informacje o artykule">
+            <li data-icon="check">semantyczny kod</li>
+            <li data-icon="check">myślenie o użytkowniku</li>
+            <li data-icon="check">testowanie i odpowiedzialność</li>
+          </ul>
+        </div>
+
+        <figure class="hero-photo hero-photo-wide" data-reveal>
+          <img src="/assets/images/heronajlepszyprogramista.webp" alt="" width="1600" height="900" decoding="async" fetchpriority="high">
+          <svg class="hero-photo-wave" viewBox="0 0 1200 150" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+            <path d="M0,105 C170,38 330,142 515,104 C705,65 890,20 1200,86 L1200,150 L0,150 Z"></path>
+          </svg>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div class="footer-copy"><strong>ANM Access</strong><p>ANM Access to audyty i rozwój dostępności cyfrowej zgodnie z WCAG 2.2.</p></div>
+      <nav class="footer-nav" aria-label="Nawigacja w stopce">
+        <a href="/audyt.html">Audyt WCAG</a>
+        <a href="/szkolenia.html">Szkolenia</a>
+        <a href="/baza-wiedzy.html">Baza wiedzy</a>
+        <a href="/o-nas.html">O nas</a>
+        <a href="/kontakt.html">Kontakt</a>
+      </nav>
+    </div>
+  </footer>
+  <div class="theme-announcer" data-theme-announcer role="status" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
