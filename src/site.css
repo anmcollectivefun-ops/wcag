@@ -2294,7 +2294,7 @@ html[data-contrast="high"] .home-hero{
   letter-spacing:-.025em;
 }
 .home-hero-copy .hero-lead{
-  max-width:46ch;
+  max-width:38ch;
   margin:0;
   font-size:1rem;
   line-height:1.65;
