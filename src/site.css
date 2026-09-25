@@ -2327,8 +2327,8 @@ html[data-contrast="high"] .home-hero{
   max-height:none;
   aspect-ratio:auto;
   object-fit:cover;
-  object-position:72% center;
-  transform:scale(1.08);
+  object-position:72% 16%;
+  transform:scale(1.04);
   transform-origin:center right;
 }
 .home-hero .hero-photo-wave{
