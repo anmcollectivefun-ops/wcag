@@ -87,6 +87,121 @@
         </figure>
       </div>
     </section>
+
+    <article class="article-page">
+      <div class="shell article-shell">
+        <section class="article-opening" aria-labelledby="resp-summary">
+          <div class="article-summary">
+            <p class="kicker">Najważniejsze</p>
+            <h2 id="resp-summary">Za dostępność nie odpowiada jedna osoba. Odpowiada cały proces.</h2>
+            <p>Właściciel strony podejmuje decyzje i odpowiada za to, jaki standard ma spełniać serwis. Projektant, programista, autor treści i osoby później rozwijające stronę wpływają na to, czy ten standard rzeczywiście zostanie utrzymany.</p>
+            <p><strong>Dostępność najczęściej psuje się wtedy, gdy każdy odpowiada tylko za swój fragment, a nikt nie pilnuje całości.</strong></p>
+          </div>
+          <nav class="article-toc" aria-label="Spis treści">
+            <strong>W tym artykule</strong>
+            <ol>
+              <li><a href="#resp-kto">Kto odpowiada formalnie</a></li>
+              <li><a href="#resp-owner">Rola właściciela serwisu</a></li>
+              <li><a href="#resp-design">Rola UX, grafiki i treści</a></li>
+              <li><a href="#resp-dev">Rola programisty</a></li>
+              <li><a href="#resp-after">Co dzieje się po publikacji</a></li>
+              <li><a href="#resp-process">Jak podzielić odpowiedzialność mądrze</a></li>
+            </ol>
+          </nav>
+        </section>
+
+        <section class="article-section" id="resp-kto" aria-labelledby="resp-kto-title">
+          <div class="article-copy">
+            <p class="kicker">Najpierw rozdzielmy dwie rzeczy</p>
+            <h2 id="resp-kto-title">Kto odpowiada za dostępność prawnie, a kto odpowiada za nią w projekcie?</h2>
+            <p>To nie zawsze jest ta sama osoba.</p>
+            <p>Jeżeli konkretny podmiot podlega przepisom dotyczącym dostępności, to właśnie ten podmiot odpowiada za spełnienie swoich obowiązków. Może zlecić projekt agencji, audytorowi albo programiście, ale samo zlecenie prac nie sprawia, że odpowiedzialność organizacji znika.</p>
+            <p>W projekcie wygląda to inaczej. Tutaj odpowiedzialność jest rozłożona pomiędzy wiele osób, bo każda z nich podejmuje decyzje, które mogą poprawić albo pogorszyć dostępność.</p>
+            <p><strong>Prawo może wskazać podmiot odpowiedzialny. Dostępność samego produktu jest jednak wynikiem pracy całego zespołu.</strong></p>
+          </div>
+        </section>
+
+        <section class="article-section article-section-tinted" id="resp-owner" aria-labelledby="resp-owner-title">
+          <div class="article-copy">
+            <p class="kicker">Właściciel strony</p>
+            <h2 id="resp-owner-title">Właściciel serwisu decyduje, czy dostępność będzie częścią projektu od początku.</h2>
+            <p>To po jego stronie najczęściej zapadają decyzje o budżecie, terminach, wykonawcach i zakresie prac.</p>
+            <p>Jeżeli dostępność pojawia się dopiero w ostatnim tygodniu przed publikacją, zespół ma znacznie mniej możliwości. Jeżeli jest wpisana do założeń od początku, może wpływać na projekt, treść i sposób budowania komponentów.</p>
+            <p>Właściciel nie musi sam znać każdego kryterium WCAG. Powinien jednak wiedzieć, że dostępność wymaga czasu, testów i odpowiednich kompetencji po stronie wykonawców.</p>
+            <p><strong>Najważniejszą decyzją właściciela jest więc nie „jak samemu zrobić WCAG”, ale „czy zatrudniam ludzi, którzy potrafią o dostępność zadbać”.</strong></p>
+          </div>
+          <figure class="article-figure article-figure-wide">
+            <img src="/assets/images/anmbiuro.webp" alt="Zespół omawia wspólnie założenia projektu cyfrowego." width="1200" height="800" loading="lazy" decoding="async">
+            <figcaption>Dostępność zaczyna się od decyzji projektowych, zanim pojawi się gotowy kod i końcowy audyt.</figcaption>
+          </figure>
+        </section>
+
+        <section class="article-section" id="resp-design" aria-labelledby="resp-design-title">
+          <div class="article-copy">
+            <p class="kicker">Projekt i treść</p>
+            <h2 id="resp-design-title">UX, grafika i treść mogą stworzyć barierę zanim programista napisze pierwszą linię kodu.</h2>
+            <p>Projektant UX decyduje, jak użytkownik przechodzi przez proces. UI i grafik decydują o kolorach, wielkości elementów i sposobie prezentacji informacji. Copywriter i redaktor odpowiadają za nagłówki, instrukcje, etykiety i komunikaty.</p>
+            <p>Jeżeli formularz jest niezrozumiały, programista nie naprawi tego samym kodem. Jeżeli istotna informacja istnieje tylko w kolorze, problem powstał już na etapie projektu. Jeżeli nagłówki nic nie mówią o treści, sam technicznie poprawny HTML nie wystarczy.</p>
+
+            <div class="article-checklist">
+              <div><strong>UX</strong><span>Układa proces tak, aby użytkownik wiedział, gdzie jest i co ma zrobić dalej.</span></div>
+              <div><strong>UI i grafika</strong><span>Dbają o czytelność, kontrast i to, żeby informacja nie zależała wyłącznie od wyglądu.</span></div>
+              <div><strong>Copywriter</strong><span>Tworzy tekst, który prowadzi użytkownika zamiast go zatrzymywać.</span></div>
+              <div><strong>Redaktor</strong><span>Utrzymuje logiczną strukturę treści również po publikacji strony.</span></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="article-section article-section-tinted" id="resp-dev" aria-labelledby="resp-dev-title">
+          <div class="article-copy">
+            <p class="kicker">Programista</p>
+            <h2 id="resp-dev-title">Programista odpowiada za to, jak decyzje projektowe działają w prawdziwej stronie lub aplikacji.</h2>
+            <p>To kluczowa rola techniczna. Developer zamienia projekt w działający produkt i właśnie wtedy okazuje się, czy menu da się obsłużyć klawiaturą, formularz prawidłowo informuje o błędzie, fokus jest widoczny, a czytnik ekranu rozumie strukturę interfejsu.</p>
+            <p>Dobry programista potrafi też zauważyć problem wcześniej i wrócić z nim do projektanta. Nie powinien wykonywać projektu bezrefleksyjnie, jeżeli widzi, że dane rozwiązanie utrudni korzystanie ze strony.</p>
+            <p><strong>Programista nie jest jedyną osobą odpowiedzialną za dostępność, ale bardzo często jest ostatnią osobą, która może zatrzymać złą decyzję zanim trafi ona do użytkownika.</strong></p>
+            <p>Więcej o roli wdrożenia opisujemy w artykule <a href="/baza-wiedzy/dlaczego-audyt-nie-zastapi-dobrego-programisty.html">„Dlaczego sam audyt WCAG nie zastąpi dobrego programisty?”</a>.</p>
+          </div>
+          <figure class="article-figure article-figure-wide">
+            <img src="/assets/images/formularz.webp" alt="Formularz internetowy pokazujący, że dostępność zależy od projektu, treści i wdrożenia." width="1200" height="800" loading="lazy" decoding="async">
+            <figcaption>Jeden formularz łączy decyzje autora treści, projektanta i programisty. Dlatego trudno przypisać jego dostępność tylko jednej osobie.</figcaption>
+          </figure>
+        </section>
+
+        <section class="article-section" id="resp-after" aria-labelledby="resp-after-title">
+          <div class="article-copy">
+            <p class="kicker">Po publikacji</p>
+            <h2 id="resp-after-title">Dostępność nie kończy się w dniu oddania strony.</h2>
+            <p>Nawet bardzo dobrze przygotowany serwis może po kilku miesiącach stracić część dostępności.</p>
+            <p>Wystarczy nowy baner bez opisu, film bez napisów, zmiana koloru przycisku, nowy formularz albo wtyczka dodana bez sprawdzenia. Dlatego osoby publikujące treści i administratorzy także mają wpływ na końcowy efekt.</p>
+            <p>To jeden z powodów, dla których warto mieć proste zasady redakcyjne i okresowo wracać do testów.</p>
+          </div>
+        </section>
+
+        <section class="article-section article-section-tinted" id="resp-process" aria-labelledby="resp-process-title">
+          <div class="article-copy">
+            <p class="kicker">Dobra organizacja</p>
+            <h2 id="resp-process-title">Najlepszy model to odpowiedzialność podzielona jasno, ale cel wspólny.</h2>
+            <p>Każda osoba powinna wiedzieć, za co odpowiada, ale zespół powinien rozumieć, że wszyscy pracują nad jednym doświadczeniem użytkownika.</p>
+            <p>W praktyce warto ustalić standard projektowy, sposób testowania, zasady publikowania treści i osobę, która pilnuje, żeby dostępność nie zniknęła pomiędzy kolejnymi etapami.</p>
+            <p><strong>Najgorsze, co może się wydarzyć, to sytuacja, w której każdy mówi: „to nie mój zakres”.</strong></p>
+            <p>Dostępność działa najlepiej wtedy, gdy projektant może zapytać programistę, programista może wrócić do UX, redaktor zna zasady publikacji, a właściciel daje zespołowi przestrzeń na testy.</p>
+          </div>
+          <figure class="article-figure article-figure-wide">
+            <img src="/assets/images/3ludzi.webp" alt="Trzy osoby współpracują nad jednym projektem cyfrowym." width="1200" height="800" loading="lazy" decoding="async">
+            <figcaption>Odpowiedzialność może być podzielona między role. Cel pozostaje jeden: użytkownik ma móc samodzielnie skorzystać z produktu.</figcaption>
+          </figure>
+        </section>
+
+        <section class="article-end" aria-labelledby="resp-cta">
+          <div>
+            <p class="kicker">Potrzebujesz uporządkować proces?</p>
+            <h2 id="resp-cta">Możemy sprawdzić stronę i wskazać, które poprawki dotyczą kodu, projektu i treści.</h2>
+            <p>Dzięki temu raport nie kończy się listą problemów, tylko pomaga rozdzielić realne zadania pomiędzy zespół.</p>
+          </div>
+          <a class="button button-primary" href="/kontakt.html" data-icon="arrow-right">Porozmawiaj z nami</a>
+        </section>
+      </div>
+    </article>
   </main>
 
   <footer class="site-footer">
