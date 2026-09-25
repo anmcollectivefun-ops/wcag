@@ -2329,3 +2329,9 @@ html:not([data-theme="dark"]):not([data-theme="reading"]) .article-end .button-p
     width:100%;
   }
 }
+
+
+/* Bez fali podcinającej zdjęcie w hero artykułu. */
+.article-hero .article-hero-wave{
+  display:none;
+}
