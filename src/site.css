@@ -1213,7 +1213,7 @@ html[data-text-size="aaa"] .navigation-row .main-nav a{
 .home-audit-why-card{
   position:relative;
   min-width:0;
-  padding:44px 18px 26px;
+  padding:56px 20px 26px;
   border:1px solid color-mix(in srgb,var(--border) 40%,transparent);
   border-radius:20px;
   background:var(--surface);
@@ -1228,18 +1228,23 @@ html[data-text-size="aaa"] .navigation-row .main-nav a{
 }
 .home-audit-why-card .icon-box{
   position:absolute;
-  top:-26px;
+  top:-36px;
   left:50%;
   transform:translateX(-50%);
-  width:52px;
-  height:52px;
+  width:72px;
+  height:72px;
   margin:0;
   border:none;
   border-radius:50%;
-  background:var(--gold);
-  color:var(--on-gold);
-  box-shadow:0 6px 16px color-mix(in srgb,var(--gold) 40%,transparent);
+  background:var(--gold) !important;
+  color:var(--on-gold) !important;
+  box-shadow:0 8px 24px color-mix(in srgb,var(--gold) 40%,transparent);
   z-index:2;
+  opacity:1 !important;
+}
+.home-audit-why-card .icon-box .icon {
+  width:32px;
+  height:32px;
 }
 html[data-contrast="high"] .home-audit-why-card {
   background:var(--bg) !important;
