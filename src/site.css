@@ -1706,6 +1706,22 @@ html[data-text-size="aaa"] .navigation-row .main-nav a{
   width:26px;
   height:26px;
 }
+html[data-contrast="high"] .audit-benefit-card {
+  background:var(--bg) !important;
+  border-width:2px !important;
+}
+html[data-contrast="high"] .audit-benefit-card::before,
+html[data-contrast="high"] .audit-benefit-card::after {
+  display:none !important;
+}
+html[data-contrast="high"] .audit-benefit-no,
+html[data-contrast="high"] .audit-benefit-icon {
+  color:var(--text) !important;
+}
+html[data-contrast="high"] .audit-benefit-icon {
+  background:transparent !important;
+  border:2px solid var(--text) !important;
+}
 .audit-benefit-card h3{
   max-width:20ch;
   margin:0 0 12px;

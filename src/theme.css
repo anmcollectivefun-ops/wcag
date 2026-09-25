@@ -172,7 +172,7 @@ html[data-contrast="high"]{
   --focus:var(--gold);
   --shadow:none;
 }
-html[data-contrast="high"] :where(.card,.audit-panel,.contact-box,.feature-panel,.report-sheet,.people-photo,.hero-note,.faq-list details,.audit-row,.status-item,.report-line){
+html[data-contrast="high"] :where(.card,.audit-panel,.contact-box,.feature-panel,.report-sheet,.people-photo,.hero-note,.faq-list details,.audit-row,.status-item,.report-line,.audit-benefit-card){
   box-shadow:none!important;
   border-color:var(--text)!important;
 }
