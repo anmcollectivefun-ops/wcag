@@ -87,6 +87,163 @@
         </figure>
       </div>
     </section>
+
+    <article class="article-page">
+      <div class="shell article-shell">
+        <section class="article-opening" aria-labelledby="auto-najwazniejsze">
+          <div class="article-summary">
+            <p class="kicker">Najważniejsze</p>
+            <h2 id="auto-najwazniejsze">Zielony wynik narzędzia nie oznacza jeszcze dostępnej strony.</h2>
+            <p>Automatyczny test potrafi znaleźć wiele technicznych błędów. Nie potrafi jednak ocenić całego doświadczenia człowieka, który próbuje przeczytać treść, wypełnić formularz albo kupić produkt.</p>
+            <p><strong>Automat pomaga. Człowiek ocenia. Użytkownik pokazuje, czy rozwiązanie naprawdę działa.</strong></p>
+          </div>
+
+          <nav class="article-toc" aria-label="Spis treści">
+            <strong>W tym artykule</strong>
+            <ol>
+              <li><a href="#auto-czym-jest">Czym jest automatyczny audyt</a></li>
+              <li><a href="#auto-co-widzi">Co narzędzie potrafi znaleźć</a></li>
+              <li><a href="#auto-czego-nie-widzi">Czego automat nie zobaczy</a></li>
+              <li><a href="#auto-przyklady">Jak może wyglądać fałszywe poczucie zgodności</a></li>
+              <li><a href="#auto-dobry-proces">Jak wygląda dobry proces testowania</a></li>
+              <li><a href="#auto-anm">Jak podchodzimy do tego w ANM</a></li>
+            </ol>
+          </nav>
+        </section>
+
+        <section class="article-section" id="auto-czym-jest" aria-labelledby="auto-czym-jest-title">
+          <div class="article-copy">
+            <p class="kicker">Szybki test</p>
+            <h2 id="auto-czym-jest-title">Czym jest automatyczny audyt WCAG?</h2>
+            <p>Automatyczny audyt to test wykonywany przez program. Narzędzie otwiera stronę, analizuje jej kod i szuka błędów, które da się rozpoznać według określonych reguł.</p>
+            <p>To bardzo przydatne, bo komputer robi to szybko i konsekwentnie. Może przejrzeć wiele elementów w kilka chwil i wskazać miejsca, które wymagają uwagi.</p>
+            <p>Problem zaczyna się wtedy, gdy wynik automatu traktujemy jak ostateczny werdykt. <strong>Narzędzie nie korzysta ze strony tak jak człowiek.</strong> Nie próbuje załatwić sprawy, nie zastanawia się, czy komunikat jest zrozumiały i nie odczuwa frustracji, kiedy utknie w formularzu.</p>
+            <p>Dlatego W3C podkreśla, że narzędzia do oceny dostępności nie potrafią automatycznie sprawdzić wszystkich aspektów i nie mogą same stwierdzić, czy strona jest dostępna.</p>
+          </div>
+        </section>
+
+        <section class="article-section article-section-tinted" id="auto-co-widzi" aria-labelledby="auto-co-widzi-title">
+          <div class="article-copy">
+            <p class="kicker">To, w czym automat jest dobry</p>
+            <h2 id="auto-co-widzi-title">Automat świetnie znajduje problemy, które można policzyć lub rozpoznać w kodzie.</h2>
+            <p>Narzędzie dobrze radzi sobie z rzeczami, które mają jednoznaczny techniczny wzorzec. Może na przykład zauważyć brak opisu przy obrazie, zbyt niski kontrast tekstu albo niektóre błędy w strukturze strony.</p>
+            <p>Może też wskazać element, który ma nieprawidłową nazwę lub został zbudowany w sposób utrudniający współpracę z technologiami wspomagającymi.</p>
+            <p><strong>To ważne informacje.</strong> Nie ma sensu rezygnować z automatycznych testów tylko dlatego, że nie widzą wszystkiego. Dobre narzędzia oszczędzają czas i pozwalają szybko znaleźć powtarzalne problemy.</p>
+
+            <div class="article-checklist">
+              <div><strong>Kontrast</strong><span>Narzędzie może sprawdzić, czy tekst wystarczająco odróżnia się od tła.</span></div>
+              <div><strong>Opisy obrazów</strong><span>Może wskazać brak atrybutu opisującego obraz.</span></div>
+              <div><strong>Struktura kodu</strong><span>Może wykryć część błędów w nagłówkach, formularzach i elementach interaktywnych.</span></div>
+              <div><strong>Powtarzalność</strong><span>Komputer może sprawdzać te same reguły na wielu podstronach bez zmęczenia.</span></div>
+            </div>
+          </div>
+
+          <figure class="article-figure article-figure-wide">
+            <img src="/assets/images/miganie.webp" alt="Osoba patrzy na ekran komputera z intensywną grafiką, która może wymagać oceny pod kątem dostępności." width="1200" height="800" loading="lazy" decoding="async">
+            <figcaption>Automat potrafi wskazać część problemów, ale nie zastąpi oceny tego, jak treść działa na człowieka.</figcaption>
+          </figure>
+        </section>
+
+        <section class="article-section" id="auto-czego-nie-widzi" aria-labelledby="auto-czego-nie-widzi-title">
+          <div class="article-copy">
+            <p class="kicker">Tu potrzebny jest człowiek</p>
+            <h2 id="auto-czego-nie-widzi-title">Czego automat nie potrafi naprawdę zrozumieć?</h2>
+            <p>Największym ograniczeniem jest to, że program nie rozumie sensu strony tak jak człowiek.</p>
+            <p>Może sprawdzić, czy obraz ma opis. Nie zawsze potrafi ocenić, czy ten opis jest dobry. Tekst „obrazek123” technicznie istnieje, ale dla osoby niewidomej nie przekazuje żadnej wartości.</p>
+            <p>Może sprawdzić, czy formularz ma etykiety. Nie zawsze oceni, czy człowiek rozumie, co ma wpisać i jak poprawić błąd.</p>
+            <p>Może policzyć kontrast. Nie sprawdzi jednak całej logiki zadania: czy użytkownik wie, gdzie jest, co ma zrobić dalej i czy po kliknięciu dostaje zrozumiałą informację zwrotną.</p>
+            <p><strong>Dostępność dotyczy nie tylko obecności technicznego elementu. Dotyczy tego, czy człowiek może skutecznie skorzystać z usługi.</strong></p>
+          </div>
+
+          <figure class="article-figure article-figure-wide">
+            <img src="/assets/images/niewidomadziewczyna.webp" alt="Niewidoma kobieta korzysta z telefonu i technologii wspomagającej." width="1200" height="800" loading="lazy" decoding="async">
+            <figcaption>To użytkownik pokazuje, czy strona rzeczywiście daje się obsłużyć. Sama poprawność techniczna nie zawsze wystarcza.</figcaption>
+          </figure>
+        </section>
+
+        <section class="article-section article-section-tinted" id="auto-przyklady" aria-labelledby="auto-przyklady-title">
+          <div class="article-copy">
+            <p class="kicker">Proste przykłady</p>
+            <h2 id="auto-przyklady-title">Strona może wyglądać „zielono” w narzędziu, a nadal blokować użytkownika.</h2>
+            <p>Wyobraźmy sobie sklep internetowy. Automat nie znajduje poważnych błędów. Kontrast jest poprawny, obrazy mają opisy, formularze mają etykiety.</p>
+            <p>Użytkownik próbuje jednak kupić produkt bez myszy. Dochodzi do koszyka, ale nie potrafi otworzyć wyboru dostawy. Narzędzie może tego nie ocenić tak jak człowiek wykonujący realne zadanie.</p>
+            <p>Inny przykład: formularz pokazuje błąd po wysłaniu. Komunikat istnieje, więc część testów wygląda dobrze. Jednak osoba korzystająca z czytnika ekranu nie otrzymuje informacji, że błąd się pojawił. Dla niej formularz po prostu „nic nie zrobił”.</p>
+            <p>Jeszcze inny przypadek to język. Przycisk może być technicznie poprawny, ale napis „Kontynuuj” nie mówi, czy użytkownik przechodzi do płatności, zapisuje dane czy wysyła zamówienie.</p>
+
+            <aside class="article-note">
+              <strong>Dlatego warto testować zadania, nie tylko elementy.</strong>
+              <p>Nie pytamy wyłącznie: „czy ten przycisk spełnia regułę?”. Pytamy też: „czy użytkownik potrafi za jego pomocą osiągnąć cel?”.</p>
+            </aside>
+          </div>
+
+          <figure class="article-figure article-figure-wide">
+            <img src="/assets/images/formularz.webp" alt="Formularz internetowy jako przykład procesu, który wymaga oceny nie tylko kodu, ale również sposobu użycia." width="1200" height="800" loading="lazy" decoding="async">
+            <figcaption>Formularz może przejść część automatycznych testów, a mimo to pozostać trudny w obsłudze.</figcaption>
+          </figure>
+        </section>
+
+        <section class="article-section" id="auto-dobry-proces" aria-labelledby="auto-dobry-proces-title">
+          <div class="article-copy">
+            <p class="kicker">Połączenie metod</p>
+            <h2 id="auto-dobry-proces-title">Dobry audyt łączy narzędzia, test manualny i ocenę realnego użycia.</h2>
+            <p>Automat powinien być pierwszą parą oczu, nie ostatnią.</p>
+            <p>Po automatycznym teście człowiek sprawdza rzeczy, których narzędzie nie rozumie. Przechodzi stronę klawiaturą. Powiększa tekst. Sprawdza formularze. Patrzy, czy kolejność informacji ma sens. Testuje ważne procesy od początku do końca.</p>
+            <p>W bardziej wymagających projektach ogromną wartość daje także udział osób z niepełnosprawnościami. W3C zwraca uwagę, że ich udział pomaga zespołom lepiej rozumieć realne bariery i tworzyć skuteczniejsze rozwiązania.</p>
+            <p><strong>Najlepszy wynik powstaje wtedy, gdy automatyzacja przyspiesza pracę, a człowiek wnosi ocenę, której automat nie potrafi wykonać.</strong></p>
+
+            <div class="article-compare">
+              <section>
+                <span aria-hidden="true">01</span>
+                <h3>Automat</h3>
+                <p>Szybko znajduje techniczne i powtarzalne błędy.</p>
+              </section>
+              <section>
+                <span aria-hidden="true">02</span>
+                <h3>Człowiek</h3>
+                <p>Sprawdza sens, kolejność, zrozumiałość i to, czy użytkownik rzeczywiście może wykonać zadanie.</p>
+              </section>
+            </div>
+          </div>
+
+          <figure class="article-figure article-figure-wide">
+            <img src="/assets/images/grupa4.webp" alt="Zespół analizuje wspólnie działanie produktu cyfrowego." width="1200" height="800" loading="lazy" decoding="async">
+            <figcaption>Dostępność najlepiej oceniać z różnych perspektyw: technicznej, projektowej i użytkowej.</figcaption>
+          </figure>
+        </section>
+
+        <section class="article-section article-section-tinted" id="auto-anm" aria-labelledby="auto-anm-title">
+          <div class="article-copy">
+            <p class="kicker">ANM Collective</p>
+            <h2 id="auto-anm-title">Jak podchodzimy do automatycznych testów w ANM?</h2>
+            <p>Traktujemy je jako narzędzie, które bardzo pomaga, ale nie podejmuje za nas decyzji.</p>
+            <p>Automatyzujemy to, co można sprawdzić wiarygodnie. Potem przechodzimy do testów manualnych i patrzymy na cały proces użytkownika. Jeśli strona ma formularz, sprawdzamy nie tylko jego kod, ale też to, czy da się go wypełnić, poprawić błąd i zakończyć działanie.</p>
+            <p>To podejście jest dla nas naturalne, bo łączymy audyt z programowaniem. Możemy znaleźć problem, zrozumieć jego przyczynę, poprawić wdrożenie i sprawdzić efekt ponownie.</p>
+            <p>Więcej o tym, dlaczego sam raport nie wystarcza, opisujemy w artykule <a href="/baza-wiedzy/dlaczego-audyt-nie-zastapi-dobrego-programisty.html">„Dlaczego sam audyt WCAG nie zastąpi dobrego programisty?”</a>.</p>
+          </div>
+        </section>
+
+        <section class="article-end" aria-labelledby="auto-cta-title">
+          <div>
+            <p class="kicker">Masz wynik z automatu?</p>
+            <h2 id="auto-cta-title">Możemy sprawdzić, co ten wynik naprawdę mówi o Twojej stronie.</h2>
+            <p>Połączymy test automatyczny z oceną manualną i wskażemy bariery, których samo narzędzie mogło nie zauważyć.</p>
+          </div>
+          <a class="button button-primary" href="/kontakt.html" data-icon="arrow-right">Porozmawiaj z nami</a>
+        </section>
+
+        <section class="article-sources article-section" aria-labelledby="auto-sources-title">
+          <div class="article-copy">
+            <p class="kicker">Źródła</p>
+            <h2 id="auto-sources-title">Materiały W3C o testowaniu dostępności.</h2>
+            <ul>
+              <li><a href="https://www.w3.org/WAI/test-evaluate/tools/selecting/" rel="noopener noreferrer">W3C WAI — Selecting Web Accessibility Evaluation Tools</a></li>
+              <li><a href="https://www.w3.org/WAI/WCAG22/Understanding/conformance" rel="noopener noreferrer">W3C WAI — Understanding Conformance</a></li>
+              <li><a href="https://www.w3.org/WAI/planning/involving-users/" rel="noopener noreferrer">W3C WAI — Involving Users in Web Projects</a></li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </article>
   </main>
 
   <footer class="site-footer">
