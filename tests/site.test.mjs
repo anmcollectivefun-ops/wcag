@@ -59,8 +59,8 @@ test('każdy obraz na publicznych stronach ma jawny atrybut alt', async () => {
 
 test('zdjęcia użytkowników na stronie głównej mają opisowe alty', async () => {
   const html = await readFile(new URL('../index.html', import.meta.url), 'utf8');
-  assert.match(html, /niewidomadziewczyna\.webp" alt="Uśmiechnięta kobieta w okularach trzyma białą laskę używaną przez osoby niewidome i słabowidzące\."/);
-  assert.match(html, /niewidzacy\.webp" alt="Mężczyzna siedzi przy biurku i korzysta ze specjalistycznej klawiatury wspomagającej obsługę komputera przez osoby z dysfunkcją wzroku\."/);
+  assert.match(html, /audyt\.webp" alt="Audytorka analizuje dostępność cyfrową serwisu internetowego przy stanowisku komputerowym\."/);
+  assert.match(html, /grupa4\.webp" alt="Grupa osób o różnych potrzebach podczas wspólnego spotkania; jedna z osób komunikuje się językiem migowym\."/);
 });
 
 test('każda publiczna strona ma wspólny górny pasek dostępności', async () => {
