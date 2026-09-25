@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="ANM Access to platforma ANM Collective do audytu dostępności stron i aplikacji pod kątem WCAG 2.2, w tym kryteriów poziomu AAA.">
+  <meta name="description" content="ANM Access to audyt WCAG 2.2 stron i aplikacji. Sprawdzamy dostępność, kod i obsługę, a potem przygotowujemy raport, zalecenia i plan poprawek.">
   <meta name="theme-color" content="#FFFFFF">
   <title>ANM Access — audyt dostępności cyfrowej</title>
   <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
@@ -69,11 +69,11 @@
         <div class="hero-copy home-hero-copy">
           <p class="kicker" data-reveal>Dostępność cyfrowa · WCAG 2.2</p>
           <h1 data-reveal>Audyt WCAG 2.2, dzięki któremu zadbasz o dostępność cyfrową swojej strony</h1>
-          <p class="hero-lead" data-reveal>Sprawdzamy Twoją stronę internetową lub aplikację zgodnie z aktualnym standardem WCAG 2.2. Audyt obejmuje również wymagania znane z WCAG 2.1 i pokazuje, gdzie występują bariery oraz co wymaga poprawy.</p>
-          <p class="hero-lead" data-reveal>Otrzymasz czytelny raport z konkretnymi zaleceniami, który pomoże Ci lepiej przygotować serwis do wymagań dostępności cyfrowej, w tym EAA, i ograniczyć ryzyko problemów związanych z niedostępnością.</p>
+          <p class="hero-lead" data-reveal>Sprawdzamy Twoją stronę internetową lub aplikację według WCAG 2.2. Wykrywamy bariery i pokazujemy, co trzeba poprawić. Sprawdzamy też wymagania znane z WCAG 2.1.</p>
+          <p class="hero-lead" data-reveal>Po audycie dostajesz czytelny raport z konkretnymi zaleceniami. Pomoże Ci przygotować serwis do wymagań dostępności cyfrowej, także tych związanych z Europejskim Aktem o Dostępności (EAA).</p>
           <ul class="hero-meta" data-reveal aria-label="Najważniejsze elementy audytu">
             <li data-icon="check">WCAG 2.2</li>
-            <li data-icon="check">testy automatyczne i manualne</li>
+            <li data-icon="check">testy automatyczne i ręczne</li>
             <li data-icon="check">raport z zaleceniami</li>
           </ul>
         </div>
@@ -91,39 +91,39 @@
       <div class="shell">
         <div class="section-heading home-audit-why-heading" data-reveal>
           <p class="kicker">Po co audyt WCAG?</p>
-          <h2 id="home-audit-why-title">Dostępność cyfrowa to konkretne obowiązki i konkretne decyzje.</h2>
-          <p>Audyt pokazuje, w jakim stanie jest Twój serwis i co trzeba zrobić dalej.</p>
+          <h2 id="home-audit-why-title">Audyt pomaga spełnić wymagania i zaplanować poprawki.</h2>
+          <p>Audyt pokazuje stan Twojego serwisu. Wskazuje też, co trzeba poprawić.</p>
         </div>
 
         <div class="home-audit-why-cards" data-reveal-sequence>
           <article class="home-audit-why-card" data-reveal>
             <span class="icon-box" data-icon="shield-check"></span>
-            <h3>Wymogi prawne</h3>
-            <p>Sprawdź, czy strona lub aplikacja spełnia wymagania dostępności cyfrowej, które dotyczą Twojej instytucji.</p>
+            <h3>Wymagania prawne</h3>
+            <p>Sprawdzamy wymagania dostępności, które dotyczą Twojej strony lub aplikacji.</p>
           </article>
 
           <article class="home-audit-why-card" data-reveal>
             <span class="icon-box" data-icon="file-check"></span>
             <h3>Deklaracja dostępności</h3>
-            <p>Audyt daje Ci podstawę do rzetelnego określenia stanu dostępności serwisu i przygotowania deklaracji.</p>
+            <p>Raport pokazuje stan dostępności strony. Możesz wykorzystać go przy przygotowaniu lub aktualizacji deklaracji dostępności.</p>
           </article>
 
           <article class="home-audit-why-card" data-reveal>
             <span class="icon-box" data-icon="search"></span>
             <h3>Monitoring i kontrola</h3>
-            <p>Wykryj niezgodności wcześniej, zamiast dowiadywać się o nich dopiero podczas monitoringu lub kontroli.</p>
+            <p>Audyt pozwala wykryć błędy przed monitoringiem lub kontrolą.</p>
           </article>
 
           <article class="home-audit-why-card" data-reveal>
             <span class="icon-box" data-icon="list-checks"></span>
-            <h3>Plan napraw</h3>
-            <p>Dostajesz listę problemów, ich priorytety oraz konkretne zalecenia, które można przekazać do wdrożenia.</p>
+            <h3>Plan poprawek</h3>
+            <p>Dostajesz listę problemów. Oznaczamy ich ważność i opisujemy sposób poprawy.</p>
           </article>
 
           <article class="home-audit-why-card" data-reveal>
             <span class="icon-box" data-icon="scan-search"></span>
             <h3>WCAG 2.2</h3>
-            <p>Nie zatrzymujemy się na WCAG 2.1. Sprawdzamy również nowe kryteria wprowadzone w standardzie WCAG 2.2.</p>
+            <p>Sprawdzamy aktualną wersję WCAG 2.2. Rozwija ona WCAG 2.1 o nowe kryteria.</p>
           </article>
         </div>
       </div>
@@ -134,8 +134,8 @@
         <ul class="trust-list" aria-label="Zakres ANM Access">
           <li data-icon="shield-check">WCAG 2.2</li>
           <li data-icon="scan-search">testy techniczne</li>
-          <li data-icon="users">weryfikacja manualna</li>
-          <li data-icon="file-check">raport i rekomendacje</li>
+          <li data-icon="users">testy ręczne</li>
+          <li data-icon="file-check">raport i zalecenia</li>
         </ul>
       </div>
     </div>
@@ -145,14 +145,14 @@
         <div class="wcag-explainer-intro" data-reveal>
           <p class="kicker">Czym jest WCAG?</p>
           <p class="wcag-mark" aria-hidden="true">WCAG <span>2.2</span></p>
-          <h2 id="wcag-explainer-title">WCAG to standard dostępności stron internetowych i aplikacji.</h2>
-          <p>Wytyczne W3C opisują, jak tworzyć serwisy, z których mogą korzystać osoby o różnych potrzebach i sposobach obsługi internetu.</p>
+          <h2 id="wcag-explainer-title">WCAG określa zasady dostępności stron internetowych i aplikacji.</h2>
+          <p>WCAG tworzy W3C — organizacja, która opracowuje standardy internetowe. Te zasady pomagają budować strony i aplikacje dostępne dla osób o różnych potrzebach, także osób z niepełnosprawnościami.</p>
 
           <div class="wcag-principles" aria-label="Cztery zasady WCAG">
-            <span>Postrzegalność</span>
-            <span>Funkcjonalność</span>
-            <span>Zrozumiałość</span>
-            <span>Kompatybilność</span>
+            <span><strong>Postrzegalność</strong> — treść można odebrać</span>
+            <span><strong>Funkcjonalność</strong> — stronę można obsłużyć</span>
+            <span><strong>Zrozumiałość</strong> — treść jest jasna</span>
+            <span><strong>Kompatybilność</strong> — strona działa z różnymi technologiami</span>
           </div>
         </div>
 
@@ -161,7 +161,7 @@
             <span class="wcag-row-number" aria-hidden="true">01</span>
             <div>
               <h3>Co obejmuje WCAG?</h3>
-              <p>Między innymi kontrast i czytelność, obsługę klawiaturą, strukturę treści, formularze, multimedia, teksty alternatywne oraz współpracę z czytnikami ekranu i innymi technologiami wspomagającymi.</p>
+              <p>WCAG sprawdza między innymi kontrast, czytelność tekstu, obsługę klawiaturą, formularze, multimedia, opisy obrazów oraz działanie z czytnikiem ekranu.</p>
             </div>
           </article>
 
@@ -169,7 +169,7 @@
             <span class="wcag-row-number" aria-hidden="true">02</span>
             <div>
               <h3>Co oznaczają poziomy A, AA i AAA?</h3>
-              <p>Kryteria WCAG są podzielone na trzy poziomy. A obejmuje wymagania podstawowe, AA rozszerza zakres dostępności, a AAA zawiera najbardziej wymagające kryteria.</p>
+              <p>WCAG ma trzy poziomy. A obejmuje wymagania podstawowe. AA dodaje kolejne wymagania. AAA zawiera kryteria najbardziej wymagające.</p>
             </div>
           </article>
 
@@ -177,7 +177,7 @@
             <span class="wcag-row-number" aria-hidden="true">03</span>
             <div>
               <h3>Dlaczego sprawdzamy WCAG 2.2?</h3>
-              <p>WCAG 2.2 rozwija wcześniejszą wersję 2.1 o nowe kryteria, między innymi dotyczące fokusu, obsługi dotykowej, przeciągania elementów i dostępnego uwierzytelniania.</p>
+              <p>WCAG 2.2 rozwija wersję 2.1. Dodaje nowe kryteria dotyczące między innymi widocznego zaznaczenia elementu, obsługi dotykowej, przeciągania i logowania.</p>
             </div>
           </article>
         </div>
@@ -189,9 +189,9 @@
         <div class="home-numbers-cta-grid" data-reveal>
           <div class="home-numbers-copy">
             <p class="kicker">Dostępność w liczbach</p>
-            <h2 id="home-numbers-title"><span>95,9%</span> badanych stron miało wykrywalne błędy WCAG.</h2>
-            <p>W badaniu WebAIM Million 2026 na milionie najpopularniejszych stron głównych wykryto ponad 56 milionów błędów dostępności. To średnio <strong>56,1 błędu na jedną stronę</strong>.</p>
-            <p>Najczęściej wykrywano między innymi zbyt niski kontrast tekstu, brak tekstów alternatywnych przy obrazach oraz brak prawidłowych etykiet pól formularzy. Strona może wyglądać poprawnie i nadal zawierać bariery, które wymagają naprawy.</p>
+            <h2 id="home-numbers-title"><span>95,9%</span> badanych stron miało błędy dostępności wykrywalne automatycznie.</h2>
+            <p>WebAIM zbadał w 2026 roku milion popularnych stron głównych. Narzędzia wykryły ponad 56 milionów błędów dostępności. To średnio <strong>56,1 błędu na stronę</strong>.</p>
+            <p>Najczęściej pojawiały się: zbyt niski kontrast, brak opisów alternatywnych obrazów i brak etykiet przy polach formularzy. Część takich błędów trudno zauważyć podczas zwykłego przeglądania strony.</p>
             <p class="home-numbers-source">Źródło: <a href="https://webaim.org/projects/million/">WebAIM Million 2026</a>.</p>
             <a class="home-numbers-button" href="/audyt.html" data-icon="scan-search">Zamów audyt WCAG</a>
           </div>
@@ -215,35 +215,35 @@
         <div class="practical-audit-copy">
           <div class="section-heading" data-reveal>
             <p class="kicker">Dostępność sprawdzamy w praktyce</p>
-            <h2 id="practical-audit-title">Łączymy audyt WCAG z analizą kodu i konkretnym sposobem naprawy.</h2>
-            <p>Jako web developerzy sprawdzamy warstwę wizualną, kod, strukturę HTML, formularze, komponenty i zachowanie interfejsu.</p>
-            <p>Łączymy analizę techniczną z testami uwzględniającymi potrzeby osób starszych, niedowidzących, głuchych i słabosłyszących.</p>
+            <h2 id="practical-audit-title">Łączymy audyt WCAG z analizą kodu. Dzięki temu wskazujemy też sposób naprawy.</h2>
+            <p>Jako web developerzy sprawdzamy wygląd strony i jej kod. Analizujemy HTML, formularze, komponenty i sposób działania interfejsu.</p>
+            <p>Testujemy też stronę z osobami o różnych potrzebach. Uwzględniamy osoby starsze, niedowidzące, głuche i słabosłyszące.</p>
           </div>
 
           <div class="practical-audit-list" data-reveal>
             <div class="practical-audit-item">
               <span class="practical-audit-index" aria-hidden="true">01</span>
-              <div><strong>Analiza kodu przez web developerów</strong><span>Sprawdzamy semantykę, strukturę, komponenty i zachowanie interfejsu.</span></div>
+              <div><strong>Analiza kodu przez web developerów</strong><span>Sprawdzamy HTML, formularze, nazwy elementów i sposób działania interfejsu.</span></div>
             </div>
             <div class="practical-audit-item">
               <span class="practical-audit-index" aria-hidden="true">02</span>
-              <div><strong>Testy automatyczne i manualne</strong><span>Łączymy narzędzia techniczne z oceną elementów, których automat nie potrafi wiarygodnie zweryfikować.</span></div>
+              <div><strong>Testy automatyczne i ręczne</strong><span>Narzędzia sprawdzają część wymagań. Pozostałe oceniamy ręcznie.</span></div>
             </div>
             <div class="practical-audit-item">
               <span class="practical-audit-index" aria-hidden="true">03</span>
-              <div><strong>Testy z osobami niedowidzącymi i starszymi</strong><span>Sprawdzamy czytelność, powiększenie, obsługę i odbiór treści w praktyce.</span></div>
+              <div><strong>Testy z osobami niedowidzącymi i starszymi</strong><span>Sprawdzamy czytelność tekstu, powiększenie strony i łatwość obsługi.</span></div>
             </div>
             <div class="practical-audit-item">
               <span class="practical-audit-index" aria-hidden="true">04</span>
-              <div><strong>Konsultacje z osobami głuchymi i słabosłyszącymi</strong><span>Uwzględniamy bariery komunikacyjne oraz doświadczenie osób korzystających z aparatów słuchowych i języka migowego.</span></div>
+              <div><strong>Testy i konsultacje z osobami głuchymi i słabosłyszącymi</strong><span>Sprawdzamy treści, multimedia i sposoby kontaktu. Uwzględniamy osoby korzystające z aparatów słuchowych i języka migowego.</span></div>
             </div>
             <div class="practical-audit-item">
               <span class="practical-audit-index" aria-hidden="true">05</span>
-              <div><strong>Różne urządzenia i systemy</strong><span>Serwis sprawdzamy w różnych przeglądarkach, systemach i na różnych urządzeniach.</span></div>
+              <div><strong>Różne urządzenia i systemy</strong><span>Sprawdzamy stronę w różnych przeglądarkach, systemach i na różnych urządzeniach.</span></div>
             </div>
             <div class="practical-audit-item">
               <span class="practical-audit-index" aria-hidden="true">06</span>
-              <div><strong>Raport, zalecenia i możliwość wdrożenia poprawek</strong><span>Możesz przekazać rekomendacje swojemu zespołowi albo zlecić nam ich wdrożenie i ponowny test.</span></div>
+              <div><strong>Raport i wdrożenie poprawek</strong><span>Dostajesz raport i zalecenia. Możesz przekazać je swojemu zespołowi albo zlecić poprawki nam.</span></div>
             </div>
           </div>
         </div>
@@ -254,8 +254,8 @@
       <div class="shell">
         <div class="section-heading audit-benefits-heading" data-reveal>
           <p class="kicker">Co otrzymujesz po audycie?</p>
-          <h2 id="audit-benefits-title">Konkretne materiały, decyzje i kolejne kroki.</h2>
-          <p>Każdy element audytu ma prowadzić do działania — od wykrycia problemu po wdrożenie i ponowną weryfikację.</p>
+          <h2 id="audit-benefits-title">Po audycie wiesz, co poprawić i co zrobić dalej.</h2>
+          <p>Dostajesz raport, priorytety i konkretne zalecenia. Po poprawkach możemy sprawdzić stronę ponownie.</p>
         </div>
 
         <div class="audit-benefits-bento">
@@ -263,8 +263,8 @@
             <div class="audit-benefit-icon" data-icon="file-check"></div>
             <span class="audit-benefit-no" aria-hidden="true">01</span>
             <div>
-              <h3>Raport z wynikiem audytu WCAG 2.2</h3>
-              <p>Otrzymujesz uporządkowany wynik badania z przypisaniem problemów do kryteriów WCAG i poziomów A, AA lub AAA.</p>
+              <h3>Raport z audytu WCAG 2.2</h3>
+              <p>Dostajesz listę wykrytych problemów. Przy każdym podajemy kryterium WCAG oraz poziom A, AA lub AAA.</p>
             </div>
           </article>
 
@@ -272,7 +272,7 @@
             <span class="audit-benefit-no" aria-hidden="true">02</span>
             <div>
               <h3>Priorytety poprawek</h3>
-              <p>Widzisz, które bariery mają największy wpływ na użytkowników i co warto poprawić w pierwszej kolejności.</p>
+              <p>Oznaczamy problemy, które mają największy wpływ na użytkowników. Wiesz, od czego zacząć.</p>
             </div>
           </article>
 
@@ -281,7 +281,7 @@
             <span class="audit-benefit-no" aria-hidden="true">03</span>
             <div>
               <h3>Zalecenia do wdrożenia</h3>
-              <p>Do każdego problemu dodajemy konkretny kierunek poprawy dla kodu, interfejsu, treści, formularzy i pozostałych elementów serwisu.</p>
+              <p>Przy każdym problemie opisujemy, co trzeba zmienić w kodzie, interfejsie lub treści.</p>
             </div>
           </article>
 
@@ -290,7 +290,7 @@
             <span class="audit-benefit-no" aria-hidden="true">04</span>
             <div>
               <h3>Ponowna weryfikacja po poprawkach</h3>
-              <p>Po wdrożeniu zmian sprawdzamy poprawione elementy i aktualizujemy wynik audytu.</p>
+              <p>Po wdrożeniu poprawek sprawdzamy zmienione elementy jeszcze raz. Aktualizujemy wynik audytu.</p>
             </div>
           </article>
 
@@ -298,7 +298,7 @@
             <span class="audit-benefit-no" aria-hidden="true">05</span>
             <div>
               <h3>Możliwość wdrożenia poprawek</h3>
-              <p>Raport możesz przekazać swojemu zespołowi albo zlecić wdrożenie zmian bezpośrednio ANM Collective.</p>
+              <p>Możesz wdrożyć zalecenia ze swoim zespołem albo zlecić poprawki ANM Collective.</p>
             </div>
           </article>
 
@@ -307,8 +307,8 @@
             <span class="audit-benefit-no" aria-hidden="true">06</span>
             <div>
               <h3>Certyfikat ANM Access</h3>
-              <p>Po pozytywnym reteście możemy wystawić firmowe potwierdzenie wyniku audytu dla wskazanego zakresu serwisu i poziomu zgodności.</p>
-              <small>Dokument wystawia ANM Collective na podstawie przeprowadzonego audytu.</small>
+              <p>Po pozytywnym ponownym teście możemy wystawić firmowy Certyfikat ANM Access. Dokument podaje zakres audytu, wersję WCAG i potwierdzony poziom zgodności.</p>
+              <small>Wystawcą certyfikatu jest ANM Collective. Dokument dotyczy wyniku naszego audytu.</small>
             </div>
           </article>
         </div>
@@ -319,24 +319,24 @@
       <div class="shell">
         <div class="section-heading" data-reveal><p class="kicker">Najczęstsze pytania</p><h2>Audyt WCAG w kilku prostych odpowiedziach.</h2></div>
         <div class="faq-list">
-          <details data-reveal><summary>Czy audyt ANM Access będzie płatny?</summary><p>Tak. Zakres i cena będą zależeć od wielkości serwisu, liczby procesów oraz zakresu testów manualnych. Przed rozpoczęciem badania klient pozna zakres i koszt.</p></details>
-          <details data-reveal><summary>Czy automat może potwierdzić pełną zgodność?</summary><p>Część kryteriów WCAG wymaga oceny człowieka. Dlatego raport wyraźnie rozdziela testy techniczne i weryfikację manualną.</p></details>
-          <details data-reveal><summary>Czy badacie również poziom AAA?</summary><p>Tak. Wyniki będą porządkowane według kryteriów A, AA i AAA, z informacją o sposobie przeprowadzenia testu.</p></details>
-          <details data-reveal><summary>Czy możecie poprawić wykryte błędy?</summary><p>Tak. ANM Collective może wdrożyć poprawki, a potem wykonać ponowną weryfikację.</p></details>
+          <details data-reveal><summary>Czy audyt ANM Access jest płatny?</summary><p>Tak. Cena zależy od wielkości serwisu, liczby ważnych procesów i zakresu testów ręcznych. Przed startem podajemy zakres i cenę.</p></details>
+          <details data-reveal><summary>Czy automat może potwierdzić pełną zgodność?</summary><p>Automat sprawdza część kryteriów. Pozostałe oceniamy ręcznie. Raport pokazuje oba wyniki osobno.</p></details>
+          <details data-reveal><summary>Czy sprawdzacie również poziom AAA?</summary><p>Tak. Sprawdzamy kryteria A, AA i AAA. Przy każdym podajemy sposób sprawdzenia.</p></details>
+          <details data-reveal><summary>Czy możecie poprawić wykryte błędy?</summary><p>Tak. Możemy wdrożyć poprawki i sprawdzić je ponownie.</p></details>
         </div>
       </div>
     </section>
 
     <section class="section final-cta">
       <div class="shell final-cta-inner" data-reveal>
-        <div><p class="kicker">ANM Access</p><h2>Sprawdź, gdzie Twoja strona stawia bariery.</h2><p>Audyt WCAG 2.2 pokaże, co działa, co wymaga poprawy i co trzeba zweryfikować manualnie.</p></div>
-        <a class="button button-primary" href="/audyt.html" data-icon="arrow-right">Przejdź do audytu</a>
+        <div><p class="kicker">ANM Access</p><h2>Sprawdź dostępność swojej strony.</h2><p>Audyt WCAG 2.2 pokaże Ci problemy, ich priorytet i sposób naprawy.</p></div>
+        <a class="button button-primary" href="/audyt.html" data-icon="arrow-right">Zamów audyt WCAG</a>
       </div>
     </section>
   </main>
   <footer class="site-footer">
     <div class="shell footer-inner">
-      <div class="footer-copy"><strong>ANM Access</strong><p>Platforma ANM Collective do audytu i rozwoju dostępności cyfrowej zgodnie z WCAG 2.2.</p></div>
+      <div class="footer-copy"><strong>ANM Access</strong><p>ANM Access to audyty i rozwój dostępności cyfrowej zgodnie z WCAG 2.2.</p></div>
       <nav class="footer-nav" aria-label="Nawigacja w stopce">
         <a href="/audyt.html">Audyt WCAG</a>
         <a href="/szkolenia.html">Szkolenia</a>
