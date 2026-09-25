@@ -87,6 +87,194 @@
         </figure>
       </div>
     </section>
+
+    <article class="article-page">
+      <div class="shell article-shell">
+        <section class="article-opening" aria-labelledby="levels-summary">
+          <div class="article-summary">
+            <p class="kicker">Najważniejsze</p>
+            <h2 id="levels-summary">A, AA i AAA to trzy poziomy zgodności WCAG.</h2>
+            <p>Poziom A zawiera wymagania podstawowe. AA obejmuje wszystkie wymagania A oraz kolejne kryteria poziomu AA. AAA obejmuje A, AA i kryteria najwyższego poziomu.</p>
+            <p><strong>Nie są to trzy osobne wersje dostępności. Każdy kolejny poziom buduje się na poprzednim.</strong></p>
+          </div>
+
+          <nav class="article-toc" aria-label="Spis treści">
+            <strong>W tym artykule</strong>
+            <ol>
+              <li><a href="#levels-po-co">Po co są trzy poziomy</a></li>
+              <li><a href="#levels-a">Co oznacza poziom A</a></li>
+              <li><a href="#levels-aa">Co oznacza poziom AA</a></li>
+              <li><a href="#levels-aaa">Co oznacza poziom AAA</a></li>
+              <li><a href="#levels-nie-oceny">Dlaczego AAA nie oznacza strony idealnej</a></li>
+              <li><a href="#levels-wybor">Do jakiego poziomu warto dążyć</a></li>
+            </ol>
+          </nav>
+        </section>
+
+        <section class="article-section" id="levels-po-co" aria-labelledby="levels-po-co-title">
+          <div class="article-copy">
+            <p class="kicker">Jedna idea, różny zakres</p>
+            <h2 id="levels-po-co-title">Po co WCAG dzieli wymagania na A, AA i AAA?</h2>
+            <p>WCAG opisuje wiele różnych barier. Niektóre mogą całkowicie uniemożliwić korzystanie ze strony. Inne utrudniają ją określonej grupie użytkowników albo wymagają bardziej rozbudowanych rozwiązań.</p>
+            <p>Dlatego kryteria podzielono na trzy poziomy zgodności. Dzięki temu organizacja może jasno określić, jaki zakres wymagań spełnia jej strona lub aplikacja.</p>
+            <p>Ważne jest jednak, żeby nie myśleć o nich jak o szkolnych ocenach. <strong>A nie oznacza „jedynki”, AA „czwórki”, a AAA „szóstki”.</strong> To po prostu coraz szerszy zestaw wymagań.</p>
+
+            <div class="article-compare">
+              <section>
+                <span aria-hidden="true">A</span>
+                <h3>Poziom podstawowy</h3>
+                <p>Strona spełnia wszystkie kryteria oznaczone poziomem A.</p>
+              </section>
+              <section>
+                <span aria-hidden="true">AA</span>
+                <h3>A + AA</h3>
+                <p>Strona spełnia kryteria poziomu A oraz wszystkie kryteria poziomu AA.</p>
+              </section>
+            </div>
+            <div class="article-compare">
+              <section>
+                <span aria-hidden="true">AAA</span>
+                <h3>A + AA + AAA</h3>
+                <p>Strona spełnia wszystkie kryteria ze wszystkich trzech poziomów.</p>
+              </section>
+              <section>
+                <span aria-hidden="true">+</span>
+                <h3>Można robić więcej</h3>
+                <p>Nawet jeśli celem jest AA, można wdrożyć wybrane kryteria AAA tam, gdzie poprawiają doświadczenie użytkownika.</p>
+              </section>
+            </div>
+          </div>
+        </section>
+
+        <section class="article-section article-section-tinted" id="levels-a" aria-labelledby="levels-a-title">
+          <div class="article-copy">
+            <p class="kicker">Poziom A</p>
+            <h2 id="levels-a-title">Poziom A usuwa część najbardziej podstawowych barier.</h2>
+            <p>Na tym poziomie znajdują się wymagania, bez których część użytkowników może w ogóle nie mieć dostępu do treści lub funkcji.</p>
+            <p>Przykład jest prosty: jeżeli ważny obraz nie ma odpowiednika tekstowego, osoba niewidoma może nie otrzymać informacji, którą inni widzą od razu.</p>
+            <p>Podobnie jest z klawiaturą. Jeżeli ważnej funkcji nie można uruchomić bez myszy, osoba korzystająca wyłącznie z klawiatury może zatrzymać się w połowie zadania.</p>
+            <p>Poziom A obejmuje więc wiele rzeczy, które tworzą podstawę dostępności: alternatywy dla treści, możliwość obsługi, logiczne informacje i unikanie rozwiązań całkowicie blokujących użytkownika.</p>
+
+            <aside class="article-note">
+              <strong>Poziom A jest początkiem, nie celem końcowym.</strong>
+              <p>Spełnienie podstawowych wymagań usuwa poważne bariery, ale nie oznacza jeszcze, że strona zapewnia szeroki poziom dostępności.</p>
+            </aside>
+          </div>
+
+          <figure class="article-figure article-figure-wide">
+            <img src="/assets/images/niewidomadziewczyna.webp" alt="Niewidoma kobieta korzysta z urządzenia cyfrowego z pomocą technologii wspomagającej." width="1200" height="800" loading="lazy" decoding="async">
+            <figcaption>Podstawowe wymagania mają zapobiegać sytuacjom, w których treść albo funkcja jest dla części użytkowników całkowicie niedostępna.</figcaption>
+          </figure>
+        </section>
+
+        <section class="article-section" id="levels-aa" aria-labelledby="levels-aa-title">
+          <div class="article-copy">
+            <p class="kicker">Poziom AA</p>
+            <h2 id="levels-aa-title">Poziom AA idzie dalej i odpowiada na wiele barier spotykanych w codziennym korzystaniu ze strony.</h2>
+            <p>AA jest dziś bardzo ważnym punktem odniesienia. W3C wskazuje, że wiele organizacji właśnie do tego poziomu dąży w swoich politykach dostępności.</p>
+            <p>Na tym poziomie pojawiają się wymagania dotyczące między innymi czytelności tekstu, kontrastu, możliwości powiększania treści, widoczności fokusu i wygodniejszej obsługi interfejsu.</p>
+            <p>W praktyce chodzi o sytuacje, które wiele osób spotyka każdego dnia.</p>
+
+            <h3>Tekst powinien dać się przeczytać</h3>
+            <p>Jeśli szary tekst znajduje się na prawie białym tle, osoba słabowidząca może go nie odczytać. WCAG określa minimalny kontrast, żeby ograniczyć takie sytuacje.</p>
+
+            <h3>Po powiększeniu strona nadal powinna działać</h3>
+            <p>Użytkownik może potrzebować znacznie większego tekstu. Nie powinien wtedy tracić dostępu do przycisków, formularzy czy ważnych informacji.</p>
+
+            <h3>Użytkownik klawiatury musi wiedzieć, gdzie się znajduje</h3>
+            <p>Widoczny fokus pokazuje aktualnie wybrany element. W WCAG 2.2 poziom AA dodatkowo chroni go przed zasłonięciem przez inne części interfejsu.</p>
+
+            <p><strong>AA nie sprowadza się więc do „większej liczby punktów”. To kolejna warstwa zabezpieczeń, dzięki którym więcej osób może samodzielnie korzystać z produktu.</strong></p>
+          </div>
+
+          <figure class="article-figure article-figure-wide">
+            <img src="/assets/images/domseniora.webp" alt="Starsza osoba korzysta z cyfrowego urządzenia i czyta treść na ekranie." width="1200" height="800" loading="lazy" decoding="async">
+            <figcaption>Czytelny tekst, możliwość powiększenia i przewidywalna obsługa pomagają znacznie szerszej grupie użytkowników niż tylko osobom z trwałą niepełnosprawnością.</figcaption>
+          </figure>
+        </section>
+
+        <section class="article-section article-section-tinted" id="levels-aaa" aria-labelledby="levels-aaa-title">
+          <div class="article-copy">
+            <p class="kicker">Poziom AAA</p>
+            <h2 id="levels-aaa-title">AAA rozszerza dostępność tam, gdzie można zapewnić użytkownikowi jeszcze więcej wsparcia.</h2>
+            <p>Poziom AAA obejmuje wszystkie kryteria A i AA oraz dodatkowe wymagania najwyższego poziomu.</p>
+            <p>Znajdziemy tu między innymi bardziej wymagające zasady dotyczące kontrastu, dodatkowych sposobów udostępniania treści multimedialnych, języka i pomocy w rozumieniu treści.</p>
+            <p>Na przykład zwykły tekst na poziomie AA wymaga kontrastu co najmniej 4,5:1, natomiast odpowiednie kryterium AAA podnosi tę wartość do 7:1. Innym przykładem AAA jest tłumaczenie nagranych materiałów dźwiękowych na język migowy.</p>
+            <p>Takie rozwiązania mogą mieć ogromną wartość dla określonych odbiorców. Nie zawsze jednak można je zastosować do każdego rodzaju treści w całym serwisie.</p>
+          </div>
+
+          <figure class="article-figure article-figure-wide">
+            <img src="/assets/images/szkolenia.webp" alt="Osoby uczestniczą w szkoleniu i korzystają z materiałów cyfrowych." width="1200" height="800" loading="lazy" decoding="async">
+            <figcaption>Wyższy poziom może oznaczać dodatkowe formy przekazywania informacji i większe wymagania dotyczące czytelności treści.</figcaption>
+          </figure>
+        </section>
+
+        <section class="article-section" id="levels-nie-oceny" aria-labelledby="levels-nie-oceny-title">
+          <div class="article-copy">
+            <p class="kicker">Ważne rozróżnienie</p>
+            <h2 id="levels-nie-oceny-title">AAA nie oznacza automatycznie „idealnej strony”.</h2>
+            <p>To jedno z najczęstszych nieporozumień. Trzy litery mogą sprawiać wrażenie, że AAA jest najwyższą możliwą oceną jakości całej strony.</p>
+            <p>WCAG działa inaczej. Zgodność oznacza spełnienie określonego zestawu kryteriów. Nie mierzy wszystkiego, co wpływa na doświadczenie użytkownika.</p>
+            <p>Strona może formalnie spełniać wiele wymagań, a nadal mieć niejasną treść, skomplikowaną nawigację albo proces, który jest po prostu niewygodny.</p>
+            <p>W3C zwraca też uwagę, że <strong>nie zaleca wymagania poziomu AAA jako ogólnej polityki dla całych serwisów</strong>, ponieważ w przypadku niektórych treści spełnienie wszystkich kryteriów AAA nie jest możliwe.</p>
+
+            <aside class="article-note">
+              <strong>To nie znaczy, że AAA należy ignorować.</strong>
+              <p>Można spełniać wybrane kryteria AAA nawet wtedy, gdy formalnym celem projektu jest poziom AA. Jeżeli konkretne rozwiązanie pomaga odbiorcom, warto je wdrożyć.</p>
+            </aside>
+          </div>
+        </section>
+
+        <section class="article-section article-section-tinted" id="levels-wybor" aria-labelledby="levels-wybor-title">
+          <div class="article-copy">
+            <p class="kicker">Jaki poziom wybrać?</p>
+            <h2 id="levels-wybor-title">Najpierw ustal wymagany poziom, a potem patrz szerzej niż tylko na literę.</h2>
+            <p>Jeżeli projekt podlega konkretnym przepisom, umowie lub wymaganiom zamówienia, poziom zgodności trzeba ustalić na podstawie tych dokumentów.</p>
+            <p>Jeżeli tworzysz własną politykę dostępności, poziom AA jest częstym i praktycznym punktem odniesienia. W3C wskazuje, że wiele organizacji właśnie do niego dąży.</p>
+            <p>Nie oznacza to jednak, że po osiągnięciu AA należy przestać poprawiać stronę. Jeżeli kryterium AAA jest możliwe do wdrożenia i realnie pomaga Twoim użytkownikom, nic nie stoi na przeszkodzie, żeby je zastosować.</p>
+            <p><strong>Dobra dostępność nie polega na zdobyciu trzech liter. Polega na usuwaniu barier.</strong></p>
+            <p>Dlatego podczas audytu warto wiedzieć, jaki poziom jest sprawdzany, ale jeszcze ważniejsze jest zrozumienie, czego dotyczy konkretna niezgodność i komu utrudnia korzystanie ze strony.</p>
+          </div>
+
+          <figure class="article-figure article-figure-wide">
+            <img src="/assets/images/grupa.webp" alt="Zespół wspólnie analizuje wymagania i jakość projektu cyfrowego." width="1200" height="800" loading="lazy" decoding="async">
+            <figcaption>Poziom zgodności porządkuje wymagania. Decyzje projektowe powinny jednak nadal wynikać z potrzeb ludzi, którzy będą korzystać z produktu.</figcaption>
+          </figure>
+        </section>
+
+        <section class="article-section" aria-labelledby="levels-summary-end">
+          <div class="article-copy">
+            <p class="kicker">Zapamiętaj</p>
+            <h2 id="levels-summary-end">A to podstawa. AA obejmuje A i AA. AAA obejmuje wszystkie trzy poziomy.</h2>
+            <p>To najprostszy sposób, żeby zapamiętać konstrukcję WCAG.</p>
+            <p>Nie wybieramy pomiędzy A, AA i AAA jak pomiędzy trzema pakietami, z których każdy zawiera inne funkcje. Każdy kolejny poziom zawiera wymagania poprzednich.</p>
+            <p>A jeśli chcesz zrobić coś więcej niż wymaga formalny poziom? Możesz. W3C zachęca do spełniania kryteriów z wyższych poziomów tam, gdzie jest to możliwe.</p>
+            <p>Jeśli dopiero porządkujesz wersje standardu, zobacz również <a href="/baza-wiedzy/wcag-2-2.html">„WCAG 2.2 — co zmieniło się względem WCAG 2.1?”</a>.</p>
+          </div>
+        </section>
+
+        <section class="article-end" aria-labelledby="levels-cta">
+          <div>
+            <p class="kicker">Nie wiesz, jaki zakres sprawdzić?</p>
+            <h2 id="levels-cta">Ustalimy właściwy poziom audytu i wyjaśnimy każde kryterium po ludzku.</h2>
+            <p>Raport ma być przydatny osobie, która zamawia audyt, i zespołowi, który później będzie pracował nad poprawkami.</p>
+          </div>
+          <a class="button button-primary" href="/audyt.html" data-icon="arrow-right">Zobacz audyt WCAG</a>
+        </section>
+
+        <section class="article-sources article-section" aria-labelledby="levels-sources">
+          <div class="article-copy">
+            <p class="kicker">Źródła</p>
+            <h2 id="levels-sources">Materiały W3C o poziomach zgodności.</h2>
+            <ul>
+              <li><a href="https://www.w3.org/TR/WCAG22/#conformance-reqs" rel="noopener noreferrer">W3C — WCAG 2.2, wymagania zgodności</a></li>
+              <li><a href="https://www.w3.org/WAI/WCAG22/Understanding/conformance" rel="noopener noreferrer">W3C WAI — Understanding Conformance</a></li>
+              <li><a href="https://www.w3.org/WAI/planning/org-policies/" rel="noopener noreferrer">W3C WAI — Developing Organizational Policies on Web Accessibility</a></li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </article>
   </main>
 
   <footer class="site-footer">
