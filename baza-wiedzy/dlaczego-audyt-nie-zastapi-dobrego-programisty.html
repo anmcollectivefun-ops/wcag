@@ -94,198 +94,244 @@
         <section class="article-opening" aria-labelledby="najwazniejsze">
           <div class="article-summary">
             <p class="kicker">Najważniejsze</p>
-            <h2 id="najwazniejsze">Audyt mówi, co nie działa. Dostępność powstaje podczas wdrożenia.</h2>
+            <h2 id="najwazniejsze">Audyt sprawdza stronę. Programista ją naprawia.</h2>
             <ul>
-              <li><strong>Audyt WCAG jest diagnozą.</strong> Pokazuje bariery, kryteria i miejsca wymagające poprawy.</li>
-              <li><strong>Programista wdraża zmianę.</strong> Musi naprawić przyczynę problemu bez psucia pozostałych funkcji strony lub aplikacji.</li>
-              <li><strong>Dostępność tworzy cały zespół.</strong> Kod, UX, treść, grafika i sposób późniejszej obsługi serwisu wpływają na końcowy efekt.</li>
+              <li><strong>Audyt WCAG to sprawdzenie strony lub aplikacji.</strong> Pokazuje, gdzie użytkownik może napotkać barierę.</li>
+              <li><strong>Raport z audytu opisuje problem.</strong> Sam raport nie zmienia kodu i nie usuwa bariery.</li>
+              <li><strong>Programista wdraża poprawkę.</strong> Musi zrobić to tak, aby strona nadal działała poprawnie dla wszystkich użytkowników.</li>
+              <li><strong>Dostępność tworzy cały zespół.</strong> Kod, projekt, treść i grafika muszą ze sobą współpracować.</li>
             </ul>
           </div>
 
           <nav class="article-toc" aria-label="Spis treści">
             <strong>W tym artykule</strong>
             <ol>
-              <li><a href="#audyt-a-wdrozenie">Audyt a wdrożenie</a></li>
-              <li><a href="#przed-audytem">Dostępność przed audytem</a></li>
-              <li><a href="#caly-zespol">Odpowiedzialność zespołu</a></li>
-              <li><a href="#przyczyna-problemu">Naprawa przyczyny, nie punktu</a></li>
+              <li><a href="#czym-jest-audyt">Czym jest audyt WCAG</a></li>
+              <li><a href="#audyt-a-wdrozenie">Dlaczego raport nie wystarcza</a></li>
+              <li><a href="#przed-audytem">Dlaczego warto zacząć wcześniej</a></li>
+              <li><a href="#caly-zespol">Kto tworzy dostępną stronę</a></li>
+              <li><a href="#przyczyna-problemu">Jak dobry programista naprawia błędy</a></li>
               <li><a href="#programista-a-audyt">Programista, który potrafi audytować</a></li>
-              <li><a href="#jak-wybrac">Jak wybrać programistę</a></li>
+              <li><a href="#jak-wybrac">Jak wybrać wykonawcę</a></li>
               <li><a href="#anm">Jak pracujemy w ANM</a></li>
             </ol>
           </nav>
         </section>
 
-        <section class="article-section" id="audyt-a-wdrozenie" aria-labelledby="audyt-a-wdrozenie-title">
+        <section class="article-section" id="czym-jest-audyt" aria-labelledby="czym-jest-audyt-title">
           <div class="article-copy">
-            <p class="kicker">Audyt i kod</p>
-            <h2 id="audyt-a-wdrozenie-title">Audyt WCAG pokazuje problem. Programista musi go rozwiązać.</h2>
-            <p><strong>Sam raport nie zmienia strony.</strong> Może wskazać, że użytkownik nie widzi fokusu, formularz nie przekazuje błędu czytnikowi ekranu albo elementu nie da się obsłużyć klawiaturą. Dopiero wdrożenie usuwa tę barierę.</p>
-            <p>Dobry programista nie pyta tylko: „który punkt z raportu mam poprawić?”. Sprawdza też, <strong>dlaczego problem powstał, gdzie jeszcze występuje i jak naprawić go bez tworzenia kolejnej bariery</strong>.</p>
-            <p>To ważne zwłaszcza w rozbudowanych serwisach. Jeden wadliwy komponent może być użyty na dziesiątkach podstron. Poprawienie pojedynczego miejsca nie wystarczy, jeśli źródło błędu nadal znajduje się w komponencie.</p>
+            <p class="kicker">Zacznijmy od podstaw</p>
+            <h2 id="czym-jest-audyt-title">Czym właściwie jest audyt WCAG?</h2>
+            <p>Wyobraź sobie przegląd samochodu. Mechanik sprawdza hamulce, światła i inne elementy. Na końcu mówi, co działa dobrze, a co trzeba naprawić. <strong>Sam protokół z przeglądu nie naprawia jednak samochodu.</strong></p>
+            <p>Z audytem WCAG jest podobnie. Audytor sprawdza stronę internetową lub aplikację i szuka miejsc, które mogą utrudniać korzystanie z niej osobom z różnymi potrzebami.</p>
+            <p>Może na przykład sprawdzić, czy:</p>
+            <ul>
+              <li>stronę da się obsłużyć samą klawiaturą, bez myszy,</li>
+              <li>tekst jest wystarczająco czytelny i ma dobry kontrast,</li>
+              <li>formularz jasno informuje, co trzeba wpisać i gdzie pojawił się błąd,</li>
+              <li>czytnik ekranu może poprawnie odczytać przyciski, nagłówki i komunikaty,</li>
+              <li>po powiększeniu tekstu nic nie znika poza ekranem.</li>
+            </ul>
+            <p><strong>Wynikiem audytu jest wiedza:</strong> co działa, co nie działa i co trzeba poprawić. Dopiero później zaczyna się wdrożenie.</p>
+          </div>
+        </section>
+
+        <section class="article-section article-section-tinted" id="audyt-a-wdrozenie" aria-labelledby="audyt-a-wdrozenie-title">
+          <div class="article-copy">
+            <p class="kicker">Raport to początek</p>
+            <h2 id="audyt-a-wdrozenie-title">Dlaczego sam raport z audytu nie wystarcza?</h2>
+            <p>Raport może napisać: „przycisku nie da się obsłużyć klawiaturą”. To cenna informacja, ale nadal nie rozwiązuje problemu.</p>
+            <p>Ktoś musi wejść do kodu strony, znaleźć przyczynę i ją poprawić. Najczęściej robi to programista.</p>
+            <p>Dobry programista nie zmienia przypadkowo jednej linijki tylko po to, żeby punkt z raportu zniknął. Najpierw sprawdza, <strong>dlaczego przycisk nie działa, czy ten sam błąd występuje w innych miejscach i czy poprawka nie zepsuje czegoś innego</strong>.</p>
+
+            <h3>Prosty przykład: formularz kontaktowy</h3>
+            <p>Użytkownik wpisuje adres e-mail i naciska „Wyślij”. Jeśli zrobi literówkę, na ekranie pojawia się czerwony komunikat „Błędny adres”.</p>
+            <p>Dla części osób to może wystarczyć. Ale osoba niewidoma korzystająca z czytnika ekranu może tego komunikatu nie usłyszeć, jeśli programista nie połączył go prawidłowo z polem formularza.</p>
+            <p><strong>Audyt wykrywa problem. Programista sprawia, że komunikat staje się dostępny.</strong></p>
 
             <div class="article-compare">
               <section>
                 <span aria-hidden="true">01</span>
                 <h3>Audyt</h3>
-                <p>Wskazuje barierę, kryterium WCAG, miejsce występowania problemu oraz sposób jego weryfikacji.</p>
+                <p>Odpowiada na pytanie: „co utrudnia użytkownikowi korzystanie ze strony?”.</p>
               </section>
               <section>
                 <span aria-hidden="true">02</span>
                 <h3>Wdrożenie</h3>
-                <p>Zmienia kod, komponent, treść lub interakcję tak, aby użytkownik mógł wykonać zadanie w dostępny sposób.</p>
+                <p>Odpowiada na pytanie: „jak zmienić stronę, żeby ta bariera zniknęła?”.</p>
               </section>
             </div>
           </div>
 
           <figure class="article-figure article-figure-wide">
             <img src="/assets/images/formularz.webp" alt="Przykład formularza internetowego, którego dostępność zależy od poprawnego kodu, etykiet i komunikatów błędów." width="1200" height="800" loading="lazy" decoding="async">
-            <figcaption>Formularz może wyglądać poprawnie, a mimo to być trudny do obsługi klawiaturą lub czytnikiem ekranu. Raport wskazuje problem, ale jego usunięcie wymaga pracy w kodzie.</figcaption>
+            <figcaption>To, że formularz wygląda dobrze, nie oznacza jeszcze, że każdy potrafi z niego skorzystać.</figcaption>
           </figure>
         </section>
 
-        <section class="article-section article-section-tinted" id="przed-audytem" aria-labelledby="przed-audytem-title">
+        <section class="article-section" id="przed-audytem" aria-labelledby="przed-audytem-title">
           <div class="article-copy">
             <p class="kicker">Najlepszy moment</p>
-            <h2 id="przed-audytem-title">Najlepiej zadbać o dostępność jeszcze przed audytem.</h2>
-            <p>Najmniej poprawek powstaje wtedy, gdy zespół myśli o dostępności od początku projektu. Programista może od razu budować właściwą strukturę, zamiast później przebudowywać gotowe komponenty.</p>
-            <p>W praktyce oznacza to między innymi:</p>
+            <h2 id="przed-audytem-title">Najłatwiej zbudować dostępność od początku.</h2>
+            <p>Można najpierw zbudować całą stronę, a później sprawdzić ją w audycie i poprawiać dziesiątki błędów. Można też od początku tworzyć ją w taki sposób, żeby wielu z tych błędów w ogóle nie było.</p>
+            <p>To podobne do budowy domu. Łatwiej od razu zaplanować szerokie drzwi niż po zakończeniu budowy burzyć ścianę i poszerzać wejście.</p>
+            <p>Programista znający zasady dostępności może od pierwszego dnia podejmować lepsze decyzje.</p>
+
             <div class="article-checklist">
-              <div><strong>Semantyczny HTML</strong><span>Przyciski są przyciskami, linki linkami, a nagłówki tworzą logiczną strukturę dokumentu.</span></div>
-              <div><strong>Obsługę klawiaturą</strong><span>Użytkownik może przejść przez interfejs bez myszy i zawsze wie, gdzie znajduje się fokus.</span></div>
-              <div><strong>Dostępne formularze</strong><span>Pola mają etykiety, instrukcje i komunikaty błędów przekazywane w zrozumiały sposób.</span></div>
-              <div><strong>Przewidywalne komponenty</strong><span>Menu, modale, zakładki i komunikaty zachowują się zgodnie z oczekiwaniami użytkownika.</span></div>
-              <div><strong>Reflow i powiększenie</strong><span>Treść pozostaje użyteczna po powiększeniu i na mniejszych ekranach.</span></div>
-              <div><strong>Rozsądne ARIA</strong><span>ARIA uzupełnia semantykę tylko tam, gdzie jest potrzebna. Nie zastępuje poprawnego HTML.</span></div>
+              <div><strong>Przycisk jest prawdziwym przyciskiem</strong><span>W kodzie używa elementu przeznaczonego do klikania, a nie przypadkowego pola udającego przycisk.</span></div>
+              <div><strong>Stronę da się przejść klawiaturą</strong><span>Osoba, która nie używa myszy, może dotrzeć do menu, formularza i wszystkich ważnych funkcji.</span></div>
+              <div><strong>Widać, gdzie jesteśmy</strong><span>Fokus to obramowanie lub inne wyróżnienie pokazujące, który element jest właśnie wybrany klawiaturą.</span></div>
+              <div><strong>Formularz mówi, co się stało</strong><span>Użytkownik otrzymuje jasną informację, które pole zawiera błąd i jak go poprawić.</span></div>
+              <div><strong>Tekst można powiększyć</strong><span>Po powiększeniu treść nadal mieści się na ekranie i nie trzeba zgadywać, gdzie coś zniknęło.</span></div>
+              <div><strong>Kod ma logiczną strukturę</strong><span>Nagłówki, listy, linki i formularze są zapisane w sposób zrozumiały także dla technologii wspomagających.</span></div>
             </div>
+
             <aside class="article-note">
-              <strong>Audyt wtedy nadal jest potrzebny.</strong>
-              <p>Pełni jednak rolę kontroli jakości i wykrywa problemy, których zespół nie zauważył podczas tworzenia produktu. Nie musi zaczynać się od ratowania całej architektury strony.</p>
+              <strong>Czy wtedy audyt nie jest potrzebny?</strong>
+              <p>Jest potrzebny. Pełni jednak rolę kontroli jakości. Sprawdza, czy zespół rzeczywiście osiągnął zamierzony efekt i czy podczas budowy nie przeoczył ważnej bariery.</p>
             </aside>
           </div>
         </section>
 
-        <section class="article-section" id="caly-zespol" aria-labelledby="caly-zespol-title">
+        <section class="article-section article-section-tinted" id="caly-zespol" aria-labelledby="caly-zespol-title">
           <div class="article-copy">
-            <p class="kicker">Wspólna odpowiedzialność</p>
-            <h2 id="caly-zespol-title">Za dostępność strony odpowiada cały zespół.</h2>
-            <p><strong>Dostępność nie powstaje wyłącznie w kodzie.</strong> Programista może przygotować bardzo dobry fundament techniczny, ale późniejsza decyzja projektowa, grafika lub zmiana treści może ponownie stworzyć barierę.</p>
+            <p class="kicker">Dostępność to praca zespołowa</p>
+            <h2 id="caly-zespol-title">Jedna osoba nie tworzy całej dostępnej strony.</h2>
+            <p>Programista ma ogromny wpływ na dostępność, ale nie decyduje o wszystkim. Strona powstaje z wielu elementów: kodu, projektu, tekstów, zdjęć, kolorów i późniejszych aktualizacji.</p>
+            <p>Dlatego nawet bardzo dobry kod może zostać osłabiony przez złą decyzję w innym miejscu.</p>
 
-            <h3>Programista</h3>
-            <p>Odpowiada za semantykę, obsługę klawiaturą, fokus, formularze, komunikaty, zachowanie komponentów i techniczną współpracę z technologiami wspomagającymi.</p>
+            <h3>Programista buduje działanie strony</h3>
+            <p>Dba o to, żeby przyciski, menu, formularze i komunikaty działały także bez myszy oraz współpracowały z czytnikami ekranu.</p>
 
-            <h3>UX i UI</h3>
-            <p>Projektują kolejność działań, hierarchię informacji, wielkość celów, kontrast i zachowanie interfejsu. Dostępny kod nie naprawi procesu, którego użytkownik nie potrafi zrozumieć.</p>
+            <h3>Projektant UX i UI planuje sposób korzystania</h3>
+            <p>Decyduje, gdzie znajduje się przycisk, jaka jest kolejność kroków, jak duże są elementy i czy użytkownik rozumie, co ma zrobić dalej.</p>
 
-            <h3>Copywriter i redaktor treści</h3>
-            <p>Tworzą nagłówki, instrukcje, etykiety i komunikaty. Prosty język, dobra kolejność informacji i jednoznaczne polecenia wpływają na dostępność równie mocno jak warstwa techniczna.</p>
+            <h3>Copywriter i redaktor tworzą treść</h3>
+            <p>Piszą nagłówki, instrukcje i komunikaty. Jeśli tekst jest niejasny, nawet perfekcyjnie zaprogramowana strona może być trudna w użyciu.</p>
 
-            <h3>Grafik</h3>
-            <p>Wpływa na kontrast, czytelność, sposób przekazania informacji i znaczenie elementów wizualnych. Informacja nie może zależeć wyłącznie od koloru lub obrazu.</p>
+            <h3>Grafik odpowiada za przekaz wizualny</h3>
+            <p>Dobiera kolory, obrazy i sposób pokazania informacji. Ważna informacja nie powinna być przekazana tylko kolorem, bo nie każdy użytkownik widzi kolory w ten sam sposób.</p>
 
-            <h3>Właściciel strony lub produktu</h3>
-            <p>Decyduje o standardzie pracy zespołu, czasie na testy oraz o tym, czy dostępność pozostaje częścią projektu także po jego publikacji.</p>
+            <h3>Właściciel strony ustala zasady pracy</h3>
+            <p>To on decyduje, czy zespół ma czas na testy, czy po publikacji nadal pilnuje dostępności i czy nowe treści są dodawane zgodnie z ustalonym standardem.</p>
+
+            <p><strong>Najlepszy efekt powstaje wtedy, gdy wszystkie te osoby wiedzą, po co jest dostępność i potrafią ze sobą współpracować.</strong></p>
           </div>
 
           <figure class="article-figure article-figure-wide">
             <img src="/assets/images/anmbiuro.webp" alt="Zespół pracujący wspólnie nad projektem cyfrowym w biurze." width="1200" height="800" loading="lazy" decoding="async">
-            <figcaption>Dostępna strona powstaje wtedy, gdy projekt, kod, treść i testy tworzą jeden proces, a nie osobne zadania wykonywane na końcu projektu.</figcaption>
+            <figcaption>Kod, projekt, grafika i treść wpływają na ten sam produkt. Dlatego dostępność jest wspólnym zadaniem zespołu.</figcaption>
           </figure>
         </section>
 
-        <section class="article-section article-section-tinted" id="przyczyna-problemu" aria-labelledby="przyczyna-problemu-title">
+        <section class="article-section" id="przyczyna-problemu" aria-labelledby="przyczyna-problemu-title">
           <div class="article-copy">
-            <p class="kicker">Myślenie systemowe</p>
-            <h2 id="przyczyna-problemu-title">Dobry programista naprawia przyczynę problemu, nie tylko punkt z raportu.</h2>
-            <p>Raport może powiedzieć: „fokus jest niewidoczny”. Wdrożenie wymaga jednak szerszego pytania: <strong>czy problem dotyczy jednego przycisku, całego komponentu czy globalnego stylu fokusu?</strong></p>
-            <p>Podobnie jest z formularzem. Samo dodanie etykiety do jednego pola nie rozwiązuje problemu, jeśli błędy walidacji nadal nie są powiązane z polami albo komunikat pojawia się wyłącznie kolorem.</p>
-            <p>Dlatego podczas wdrożenia warto szukać wzorca błędu i poprawiać go u źródła. Takie podejście zmniejsza ryzyko, że ten sam problem wróci po kolejnej aktualizacji.</p>
+            <p class="kicker">Nie łatamy tylko jednego miejsca</p>
+            <h2 id="przyczyna-problemu-title">Dobry programista szuka przyczyny, a nie tylko usuwa objaw.</h2>
+            <p>Wyobraź sobie, że na stronie jest pięćdziesiąt takich samych przycisków. Wszystkie zostały zbudowane z jednego wspólnego elementu w kodzie. Taki wspólny element nazywamy <strong>komponentem</strong>.</p>
+            <p>Audyt może znaleźć błąd na jednym przycisku. Słabsze rozwiązanie to poprawić tylko ten jeden przycisk. Dobry programista sprawdzi, czy błąd pochodzi ze wspólnego komponentu.</p>
+            <p>Jeśli tak, poprawia komponent. Dzięki temu naprawa może zadziałać od razu w wielu miejscach.</p>
+
+            <h3>Przykład z fokusem</h3>
+            <p>Fokus pokazuje użytkownikowi klawiatury, który element strony jest obecnie wybrany. Jeżeli obramowanie fokusu zostało usunięte w globalnym stylu strony, problem może dotyczyć wszystkich przycisków i linków.</p>
+            <p>Dodanie obramowania tylko do jednego przycisku nie rozwiąże całego problemu. Trzeba poprawić zasadę, która wpływa na całą stronę.</p>
 
             <div class="article-impact">
-              <div><strong>Nie tylko ten ekran</strong><span>Sprawdzamy, gdzie jeszcze używany jest ten sam komponent.</span></div>
-              <div><strong>Nie tylko jedna rozdzielczość</strong><span>Poprawka musi działać po powiększeniu tekstu i na urządzeniach mobilnych.</span></div>
-              <div><strong>Nie tylko mysz</strong><span>Sprawdzamy klawiaturę, fokus oraz komunikację z technologiami wspomagającymi.</span></div>
-              <div><strong>Nie tylko wdrożenie</strong><span>Po poprawce wykonujemy ponowny test, żeby potwierdzić efekt.</span></div>
+              <div><strong>Sprawdzamy więcej niż jeden ekran</strong><span>Ten sam błąd może występować na wielu podstronach.</span></div>
+              <div><strong>Sprawdzamy różne urządzenia</strong><span>Poprawka powinna działać na komputerze i telefonie.</span></div>
+              <div><strong>Sprawdzamy różne sposoby obsługi</strong><span>Mysz to tylko jeden ze sposobów korzystania ze strony.</span></div>
+              <div><strong>Sprawdzamy ponownie po zmianie</strong><span>Dopiero test po wdrożeniu pokazuje, czy problem naprawdę zniknął.</span></div>
             </div>
           </div>
         </section>
 
-        <section class="article-section" id="programista-a-audyt" aria-labelledby="programista-a-audyt-title">
+        <section class="article-section article-section-tinted" id="programista-a-audyt" aria-labelledby="programista-a-audyt-title">
           <div class="article-copy">
-            <p class="kicker">Dwie kompetencje w jednym procesie</p>
-            <h2 id="programista-a-audyt-title">Programista, który potrafi również audytować, ma dużą przewagę wdrożeniową.</h2>
-            <p>Developer znający sposób testowania WCAG potrafi szybciej połączyć objaw z jego techniczną przyczyną. Widzi raport i jednocześnie rozumie strukturę DOM, logikę komponentu, stan aplikacji oraz zależności między zmianami.</p>
-            <p>Może przeprowadzić test, wdrożyć poprawkę i od razu ją ponownie zweryfikować. To ogranicza przekazywanie problemu pomiędzy kilkoma osobami i zmniejsza ryzyko, że zalecenie zostanie źle zinterpretowane.</p>
-            <p><strong>Druga para oczu nadal ma wartość.</strong> W większych lub szczególnie odpowiedzialnych projektach niezależna weryfikacja pozwala wychwycić rzeczy, które może przeoczyć osoba znająca produkt od środka.</p>
-            <p>Automatyczne narzędzia są również częścią procesu, ale nie zastępują testów manualnych. Więcej pokazujemy w artykule <a href="/baza-wiedzy/automatyczny-audyt-wcag-a-niedostepna-strona.html">„Dlaczego strona może przejść automatyczny audyt WCAG i nadal być niedostępna?”</a>.</p>
+            <p class="kicker">Audyt i programowanie w jednym zespole</p>
+            <h2 id="programista-a-audyt-title">Programista, który rozumie audyt WCAG, szybciej przechodzi od problemu do rozwiązania.</h2>
+            <p>Programista znający zasady audytu widzi dwie strony tego samego problemu.</p>
+            <p>Z jednej strony rozumie, <strong>co użytkownikowi przeszkadza</strong>. Z drugiej strony potrafi znaleźć miejsce w kodzie, które odpowiada za tę barierę.</p>
+            <p>Dzięki temu nie musi zgadywać, co audytor miał na myśli. Może sprawdzić problem, wdrożyć poprawkę i od razu wykonać ponowny test.</p>
+            <p>To szczególnie wygodne wtedy, gdy jedna firma lub jeden zespół odpowiada zarówno za audyt, jak i za techniczne poprawki.</p>
+
+            <aside class="article-note">
+              <strong>Dlaczego czasem warto mieć dodatkową osobę do sprawdzenia?</strong>
+              <p>Kiedy długo pracujemy nad jednym projektem, znamy go bardzo dobrze i możemy nie zauważyć czegoś oczywistego dla nowego użytkownika. Dlatego przy większych projektach dodatkowa weryfikacja nadal jest wartościowa.</p>
+            </aside>
+
+            <p>Automatyczne narzędzia również pomagają, ale sprawdzają tylko część problemów. Więcej wyjaśniamy w artykule <a href="/baza-wiedzy/automatyczny-audyt-wcag-a-niedostepna-strona.html">„Dlaczego strona może przejść automatyczny audyt WCAG i nadal być niedostępna?”</a>.</p>
           </div>
         </section>
 
-        <section class="article-section article-section-tinted" id="jak-wybrac" aria-labelledby="jak-wybrac-title">
+        <section class="article-section" id="jak-wybrac" aria-labelledby="jak-wybrac-title">
           <div class="article-copy">
-            <p class="kicker">Przed rozpoczęciem współpracy</p>
-            <h2 id="jak-wybrac-title">Jak wybrać programistę do dostępnej strony lub aplikacji?</h2>
-            <p>Samo zdanie „znam WCAG” mówi niewiele. Znacznie więcej pokazują konkretne odpowiedzi na pytania o sposób pracy.</p>
+            <p class="kicker">Wybór wykonawcy</p>
+            <h2 id="jak-wybrac-title">Jak sprawdzić, czy programista naprawdę rozumie dostępność?</h2>
+            <p>Nie musisz znać kodu ani numerów kryteriów WCAG. Możesz po prostu poprosić programistę, żeby wyjaśnił, jak pracuje.</p>
+            <p>Dobra odpowiedź powinna być konkretna i zrozumiała.</p>
+
             <ol class="article-steps">
-              <li><strong>Zapytaj, jak testuje obsługę bez myszy.</strong> Dobry developer potrafi wyjaśnić kolejność fokusu i test klawiaturą.</li>
-              <li><strong>Zapytaj o formularze i błędy.</strong> Powinien wiedzieć, jak łączyć pola, etykiety, instrukcje i komunikaty.</li>
-              <li><strong>Zapytaj, kiedy używa ARIA.</strong> Odpowiedź „wszędzie” powinna wzbudzić ostrożność. Najpierw jest poprawna semantyka HTML.</li>
-              <li><strong>Zapytaj o powiększenie tekstu i reflow.</strong> Dostępność nie kończy się na widoku desktopowym.</li>
-              <li><strong>Zapytaj, co robi po wdrożeniu poprawki.</strong> Odpowiedzią powinien być ponowny test, a nie samo zamknięcie zadania.</li>
-              <li><strong>Poproś o wyjaśnienie problemu prostym językiem.</strong> Osoba, która rozumie zagadnienie, zwykle potrafi przedstawić je bez technicznego żargonu.</li>
+              <li><strong>Zapytaj: „Jak sprawdzasz stronę bez myszy?”</strong> Programista powinien opowiedzieć o przechodzeniu po stronie klawiaturą i o widocznym fokusie.</li>
+              <li><strong>Zapytaj: „Co robisz, gdy formularz ma błąd?”</strong> Powinien wyjaśnić, jak użytkownik dowie się, które pole wymaga poprawy.</li>
+              <li><strong>Zapytaj: „Czy każdy element można zrobić za pomocą ARIA?”</strong> Dobra odpowiedź brzmi: najpierw używamy poprawnego HTML, a ARIA dodajemy tylko wtedy, gdy jest potrzebna.</li>
+              <li><strong>Zapytaj: „Co się stanie po powiększeniu tekstu?”</strong> Programista powinien sprawdzać, czy treść nadal jest widoczna i możliwa do obsługi.</li>
+              <li><strong>Zapytaj: „Co robisz po wdrożeniu poprawki?”</strong> Powinien odpowiedzieć, że ponownie testuje zmieniony element.</li>
             </ol>
-            <p>Dobry programista nie musi znać na pamięć numeru każdego kryterium. Powinien jednak wiedzieć, <strong>jak znaleźć wymaganie, jak je zweryfikować i jak przełożyć je na działający produkt</strong>.</p>
-            <p>Więcej o samych kompetencjach developera opisujemy w artykule <a href="/baza-wiedzy/najlepszy-programista-dostepnosci.html">„Czym wyróżnia się najlepszy programista budujący dostępne strony i aplikacje?”</a>.</p>
+
+            <p>Najważniejsze jest to, czy potrafi wyjaśnić problem zwykłym językiem. <strong>Jeżeli rozumie temat, powinien potrafić powiedzieć nie tylko co zmieni, ale też dlaczego.</strong></p>
+            <p>Więcej o kompetencjach developera opisujemy w artykule <a href="/baza-wiedzy/najlepszy-programista-dostepnosci.html">„Czym wyróżnia się najlepszy programista budujący dostępne strony i aplikacje?”</a>.</p>
           </div>
 
           <figure class="article-figure article-figure-wide">
             <img src="/assets/images/jakwybrać.webp" alt="Osoba analizuje kryteria wyboru programisty do projektu strony internetowej." width="1200" height="800" loading="lazy" decoding="async">
-            <figcaption>Przy wyborze wykonawcy warto pytać o sposób testowania i wdrażania, a nie tylko o znajomość hasła WCAG.</figcaption>
+            <figcaption>Nie trzeba znać kodu, żeby zadać dobre pytania wykonawcy. Ważne jest, czy potrafi jasno opisać swój sposób pracy.</figcaption>
           </figure>
         </section>
 
-        <section class="article-section" id="anm" aria-labelledby="anm-title">
+        <section class="article-section article-section-tinted" id="anm" aria-labelledby="anm-title">
           <div class="article-copy">
             <p class="kicker">ANM Collective</p>
-            <h2 id="anm-title">Jak pracujemy nad dostępnością w ANM?</h2>
-            <p><strong>Łączymy wiedzę o WCAG z praktyką tworzenia stron, sklepów, aplikacji i systemów webowych.</strong> Dzięki temu raport nie jest dla nas osobnym dokumentem oderwanym od projektu. Patrzymy na niego razem z kodem, komponentami, formularzami, treścią i całym procesem użytkownika.</p>
-            <p>Rozwijamy kompetencje również formalnie. <strong>Przeszliśmy i nadal przechodzimy szkolenia oraz kursy certyfikowane dotyczące dostępności cyfrowej.</strong> Mamy już pierwsze certyfikaty, a kolejne szkolenia są częścią naszego planu rozwoju.</p>
-            <p>Nie traktujemy certyfikatu jako końca nauki. Standardy, technologie i sposoby budowania aplikacji zmieniają się. Dlatego wiedzę sprawdzamy od razu w praktyce: na prawdziwym kodzie, formularzach, komponentach i testach.</p>
+            <h2 id="anm-title">Dlaczego w ANM łączymy dostępność z tworzeniem stron i aplikacji?</h2>
+            <p>Na co dzień budujemy strony internetowe, sklepy, aplikacje i systemy webowe. Dlatego gdy widzimy błąd WCAG, nie patrzymy na niego wyłącznie jak na punkt w raporcie.</p>
+            <p>Patrzymy na cały proces: <strong>co widzi użytkownik, jak działa komponent, co znajduje się w kodzie i co trzeba zmienić, żeby rozwiązanie było trwałe</strong>.</p>
+            <p>Rozwijamy tę wiedzę także poprzez szkolenia. <strong>Przeszliśmy i nadal przechodzimy kursy oraz szkolenia certyfikowane z zakresu dostępności cyfrowej.</strong> Mamy już pierwsze certyfikaty i kontynuujemy naukę.</p>
+            <p>Łączymy więc dwa obszary: wiedzę o wymaganiach WCAG oraz praktyczne doświadczenie w budowaniu produktów cyfrowych. Dzięki temu możemy przejść z klientem przez cały proces, a nie zatrzymać się na samym raporcie.</p>
 
             <div class="article-compare">
               <section>
                 <span aria-hidden="true">01</span>
-                <h3>Audytujemy</h3>
-                <p>Sprawdzamy kod, interakcje, treść i realne zadania użytkownika.</p>
+                <h3>Najpierw sprawdzamy</h3>
+                <p>Szukamy barier i ustalamy, które z nich najbardziej utrudniają korzystanie ze strony.</p>
               </section>
               <section>
                 <span aria-hidden="true">02</span>
-                <h3>Wdrażamy i testujemy ponownie</h3>
-                <p>Poprawiamy przyczynę problemu, a potem sprawdzamy, czy rozwiązanie działa zgodnie z założeniem.</p>
+                <h3>Potem poprawiamy i testujemy</h3>
+                <p>Wdrażamy zmianę w kodzie lub treści i sprawdzamy, czy użytkownik rzeczywiście może wykonać zadanie łatwiej.</p>
               </section>
             </div>
           </div>
 
           <figure class="article-figure article-figure-wide">
             <img src="/assets/images/certyfikat.webp" alt="Materiały szkoleniowe i certyfikat związany z rozwojem kompetencji w zakresie dostępności cyfrowej." width="1200" height="800" loading="lazy" decoding="async">
-            <figcaption>Rozwijamy wiedzę poprzez kursy, szkolenia certyfikowane i praktyczne testowanie rozwiązań w projektach.</figcaption>
+            <figcaption>Szkolenia i certyfikaty są dla nas częścią rozwoju. Najważniejsze jest jednak to, żeby zdobytą wiedzę umieć zastosować w prawdziwym projekcie.</figcaption>
           </figure>
         </section>
 
-        <section class="article-section article-section-tinted" aria-labelledby="proces-title">
+        <section class="article-section" aria-labelledby="proces-title">
           <div class="article-copy">
-            <p class="kicker">Pełny proces</p>
-            <h2 id="proces-title">Audyt, wdrożenie i ponowny test tworzą jeden proces.</h2>
-            <p><strong>Dobry audyt mówi, co jest nie tak. Dobry programista potrafi to naprawić. Dobry zespół sprawia, że ten sam problem nie wraca przy kolejnej zmianie.</strong></p>
-            <p>Dlatego dostępność warto uwzględnić już przy wyborze wykonawcy strony lub aplikacji. Im wcześniej zespół zna wymagania i potrafi je stosować, tym mniej kosztownych zmian pojawia się na końcu projektu.</p>
+            <p class="kicker">Całość ma znaczenie</p>
+            <h2 id="proces-title">Dostępna strona powstaje przed audytem, podczas wdrożenia i po ponownym teście.</h2>
+            <p>Audyt jest ważny, bo pokazuje problemy. Programista jest ważny, bo potrafi je usunąć. Projektant, grafik i autor treści są ważni, bo ich decyzje także wpływają na użytkownika.</p>
+            <p><strong>Najlepszy rezultat daje zespół, który rozumie dostępność jeszcze zanim powstanie pierwsza wersja strony.</strong></p>
+            <p>Wtedy audyt nie jest próbą ratowania gotowego projektu. Jest sprawdzeniem, czy to, co zbudowaliśmy, rzeczywiście działa dla możliwie szerokiej grupy użytkowników.</p>
           </div>
         </section>
 
         <section class="article-end" aria-labelledby="article-cta-title">
           <div>
-            <p class="kicker">Masz raport WCAG?</p>
-            <h2 id="article-cta-title">Możemy przełożyć zalecenia na konkretne poprawki w kodzie.</h2>
-            <p>Przeanalizujemy raport, ustalimy kolejność prac, wdrożymy poprawki i sprawdzimy efekt ponownie.</p>
+            <p class="kicker">Masz raport WCAG albo dopiero planujesz projekt?</p>
+            <h2 id="article-cta-title">Możemy przejść z Tobą od sprawdzenia strony do gotowej poprawki.</h2>
+            <p>Wyjaśnimy problemy prostym językiem, ustalimy kolejność prac, wdrożymy zmiany i wykonamy ponowny test.</p>
           </div>
           <a class="button button-primary" href="/kontakt.html" data-icon="arrow-right">Porozmawiaj z nami</a>
         </section>
