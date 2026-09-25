@@ -2166,41 +2166,6 @@ html[data-contrast="high"] .audit-benefit-icon {
   }
 }
 
-
-/* 2026-09-25 — hero: tekst w siatce, zdjęcie przy prawej krawędzi bez bocznego marginesu */
-@media(min-width:901px){
-  /* Strona główna: fotografia zajmuje prawą część hero i dochodzi do krawędzi viewportu. */
-  .home-hero .hero-photo-wide{
-    top:0;
-    right:0;
-    bottom:0;
-    left:42%;
-    width:auto;
-    height:100%;
-  }
-  .home-hero .hero-photo-wide>img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    object-position:right center;
-    transform:none;
-  }
-  .home-hero::before{
-    background:
-      linear-gradient(
-        90deg,
-        var(--surface) 0%,
-        var(--surface) 34%,
-        color-mix(in srgb,var(--surface) 92%,transparent) 40%,
-        color-mix(in srgb,var(--surface) 54%,transparent) 49%,
-        color-mix(in srgb,var(--surface) 14%,transparent) 58%,
-        transparent 66%
-      );
-  }
-
-}
-
-
 /* 2026-09-25 — final: czysty artykuł, bez ramek i bez cropowania hero */
 /* Jasny artykuł: biała powierzchnia, czarny tekst, bordowe akcenty. */
 html:not([data-theme="dark"]):not([data-theme="reading"]) .article-page,
@@ -2254,3 +2219,194 @@ html:not([data-theme="dark"]):not([data-theme="reading"]) .article-end .button-p
   }
 }
 
+
+
+/* =========================================================
+   WZORZEC HERO ANM ACCESS — STRONA GLOWNA
+   Ten układ jest wzorem do skopiowania 1:1 na kolejne strony.
+   ========================================================= */
+.home-hero{
+  --hero-fog:#fff;
+  --hero-wave:#fff;
+  position:relative;
+  isolation:isolate;
+  display:grid;
+  align-items:center;
+  min-height:clamp(560px,68vh,700px);
+  padding:0;
+  overflow:hidden;
+  background:#fff;
+}
+html[data-theme="dark"] .home-hero{
+  --hero-fog:var(--theme-dark-bg);
+  --hero-wave:var(--theme-dark-bg);
+  background:var(--theme-dark-bg);
+}
+html[data-theme="reading"] .home-hero{
+  --hero-fog:var(--theme-reading-bg);
+  --hero-wave:var(--theme-reading-bg);
+  background:var(--theme-reading-bg);
+}
+html[data-contrast="high"] .home-hero{
+  --hero-fog:#fff;
+  --hero-wave:#fff;
+  background:#fff;
+  color:#000;
+}
+
+.home-hero::after{display:none}
+.home-hero::before{
+  content:"";
+  position:absolute;
+  z-index:1;
+  inset:0;
+  background:linear-gradient(
+    90deg,
+    var(--hero-fog) 0%,
+    color-mix(in srgb,var(--hero-fog) 94%,transparent) 27%,
+    color-mix(in srgb,var(--hero-fog) 62%,transparent) 43%,
+    color-mix(in srgb,var(--hero-fog) 18%,transparent) 58%,
+    transparent 69%
+  );
+  pointer-events:none;
+}
+
+.home-hero-shell{
+  position:relative;
+  z-index:3;
+  width:min(1320px,calc(100% - 40px));
+  min-height:inherit;
+  display:flex;
+  align-items:center;
+  margin-inline:auto;
+}
+
+.home-hero-copy{
+  position:relative;
+  z-index:3;
+  width:min(100%,620px);
+  padding:clamp(64px,7vw,92px) 0 clamp(92px,9vw,120px);
+}
+.home-hero-copy h1{
+  max-width:22ch;
+  margin:.25rem 0 1rem;
+  font-size:30px;
+  line-height:1.12;
+  letter-spacing:-.025em;
+}
+.home-hero-copy .hero-lead{
+  max-width:52ch;
+  margin:0;
+  font-size:1rem;
+  line-height:1.65;
+}
+.home-hero .hero-meta{
+  margin-top:1.25rem;
+  gap:.55rem 1rem;
+}
+
+.home-hero .hero-photo-wide{
+  position:absolute;
+  z-index:0;
+  inset:0;
+  width:100%;
+  height:100%;
+  min-height:0;
+  margin:0;
+  border:0;
+  border-radius:0;
+  overflow:hidden;
+  background:transparent;
+  box-shadow:none;
+}
+.home-hero .hero-photo-wide::before{display:none}
+.home-hero .hero-photo-wide>img{
+  display:block;
+  width:100%;
+  height:100%;
+  min-height:0;
+  max-height:none;
+  aspect-ratio:auto;
+  object-fit:cover;
+  object-position:center center;
+  transform:none;
+}
+.home-hero .hero-photo-wave{
+  display:block;
+  position:absolute;
+  z-index:2;
+  left:0;
+  right:0;
+  bottom:-1px;
+  width:100%;
+  height:12%;
+  color:var(--hero-wave);
+}
+
+/* Kontrast: bez przygaszonych powierzchni, czarny + bordo na bieli. */
+html[data-contrast="high"] .home-hero-copy,
+html[data-contrast="high"] .home-hero-copy .hero-lead,
+html[data-contrast="high"] .home-hero .hero-meta{
+  color:#000;
+}
+html[data-contrast="high"] .home-hero .kicker,
+html[data-contrast="high"] .home-hero .hero-meta .icon{
+  color:#5A2430;
+}
+
+/* Ten sam schemat także na mniejszych ekranach: zdjęcie nadal jest tłem hero. */
+@media(max-width:820px){
+  .home-hero{
+    display:grid;
+    min-height:620px;
+  }
+  .home-hero::before{
+    display:block;
+    background:linear-gradient(
+      90deg,
+      var(--hero-fog) 0%,
+      color-mix(in srgb,var(--hero-fog) 94%,transparent) 48%,
+      color-mix(in srgb,var(--hero-fog) 66%,transparent) 68%,
+      color-mix(in srgb,var(--hero-fog) 18%,transparent) 88%,
+      transparent 100%
+    );
+  }
+  .home-hero-shell{
+    width:min(100% - 32px,1320px);
+    min-height:inherit;
+    display:flex;
+    align-items:flex-start;
+  }
+  .home-hero-copy{
+    width:min(100%,34rem);
+    padding:48px 0 120px;
+  }
+  .home-hero-copy h1{
+    max-width:20ch;
+    font-size:30px;
+  }
+  .home-hero-copy .hero-lead{
+    max-width:34ch;
+  }
+  .home-hero .hero-photo-wide{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    margin:0;
+  }
+  .home-hero .hero-photo-wide>img{
+    width:100%;
+    height:100%;
+    aspect-ratio:auto;
+    object-fit:cover;
+    object-position:center center;
+    transform:none;
+  }
+  .home-hero .hero-photo-wave{height:10%}
+}
+@media(max-width:480px){
+  .home-hero-shell{width:min(100% - 22px,1320px)}
+  .home-hero-copy{padding-top:40px}
+  .home-hero-copy h1{font-size:30px}
+}
