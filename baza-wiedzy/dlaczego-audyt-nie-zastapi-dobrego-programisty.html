@@ -94,246 +94,181 @@
         <section class="article-opening" aria-labelledby="najwazniejsze">
           <div class="article-summary">
             <p class="kicker">Najważniejsze</p>
-            <h2 id="najwazniejsze">Audyt sprawdza stronę. Programista ją naprawia.</h2>
-            <ul>
-              <li><strong>Audyt WCAG to sprawdzenie strony lub aplikacji.</strong> Pokazuje, gdzie użytkownik może napotkać barierę.</li>
-              <li><strong>Raport z audytu opisuje problem.</strong> Sam raport nie zmienia kodu i nie usuwa bariery.</li>
-              <li><strong>Programista wdraża poprawkę.</strong> Musi zrobić to tak, aby strona nadal działała poprawnie dla wszystkich użytkowników.</li>
-              <li><strong>Dostępność tworzy cały zespół.</strong> Kod, projekt, treść i grafika muszą ze sobą współpracować.</li>
-            </ul>
+            <h2 id="najwazniejsze">Audyt ocenia to, co już powstało. Dostępność tworzy się wcześniej.</h2>
+            <p>Audyt WCAG jest potrzebny, bo pokazuje, gdzie gotowa strona lub aplikacja stawia użytkownikowi bariery. Nie zastępuje jednak ludzi, którzy tę stronę projektują, piszą i programują.</p>
+            <p><strong>Najlepsza sytuacja jest wtedy, gdy zespół zna zasady dostępności jeszcze zanim powstanie pierwsza wersja serwisu.</strong> Wtedy audyt staje się sprawdzeniem jakości, a nie początkiem kosztownej przebudowy.</p>
           </div>
 
           <nav class="article-toc" aria-label="Spis treści">
             <strong>W tym artykule</strong>
             <ol>
-              <li><a href="#czym-jest-audyt">Czym jest audyt WCAG</a></li>
-              <li><a href="#audyt-a-wdrozenie">Dlaczego raport nie wystarcza</a></li>
-              <li><a href="#przed-audytem">Dlaczego warto zacząć wcześniej</a></li>
-              <li><a href="#caly-zespol">Kto tworzy dostępną stronę</a></li>
-              <li><a href="#przyczyna-problemu">Jak dobry programista naprawia błędy</a></li>
-              <li><a href="#programista-a-audyt">Programista, który potrafi audytować</a></li>
-              <li><a href="#jak-wybrac">Jak wybrać wykonawcę</a></li>
-              <li><a href="#anm">Jak pracujemy w ANM</a></li>
+              <li><a href="#czym-jest-audyt">Czym naprawdę jest audyt WCAG</a></li>
+              <li><a href="#raport">Dlaczego raport nie naprawia strony</a></li>
+              <li><a href="#zespol">Dostępność tworzy cały zespół</a></li>
+              <li><a href="#webdeveloper">Dlaczego webdeveloper jest tak ważny</a></li>
+              <li><a href="#dobry-developer">Czym wyróżnia się dobry developer</a></li>
+              <li><a href="#anm">Jak podchodzimy do tego w ANM</a></li>
             </ol>
           </nav>
         </section>
 
         <section class="article-section" id="czym-jest-audyt" aria-labelledby="czym-jest-audyt-title">
           <div class="article-copy">
-            <p class="kicker">Zacznijmy od podstaw</p>
-            <h2 id="czym-jest-audyt-title">Czym właściwie jest audyt WCAG?</h2>
-            <p>Wyobraź sobie przegląd samochodu. Mechanik sprawdza hamulce, światła i inne elementy. Na końcu mówi, co działa dobrze, a co trzeba naprawić. <strong>Sam protokół z przeglądu nie naprawia jednak samochodu.</strong></p>
-            <p>Z audytem WCAG jest podobnie. Audytor sprawdza stronę internetową lub aplikację i szuka miejsc, które mogą utrudniać korzystanie z niej osobom z różnymi potrzebami.</p>
-            <p>Może na przykład sprawdzić, czy:</p>
-            <ul>
-              <li>stronę da się obsłużyć samą klawiaturą, bez myszy,</li>
-              <li>tekst jest wystarczająco czytelny i ma dobry kontrast,</li>
-              <li>formularz jasno informuje, co trzeba wpisać i gdzie pojawił się błąd,</li>
-              <li>czytnik ekranu może poprawnie odczytać przyciski, nagłówki i komunikaty,</li>
-              <li>po powiększeniu tekstu nic nie znika poza ekranem.</li>
-            </ul>
-            <p><strong>Wynikiem audytu jest wiedza:</strong> co działa, co nie działa i co trzeba poprawić. Dopiero później zaczyna się wdrożenie.</p>
-          </div>
-        </section>
-
-        <section class="article-section article-section-tinted" id="audyt-a-wdrozenie" aria-labelledby="audyt-a-wdrozenie-title">
-          <div class="article-copy">
-            <p class="kicker">Raport to początek</p>
-            <h2 id="audyt-a-wdrozenie-title">Dlaczego sam raport z audytu nie wystarcza?</h2>
-            <p>Raport może napisać: „przycisku nie da się obsłużyć klawiaturą”. To cenna informacja, ale nadal nie rozwiązuje problemu.</p>
-            <p>Ktoś musi wejść do kodu strony, znaleźć przyczynę i ją poprawić. Najczęściej robi to programista.</p>
-            <p>Dobry programista nie zmienia przypadkowo jednej linijki tylko po to, żeby punkt z raportu zniknął. Najpierw sprawdza, <strong>dlaczego przycisk nie działa, czy ten sam błąd występuje w innych miejscach i czy poprawka nie zepsuje czegoś innego</strong>.</p>
-
-            <h3>Prosty przykład: formularz kontaktowy</h3>
-            <p>Użytkownik wpisuje adres e-mail i naciska „Wyślij”. Jeśli zrobi literówkę, na ekranie pojawia się czerwony komunikat „Błędny adres”.</p>
-            <p>Dla części osób to może wystarczyć. Ale osoba niewidoma korzystająca z czytnika ekranu może tego komunikatu nie usłyszeć, jeśli programista nie połączył go prawidłowo z polem formularza.</p>
-            <p><strong>Audyt wykrywa problem. Programista sprawia, że komunikat staje się dostępny.</strong></p>
-
-            <div class="article-compare">
-              <section>
-                <span aria-hidden="true">01</span>
-                <h3>Audyt</h3>
-                <p>Odpowiada na pytanie: „co utrudnia użytkownikowi korzystanie ze strony?”.</p>
-              </section>
-              <section>
-                <span aria-hidden="true">02</span>
-                <h3>Wdrożenie</h3>
-                <p>Odpowiada na pytanie: „jak zmienić stronę, żeby ta bariera zniknęła?”.</p>
-              </section>
-            </div>
-          </div>
-
-          <figure class="article-figure article-figure-wide">
-            <img src="/assets/images/formularz.webp" alt="Przykład formularza internetowego, którego dostępność zależy od poprawnego kodu, etykiet i komunikatów błędów." width="1200" height="800" loading="lazy" decoding="async">
-            <figcaption>To, że formularz wygląda dobrze, nie oznacza jeszcze, że każdy potrafi z niego skorzystać.</figcaption>
-          </figure>
-        </section>
-
-        <section class="article-section" id="przed-audytem" aria-labelledby="przed-audytem-title">
-          <div class="article-copy">
-            <p class="kicker">Najlepszy moment</p>
-            <h2 id="przed-audytem-title">Najłatwiej zbudować dostępność od początku.</h2>
-            <p>Można najpierw zbudować całą stronę, a później sprawdzić ją w audycie i poprawiać dziesiątki błędów. Można też od początku tworzyć ją w taki sposób, żeby wielu z tych błędów w ogóle nie było.</p>
-            <p>To podobne do budowy domu. Łatwiej od razu zaplanować szerokie drzwi niż po zakończeniu budowy burzyć ścianę i poszerzać wejście.</p>
-            <p>Programista znający zasady dostępności może od pierwszego dnia podejmować lepsze decyzje.</p>
-
-            <div class="article-checklist">
-              <div><strong>Przycisk jest prawdziwym przyciskiem</strong><span>W kodzie używa elementu przeznaczonego do klikania, a nie przypadkowego pola udającego przycisk.</span></div>
-              <div><strong>Stronę da się przejść klawiaturą</strong><span>Osoba, która nie używa myszy, może dotrzeć do menu, formularza i wszystkich ważnych funkcji.</span></div>
-              <div><strong>Widać, gdzie jesteśmy</strong><span>Fokus to obramowanie lub inne wyróżnienie pokazujące, który element jest właśnie wybrany klawiaturą.</span></div>
-              <div><strong>Formularz mówi, co się stało</strong><span>Użytkownik otrzymuje jasną informację, które pole zawiera błąd i jak go poprawić.</span></div>
-              <div><strong>Tekst można powiększyć</strong><span>Po powiększeniu treść nadal mieści się na ekranie i nie trzeba zgadywać, gdzie coś zniknęło.</span></div>
-              <div><strong>Kod ma logiczną strukturę</strong><span>Nagłówki, listy, linki i formularze są zapisane w sposób zrozumiały także dla technologii wspomagających.</span></div>
-            </div>
+            <p class="kicker">Ocena gotowego produktu</p>
+            <h2 id="czym-jest-audyt-title">Czym naprawdę jest audyt WCAG?</h2>
+            <p>Audyt WCAG to <strong>ocena strony lub aplikacji, która już istnieje</strong>. Audytor sprawdza, jak działa gotowy produkt i czy różni użytkownicy mogą z niego korzystać.</p>
+            <p>Może analizować wygląd, treść, zachowanie elementów, sposób obsługi strony, a także strukturę techniczną. Może zajrzeć do kodu, ale jego główną rolą nie jest przebudowanie tego kodu. <strong>Rolą audytu jest ocena efektu.</strong></p>
+            <p>Audyt odpowiada więc na pytania: Czy użytkownik może wykonać swoje zadanie? Gdzie napotyka przeszkodę? Co jest niezgodne z wymaganiami? Co wymaga poprawy?</p>
+            <p>Na końcu powstaje raport. To zapis tego, co audytor znalazł. Raport może być bardzo dokładny, ale nadal pozostaje opisem stanu strony w danym momencie.</p>
 
             <aside class="article-note">
-              <strong>Czy wtedy audyt nie jest potrzebny?</strong>
-              <p>Jest potrzebny. Pełni jednak rolę kontroli jakości. Sprawdza, czy zespół rzeczywiście osiągnął zamierzony efekt i czy podczas budowy nie przeoczył ważnej bariery.</p>
+              <strong>Najprościej:</strong>
+              <p>Audyt nie tworzy dostępnej strony. Audyt sprawdza, czy strona, którą ktoś wcześniej zaprojektował i zbudował, rzeczywiście jest dostępna.</p>
             </aside>
           </div>
         </section>
 
-        <section class="article-section article-section-tinted" id="caly-zespol" aria-labelledby="caly-zespol-title">
+        <section class="article-section article-section-tinted" id="raport" aria-labelledby="raport-title">
           <div class="article-copy">
-            <p class="kicker">Dostępność to praca zespołowa</p>
-            <h2 id="caly-zespol-title">Jedna osoba nie tworzy całej dostępnej strony.</h2>
-            <p>Programista ma ogromny wpływ na dostępność, ale nie decyduje o wszystkim. Strona powstaje z wielu elementów: kodu, projektu, tekstów, zdjęć, kolorów i późniejszych aktualizacji.</p>
-            <p>Dlatego nawet bardzo dobry kod może zostać osłabiony przez złą decyzję w innym miejscu.</p>
-
-            <h3>Programista buduje działanie strony</h3>
-            <p>Dba o to, żeby przyciski, menu, formularze i komunikaty działały także bez myszy oraz współpracowały z czytnikami ekranu.</p>
-
-            <h3>Projektant UX i UI planuje sposób korzystania</h3>
-            <p>Decyduje, gdzie znajduje się przycisk, jaka jest kolejność kroków, jak duże są elementy i czy użytkownik rozumie, co ma zrobić dalej.</p>
-
-            <h3>Copywriter i redaktor tworzą treść</h3>
-            <p>Piszą nagłówki, instrukcje i komunikaty. Jeśli tekst jest niejasny, nawet perfekcyjnie zaprogramowana strona może być trudna w użyciu.</p>
-
-            <h3>Grafik odpowiada za przekaz wizualny</h3>
-            <p>Dobiera kolory, obrazy i sposób pokazania informacji. Ważna informacja nie powinna być przekazana tylko kolorem, bo nie każdy użytkownik widzi kolory w ten sam sposób.</p>
-
-            <h3>Właściciel strony ustala zasady pracy</h3>
-            <p>To on decyduje, czy zespół ma czas na testy, czy po publikacji nadal pilnuje dostępności i czy nowe treści są dodawane zgodnie z ustalonym standardem.</p>
-
-            <p><strong>Najlepszy efekt powstaje wtedy, gdy wszystkie te osoby wiedzą, po co jest dostępność i potrafią ze sobą współpracować.</strong></p>
+            <p class="kicker">Raport to informacja</p>
+            <h2 id="raport-title">Dlaczego nawet bardzo dobry raport nie naprawi strony?</h2>
+            <p>Raport może wskazać problem bardzo precyzyjnie. Może napisać, że użytkownik nie widzi fokusu, że kolejność przechodzenia po stronie jest nieprawidłowa albo że formularz nie przekazuje ważnego komunikatu.</p>
+            <p>Dla osoby, która na co dzień nie zajmuje się tworzeniem stron, część takich określeń może brzmieć obco. Słowo <strong>„fokus”</strong> oznacza po prostu widoczne zaznaczenie elementu, na którym w danej chwili znajduje się użytkownik korzystający z klawiatury. <strong>Tabulator</strong> to klawisz, którym wiele osób przechodzi po kolejnych linkach, przyciskach i polach formularza bez używania myszy.</p>
+            <p>To pokazuje ważną rzecz: <strong>raport trzeba jeszcze umieć przełożyć na działanie</strong>.</p>
+            <p>Ktoś musi zrozumieć, skąd problem się wziął, znaleźć odpowiednie miejsce w projekcie lub kodzie i wprowadzić zmianę. Czasem poprawka jest prosta. Innym razem jeden błąd wynika z tego, jak zbudowano cały komponent albo cały proces.</p>
+            <p>Dlatego audyt i wdrożenie to dwa różne etapy. Pierwszy mówi, <em>co</em> trzeba poprawić. Drugi odpowiada na pytanie, <em>jak</em> zrobić to dobrze.</p>
           </div>
 
           <figure class="article-figure article-figure-wide">
-            <img src="/assets/images/anmbiuro.webp" alt="Zespół pracujący wspólnie nad projektem cyfrowym w biurze." width="1200" height="800" loading="lazy" decoding="async">
-            <figcaption>Kod, projekt, grafika i treść wpływają na ten sam produkt. Dlatego dostępność jest wspólnym zadaniem zespołu.</figcaption>
+            <img src="/assets/images/formularz.webp" alt="Formularz internetowy jako przykład elementu, którego dostępność zależy od projektu, treści i sposobu wdrożenia." width="1200" height="800" loading="lazy" decoding="async">
+            <figcaption>Raport może wskazać problem w formularzu. Dopiero zespół projektowy i programista zamieniają tę informację w działające rozwiązanie.</figcaption>
           </figure>
         </section>
 
-        <section class="article-section" id="przyczyna-problemu" aria-labelledby="przyczyna-problemu-title">
+        <section class="article-section" id="zespol" aria-labelledby="zespol-title">
           <div class="article-copy">
-            <p class="kicker">Nie łatamy tylko jednego miejsca</p>
-            <h2 id="przyczyna-problemu-title">Dobry programista szuka przyczyny, a nie tylko usuwa objaw.</h2>
-            <p>Wyobraź sobie, że na stronie jest pięćdziesiąt takich samych przycisków. Wszystkie zostały zbudowane z jednego wspólnego elementu w kodzie. Taki wspólny element nazywamy <strong>komponentem</strong>.</p>
-            <p>Audyt może znaleźć błąd na jednym przycisku. Słabsze rozwiązanie to poprawić tylko ten jeden przycisk. Dobry programista sprawdzi, czy błąd pochodzi ze wspólnego komponentu.</p>
-            <p>Jeśli tak, poprawia komponent. Dzięki temu naprawa może zadziałać od razu w wielu miejscach.</p>
+            <p class="kicker">Nie tylko programista</p>
+            <h2 id="zespol-title">Dostępność strony tworzy cały zespół.</h2>
+            <p>Łatwo powiedzieć: „programista odpowiada za WCAG”. To jednak tylko część prawdy. Programista ma ogromny wpływ na końcowy efekt, ale nie tworzy strony sam.</p>
+            <p>Projektant decyduje, jak użytkownik przechodzi przez stronę. Grafik wybiera kolory i sposób pokazania informacji. Copywriter lub redaktor pisze nagłówki, instrukcje i komunikaty. Programista zamienia projekt w działający produkt. Później ktoś jeszcze dodaje nowe treści i aktualizuje serwis.</p>
+            <p>Każda z tych osób może ułatwić użytkownikowi korzystanie ze strony albo nieświadomie stworzyć nową barierę.</p>
 
-            <h3>Przykład z fokusem</h3>
-            <p>Fokus pokazuje użytkownikowi klawiatury, który element strony jest obecnie wybrany. Jeżeli obramowanie fokusu zostało usunięte w globalnym stylu strony, problem może dotyczyć wszystkich przycisków i linków.</p>
-            <p>Dodanie obramowania tylko do jednego przycisku nie rozwiąże całego problemu. Trzeba poprawić zasadę, która wpływa na całą stronę.</p>
+            <h3>UX i UI układają drogę użytkownika</h3>
+            <p>To tutaj powstaje decyzja, gdzie będzie przycisk, jak wygląda formularz, w jakiej kolejności pojawią się informacje i co użytkownik zobaczy po wykonaniu działania. Jeżeli sam proces jest skomplikowany lub niejasny, późniejszy kod nie rozwiąże wszystkich problemów.</p>
 
-            <div class="article-impact">
-              <div><strong>Sprawdzamy więcej niż jeden ekran</strong><span>Ten sam błąd może występować na wielu podstronach.</span></div>
-              <div><strong>Sprawdzamy różne urządzenia</strong><span>Poprawka powinna działać na komputerze i telefonie.</span></div>
-              <div><strong>Sprawdzamy różne sposoby obsługi</strong><span>Mysz to tylko jeden ze sposobów korzystania ze strony.</span></div>
-              <div><strong>Sprawdzamy ponownie po zmianie</strong><span>Dopiero test po wdrożeniu pokazuje, czy problem naprawdę zniknął.</span></div>
-            </div>
-          </div>
-        </section>
+            <h3>Treść musi być zrozumiała</h3>
+            <p>Dostępność to także język. Dobry nagłówek mówi, czego dotyczy kolejna część strony. Instrukcja jasno mówi, co trzeba zrobić. Komunikat o błędzie tłumaczy, co poszło nie tak i jak to poprawić. Tutaj dużą rolę mają copywriterzy i redaktorzy.</p>
 
-        <section class="article-section article-section-tinted" id="programista-a-audyt" aria-labelledby="programista-a-audyt-title">
-          <div class="article-copy">
-            <p class="kicker">Audyt i programowanie w jednym zespole</p>
-            <h2 id="programista-a-audyt-title">Programista, który rozumie audyt WCAG, szybciej przechodzi od problemu do rozwiązania.</h2>
-            <p>Programista znający zasady audytu widzi dwie strony tego samego problemu.</p>
-            <p>Z jednej strony rozumie, <strong>co użytkownikowi przeszkadza</strong>. Z drugiej strony potrafi znaleźć miejsce w kodzie, które odpowiada za tę barierę.</p>
-            <p>Dzięki temu nie musi zgadywać, co audytor miał na myśli. Może sprawdzić problem, wdrożyć poprawkę i od razu wykonać ponowny test.</p>
-            <p>To szczególnie wygodne wtedy, gdy jedna firma lub jeden zespół odpowiada zarówno za audyt, jak i za techniczne poprawki.</p>
+            <h3>Grafika nie może utrudniać odbioru informacji</h3>
+            <p>Kolory, kontrast, wielkość tekstu i sposób przedstawienia danych wpływają na to, czy informacja jest czytelna. Ważny komunikat nie powinien być zrozumiały wyłącznie dla osoby, która widzi konkretny kolor albo szczegół obrazu.</p>
 
-            <aside class="article-note">
-              <strong>Dlaczego czasem warto mieć dodatkową osobę do sprawdzenia?</strong>
-              <p>Kiedy długo pracujemy nad jednym projektem, znamy go bardzo dobrze i możemy nie zauważyć czegoś oczywistego dla nowego użytkownika. Dlatego przy większych projektach dodatkowa weryfikacja nadal jest wartościowa.</p>
-            </aside>
-
-            <p>Automatyczne narzędzia również pomagają, ale sprawdzają tylko część problemów. Więcej wyjaśniamy w artykule <a href="/baza-wiedzy/automatyczny-audyt-wcag-a-niedostepna-strona.html">„Dlaczego strona może przejść automatyczny audyt WCAG i nadal być niedostępna?”</a>.</p>
-          </div>
-        </section>
-
-        <section class="article-section" id="jak-wybrac" aria-labelledby="jak-wybrac-title">
-          <div class="article-copy">
-            <p class="kicker">Wybór wykonawcy</p>
-            <h2 id="jak-wybrac-title">Jak sprawdzić, czy programista naprawdę rozumie dostępność?</h2>
-            <p>Nie musisz znać kodu ani numerów kryteriów WCAG. Możesz po prostu poprosić programistę, żeby wyjaśnił, jak pracuje.</p>
-            <p>Dobra odpowiedź powinna być konkretna i zrozumiała.</p>
-
-            <ol class="article-steps">
-              <li><strong>Zapytaj: „Jak sprawdzasz stronę bez myszy?”</strong> Programista powinien opowiedzieć o przechodzeniu po stronie klawiaturą i o widocznym fokusie.</li>
-              <li><strong>Zapytaj: „Co robisz, gdy formularz ma błąd?”</strong> Powinien wyjaśnić, jak użytkownik dowie się, które pole wymaga poprawy.</li>
-              <li><strong>Zapytaj: „Czy każdy element można zrobić za pomocą ARIA?”</strong> Dobra odpowiedź brzmi: najpierw używamy poprawnego HTML, a ARIA dodajemy tylko wtedy, gdy jest potrzebna.</li>
-              <li><strong>Zapytaj: „Co się stanie po powiększeniu tekstu?”</strong> Programista powinien sprawdzać, czy treść nadal jest widoczna i możliwa do obsługi.</li>
-              <li><strong>Zapytaj: „Co robisz po wdrożeniu poprawki?”</strong> Powinien odpowiedzieć, że ponownie testuje zmieniony element.</li>
-            </ol>
-
-            <p>Najważniejsze jest to, czy potrafi wyjaśnić problem zwykłym językiem. <strong>Jeżeli rozumie temat, powinien potrafić powiedzieć nie tylko co zmieni, ale też dlaczego.</strong></p>
-            <p>Więcej o kompetencjach developera opisujemy w artykule <a href="/baza-wiedzy/najlepszy-programista-dostepnosci.html">„Czym wyróżnia się najlepszy programista budujący dostępne strony i aplikacje?”</a>.</p>
+            <h3>Programista łączy te decyzje w działający produkt</h3>
+            <p>To właśnie na etapie wdrożenia projekt, treść i grafika zaczynają naprawdę działać. Dlatego webdeveloper jest kluczowym ogniwem technicznym całego procesu.</p>
+            <p><strong>Nie jest jedyną osobą odpowiedzialną za dostępność, ale to jego praca decyduje o tym, czy wiele wcześniejszych założeń zostanie prawidłowo przełożonych na stronę lub aplikację.</strong></p>
           </div>
 
           <figure class="article-figure article-figure-wide">
-            <img src="/assets/images/jakwybrać.webp" alt="Osoba analizuje kryteria wyboru programisty do projektu strony internetowej." width="1200" height="800" loading="lazy" decoding="async">
-            <figcaption>Nie trzeba znać kodu, żeby zadać dobre pytania wykonawcy. Ważne jest, czy potrafi jasno opisać swój sposób pracy.</figcaption>
+            <img src="/assets/images/anmbiuro.webp" alt="Zespół współpracujący nad projektem cyfrowym." width="1200" height="800" loading="lazy" decoding="async">
+            <figcaption>Dostępność jest wspólnym efektem pracy projektanta, autora treści, grafika, programisty i osób rozwijających produkt po publikacji.</figcaption>
+          </figure>
+        </section>
+
+        <section class="article-section article-section-tinted" id="webdeveloper" aria-labelledby="webdeveloper-title">
+          <div class="article-copy">
+            <p class="kicker">Rola developera</p>
+            <h2 id="webdeveloper-title">Dlaczego dobry webdeveloper ma tak duży wpływ na dostępność?</h2>
+            <p>Bez względu na to, czy powstaje prosta strona internetowa, sklep czy rozbudowana aplikacja, webdeveloper nadaje projektowi działanie.</p>
+            <p>To on sprawia, że przycisk naprawdę reaguje, formularz wysyła dane, menu się otwiera, komunikat pojawia się we właściwym momencie, a użytkownik może przejść przez cały proces od początku do końca.</p>
+            <p>Właśnie dlatego znajomość dostępności u developera ma tak duże znaczenie. Jeżeli myśli o niej dopiero wtedy, gdy dostaje gotowy raport, wiele decyzji zostało już wcześniej podjętych. Czasem trzeba wtedy wracać do rzeczy zbudowanych kilka miesięcy wcześniej.</p>
+            <p>Developer, który zna zasady WCAG podczas codziennej pracy, może zauważyć problem zanim trafi on do użytkownika. Może również powiedzieć zespołowi: „ten pomysł wygląda dobrze, ale w tej formie będzie trudny w obsłudze” i wspólnie poszukać lepszego rozwiązania.</p>
+            <p><strong>To jest jedna z najważniejszych cech dobrego webdevelopera: nie wykonuje projektu bezmyślnie. Rozumie, dla kogo powstaje produkt i potrafi rozmawiać z resztą zespołu o konsekwencjach konkretnych decyzji.</strong></p>
+          </div>
+        </section>
+
+        <section class="article-section" id="dobry-developer" aria-labelledby="dobry-developer-title">
+          <div class="article-copy">
+            <p class="kicker">Nie tylko znajomość kodu</p>
+            <h2 id="dobry-developer-title">Czym wyróżnia się programista, który naprawdę dba o dostępność?</h2>
+            <p>Nie istnieje jedna szkoła, po której ktoś automatycznie staje się „programistą WCAG”. To kompetencja, którą buduje się tak jak inne umiejętności techniczne: przez naukę, praktykę, szkolenia, analizowanie standardów i pracę nad prawdziwymi projektami.</p>
+            <p>Dobry developer zna aktualne wymagania, ale jeszcze ważniejsze jest to, <strong>jak podchodzi do swojej pracy</strong>.</p>
+
+            <h3>Jest ciekawy i stale się uczy</h3>
+            <p>Standardy i technologie się zmieniają. Dobry programista nie zakłada, że raz zdobyta wiedza wystarczy na zawsze. Czyta aktualizacje, wraca do dokumentacji, uczestniczy w szkoleniach i sprawdza nowe rozwiązania.</p>
+
+            <h3>Pyta, zamiast tylko wykonywać</h3>
+            <p>Kiedy widzi rozwiązanie, które może stworzyć barierę, mówi o tym projektantowi lub osobie prowadzącej projekt. Szuka sposobu, żeby zachować pomysł i jednocześnie poprawić jego dostępność.</p>
+
+            <h3>Potrafi współpracować</h3>
+            <p>Dostępność nie jest konkursem pomiędzy programistą a grafikiem czy copywriterem. Dobry developer rozumie rolę innych osób i potrafi wytłumaczyć techniczny problem tak, żeby zespół mógł wspólnie podjąć decyzję.</p>
+
+            <h3>Patrzy na użytkownika, nie tylko na kod</h3>
+            <p>Można napisać kod, który formalnie wygląda poprawnie, ale nadal tworzy trudne doświadczenie. Dobry developer pyta, czy użytkownik naprawdę rozumie, co się dzieje i czy może wykonać zadanie bez zbędnych przeszkód.</p>
+
+            <h3>Nie traktuje dostępności jak przykrego obowiązku</h3>
+            <p>Najlepsi specjaliści zwykle mają jedną wspólną cechę: zależy im na jakości tego, co tworzą. Dostępność staje się wtedy częścią dobrze wykonanej pracy, tak samo jak bezpieczeństwo, wydajność czy stabilność aplikacji.</p>
+
+            <p>Dlatego przy wyborze wykonawcy warto patrzeć szerzej niż na samą listę technologii w portfolio. Warto sprawdzić, czy potrafi rozmawiać o użytkownikach, testowaniu, współpracy i odpowiedzialności za końcowy efekt.</p>
+          </div>
+
+          <figure class="article-figure article-figure-wide">
+            <img src="/assets/images/jakwybrać.webp" alt="Osoba analizuje wybór wykonawcy do projektu cyfrowego." width="1200" height="800" loading="lazy" decoding="async">
+            <figcaption>Dobrego developera poznaje się nie tylko po tym, jakie technologie zna, ale też po sposobie myślenia o użytkowniku i współpracy z zespołem.</figcaption>
           </figure>
         </section>
 
         <section class="article-section article-section-tinted" id="anm" aria-labelledby="anm-title">
           <div class="article-copy">
             <p class="kicker">ANM Collective</p>
-            <h2 id="anm-title">Dlaczego w ANM łączymy dostępność z tworzeniem stron i aplikacji?</h2>
-            <p>Na co dzień budujemy strony internetowe, sklepy, aplikacje i systemy webowe. Dlatego gdy widzimy błąd WCAG, nie patrzymy na niego wyłącznie jak na punkt w raporcie.</p>
-            <p>Patrzymy na cały proces: <strong>co widzi użytkownik, jak działa komponent, co znajduje się w kodzie i co trzeba zmienić, żeby rozwiązanie było trwałe</strong>.</p>
-            <p>Rozwijamy tę wiedzę także poprzez szkolenia. <strong>Przeszliśmy i nadal przechodzimy kursy oraz szkolenia certyfikowane z zakresu dostępności cyfrowej.</strong> Mamy już pierwsze certyfikaty i kontynuujemy naukę.</p>
-            <p>Łączymy więc dwa obszary: wiedzę o wymaganiach WCAG oraz praktyczne doświadczenie w budowaniu produktów cyfrowych. Dzięki temu możemy przejść z klientem przez cały proces, a nie zatrzymać się na samym raporcie.</p>
+            <h2 id="anm-title">Dlaczego chcemy tworzyć strony i aplikacje dostępne od początku?</h2>
+            <p>Dla nas dostępność nie jest dodatkiem do gotowej strony. Chcemy, żeby była częścią sposobu, w jaki strony i aplikacje powstają.</p>
+            <p>Powód jest prosty: <strong>im więcej dobrze zaprojektowanych i dobrze napisanych produktów cyfrowych, tym więcej osób może z nich swobodnie korzystać</strong>. Dotyczy to osób niewidomych i słabowidzących, osób z niepełnosprawnościami ruchowymi, osób głuchych, osób starszych, osób mających trudności poznawcze i wielu innych użytkowników.</p>
+            <p>Dlatego rozwijamy kompetencje całego zespołu. Przeszliśmy i nadal przechodzimy szkolenia oraz kursy certyfikowane. Mamy pierwsze certyfikaty i uczymy się dalej, bo dostępność cyfrowa nie jest tematem, który można zamknąć po jednym szkoleniu.</p>
+            <p>Śledzimy aktualne wytyczne i zmiany standardów. Pracujemy z WCAG 2.2 i obserwujemy rozwój kolejnych kierunków, w tym WCAG 3.0. Nie chcemy ograniczać się do najniższego możliwego minimum. Chcemy rozumieć, dokąd zmierza dostępność i przygotowywać projekty z wyprzedzeniem.</p>
+            <p>Najważniejsze jest jednak to, że łączymy tę wiedzę z codziennym tworzeniem produktów. Budujemy strony, sklepy, aplikacje i systemy webowe. Dzięki temu możemy patrzeć na dostępność jednocześnie od strony użytkownika, audytu i wdrożenia.</p>
 
-            <div class="article-compare">
-              <section>
-                <span aria-hidden="true">01</span>
-                <h3>Najpierw sprawdzamy</h3>
-                <p>Szukamy barier i ustalamy, które z nich najbardziej utrudniają korzystanie ze strony.</p>
-              </section>
-              <section>
-                <span aria-hidden="true">02</span>
-                <h3>Potem poprawiamy i testujemy</h3>
-                <p>Wdrażamy zmianę w kodzie lub treści i sprawdzamy, czy użytkownik rzeczywiście może wykonać zadanie łatwiej.</p>
-              </section>
-            </div>
+            <aside class="article-note">
+              <strong>Tak chcemy pracować:</strong>
+              <p>Najpierw rozumiemy użytkownika i wymagania. Potem projektujemy i programujemy. Następnie sprawdzamy efekt. Jeśli znajdujemy problem, poprawiamy go i testujemy ponownie.</p>
+            </aside>
           </div>
 
           <figure class="article-figure article-figure-wide">
-            <img src="/assets/images/certyfikat.webp" alt="Materiały szkoleniowe i certyfikat związany z rozwojem kompetencji w zakresie dostępności cyfrowej." width="1200" height="800" loading="lazy" decoding="async">
-            <figcaption>Szkolenia i certyfikaty są dla nas częścią rozwoju. Najważniejsze jest jednak to, żeby zdobytą wiedzę umieć zastosować w prawdziwym projekcie.</figcaption>
+            <img src="/assets/images/certyfikat.webp" alt="Materiały szkoleniowe i certyfikat związany z rozwojem wiedzy o dostępności cyfrowej." width="1200" height="800" loading="lazy" decoding="async">
+            <figcaption>Szkolenia i certyfikaty pomagają uporządkować wiedzę. Prawdziwa kompetencja rośnie wtedy, gdy tę wiedzę regularnie stosujemy w projektach.</figcaption>
           </figure>
         </section>
 
-        <section class="article-section" aria-labelledby="proces-title">
+        <section class="article-section" aria-labelledby="podsumowanie-title">
           <div class="article-copy">
-            <p class="kicker">Całość ma znaczenie</p>
-            <h2 id="proces-title">Dostępna strona powstaje przed audytem, podczas wdrożenia i po ponownym teście.</h2>
-            <p>Audyt jest ważny, bo pokazuje problemy. Programista jest ważny, bo potrafi je usunąć. Projektant, grafik i autor treści są ważni, bo ich decyzje także wpływają na użytkownika.</p>
-            <p><strong>Najlepszy rezultat daje zespół, który rozumie dostępność jeszcze zanim powstanie pierwsza wersja strony.</strong></p>
-            <p>Wtedy audyt nie jest próbą ratowania gotowego projektu. Jest sprawdzeniem, czy to, co zbudowaliśmy, rzeczywiście działa dla możliwie szerokiej grupy użytkowników.</p>
+            <p class="kicker">Podsumowanie</p>
+            <h2 id="podsumowanie-title">Dobry audyt jest ważny. Dobry zespół jest jeszcze ważniejszy.</h2>
+            <p>Audyt pomaga zobaczyć bariery, których wcześniej nie zauważyliśmy. Jest wartościowym narzędziem kontroli i punktem odniesienia.</p>
+            <p>Ale użytkownik nie korzysta z raportu. <strong>Użytkownik korzysta ze strony.</strong></p>
+            <p>Dlatego o końcowej dostępności decydują ludzie, którzy tę stronę tworzą i rozwijają. Projektant, autor treści, grafik i programista. Wśród nich webdeveloper zajmuje szczególne miejsce, bo to właśnie w jego pracy wcześniejsze decyzje zamieniają się w działający produkt.</p>
+            <p>Najlepszy model to taki, w którym dostępność jest obecna od pierwszych decyzji projektowych, a audyt na końcu potwierdza jakość pracy zespołu i pokazuje, co można jeszcze ulepszyć.</p>
           </div>
         </section>
 
         <section class="article-end" aria-labelledby="article-cta-title">
           <div>
-            <p class="kicker">Masz raport WCAG albo dopiero planujesz projekt?</p>
-            <h2 id="article-cta-title">Możemy przejść z Tobą od sprawdzenia strony do gotowej poprawki.</h2>
-            <p>Wyjaśnimy problemy prostym językiem, ustalimy kolejność prac, wdrożymy zmiany i wykonamy ponowny test.</p>
+            <p class="kicker">Budujesz stronę lub masz już raport WCAG?</p>
+            <h2 id="article-cta-title">Możemy połączyć audyt z realnym wdrożeniem.</h2>
+            <p>Pracujemy nad dostępnością od strony audytu, kodu, projektu i treści. Wyjaśniamy problemy prostym językiem i pomagamy przejść od raportu do działającego rozwiązania.</p>
           </div>
           <a class="button button-primary" href="/kontakt.html" data-icon="arrow-right">Porozmawiaj z nami</a>
+        </section>
+
+        <section class="article-sources article-section" aria-labelledby="sources-title">
+          <div class="article-copy">
+            <p class="kicker">Dalsza lektura</p>
+            <h2 id="sources-title">Materiały, na których opieramy podejście do dostępności.</h2>
+            <ul>
+              <li><a href="https://www.w3.org/WAI/test-evaluate/conformance/wcag-em/" rel="noopener noreferrer">W3C WAI — WCAG Evaluation Methodology</a></li>
+              <li><a href="https://www.w3.org/WAI/planning-and-managing/implement/" rel="noopener noreferrer">W3C WAI — wdrażanie dostępności w całym procesie projektowym</a></li>
+              <li><a href="https://www.w3.org/WAI/planning/arrm/" rel="noopener noreferrer">W3C WAI — role i odpowiedzialności w dostępności cyfrowej</a></li>
+              <li><a href="https://www.w3.org/TR/WCAG22/" rel="noopener noreferrer">W3C — Web Content Accessibility Guidelines (WCAG) 2.2</a></li>
+            </ul>
+          </div>
         </section>
       </div>
     </article>
