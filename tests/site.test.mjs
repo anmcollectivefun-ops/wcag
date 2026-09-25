@@ -7,6 +7,7 @@ const pages = [
   ['../audyt.html','Audyt WCAG'],
   ['../szkolenia.html','Szkolenia'],
   ['../baza-wiedzy.html','Baza wiedzy'],
+  ['../baza-wiedzy/deklaracja-dostepnosci-eaa.html','Baza wiedzy'],
   ['../o-nas.html','O nas'],
   ['../kontakt.html','Kontakt']
 ];
@@ -124,4 +125,23 @@ test('wszystkie publiczne strony używają właściwego logo ANM Collective', as
     assert.match(html, /alt="ANM Collective"/);
     assert.doesNotMatch(html, /brand-copy/);
   }
+});
+
+
+test('artykuł EAA używa całego zestawu zdjęć i zachowuje hierarchię nagłówków', async () => {
+  const html = await readFile(new URL('../baza-wiedzy/deklaracja-dostepnosci-eaa.html', import.meta.url), 'utf8');
+  const expectedImages = [
+    'heroeaa.webp',
+    'klawiaturadobrilea.webp',
+    'kraweznikiwozek.webp',
+    'niewidomyzlaskowparkuitelefonem.webp',
+    'sluchaniestrony.webp',
+    'stopieniwozek.webp',
+    'studentkaimultikiosk.webp',
+    'wysokikontuari%20wozek.webp'
+  ];
+  for (const image of expectedImages) assert.ok(html.includes(image), image);
+  assert.equal((html.match(/<h1\b/g) || []).length, 1);
+  assert.ok((html.match(/<h2\b/g) || []).length >= 8);
+  assert.doesNotMatch(html, /<h4\b/);
 });
