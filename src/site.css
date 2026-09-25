@@ -2198,37 +2198,11 @@ html[data-contrast="high"] .audit-benefit-icon {
       );
   }
 
-  /* Artykuł: tekst pozostaje w .shell, a zdjęcie zaczyna się po prawej i kończy na krawędzi ekranu. */
-  .article-hero-photo{
-    top:0;
-    bottom:0;
-    left:48%;
-    right:auto;
-    width:calc(52% + max(16px, (100vw - 1320px) / 2));
-    height:100%;
-  }
-  .article-hero-photo img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    object-position:right center;
-  }
-  .article-hero-photo::after{
-    background:
-      linear-gradient(
-        90deg,
-        var(--surface) 0%,
-        color-mix(in srgb,var(--surface) 86%,transparent) 8%,
-        color-mix(in srgb,var(--surface) 38%,transparent) 18%,
-        transparent 30%
-      );
-  }
 }
 
 
 /* 2026-09-25 — final: czysty artykuł, bez ramek i bez cropowania hero */
 /* Jasny artykuł: biała powierzchnia, czarny tekst, bordowe akcenty. */
-html:not([data-theme="dark"]):not([data-theme="reading"]) .article-hero,
 html:not([data-theme="dark"]):not([data-theme="reading"]) .article-page,
 html:not([data-theme="dark"]):not([data-theme="reading"]) .article-section,
 html:not([data-theme="dark"]):not([data-theme="reading"]) .article-section-tinted,
@@ -2271,56 +2245,6 @@ html:not([data-theme="dark"]):not([data-theme="reading"]) .article-end .button-p
   color:#fff;
 }
 
-@media(min-width:901px){
-  /* Tekst wraca do normalnej szerokości. */
-  .article-hero-copy{
-    width:min(100%,42rem);
-    padding-right:2rem;
-  }
-  .article-hero-copy h1{
-    max-width:15ch;
-  }
-
-  /* Zdjęcie stoi po prawej i jest widoczne w CAŁOŚCI — bez object-fit: cover. */
-  .article-hero-photo{
-    top:0;
-    right:0;
-    bottom:0;
-    left:50%;
-    width:50%;
-    height:100%;
-    display:flex;
-    align-items:center;
-    justify-content:flex-end;
-    overflow:visible;
-    background:#fff;
-  }
-  .article-hero-photo img{
-    display:block;
-    width:100%;
-    height:auto;
-    max-width:100%;
-    max-height:100%;
-    object-fit:contain;
-    object-position:right center;
-  }
-
-  /* Minimalna mgła tylko na styku kolumn. */
-  .article-hero-photo::after{
-    content:"";
-    position:absolute;
-    inset:0 auto 0 0;
-    width:8%;
-    background:linear-gradient(
-      90deg,
-      rgba(255,255,255,.28) 0%,
-      rgba(255,255,255,.08) 45%,
-      rgba(255,255,255,0) 100%
-    );
-    pointer-events:none;
-  }
-}
-
 @media(max-width:900px){
   .article-opening{
     grid-template-columns:1fr;
@@ -2330,8 +2254,3 @@ html:not([data-theme="dark"]):not([data-theme="reading"]) .article-end .button-p
   }
 }
 
-
-/* Bez fali podcinającej zdjęcie w hero artykułu. */
-.article-hero .article-hero-wave{
-  display:none;
-}
