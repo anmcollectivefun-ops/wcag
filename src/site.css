@@ -2111,3 +2111,44 @@ html[data-contrast="high"] .audit-benefit-icon {
   }
   .article-summary{padding:22px 18px;border-radius:20px}
 }
+
+
+/* Artykuły: bezpieczny reflow przy 200% / 320 CSS px. */
+.article-page :where(
+  .article-copy,
+  .article-summary,
+  .article-toc,
+  .article-compare,
+  .article-compare section,
+  .article-checklist,
+  .article-checklist > div,
+  .article-note,
+  .article-impact,
+  .article-impact > div,
+  .article-penalties,
+  .article-penalties section,
+  .article-end,
+  h2,
+  h3,
+  p,
+  li,
+  strong,
+  span,
+  a
+){
+  min-width:0;
+  max-width:100%;
+  overflow-wrap:anywhere;
+  word-break:normal;
+  white-space:normal;
+}
+.article-copy ul,
+.article-copy ol{
+  padding-left:28px;
+}
+@media(max-width:480px){
+  .article-copy ul,
+  .article-copy ol{
+    padding-left:22px;
+  }
+}
