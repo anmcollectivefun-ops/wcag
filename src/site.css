@@ -1627,89 +1627,92 @@ html[data-text-size="aaa"] .navigation-row .main-nav a{
   min-width:0;
   min-height:340px;
   padding:32px 28px 32px;
-  border:1px solid color-mix(in srgb,var(--gold) 20%,var(--border));
-  border-radius:24px;
-  background:color-mix(in srgb,var(--gold) 3%,var(--surface));
+  border:1px solid color-mix(in srgb,var(--gold) 15%,var(--border));
+  border-radius:18px;
+  background:color-mix(in srgb,var(--gold) 10%,var(--surface));
   box-shadow:0 18px 44px -22px color-mix(in srgb,var(--gold) 15%,transparent);
   transition:transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 .audit-benefit-card:hover{
   transform:translateY(-6px);
   box-shadow:0 26px 56px -24px color-mix(in srgb,var(--gold) 25%,transparent);
-  border-color:color-mix(in srgb,var(--gold) 50%,var(--border));
+  border-color:color-mix(in srgb,var(--gold) 40%,var(--border));
 }
 .audit-benefit-card::before{
   content:"";
   position:absolute;
-  top:-50px;
-  right:-50px;
-  width:160px;
-  height:160px;
+  top:12%;
+  right:32%;
+  width:140px;
+  height:140px;
   border-radius:50%;
-  background:color-mix(in srgb,var(--gold) 6%,transparent);
+  background:color-mix(in srgb,var(--surface) 40%,transparent);
   pointer-events:none;
 }
 .audit-benefit-card::after{
   content:"";
   position:absolute;
-  bottom:-40px;
-  left:-30px;
-  width:180px;
-  height:180px;
-  border-radius:50%;
-  border:1px solid color-mix(in srgb,var(--gold) 10%,transparent);
+  bottom:0;
+  right:0;
+  width:65px;
+  height:65px;
+  border-top-left-radius:100%;
+  background:var(--gold);
   pointer-events:none;
 }
 .audit-benefit-card > * {
   position:relative;
   z-index:1;
 }
-.audit-benefit-card:nth-child(even){
-  background:color-mix(in srgb,var(--gold) 1.5%,var(--surface-alt));
-}
-.audit-benefit-card-docs{
-  background:color-mix(in srgb,var(--gold) 7%,var(--surface));
-}
+.audit-benefit-card:nth-child(even),
+.audit-benefit-card-docs,
 .audit-benefit-card-result{
-  background:var(--promo-bg);
-  color:var(--promo-text);
-  border-color:var(--promo-bg);
-}
-.audit-benefit-card-result::before{
-  background:color-mix(in srgb,var(--promo-text) 8%,transparent);
-}
-.audit-benefit-card-result::after{
-  border-color:color-mix(in srgb,var(--promo-text) 15%,transparent);
+  background:color-mix(in srgb,var(--gold) 10%,var(--surface));
+  color:inherit;
+  border-color:color-mix(in srgb,var(--gold) 15%,var(--border));
 }
 .audit-benefit-card-result h3,
 .audit-benefit-card-result p,
 .audit-benefit-card-result .audit-benefit-no,
 .audit-benefit-card-result .audit-benefit-icon{
-  color:var(--promo-text);
+  color:inherit;
 }
 .audit-benefit-top{
   display:flex;
   align-items:center;
   justify-content:space-between;
   gap:16px;
-  margin-bottom:clamp(34px,5vw,64px);
+  margin-bottom:clamp(26px,4vw,44px);
 }
 .audit-benefit-no{
+  display:inline-flex;
+  align-items:center;
   color:var(--gold);
-  font-size:.78rem;
-  font-weight:650;
-  letter-spacing:.08em;
+  font-size:.85rem;
+  font-weight:750;
+  letter-spacing:.05em;
+}
+.audit-benefit-no::after{
+  content:"";
+  display:inline-block;
+  width:36px;
+  height:1.5px;
+  margin-left:14px;
+  background:var(--gold);
+  opacity:0.65;
 }
 .audit-benefit-icon{
   display:grid;
   place-items:center;
-  width:46px;
-  height:46px;
+  width:52px;
+  height:52px;
+  border-radius:50%;
+  background:color-mix(in srgb,var(--surface) 55%,transparent);
   color:var(--gold);
 }
 .audit-benefit-icon .icon{
-  width:28px;
-  height:28px;
+  width:26px;
+  height:26px;
 }
 .audit-benefit-card h3{
   max-width:20ch;
