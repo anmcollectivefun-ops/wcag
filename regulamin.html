@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="pl" data-theme="light" data-text-size="a">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Regulamin ANM Collective dla serwisu ANM Access i usług dostępności cyfrowej: audyty WCAG, wdrożenia, szkolenia, zasady zamówień, płatności, reklamacji i odpowiedzialności.">
+  <meta name="theme-color" content="#FFFFFF">
+  <title>Regulamin ANM Collective — ANM Access</title>
+  <link rel="canonical" href="https://anm.anmcollective.fun/regulamin.html">
+  <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/assets/fonts/atkinson.css">
+  <link rel="stylesheet" href="/src/theme.css">
+  <link rel="stylesheet" href="/src/typography.css">
+  <link rel="stylesheet" href="/src/site.css">
+  <script defer src="/assets/vendor/gsap.min.js"></script>
+  <script type="module" src="/src/theme.mjs"></script>
+  <script type="module" src="/src/site.mjs"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Przejdź do treści</a>
+
+  <header class="site-header">
+    <div class="accessibility-bar" aria-label="Ustawienia dostępności">
+      <div class="shell accessibility-bar-inner">
+        <div class="language-switcher access-group" aria-label="Język strony">
+          <span class="access-group-label" data-icon="languages">Język</span>
+          <button type="button" aria-pressed="true" aria-label="Język polski">PL</button>
+          <button type="button" disabled aria-label="Język angielski — w przygotowaniu">EN</button>
+          <button type="button" disabled aria-label="Język ukraiński — w przygotowaniu">UA</button>
+        </div>
+
+        <div class="text-size-switcher access-group" role="group" aria-label="Rozmiar tekstu">
+          <span class="access-group-label" data-icon="text-size">Tekst</span>
+          <button type="button" data-text-size-choice="a" aria-pressed="true" aria-label="Rozmiar tekstu A, 100 procent">A</button>
+          <button type="button" data-text-size-choice="aa" aria-pressed="false" aria-label="Rozmiar tekstu AA, 150 procent">AA</button>
+          <button type="button" data-text-size-choice="aaa" aria-pressed="false" aria-label="Rozmiar tekstu AAA, 200 procent">AAA</button>
+        </div>
+
+        <button class="access-tool" type="button" data-contrast-toggle data-icon="eye-contrast" aria-pressed="false">
+          <span>Wysoki kontrast</span>
+        </button>
+
+        <div class="theme-switcher access-group" role="group" aria-label="Motyw strony">
+          <button type="button" data-theme-choice="light" data-icon="sun" aria-pressed="true">Jasny</button>
+          <button type="button" data-theme-choice="dark" data-icon="moon" aria-pressed="false">Ciemny</button>
+          <button type="button" data-theme-choice="reading" data-icon="book-open" aria-pressed="false">Czytanie</button>
+        </div>
+
+        <button class="access-tool" type="button" data-read-page data-icon="volume-2" aria-pressed="false">
+          <span data-reader-label>Przeczytaj stronę</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="shell navigation-row">
+      <a class="brand" href="/" aria-label="ANM Collective — strona główna">
+        <img class="brand-logo" src="/assets/images/ANM-Collective%20mobile.webp" alt="ANM Collective" decoding="async">
+      </a>
+      <button class="nav-toggle" type="button" data-nav-toggle data-icon="menu" aria-expanded="false" aria-controls="main-nav-list">Menu</button>
+      <nav class="main-nav" aria-label="Nawigacja główna" data-open="false">
+        <ul class="main-nav-list" id="main-nav-list">
+          <li><a href="/">Strona główna</a></li>
+          <li><a href="/audyt.html">Audyt WCAG</a></li>
+          <li><a href="/szkolenia.html">Szkolenia</a></li>
+          <li><a href="/baza-wiedzy.html">Baza wiedzy</a></li>
+          <li><a href="/o-nas.html">O nas</a></li>
+          <li><a href="/kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero home-hero">
+      <div class="shell home-hero-shell">
+        <div class="hero-copy home-hero-copy">
+          <p class="kicker" data-reveal>ANM Collective · zasady współpracy</p>
+          <h1 data-reveal>Regulamin ANM Collective — ANM Access</h1>
+          <p class="hero-lead" data-reveal>Opisujemy jasno, jak działa serwis ANM Access, jak zamawia się audyt lub inne usługi oraz jakie prawa i obowiązki mają obie strony współpracy.</p>
+          <ul class="hero-meta" data-reveal aria-label="Najważniejsze informacje o regulaminie">
+            <li data-icon="check">jasny zakres przed startem</li>
+            <li data-icon="check">wycena przed realizacją</li>
+            <li data-icon="check">reklamacje i prawa klienta</li>
+          </ul>
+        </div>
+
+        <figure class="hero-photo hero-photo-wide" data-reveal>
+          <img src="/assets/images/heroonas.webp" alt="" width="1600" height="760" decoding="async" fetchpriority="high">
+          <svg class="hero-photo-wave" viewBox="0 0 1200 150" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+            <path d="M0,105 C170,38 330,142 515,104 C705,65 890,20 1200,86 L1200,150 L0,150 Z"></path>
+          </svg>
+        </figure>
+      </div>
+    </section>
+
+    <article class="article-page">
+      <div class="shell article-shell">
+        <section class="article-opening" aria-labelledby="terms-summary">
+          <div class="article-summary">
+            <p class="kicker">Regulamin w skrócie</p>
+            <h2 id="terms-summary">Najpierw ustalamy zakres. Potem rozpoczynamy pracę.</h2>
+            <ul>
+              <li><strong>Serwis ANM Access ma charakter informacyjny.</strong> Nie ma tutaj koszyka ani automatycznego zakupu płatnej usługi.</li>
+              <li><strong>Płatne zlecenie rozpoczynamy po ustaleniu zakresu, ceny i terminu</strong> oraz po akceptacji oferty, zlecenia albo umowy.</li>
+              <li><strong>Zakres indywidualnej oferty lub umowy jest ważniejszy od ogólnych zapisów regulaminu</strong>, jeśli strony uzgodnią inne zasady dla konkretnego projektu.</li>
+              <li><strong>Audyt opisuje konkretny zakres i stan produktu w czasie badania.</strong> Późniejsze zmiany na stronie mogą wymagać ponownego testu.</li>
+              <li><strong>Reklamacje można składać elektronicznie.</strong> Konsument otrzyma odpowiedź nie później niż w ustawowym terminie 14 dni.</li>
+            </ul>
+            <p class="meta">Wersja 1.0 · obowiązuje od 26 września 2026 r.</p>
+          </div>
+
+          <nav class="article-toc" aria-label="Spis treści regulaminu">
+            <strong>Na tej stronie</strong>
+            <ol>
+              <li><a href="#terms-provider">Usługodawca i kontakt</a></li>
+              <li><a href="#terms-definitions">Najważniejsze pojęcia</a></li>
+              <li><a href="#terms-electronic">Korzystanie z serwisu</a></li>
+              <li><a href="#terms-services">Zakres usług ANM Access</a></li>
+              <li><a href="#terms-order">Zamówienie i zawarcie umowy</a></li>
+              <li><a href="#terms-client">Obowiązki klienta</a></li>
+              <li><a href="#terms-delivery">Realizacja i odbiór</a></li>
+              <li><a href="#terms-payment">Cena i płatność</a></li>
+              <li><a href="#terms-audit">Zasady audytów WCAG</a></li>
+              <li><a href="#terms-certificate">Certyfikat ANM Access</a></li>
+              <li><a href="#terms-ip">Prawa autorskie</a></li>
+              <li><a href="#terms-warranty">Gwarancja i odpowiedzialność</a></li>
+              <li><a href="#terms-consumer">Konsument i odstąpienie</a></li>
+              <li><a href="#terms-complaints">Reklamacje</a></li>
+              <li><a href="#terms-final">Postanowienia końcowe</a></li>
+            </ol>
+          </nav>
+        </section>
+
+        <section class="article-section" id="terms-provider" aria-labelledby="terms-provider-title">
+          <div class="article-copy">
+            <p class="kicker">§ 1</p>
+            <h2 id="terms-provider-title">Kto świadczy usługi?</h2>
+            <p>Usługodawcą i właścicielem serwisu ANM Access jest <strong>ANM Collective Sp. z o.o.</strong> z siedzibą pod adresem Włodzimierz 5A, 98-105 Wodzierady, Polska.</p>
+            <ul>
+              <li>KRS: 0001219850,</li>
+              <li>NIP: 8311649267,</li>
+              <li>REGON: 543820292,</li>
+              <li>telefon: <a href="tel:+48572069851">+48 572 069 851</a>,</li>
+              <li>kontakt ogólny: <a href="mailto:kontakt@anmcollective.pl">kontakt@anmcollective.pl</a>,</li>
+              <li>zapytania ofertowe: <a href="mailto:kontakt@anmcollectivemail.pl">kontakt@anmcollectivemail.pl</a>.</li>
+            </ul>
+            <p>Regulamin dotyczy serwisu ANM Access oraz usług zamawianych w związku z ofertą dostępną w tym serwisie.</p>
+          </div>
+        </section>
+
+        <section class="article-section article-section-tinted" id="terms-definitions" aria-labelledby="terms-definitions-title">
+          <div class="article-copy">
+            <p class="kicker">§ 2</p>
+            <h2 id="terms-definitions-title">Najważniejsze pojęcia</h2>
+            <div class="article-checklist">
+              <div><strong>ANM / Usługodawca</strong><span>ANM Collective Sp. z o.o.</span></div>
+              <div><strong>Serwis</strong><span>ANM Access dostępny pod adresem anm.anmcollective.fun wraz z jego podstronami.</span></div>
+              <div><strong>Klient</strong><span>Osoba fizyczna, firma, instytucja albo organizacja korzystająca z płatnej usługi ANM.</span></div>
+              <div><strong>Użytkownik</strong><span>Każda osoba korzystająca z publicznej części Serwisu.</span></div>
+              <div><strong>Oferta</strong><span>Indywidualny opis zakresu, ceny, terminu i innych warunków przekazany Klientowi przed rozpoczęciem prac.</span></div>
+              <div><strong>Usługa</strong><span>Audyt WCAG, konsultacja, wdrożenie poprawek, ponowny test, szkolenie lub inna uzgodniona praca związana z dostępnością cyfrową.</span></div>
+              <div><strong>Raport</strong><span>Wynik audytu lub testu w zakresie ustalonym z Klientem.</span></div>
+              <div><strong>Umowa</strong><span>Umowa, zlecenie lub inne uzgodnienie wiążące strony, zawarte po zaakceptowaniu zakresu i warunków współpracy.</span></div>
+            </div>
+            <p>Jeżeli indywidualna Umowa albo zaakceptowana Oferta zawiera postanowienie odmienne od Regulaminu, pierwszeństwo ma indywidualne ustalenie stron, o ile jest zgodne z prawem.</p>
+          </div>
+        </section>
+
+        <section class="article-section" id="terms-electronic" aria-labelledby="terms-electronic-title">
+          <div class="article-copy">
+            <p class="kicker">§ 3</p>
+            <h2 id="terms-electronic-title">Korzystanie z serwisu ANM Access</h2>
+            <p>Publiczna część Serwisu udostępnia nieodpłatnie informacje o dostępności cyfrowej, ofercie ANM Access, usługach, artykułach i danych kontaktowych.</p>
+            <p>Umowa o bezpłatne korzystanie z publicznej części Serwisu zostaje zawarta w chwili rozpoczęcia korzystania z Serwisu i kończy się w chwili opuszczenia strony lub zamknięcia przeglądarki.</p>
+
+            <h3>Wymagania techniczne</h3>
+            <p>Do korzystania z Serwisu potrzebne są: urządzenie z dostępem do internetu, aktualna przeglądarka internetowa oraz obsługa standardowych technologii HTML i CSS. JavaScript jest potrzebny do części funkcji interaktywnych, takich jak przełączanie motywu, rozmiaru tekstu, wysokiego kontrastu i czytanie strony.</p>
+            <p>Do kontaktu e-mail potrzebny jest dostęp do poczty elektronicznej. ANM nie wymaga założenia konta użytkownika do przeglądania publicznej części Serwisu.</p>
+
+            <h3>Bezpieczne i zgodne z prawem korzystanie</h3>
+            <p>Użytkownik nie może dostarczać za pośrednictwem komunikacji z ANM treści bezprawnych, złośliwego oprogramowania, danych pozyskanych bez podstawy prawnej ani materiałów naruszających prawa osób trzecich.</p>
+            <p>Nie należy przesyłać haseł ani danych dostępowych w pierwszej wiadomości e-mail. Jeśli do realizacji projektu potrzebne są dostępy techniczne, sposób ich bezpiecznego przekazania ustalamy osobno.</p>
+            <p>ANM może czasowo ograniczyć dostęp do Serwisu z powodu prac technicznych, aktualizacji, bezpieczeństwa lub awarii infrastruktury niezależnej od ANM.</p>
+          </div>
+        </section>
+
+        <section class="article-section article-section-tinted" id="terms-services" aria-labelledby="terms-services-title">
+          <div class="article-copy">
+            <p class="kicker">§ 4</p>
+            <h2 id="terms-services-title">Jakie usługi może obejmować współpraca?</h2>
+            <p>Dokładny zakres zawsze wynika z Oferty lub Umowy. W zależności od projektu ANM może świadczyć między innymi:</p>
+            <ul>
+              <li>audyty dostępności cyfrowej według uzgodnionej wersji i poziomu WCAG,</li>
+              <li>testy automatyczne i manualne stron, aplikacji oraz procesów cyfrowych,</li>
+              <li>analizę kodu, treści, formularzy i sposobu obsługi interfejsu,</li>
+              <li>przygotowanie raportu i zaleceń wdrożeniowych,</li>
+              <li>wdrażanie uzgodnionych poprawek w kodzie, projekcie lub treści,</li>
+              <li>ponowne testy po wdrożeniu zmian,</li>
+              <li>konsultacje i wsparcie zespołów projektowych,</li>
+              <li>szkolenia z dostępności cyfrowej,</li>
+              <li>przygotowanie lub wsparcie przy dokumentach związanych z dostępnością, jeżeli zostało to wyraźnie objęte zleceniem,</li>
+              <li>wystawienie firmowego Certyfikatu ANM Access po spełnieniu warunków określonych w § 10.</li>
+            </ul>
+            <p>Informacje publikowane w Bazie wiedzy mają charakter edukacyjny i nie zastępują indywidualnego audytu, analizy prawnej ani oceny konkretnego produktu.</p>
+          </div>
+        </section>
+
+        <section class="article-section" id="terms-order" aria-labelledby="terms-order-title">
+          <div class="article-copy">
+            <p class="kicker">§ 5</p>
+            <h2 id="terms-order-title">Jak zamawia się płatną usługę?</h2>
+            <p>ANM Access nie prowadzi automatycznego zakupu płatnych usług przez koszyk. Proces zaczyna się od kontaktu.</p>
+            <ol class="article-steps">
+              <li><strong>Klient opisuje potrzebę.</strong> Może podać adres strony, aplikacji albo krótko wyjaśnić cel projektu.</li>
+              <li><strong>ANM ustala zakres.</strong> W razie potrzeby prosimy o dodatkowe informacje lub dostęp do wersji testowej.</li>
+              <li><strong>Klient otrzymuje Ofertę.</strong> Określamy zakres, cenę, termin, sposób rozliczenia i najważniejsze założenia.</li>
+              <li><strong>Strony potwierdzają współpracę.</strong> Może to nastąpić przez podpisanie Umowy, zaakceptowanie Oferty albo w inny jednoznacznie uzgodniony sposób.</li>
+              <li><strong>Rozpoczynamy pracę.</strong> Po spełnieniu warunków startu wskazanych w Ofercie lub Umowie, w tym po przekazaniu niezbędnych materiałów i — jeżeli ustalono — płatności początkowej.</li>
+            </ol>
+            <p>Sama prośba o wycenę, wysłanie adresu strony albo pierwsza rozmowa nie oznacza jeszcze obowiązku zamówienia usługi.</p>
+          </div>
+        </section>
+
+        <section class="article-section article-section-tinted" id="terms-client" aria-labelledby="terms-client-title">
+          <div class="article-copy">
+            <p class="kicker">§ 6</p>
+            <h2 id="terms-client-title">Co jest potrzebne po stronie Klienta?</h2>
+            <p>Żeby wykonać usługę prawidłowo i w terminie, Klient:</p>
+            <ul>
+              <li>przekazuje informacje, materiały i dostępy potrzebne do realizacji uzgodnionego zakresu,</li>
+              <li>zapewnia, że ma prawo korzystać z przekazanych tekstów, grafik, zdjęć, znaków, kodu i innych materiałów,</li>
+              <li>nie przekazuje danych osobowych ani poufnych informacji, które nie są potrzebne do realizacji projektu,</li>
+              <li>udziela odpowiedzi i akceptacji w terminach ustalonych dla projektu,</li>
+              <li>informuje o istotnych zmianach w serwisie, które mogą wpływać na audyt lub wdrożenie.</li>
+            </ul>
+            <p>Jeżeli realizacja opóźnia się z powodu braku materiałów, dostępu lub decyzji po stronie Klienta, termin wykonania może zostać odpowiednio przesunięty.</p>
+            <p>Zmiany wykraczające poza zaakceptowany zakres są nowym lub dodatkowym zakresem i mogą wymagać osobnej wyceny.</p>
+          </div>
+        </section>
+
+        <section class="article-section" id="terms-delivery" aria-labelledby="terms-delivery-title">
+          <div class="article-copy">
+            <p class="kicker">§ 7</p>
+            <h2 id="terms-delivery-title">Realizacja, uwagi i odbiór</h2>
+            <p>Prace realizujemy w zakresie i terminie uzgodnionym w Ofercie lub Umowie. Jeśli projekt jest etapowy, sposób odbioru poszczególnych etapów ustalamy przed startem.</p>
+            <p>Klient może zgłaszać uwagi dotyczące zgodności rezultatu z uzgodnionym zakresem. Poprawki wynikające z błędu wykonawczego lub niezgodności z zaakceptowanym zakresem nie są traktowane jako nowa funkcja.</p>
+            <p>Prośby o nowe rozwiązania, rozszerzenie zakresu, zmianę wcześniej zaakceptowanej koncepcji albo dodatkowe prace mogą zostać wycenione osobno.</p>
+            <p>Termin na zgłoszenie uwag do odbioru, jeśli jest potrzebny, wskazujemy w Ofercie lub Umowie. Brak takiego terminu nie pozbawia Klienta praw wynikających z przepisów.</p>
+          </div>
+        </section>
+
+        <section class="article-section article-section-tinted" id="terms-payment" aria-labelledby="terms-payment-title">
+          <div class="article-copy">
+            <p class="kicker">§ 8</p>
+            <h2 id="terms-payment-title">Cena, faktura i sposób płatności</h2>
+            <p>Cena jest ustalana przed rozpoczęciem płatnej usługi i wynika z Oferty lub Umowy.</p>
+            <p>ANM stosuje różne modele rozliczeń zależnie od rodzaju pracy. Może to być płatność po odbiorze, podział płatności na etapy, zaliczka przed rozpoczęciem części prac albo rozliczenie okresowe przy stałej opiece. <strong>Wiążący jest zawsze model zapisany dla konkretnego zlecenia.</strong></p>
+            <p>Termin płatności i dane do przelewu znajdują się na fakturze, Ofercie albo w Umowie. Klient nie ponosi kosztów, które nie zostały wcześniej uzgodnione.</p>
+            <p>Jeżeli prace dodatkowe wymagają osobnej wyceny, rozpoczynamy je po zaakceptowaniu ich zakresu i ceny.</p>
+          </div>
+        </section>
+
+        <section class="article-section" id="terms-audit" aria-labelledby="terms-audit-title">
+          <div class="article-copy">
+            <p class="kicker">§ 9</p>
+            <h2 id="terms-audit-title">Jak rozumieć wynik audytu WCAG?</h2>
+            <p>Audyt jest oceną produktu w <strong>konkretnym zakresie i w konkretnym momencie</strong>. Raport opisuje strony, widoki, komponenty, procesy i kryteria objęte zleceniem.</p>
+            <p>Jeżeli audyt obejmuje próbę reprezentatywną zamiast całego serwisu, informacja o tym znajduje się w zakresie badania lub Raporcie.</p>
+            <p>Test automatyczny jest elementem pomocniczym. Sam wynik narzędzia automatycznego nie stanowi potwierdzenia pełnej zgodności z WCAG.</p>
+            <p>Po zakończeniu audytu Klient lub osoba trzecia może zmienić kod, treść, wtyczkę, motyw, integrację albo konfigurację. Taka zmiana może wpłynąć na dostępność i nie jest objęta wcześniejszym wynikiem, jeśli nie została ponownie sprawdzona.</p>
+            <p>Raport i zalecenia techniczne nie stanowią opinii prawnej, chyba że strony wyraźnie zamówiły osobną usługę obejmującą analizę prawną wykonywaną przez osobę posiadającą odpowiednie kompetencje.</p>
+          </div>
+        </section>
+
+        <section class="article-section article-section-tinted" id="terms-certificate" aria-labelledby="terms-certificate-title">
+          <div class="article-copy">
+            <p class="kicker">§ 10</p>
+            <h2 id="terms-certificate-title">Co oznacza Certyfikat ANM Access?</h2>
+            <p>Certyfikat ANM Access jest <strong>firmowym potwierdzeniem ANM Collective</strong> dotyczącym zakresu wskazanego w certyfikacie lub powiązanym Raporcie.</p>
+            <p>Nie jest certyfikatem wydawanym przez W3C, organ państwowy ani jednostkę akredytowaną, chyba że dokument wyraźnie stanowi inaczej.</p>
+            <p>Certyfikat może zostać wystawiony po zakończeniu uzgodnionych testów i potwierdzeniu wyniku dla wskazanego zakresu. Nie potwierdza dostępności elementów, podstron lub procesów, które nie były objęte badaniem.</p>
+            <p>Jeżeli po wydaniu certyfikatu serwis zostanie istotnie zmieniony, wynik może wymagać ponownej weryfikacji. Klient nie powinien przedstawiać certyfikatu w sposób sugerujący szerszy zakres niż faktycznie sprawdzony.</p>
+          </div>
+        </section>
+
+        <section class="article-section" id="terms-ip" aria-labelledby="terms-ip-title">
+          <div class="article-copy">
+            <p class="kicker">§ 11</p>
+            <h2 id="terms-ip-title">Prawa autorskie i materiały</h2>
+            <p>Prawa do materiałów przekazanych przez Klienta pozostają przy Kliencie lub ich właściwym właścicielu. Klient odpowiada za posiadanie praw pozwalających na ich wykorzystanie w projekcie.</p>
+            <p>Prawa do elementów stworzonych przez ANM są przenoszone albo licencjonowane w zakresie określonym w Ofercie lub Umowie. Jeśli strony uzależniły przeniesienie praw od pełnej zapłaty, skutek następuje po uregulowaniu należności.</p>
+            <p>Narzędzia, biblioteki, komponenty, rozwiązania open source i materiały osób trzecich pozostają objęte właściwymi licencjami. Elementy ANM istniejące przed konkretnym projektem nie przechodzą na Klienta, chyba że strony wyraźnie uzgodnią inaczej.</p>
+            <p>Klient może wykorzystywać Raport audytowy na potrzeby własnej organizacji oraz przekazywać go osobom realizującym poprawki, doradcom lub uprawnionym organom. Odsprzedaż Raportu jako własnego produktu lub zmiana jego treści w sposób wprowadzający w błąd wymaga zgody ANM.</p>
+          </div>
+        </section>
+
+        <section class="article-section article-section-tinted" id="terms-warranty" aria-labelledby="terms-warranty-title">
+          <div class="article-copy">
+            <p class="kicker">§ 12</p>
+            <h2 id="terms-warranty-title">Gwarancja techniczna i odpowiedzialność</h2>
+            <p>Jeżeli indywidualna Oferta lub Umowa nie stanowi inaczej, ANM udziela <strong>12-miesięcznej gwarancji na usterki wykonawcze w elementach technicznych stworzonych przez ANM</strong>, liczonej od odbioru danego zakresu.</p>
+            <p>Gwarancja obejmuje usunięcie usterki wynikającej z wykonania ANM. Nie obejmuje nowych funkcji ani problemów powstałych wskutek:</p>
+            <ul>
+              <li>zmian wykonanych po odbiorze przez Klienta lub osoby trzecie,</li>
+              <li>aktualizacji, awarii albo zmiany działania zewnętrznej platformy, wtyczki, API, hostingu lub innego dostawcy,</li>
+              <li>nieprawidłowej administracji, utraty danych dostępowych, złośliwego oprogramowania lub naruszenia bezpieczeństwa niezależnego od ANM,</li>
+              <li>zmiany prawa, standardu lub wytycznych po odbiorze projektu,</li>
+              <li>rozbudowy serwisu poza zakres objęty odbiorem.</li>
+            </ul>
+            <p>Nowe funkcje, rozwój produktu i prace wynikające ze zmian zewnętrznych mogą zostać wykonane jako osobne zlecenie.</p>
+            <p>Gwarancja umowna nie ogranicza praw Konsumenta ani innych praw, których zgodnie z przepisami nie można wyłączyć.</p>
+
+            <h3>Odpowiedzialność wobec Klientów profesjonalnych</h3>
+            <p>W relacji z Klientem, który zawiera umowę w ramach działalności zawodowej lub gospodarczej i nie korzysta z ochrony konsumenckiej, ANM nie odpowiada za utracone korzyści ani szkody wynikające wyłącznie z awarii lub działania systemów osób trzecich, na które ANM nie ma wpływu. Postanowienie to nie dotyczy szkód wyrządzonych umyślnie ani przypadków, w których ograniczenie odpowiedzialności jest niedopuszczalne prawem.</p>
+          </div>
+        </section>
+
+        <section class="article-section" id="terms-consumer" aria-labelledby="terms-consumer-title">
+          <div class="article-copy">
+            <p class="kicker">§ 13</p>
+            <h2 id="terms-consumer-title">Prawa Konsumenta i odstąpienie od umowy</h2>
+            <p>Oferta ANM jest kierowana przede wszystkim do firm, instytucji i organizacji. Jeżeli jednak Umowę zawiera Konsument, przysługują mu prawa wynikające z ustawy o prawach konsumenta.</p>
+            <p>Do osoby fizycznej prowadzącej działalność gospodarczą stosuje się odpowiednie przepisy konsumenckie również wtedy, gdy ustawa przyznaje jej taką ochronę ze względu na niezawodowy charakter Umowy.</p>
+
+            <h3>14 dni na odstąpienie</h3>
+            <p>Konsument, który zawarł Umowę na odległość, może co do zasady odstąpić od niej w terminie 14 dni od dnia zawarcia Umowy bez podawania przyczyny.</p>
+            <p>Oświadczenie można wysłać na <a href="mailto:kontakt@anmcollective.pl">kontakt@anmcollective.pl</a> albo pocztą na adres ANM. Nie trzeba korzystać ze specjalnego formularza — wystarczy jednoznaczna informacja o odstąpieniu.</p>
+
+            <h3>Rozpoczęcie pracy przed upływem 14 dni</h3>
+            <p>Jeżeli Konsument chce, aby ANM rozpoczęła wykonywanie płatnej usługi przed upływem terminu na odstąpienie, prosimy o wyraźne żądanie rozpoczęcia świadczenia.</p>
+            <p>Jeżeli usługa zostanie w pełni wykonana przed upływem 14 dni, prawo odstąpienia wygasa po pełnym wykonaniu tylko wtedy, gdy przed rozpoczęciem Konsument wyraził wymaganą zgodę lub żądanie i przyjął do wiadomości skutek przewidziany przez prawo.</p>
+            <p>Jeżeli Konsument odstąpi po wyraźnym żądaniu rozpoczęcia usługi, ale zanim zostanie ona w pełni wykonana, może być zobowiązany do zapłaty kwoty proporcjonalnej do części usługi wykonanej do chwili odstąpienia, zgodnie z ustawą.</p>
+          </div>
+        </section>
+
+        <section class="article-section article-section-tinted" id="terms-complaints" aria-labelledby="terms-complaints-title">
+          <div class="article-copy">
+            <p class="kicker">§ 14</p>
+            <h2 id="terms-complaints-title">Jak złożyć reklamację?</h2>
+            <p>Reklamację dotyczącą Serwisu albo płatnej Usługi można wysłać:</p>
+            <ul>
+              <li>e-mailem na <a href="mailto:kontakt@anmcollective.pl">kontakt@anmcollective.pl</a>,</li>
+              <li>listownie na adres: ANM Collective Sp. z o.o., Włodzimierz 5A, 98-105 Wodzierady.</li>
+            </ul>
+            <p>Dla sprawnego rozpatrzenia warto podać dane pozwalające zidentyfikować zlecenie, opisać problem i wskazać oczekiwany sposób rozwiązania. Brak tych informacji nie pozbawia Konsumenta prawa do reklamacji.</p>
+            <p><strong>Na reklamację Konsumenta odpowiadamy w terminie 14 dni od jej otrzymania</strong>, chyba że przepis szczególny przewiduje inny termin. Odpowiedź przekazujemy na papierze lub innym trwałym nośniku.</p>
+            <p>Reklamacje pozostałych Klientów rozpatrujemy bez zbędnej zwłoki, z uwzględnieniem charakteru zgłoszenia.</p>
+            <p>Konsument może również korzystać z pozasądowych sposobów rozwiązywania sporów konsumenckich. Informacje o dostępnych możliwościach można uzyskać między innymi u miejskiego lub powiatowego rzecznika konsumentów oraz w materiałach Urzędu Ochrony Konkurencji i Konsumentów.</p>
+          </div>
+        </section>
+
+        <section class="article-section" id="terms-final" aria-labelledby="terms-final-title">
+          <div class="article-copy">
+            <p class="kicker">§ 15</p>
+            <h2 id="terms-final-title">Dane osobowe, zmiany Regulaminu i prawo właściwe</h2>
+
+            <h3>Dane osobowe</h3>
+            <p>Zasady przetwarzania danych w Serwisie opisuje <a href="/polityka-prywatnosci.html">Polityka prywatności ANM Access</a>.</p>
+
+            <h3>Dostępność Regulaminu</h3>
+            <p>Regulamin jest bezpłatnie dostępny w Serwisie w formacie HTML, który można zapisać, wydrukować i odczytać przy użyciu technologii wspomagających. Na prośbę możemy przekazać jego treść również w innym uzgodnionym, dostępnym formacie elektronicznym.</p>
+
+            <h3>Zmiany Regulaminu</h3>
+            <p>Regulamin może zostać zmieniony z powodu zmiany prawa, zakresu Serwisu, sposobu świadczenia usług albo danych Usługodawcy. Nowa wersja obowiązuje od daty wskazanej na stronie.</p>
+            <p>Zmiana Regulaminu nie zmienia automatycznie warunków zakończonego zlecenia. Dla trwającej Umowy stosuje się zasady uzgodnione przy jej zawarciu, chyba że zmiana wynika z bezwzględnie obowiązującego prawa albo strony uzgodnią inaczej.</p>
+
+            <h3>Prawo właściwe i spory</h3>
+            <p>Do Regulaminu i Umów stosuje się prawo polskie, z zachowaniem ochrony przyznanej Konsumentowi przez przepisy, których nie można wyłączyć.</p>
+            <p>Wobec Konsumenta właściwość sądu określają przepisy prawa. W sporach z Klientami profesjonalnymi właściwy jest sąd właściwy dla siedziby ANM, o ile indywidualna Umowa nie stanowi inaczej.</p>
+          </div>
+        </section>
+
+        <section class="article-section article-section-tinted" aria-labelledby="terms-law-title">
+          <div class="article-copy">
+            <p class="kicker">Podstawa dokumentu</p>
+            <h2 id="terms-law-title">Najważniejsze przepisy, do których odnosi się Regulamin</h2>
+            <ul>
+              <li><a href="https://eli.gov.pl/api/acts/DU/2024/1513/text.html" rel="noopener noreferrer">ustawa o świadczeniu usług drogą elektroniczną — tekst jednolity</a>,</li>
+              <li><a href="https://eli.gov.pl/api/acts/DU/2024/1796/text.html" rel="noopener noreferrer">ustawa o prawach konsumenta — tekst jednolity</a>,</li>
+              <li>Kodeks cywilny — w zakresie właściwym dla zawieranych Umów.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="article-end" aria-labelledby="terms-contact-title">
+          <div>
+            <p class="kicker">Masz pytanie do Regulaminu?</p>
+            <h2 id="terms-contact-title">Wyjaśnimy zasady przed rozpoczęciem współpracy.</h2>
+            <p>Jeżeli zapis Regulaminu jest dla Ciebie niejasny albo projekt wymaga innych warunków, ustalimy je przed zawarciem Umowy.</p>
+          </div>
+          <a class="button button-primary" href="/kontakt.html" data-icon="arrow-right">Skontaktuj się z ANM</a>
+        </section>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div class="footer-copy">
+        <strong>ANM Access</strong>
+        <p>ANM Access to audyty i rozwój dostępności cyfrowej zgodnie z WCAG 2.2.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Nawigacja w stopce">
+        <a href="/audyt.html">Audyt WCAG</a>
+        <a href="/szkolenia.html">Szkolenia</a>
+        <a href="/baza-wiedzy.html">Baza wiedzy</a>
+        <a href="/o-nas.html">O nas</a>
+        <a href="/kontakt.html">Kontakt</a>
+        <a href="/regulamin.html" aria-current="page">Regulamin</a>
+        <a href="/polityka-prywatnosci.html">Polityka prywatności</a>
+      </nav>
+    </div>
+  </footer>
+
+  <div class="theme-announcer" data-theme-announcer role="status" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
