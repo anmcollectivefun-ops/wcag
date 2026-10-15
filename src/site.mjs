@@ -1,3 +1,4 @@
+import { setupAccessibleExample } from './form-example.mjs';
 document.documentElement.classList.add('js');
 
 const iconHref = name => '/assets/icons.svg#' + name;
@@ -232,6 +233,7 @@ function setupPageReader() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  setupAccessibleExample();
   setupNavigation();
   setupIcons();
   setupAuditVisual();
