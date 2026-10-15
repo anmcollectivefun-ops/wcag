@@ -2179,7 +2179,7 @@ html:not([data-theme="dark"]):not([data-theme="reading"]) .article-impact>div,
 html:not([data-theme="dark"]):not([data-theme="reading"]) .article-note,
 html:not([data-theme="dark"]):not([data-theme="reading"]) .article-penalties section,
 html:not([data-theme="dark"]):not([data-theme="reading"]) .article-end{
-  background:#fff;
+  background:var(--theme-light-surface);
 }
 
 /* Bez dodatkowych ramek/kart, których nie było w założeniu. */
@@ -2196,19 +2196,19 @@ html:not([data-theme="dark"]):not([data-theme="reading"]) .article-opening{
 
 /* Zachowujemy tylko bordowe akcenty tam, gdzie już są semantyczne. */
 html:not([data-theme="dark"]):not([data-theme="reading"]) .article-note{
-  border-left-color:#5A2430;
+  border-left-color:var(--theme-light-gold);
 }
 html:not([data-theme="dark"]):not([data-theme="reading"]) .article-penalties section:last-child,
 html:not([data-theme="dark"]):not([data-theme="reading"]) .article-end{
-  color:#111;
+  color:var(--theme-light-text);
 }
 html:not([data-theme="dark"]):not([data-theme="reading"]) .article-end .kicker{
-  color:#5A2430;
+  color:var(--theme-light-gold);
 }
 html:not([data-theme="dark"]):not([data-theme="reading"]) .article-end .button-primary{
-  background:#5A2430;
-  border-color:#5A2430;
-  color:#fff;
+  background:var(--theme-light-gold);
+  border-color:var(--theme-light-gold);
+  color:var(--theme-light-surface);
 }
 
 @media(max-width:900px){
@@ -2227,8 +2227,8 @@ html:not([data-theme="dark"]):not([data-theme="reading"]) .article-end .button-p
    Ten układ jest wzorem do skopiowania 1:1 na kolejne strony.
    ========================================================= */
 .home-hero{
-  --hero-fog:#fff;
-  --hero-wave:#fff;
+  --hero-fog:var(--theme-light-surface);
+  --hero-wave:var(--theme-light-surface);
   position:relative;
   isolation:isolate;
   display:grid;
@@ -2236,7 +2236,7 @@ html:not([data-theme="dark"]):not([data-theme="reading"]) .article-end .button-p
   min-height:clamp(560px,68vh,700px);
   padding:0;
   overflow:hidden;
-  background:#fff;
+  background:var(--theme-light-surface);
 }
 html[data-theme="dark"] .home-hero{
   --hero-fog:var(--theme-dark-bg);
@@ -2249,10 +2249,10 @@ html[data-theme="reading"] .home-hero{
   background:var(--theme-reading-bg);
 }
 html[data-contrast="high"] .home-hero{
-  --hero-fog:#fff;
-  --hero-wave:#fff;
-  background:#fff;
-  color:#000;
+  --hero-fog:var(--theme-light-surface);
+  --hero-wave:var(--theme-light-surface);
+  background:var(--theme-light-surface);
+  color:var(--high-contrast-text);
 }
 
 .home-hero::after{display:none}
@@ -2348,11 +2348,11 @@ html[data-contrast="high"] .home-hero{
 html[data-contrast="high"] .home-hero-copy,
 html[data-contrast="high"] .home-hero-copy .hero-lead,
 html[data-contrast="high"] .home-hero .hero-meta{
-  color:#000;
+  color:var(--high-contrast-text);
 }
 html[data-contrast="high"] .home-hero .kicker,
 html[data-contrast="high"] .home-hero .hero-meta .icon{
-  color:#5A2430;
+  color:var(--theme-light-gold);
 }
 
 /* Ten sam schemat także na mniejszych ekranach: zdjęcie nadal jest tłem hero. */
@@ -2468,12 +2468,69 @@ html[data-contrast="high"] .home-hero .hero-meta .icon{
   transform:translateY(1rem);
 }
 html[data-contrast="high"] .home-article-card{
-  background:#fff;
-  border:2px solid #000;
+  background:var(--theme-light-surface);
+  border:2px solid var(--high-contrast-text);
   box-shadow:none;
 }
 @media(max-width:820px){
   .home-articles-grid{
     grid-template-columns:1fr;
   }
+}
+
+
+/* Accessibility corrections: resilient text, named controls and pointer targets. */
+:where(a, button, summary, input, select, textarea){scroll-margin-block:1rem}
+.home-article-card-body,.home-article-card-body>*{min-width:0;max-width:100%;overflow-wrap:anywhere}
+.home-article-card{grid-template-columns:minmax(0,1fr)}
+.home-numbers-copy,.home-numbers-copy>*{min-width:0;max-width:100%;overflow-wrap:anywhere}
+.footer-nav a,.article-toc a,.glossary-index a{
+  display:inline-flex;align-items:center;min-height:44px;min-width:44px;padding:6px 4px;
+}
+.footer-nav{gap:8px 16px}
+.accessibility-bar .access-group{
+  min-width:0;max-width:100%;flex:0 1 auto;flex-wrap:wrap;
+}
+.accessibility-bar :where(.access-group button,.access-tool){
+  max-width:100%;white-space:normal;overflow-wrap:anywhere;
+}
+html[data-text-size="aaa"] .accessibility-bar .access-group{min-width:0}
+.accessibility-bar-inner{flex-wrap:wrap}
+/* An opaque backing keeps the text contrast independent of the photograph. */
+.home-hero-copy{background:transparent;box-shadow:none}
+.home-hero-copy>:where(h1,p,ul){
+  width:fit-content;background:var(--bg);box-shadow:0 0 10px 8px var(--bg);
+}
+html[data-contrast="high"] .home-hero-copy{background:var(--surface)}
+.simple-summary{padding-block:2rem;border-bottom:1px solid var(--border)}
+.simple-summary .shell{max-width:900px}
+.simple-summary h2{margin-top:0}
+.simple-summary li{margin-block:.55rem}
+.term-link{text-decoration-style:dotted}
+.glossary-list{max-width:75ch}
+.glossary-list dt{font-weight:650;margin-top:1.5rem;scroll-margin-top:1rem}
+.glossary-list dd{margin:.35rem 0 1rem}
+.glossary-index{display:flex;flex-wrap:wrap;gap:8px 16px;margin-block:1.5rem}
+@media(max-width:900px){
+ html:not([data-theme="dark"]):not([data-theme="reading"]) .article-opening{grid-template-columns:minmax(0,1fr)}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto!important}
+ *,*::before,*::after{animation:none!important;transition:none!important}
+}
+/* Definitions stay legible on promotional panels as well as ordinary surfaces. */
+.term-link{color:inherit}
+/* Long definitions and the decorative WCAG mark also fit at 200% / 320 px. */
+.glossary-list :where(dt,dd){min-width:0;max-width:100%;overflow-wrap:anywhere}
+.wcag-mark{font-size:min(5rem,20vw);overflow-wrap:anywhere}
+
+/* The full button and its focus outline stay inside the article card at 200%. */
+.home-article-card .button{transform:none}
+
+/* Focus must contrast with promotional panels, including reading mode. */
+.home-numbers-cta-grid,.article-end,.article-penalties section:last-child{
+  --focus-on-surface:var(--promo-text);
+}
+html:not([data-theme="dark"]):not([data-theme="reading"]) :where(.article-end,.article-penalties section:last-child){
+  --focus-on-surface:var(--focus);
 }
