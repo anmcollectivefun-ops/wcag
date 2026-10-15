@@ -47,19 +47,19 @@
 <body>
   <a class="skip-link" href="#main">Przejdź do treści</a>
   <header class="site-header">
-    <div class="accessibility-bar" aria-label="Ustawienia dostępności">
+    <div class="accessibility-bar" role="group" aria-label="Ustawienia dostępności">
       <div class="shell accessibility-bar-inner">
-        <div class="language-switcher access-group" aria-label="Język strony">
+        <div class="language-switcher access-group" role="group" aria-label="Język strony">
           <span class="access-group-label" data-icon="languages">Język</span>
-          <button type="button" aria-pressed="true" aria-label="Język polski">PL</button>
-          <button type="button" disabled aria-label="Język angielski — w przygotowaniu">EN</button>
-          <button type="button" disabled aria-label="Język ukraiński — w przygotowaniu">UA</button>
+          <button type="button" aria-pressed="true" aria-label="PL — język polski">PL</button>
+          <button type="button" disabled aria-label="EN — język angielski, w przygotowaniu">EN</button>
+          <button type="button" disabled aria-label="UA — język ukraiński, w przygotowaniu">UA</button>
         </div>
         <div class="text-size-switcher access-group" role="group" aria-label="Rozmiar tekstu">
           <span class="access-group-label" data-icon="text-size">Tekst</span>
-          <button type="button" data-text-size-choice="a" aria-pressed="true" aria-label="Rozmiar tekstu A, 100 procent">A</button>
-          <button type="button" data-text-size-choice="aa" aria-pressed="false" aria-label="Rozmiar tekstu AA, 150 procent">AA</button>
-          <button type="button" data-text-size-choice="aaa" aria-pressed="false" aria-label="Rozmiar tekstu AAA, 200 procent">AAA</button>
+          <button type="button" data-text-size-choice="a" aria-pressed="true" aria-label="Rozmiar tekstu A, 100 procent treści">A</button>
+          <button type="button" data-text-size-choice="aa" aria-pressed="false" aria-label="Rozmiar tekstu AA, 150 procent treści">AA</button>
+          <button type="button" data-text-size-choice="aaa" aria-pressed="false" aria-label="Rozmiar tekstu AAA, 200 procent treści">AAA</button>
         </div>
         <button class="access-tool" type="button" data-contrast-toggle data-icon="eye-contrast" aria-pressed="false">
           <span>Wysoki kontrast</span>
@@ -95,9 +95,9 @@
     <section class="page-hero home-hero">
       <div class="shell home-hero-shell">
         <div class="hero-copy home-hero-copy">
-          <p class="kicker" data-reveal>Dostępność cyfrowa · WCAG 2.1 i 2.2</p>
-          <h1 data-reveal>Audyt WCAG 2.1 i 2.2, dzięki któremu zadbasz o dostępność cyfrową swojej strony</h1>
-          <p class="hero-lead" data-reveal>Sprawdzamy stronę lub aplikację według WCAG 2.1 i 2.2, wskazujemy bariery i przekazujemy czytelny raport z konkretnymi zaleceniami.</p>
+          <p class="kicker" data-reveal>Dostępność cyfrowa · <a class="term-link" href="/slownik.html#wcag">WCAG</a> 2.1 i 2.2</p>
+          <h1 data-reveal>Audyt WCAG: sprawdzimy, czy z Twojej strony łatwo korzystać</h1>
+          <p class="hero-lead" data-reveal>Znajdziemy przeszkody, które utrudniają czytanie, zakupy lub wysłanie wiadomości. Otrzymasz jasny plan poprawek.</p>
           <ul class="hero-meta" data-reveal aria-label="Najważniejsze elementy audytu">
             <li data-icon="check">WCAG 2.1 i 2.2</li>
             <li data-icon="check">testy automatyczne i ręczne</li>
@@ -132,7 +132,7 @@
           <article class="home-audit-why-card" data-reveal>
             <span class="icon-box" data-icon="file-check"></span>
             <h3>EAA</h3>
-            <p>Raport EAA możesz wykorzystać przy przygotowaniu lub aktualizacji deklaracji dostępności.</p>
+            <p>Raport pomoże opisać dostępność Twojej usługi. Wskażemy, czy chodzi o informację dla klientów firmy, czy deklarację dla podmiotu publicznego.</p>
           </article>
 
           <article class="home-audit-why-card" data-reveal>
@@ -173,9 +173,9 @@
           <p class="kicker">Czym jest WCAG?</p>
           <p class="wcag-mark" aria-hidden="true">WCAG <span>2.2</span></p>
           <h2 id="wcag-explainer-title">WCAG określa zasady dostępności stron internetowych i aplikacji.</h2>
-          <p>WCAG tworzy W3C — organizacja, która opracowuje standardy internetowe. Te zasady pomagają budować strony i aplikacje dostępne dla osób o różnych potrzebach, także osób z niepełnosprawnościami.</p>
+          <p>WCAG to zasady tworzenia stron łatwiejszych w obsłudze. Pomagają także osobom, które słabiej widzą, słyszą lub korzystają z samej klawiatury. Opracowuje je organizacja <a class="term-link" href="/slownik.html#w3c">W3C</a>.</p>
 
-          <div class="wcag-principles" aria-label="Cztery zasady WCAG">
+          <div class="wcag-principles" role="group" aria-label="Cztery zasady WCAG">
             <span><strong>Postrzegalność</strong> — treść można odebrać</span>
             <span><strong>Funkcjonalność</strong> — stronę można obsłużyć</span>
             <span><strong>Zrozumiałość</strong> — treść jest jasna</span>
@@ -196,7 +196,7 @@
             <span class="wcag-row-number" aria-hidden="true">02</span>
             <div>
               <h3>Co oznaczają poziomy A, AA i AAA?</h3>
-              <p>WCAG ma trzy poziomy. A obejmuje wymagania podstawowe. AA dodaje kolejne wymagania. AAA zawiera kryteria najbardziej wymagające.</p>
+              <p>WCAG ma trzy poziomy. A obejmuje wymagania podstawowe. <a class="term-link" href="/slownik.html#poziomy">AA</a> dodaje kolejne wymagania. AAA zawiera kryteria najbardziej wymagające.</p>
             </div>
           </article>
 
@@ -240,7 +240,7 @@
           <div class="section-heading" data-reveal>
             <p class="kicker">Dostępność sprawdzamy w praktyce</p>
             <h2 id="practical-audit-title">Łączymy audyt WCAG z analizą kodu i testami z użytkownikami.</h2>
-            <p>Jako web developerzy sprawdzamy wygląd strony, kod HTML, formularze i sposób działania serwisu.</p>
+            <p>Jako web developerzy sprawdzamy wygląd strony, kod <a class="term-link" href="/slownik.html#html">HTML</a>, formularze i sposób działania serwisu.</p>
             <p>Testujemy też stronę z osobami o różnych potrzebach. Uwzględniamy osoby starsze, niedowidzące, głuche i słabosłyszące.</p>
           </div>
 
@@ -300,7 +300,7 @@
               <span class="audit-benefit-icon" data-icon="monitor"></span>
             </div>
             <h3>Kod i obsługa strony</h3>
-            <p>Sprawdzamy obsługę klawiaturą, fokus, formularze, komunikaty, czytniki ekranu oraz poprawne nazwy i role elementów. Dla AAA sprawdzamy też między innymi pełną widoczność fokusu i większe cele dotykowe.</p>
+            <p>Sprawdzamy przyciski, formularze i obsługę klawiaturą. Badamy też działanie z programem czytającym stronę. Przy poziomie AAA sprawdzamy dodatkowo, czy wybrany przycisk jest w całości widoczny i łatwy do naciśnięcia.</p>
           </article>
 
           <article class="audit-benefit-card" data-reveal>
@@ -327,7 +327,7 @@
               <span class="audit-benefit-icon" data-icon="volume-2"></span>
             </div>
             <h3>Multimedia, napisy i PJM</h3>
-            <p>Sprawdzamy napisy, transkrypcje i audiodeskrypcję. Dla nagranych materiałów z dźwiękiem poziom AAA obejmuje także tłumaczenie na język migowy.</p>
+            <p>Sprawdzamy napisy, <a class="term-link" href="/slownik.html#transkrypcja">transkrypcje</a> i <a class="term-link" href="/slownik.html#audiodeskrypcja">audiodeskrypcję</a>. Dla nagranych materiałów z dźwiękiem poziom AAA obejmuje także tłumaczenie na język migowy.</p>
           </article>
 
           <article class="audit-benefit-card audit-benefit-card-docs" data-reveal>
@@ -336,7 +336,7 @@
               <span class="audit-benefit-icon" data-icon="file-check"></span>
             </div>
             <h3>Deklaracja i informacja o dostępności</h3>
-            <p>Dla podmiotów publicznych pomagamy przygotować lub zaktualizować Deklarację dostępności. Dla usług objętych Europejskim Aktem o Dostępności (EAA) pomagamy przygotować informację o tym, jak usługa spełnia wymagania dostępności.</p>
+            <p>Dla podmiotów publicznych pomagamy przygotować lub zaktualizować Deklarację dostępności. Dla usług objętych Europejskim Aktem o Dostępności (<a class="term-link" href="/slownik.html#eaa">EAA</a>) pomagamy przygotować informację o tym, jak usługa spełnia wymagania dostępności.</p>
           </article>
 
           <article class="audit-benefit-card audit-benefit-card-result" data-reveal>
@@ -370,7 +370,7 @@
               <p class="kicker">Audyt i wdrożenie</p>
               <h3>Dlaczego sam audyt nie zastąpi dobrego programisty?</h3>
               <p>Raport wskazuje problemy, ale dopiero poprawne wdrożenie w kodzie zamienia zalecenia w realną dostępność.</p>
-              <a class="button button-secondary" href="/baza-wiedzy/dlaczego-audyt-nie-zastapi-dobrego-programisty.html" data-icon="arrow-right">Czytaj artykuł</a>
+              <a class="button button-secondary" href="/baza-wiedzy/dlaczego-audyt-nie-zastapi-dobrego-programisty.html" data-icon="arrow-right" aria-label="Czytaj artykuł: Dlaczego sam audyt nie zastąpi dobrego programisty?">Czytaj artykuł</a>
             </div>
           </article>
 
@@ -381,8 +381,8 @@
             <div class="home-article-card-body">
               <p class="kicker">Dobry webdeveloper</p>
               <h3>Czym wyróżnia się programista, który naprawdę potrafi budować dostępne strony?</h3>
-              <p>Semantyka, klawiatura, fokus, przewidywalne komponenty i odpowiedzialność za efekt — nie tylko znajomość checklisty.</p>
-              <a class="button button-secondary" href="/baza-wiedzy/najlepszy-programista-dostepnosci.html" data-icon="arrow-right">Czytaj artykuł</a>
+              <p>Dobry programista buduje stronę, na której łatwo znaleźć informacje i użyć przycisków. Sprawdza ją również klawiaturą i programem czytającym tekst.</p>
+              <a class="button button-secondary" href="/baza-wiedzy/najlepszy-programista-dostepnosci.html" data-icon="arrow-right" aria-label="Czytaj artykuł: Czym wyróżnia się najlepszy programista budujący dostępne strony i aplikacje?">Czytaj artykuł</a>
             </div>
           </article>
 
@@ -394,7 +394,7 @@
               <p class="kicker">Audyt automatyczny</p>
               <h3>Dlaczego strona może przejść automatyczny audyt WCAG i nadal być niedostępna?</h3>
               <p>Automat sprawdza tylko część problemów. Resztę ujawniają dopiero testy manualne i realne zadania użytkownika.</p>
-              <a class="button button-secondary" href="/baza-wiedzy/automatyczny-audyt-wcag-a-niedostepna-strona.html" data-icon="arrow-right">Czytaj artykuł</a>
+              <a class="button button-secondary" href="/baza-wiedzy/automatyczny-audyt-wcag-a-niedostepna-strona.html" data-icon="arrow-right" aria-label="Czytaj artykuł: Dlaczego strona może przejść automatyczny audyt WCAG i nadal być niedostępna?">Czytaj artykuł</a>
             </div>
           </article>
 
@@ -406,7 +406,7 @@
               <p class="kicker">Jakość kodu</p>
               <h3>Dostępność jako część jakości kodu, a nie dodatkowa funkcja</h3>
               <p>Dostępność powinna wynikać z jakości komponentów i architektury produktu, a nie być łatą dodawaną na końcu.</p>
-              <a class="button button-secondary" href="/baza-wiedzy/dostepnosc-jako-czesc-jakosci-kodu.html" data-icon="arrow-right">Czytaj artykuł</a>
+              <a class="button button-secondary" href="/baza-wiedzy/dostepnosc-jako-czesc-jakosci-kodu.html" data-icon="arrow-right" aria-label="Czytaj artykuł: Dostępność jako część jakości kodu, a nie dodatkowa funkcja">Czytaj artykuł</a>
             </div>
           </article>
         </div>
@@ -443,6 +443,7 @@
         <a href="/kontakt.html">Kontakt</a>
               <a href="/regulamin.html">Regulamin</a>
         <a href="/polityka-prywatnosci.html">Polityka prywatności</a>
+        <a href="/slownik.html">Słownik prostych pojęć</a>
       </nav>
     </div>
   </footer>
