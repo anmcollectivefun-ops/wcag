@@ -125,6 +125,48 @@
         </div>
       </div>
     </section>
+    <section class="section form-showcase" aria-labelledby="form-example-title">
+      <div class="shell form-showcase-grid">
+        <div class="form-showcase-intro">
+          <p class="kicker">Sprawdź w praktyce</p>
+          <h2 id="form-example-title">Formularz, który pomaga Ci przejść dalej.</h2>
+          <p>Wypełnij pola albo zostaw je puste i sprawdź komunikaty. Całość obsłużysz klawiaturą i czytnikiem ekranu.</p>
+          <ul><li>Każde pole ma nazwę i prostą wskazówkę.</li><li>Błąd mówi, co poprawić, i prowadzi do pola.</li><li>Twoje odpowiedzi zostają przy poprawianiu.</li></ul>
+          <p id="form-example-privacy"><strong>To pokaz działania.</strong> Użyj przykładowych danych. Formularz niczego nie wysyła ani nie zapisuje na serwerze. W sprawie oferty skorzystaj z adresu e-mail powyżej.</p>
+        </div>
+        <form class="accessible-example" data-accessible-example aria-labelledby="form-example-title" aria-describedby="form-example-privacy">
+          <p>Pola oznaczone „wymagane” trzeba wypełnić. Pozostałe możesz pominąć.</p>
+          <noscript><p>Do sprawdzenia formularza włącz JavaScript. Kontakt e-mail powyżej działa także bez niego.</p></noscript>
+          <div class="form-errors" data-form-errors tabindex="-1" aria-labelledby="form-errors-title" hidden>
+            <h3 id="form-errors-title">Popraw wskazane pola</h3><ul></ul>
+          </div>
+          <div class="example-field">
+            <label for="example-name">Imię (wymagane)</label>
+            <p id="example-name-hint" class="field-hint">Może być przykładowe, np. Anna.</p>
+            <input id="example-name" name="name" autocomplete="given-name" required maxlength="100" aria-describedby="example-name-hint example-name-error">
+            <p id="example-name-error" class="field-error" hidden></p>
+          </div>
+          <div class="example-field">
+            <label for="example-email">Adres e-mail (wymagane)</label>
+            <p id="example-email-hint" class="field-hint">Wpisz adres z @, np. anna@example.com.</p>
+            <input id="example-email" name="email" type="email" autocomplete="email" spellcheck="false" required maxlength="254" aria-describedby="example-email-hint example-email-error">
+            <p id="example-email-error" class="field-error" hidden></p>
+          </div>
+          <div class="example-field">
+            <label for="example-topic">Czego potrzebujesz? (opcjonalne)</label>
+            <select id="example-topic" name="topic"><option value="">Wybierz temat</option><option>Audyt dostępności</option><option>Poprawa strony</option><option>Szkolenie</option><option>Inna sprawa</option></select>
+          </div>
+          <div class="example-field">
+            <label for="example-message">Wiadomość (wymagane)</label>
+            <p id="example-message-hint" class="field-hint">Napisz jedno zdanie, np. „Chcę sprawdzić dostępność mojego sklepu”. Maksymalnie 2000 znaków.</p>
+            <textarea id="example-message" name="message" rows="5" required maxlength="2000" aria-describedby="example-message-hint example-message-error"></textarea>
+            <p id="example-message-error" class="field-error" hidden></p>
+          </div>
+          <button class="button button-primary" type="submit" disabled>Sprawdź formularz — bez wysyłania</button>
+          <p class="form-result" data-form-result role="status" aria-atomic="true"></p>
+        </form>
+      </div>
+    </section>
   </main>
   <footer class="site-footer">
     <div class="shell footer-inner">

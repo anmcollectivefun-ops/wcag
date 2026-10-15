@@ -26,6 +26,8 @@ jobs:
           npm install
           npm install --no-save playwright @axe-core/playwright
           npx playwright install --with-deps chromium
+      - name: Formularz — błędy, fokus i poprawne wypełnienie
+        run: npm run test:form
       - name: Audyt techniczny i raport
         run: node scripts/audit.mjs
       - name: Zachowaj raport i zrzuty

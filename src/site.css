@@ -2534,3 +2534,24 @@ html[data-contrast="high"] .home-hero-copy{background:var(--surface)}
 html:not([data-theme="dark"]):not([data-theme="reading"]) :where(.article-end,.article-penalties section:last-child){
   --focus-on-surface:var(--focus);
 }
+
+/* A working, local-only examplenstration of clear form instructions and recovery. */
+.form-showcase{background:var(--surface-alt);border-block:1px solid var(--border)}
+.form-showcase-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(24px,5vw,72px);align-items:start}
+.form-showcase-grid>*{min-width:0;overflow-wrap:anywhere}
+.form-showcase-intro h2{max-width:18ch}
+.form-showcase-intro li{margin-block:1rem}
+.accessible-example{padding:clamp(16px,3vw,36px);border:1px solid var(--border);border-radius:20px;background:var(--surface);color:var(--text)}
+.example-field{margin-block:1.6rem}
+.example-field label{display:block;font-weight:700;margin-bottom:.5rem}
+.example-field :where(input,select,textarea){display:block;width:100%;min-width:0;max-width:100%;min-height:48px;padding:.8rem;border:2px solid var(--border);border-radius:8px;font:inherit;line-height:1.5;box-sizing:border-box}
+.example-field textarea{resize:vertical}
+.example-field .field-hint{margin:.4rem 0 .7rem}
+.example-field [aria-invalid="true"]{border-color:var(--danger)}
+.field-error{color:var(--danger);font-weight:700;margin-top:.6rem}
+.form-errors{border:3px solid var(--danger);padding:1rem;border-radius:8px;margin-block:1rem}
+.form-errors h3{margin-top:0}
+.form-errors a{display:inline-block;min-height:44px;padding-block:.5rem}
+.accessible-example .button{white-space:normal;max-width:100%;height:auto;min-height:48px}
+.form-result:not(:empty){border-inline-start:4px solid var(--gold);padding:1rem;margin-top:1.5rem}
+@media(max-width:760px){.form-showcase-grid{grid-template-columns:minmax(0,1fr)}}
