@@ -1,12 +1,12 @@
 # Karta realizacji — ANM Access
 
-- **Wykonawca:** ANM Collective
-- **Rodzaj:** własny projekt demonstracyjny, bez zewnętrznego zamawiającego
-- **Zakres:** projektowanie i implementacja interfejsu panelu zgłoszeń, walidacja, lokalna obsługa zgłoszeń, testy jednostkowe, plan audytu dostępności
-- **Technologie:** HTML, CSS, JavaScript ES Modules, Node.js (statyczny serwer)
-- **Dane:** wyłącznie demonstracyjne, przechowywane lokalnie w przeglądarce
-- **Dowód wykonania:** kod źródłowy, uruchamialna aplikacja, wyniki testów jednostkowych, plan testów manualnych
-- **Certyfikacja WCAG:** brak; audyt zewnętrzny nie został przeprowadzony
-- **Referencje:** projekt własny, nie zastępuje referencji ani wykazu usług wymaganych przez zamawiającego w przetargu
+- Wykonawca i właściciel: ANM Collective.
+- Rodzaj: własny publiczny serwis o dostępności cyfrowej.
+- Zakres: strona oferty, artykuły, słownik, ustawienia czytelności, odczyt treści, menu i FAQ.
+- Technologie: HTML, CSS, JavaScript ES Modules i Node.js jako serwer statyczny.
+- Dowody wykonania: historia kodu, działający serwis, testy jednostkowe, wyniki audytu przeglądarkowego i plan oceny manualnej.
+- Cel dostępności: WCAG 2.2 A i AA oraz właściwe kryteria AAA.
+- Potwierdzenie pełnej zgodności: wymaga zakończenia wszystkich właściwych testów, w tym czytników ekranu i natywnego powiększania.
+- Pochodzenie realizacji: projekt własny, bez zewnętrznego zamawiającego. Wymagania konkretnego postępowania ocenia się na podstawie jego dokumentów.
 
-Po wdrożeniu dopisz dokładny commit, datę publikacji i potwierdzone wyniki audytu. Nie oznaczaj planowanych testów jako zaliczonych.
+Po publikacji wpisz badany commit i potwierdzony wynik. Oddziel wynik testów automatycznych od oceny manualnej.
