@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="pl" data-theme="light" data-text-size="a">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Proste wyjaśnienia słów i skrótów związanych z dostępnością stron, WCAG oraz danymi osobowymi.">
+  <meta name="theme-color" content="#FFFFFF">
+  <title>Słownik prostych pojęć — ANM Access</title>
+  <link rel="canonical" href="https://anm.anmcollective.fun/slownik.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:title" content="Słownik prostych pojęć — ANM Access">
+  <meta property="og:description" content="Proste wyjaśnienia słów i skrótów związanych z dostępnością stron, WCAG oraz danymi osobowymi.">
+  <meta property="og:url" content="https://anm.anmcollective.fun/slownik.html">
+  <meta property="og:image" content="https://anm.anmcollective.fun/assets/images/herokontakt.webp">
+  <meta property="og:image:alt" content="Słownik prostych pojęć — ANM Access">
+  <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Słownik prostych pojęć — ANM Access",
+    "description": "Proste wyjaśnienia słów i skrótów związanych z dostępnością stron, WCAG oraz danymi osobowymi.",
+    "url": "https://anm.anmcollective.fun/slownik.html",
+    "inLanguage": "pl-PL",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "ANM Access",
+      "url": "https://anm.anmcollective.fun/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ANM Collective Sp. z o.o.",
+      "url": "https://anmcollective.pl/"
+    }
+  }
+  </script>
+  <link rel="icon" type="image/svg+xml" href="/assets/logo.svg">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/assets/fonts/atkinson.css">
+  <link rel="stylesheet" href="/src/theme.css">
+  <link rel="stylesheet" href="/src/typography.css">
+  <link rel="stylesheet" href="/src/site.css">
+  <script defer src="/assets/vendor/gsap.min.js"></script>
+  <script type="module" src="/src/theme.mjs"></script>
+  <script type="module" src="/src/site.mjs"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Przejdź do treści</a>
+  <header class="site-header">
+    <div class="accessibility-bar" role="group" aria-label="Ustawienia dostępności">
+      <div class="shell accessibility-bar-inner">
+        <div class="language-switcher access-group" role="group" aria-label="Język strony">
+          <span class="access-group-label" data-icon="languages">Język</span>
+          <button type="button" aria-pressed="true" aria-label="PL — język polski">PL</button>
+          <button type="button" disabled aria-label="EN — język angielski, w przygotowaniu">EN</button>
+          <button type="button" disabled aria-label="UA — język ukraiński, w przygotowaniu">UA</button>
+        </div>
+        <div class="text-size-switcher access-group" role="group" aria-label="Rozmiar tekstu">
+          <span class="access-group-label" data-icon="text-size">Tekst</span>
+          <button type="button" data-text-size-choice="a" aria-pressed="true" aria-label="Rozmiar tekstu A, 100 procent treści">A</button>
+          <button type="button" data-text-size-choice="aa" aria-pressed="false" aria-label="Rozmiar tekstu AA, 150 procent treści">AA</button>
+          <button type="button" data-text-size-choice="aaa" aria-pressed="false" aria-label="Rozmiar tekstu AAA, 200 procent treści">AAA</button>
+        </div>
+        <button class="access-tool" type="button" data-contrast-toggle data-icon="eye-contrast" aria-pressed="false">
+          <span>Wysoki kontrast</span>
+        </button>
+        <div class="theme-switcher access-group" role="group" aria-label="Motyw strony">
+          <button type="button" data-theme-choice="light" data-icon="sun" aria-pressed="true">Jasny</button>
+          <button type="button" data-theme-choice="dark" data-icon="moon" aria-pressed="false">Ciemny</button>
+          <button type="button" data-theme-choice="reading" data-icon="book-open" aria-pressed="false">Czytanie</button>
+        </div>
+        <button class="access-tool" type="button" data-read-page data-icon="volume-2" aria-pressed="false">
+          <span data-reader-label>Przeczytaj stronę</span>
+        </button>
+      </div>
+    </div>
+    <div class="shell navigation-row">
+      <a class="brand" href="/" aria-label="ANM Collective — strona główna">
+        <img class="brand-logo" src="/assets/images/ANM-Collective%20mobile.webp" alt="ANM Collective" decoding="async">
+      </a>
+      <button class="nav-toggle" type="button" data-nav-toggle data-icon="menu" aria-expanded="false" aria-controls="main-nav-list">Menu</button>
+      <nav class="main-nav" aria-label="Nawigacja główna" data-open="false">
+        <ul class="main-nav-list" id="main-nav-list">
+          <li><a href="/">Strona główna</a></li>
+          <li><a href="/audyt.html">Audyt WCAG</a></li>
+          <li><a href="/szkolenia.html">Szkolenia</a></li>
+          <li><a href="/baza-wiedzy.html">Baza wiedzy</a></li>
+          <li><a href="/o-nas.html">O nas</a></li>
+          <li><a href="/kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="section"><div class="shell"><h1>Słownik prostych pojęć</h1><p>Spotykasz trudne słowo? Tutaj sprawdzisz, co oznacza. Każde wyjaśnienie opisuje także, do czego dana rzecz służy.</p><nav class="glossary-index" aria-label="Przejdź do wyjaśnienia pojęcia"><a href="#wcag">WCAG</a>
+        <a href="#poziomy">A, AA i AAA</a>
+        <a href="#dostepnosc">Dostępność cyfrowa</a>
+        <a href="#audyt">Audyt</a>
+        <a href="#bariera">Bariera</a>
+        <a href="#kryterium">Kryterium sukcesu</a>
+        <a href="#kontrast">Kontrast</a>
+        <a href="#fokus">Fokus</a>
+        <a href="#reflow">Reflow</a>
+        <a href="#tekst-alternatywny">Tekst alternatywny i ALT</a>
+        <a href="#czytnik">Czytnik ekranu</a>
+        <a href="#nvda">NVDA</a>
+        <a href="#voiceover">VoiceOver</a>
+        <a href="#technologie">Technologie wspomagające</a>
+        <a href="#semantyka">Semantyka i semantyczny kod</a>
+        <a href="#html">HTML</a>
+        <a href="#css">CSS</a>
+        <a href="#javascript">JavaScript i JS</a>
+        <a href="#aria">ARIA</a>
+        <a href="#interfejs">Interfejs i UI</a>
+        <a href="#ux">UX</a>
+        <a href="#komponent">Komponent</a>
+        <a href="#kompatybilnosc">Kompatybilność i interoperacyjność</a>
+        <a href="#responsywnosc">Responsywność i RWD</a>
+        <a href="#testy">Testy automatyczne, manualne i regresji</a>
+        <a href="#wdrozenie">Wdrożenie i implementacja</a>
+        <a href="#komunikat">Komunikat statusu</a>
+        <a href="#walidacja">Walidacja</a>
+        <a href="#cel-dotykowy">Cel dotykowy i pole klikania</a>
+        <a href="#nawigacja">Nawigacja</a>
+        <a href="#hierarchia">Hierarchia treści</a>
+        <a href="#transkrypcja">Transkrypcja</a>
+        <a href="#audiodeskrypcja">Audiodeskrypcja</a>
+        <a href="#multimedia">Multimedia</a>
+        <a href="#pjm">PJM</a>
+        <a href="#eaa">EAA</a>
+        <a href="#pad">PAD</a>
+        <a href="#deklaracja">Deklaracja dostępności</a>
+        <a href="#podmiot-publiczny">Podmiot publiczny</a>
+        <a href="#w3c">W3C</a>
+        <a href="#wai">WAI</a>
+        <a href="#wcag2ict">WCAG2ICT</a>
+        <a href="#www">WWW</a>
+        <a href="#api">API</a>
+        <a href="#https">HTTPS</a>
+        <a href="#ip">IP</a>
+        <a href="#it">IT</a>
+        <a href="#rodo">RODO</a>
+        <a href="#eog">EOG</a>
+        <a href="#ue">UE</a>
+        <a href="#eur">EUR</a>
+        <a href="#krs">KRS</a>
+        <a href="#nip">NIP</a>
+        <a href="#regon">REGON</a>
+        <a href="#parp">PARP</a>
+        <a href="#adhd">ADHD</a>
+        <a href="#prywatnosc">Administrator danych i przetwarzanie danych</a>
+        <a href="#profilowanie">Profilowanie</a>
+        <a href="#localstorage">Pamięć lokalna i localStorage</a>
+        <a href="#cookies">Cookies</a>
+        <a href="#konsument">Konsument</a>
+        <a href="#reklamacja">Reklamacja</a>
+        <a href="#odstapienie">Odstąpienie od umowy</a>
+        <a href="#przedslownikiem">ANM Access i ANM Collective</a></nav><dl class="glossary-list"><dt id="wcag">WCAG</dt>
+        <dd>Web Content Accessibility Guidelines — zasady tworzenia stron i aplikacji łatwiejszych w obsłudze, także dla osób z niepełnosprawnościami.</dd><dt id="poziomy">A, AA i AAA</dt>
+        <dd>Trzy poziomy zgodności z WCAG. A obejmuje podstawowe zasady. AA obejmuje A i kolejne ułatwienia. AAA obejmuje A, AA i najbardziej wymagające ułatwienia. Nazwa poziomu dotyczy całego zestawu właściwych wymagań.</dd><dt id="dostepnosc">Dostępność cyfrowa</dt>
+        <dd>Sposób tworzenia strony lub aplikacji, który pomaga korzystać z niej osobom o różnych potrzebach. Na przykład osobie słabowidzącej lub używającej samej klawiatury.</dd><dt id="audyt">Audyt</dt>
+        <dd>Dokładne sprawdzenie wybranej strony lub aplikacji. Wynik pokazuje znalezione problemy i sposób ich poprawy.</dd><dt id="bariera">Bariera</dt>
+        <dd>Przeszkoda w korzystaniu ze strony. Na przykład przycisk, którego osoba używająca klawiatury może nie dosięgnąć.</dd><dt id="kryterium">Kryterium sukcesu</dt>
+        <dd>Jedno konkretne wymaganie WCAG. Test pokazuje, czy strona je spełnia.</dd><dt id="kontrast">Kontrast</dt>
+        <dd>Różnica między kolorem tekstu lub przycisku a jego tłem. Duży kontrast pomaga je odróżnić i odczytać.</dd><dt id="fokus">Fokus</dt>
+        <dd>Wskazanie elementu wybranego klawiaturą. Zwykle widać je jako obrys wokół przycisku lub odnośnika.</dd><dt id="reflow">Reflow</dt>
+        <dd>Dopasowanie układu strony do miejsca na ekranie. Po powiększeniu tekstu wiersze powinny ułożyć się tak, aby można je było przeczytać.</dd><dt id="tekst-alternatywny">Tekst alternatywny i ALT</dt>
+        <dd>Opis zdjęcia lub innego obrazu zapisany w kodzie. Program czytający stronę może go odczytać osobie, która nie widzi obrazu. ALT to nazwa atrybutu alt, w którym zapisuje się ten opis.</dd><dt id="czytnik">Czytnik ekranu</dt>
+        <dd>Program, który odczytuje tekst oraz informacje o przyciskach i innych elementach. Pomaga też poruszać się po stronie. Przykłady: NVDA i VoiceOver.</dd><dt id="nvda">NVDA</dt>
+        <dd>NonVisual Desktop Access — nazwa programu czytającego ekran, używanego na komputerach z systemem Windows.</dd><dt id="voiceover">VoiceOver</dt>
+        <dd>Nazwa programu czytającego ekran na urządzeniach Apple, na przykład na iPhonie i komputerze Mac.</dd><dt id="technologie">Technologie wspomagające</dt>
+        <dd>Programy i urządzenia pomagające korzystać z komputera lub telefonu. Przykładem jest czytnik ekranu albo klawiatura dostosowana do potrzeb użytkownika.</dd><dt id="semantyka">Semantyka i semantyczny kod</dt>
+        <dd>Nadawanie elementom strony właściwego znaczenia. Przycisk jest zapisany jako przycisk, a nagłówek jako nagłówek. Dzięki temu przeglądarka i czytnik ekranu wiedzą, do czego służą.</dd><dt id="html">HTML</dt>
+        <dd>HyperText Markup Language — język zapisu treści strony. Pozwala oznaczyć na przykład nagłówki, akapity, odnośniki i przyciski.</dd><dt id="css">CSS</dt>
+        <dd>Cascading Style Sheets — reguły określające wygląd strony: kolory, wielkość liter, odstępy i układ.</dd><dt id="javascript">JavaScript i JS</dt>
+        <dd>JavaScript to język programowania dodający działanie stronie. Na przykład otwieranie menu po naciśnięciu przycisku. JS to jego skrócona nazwa.</dd><dt id="aria">ARIA</dt>
+        <dd>Accessible Rich Internet Applications — dodatkowe informacje w kodzie dla programów pomagających korzystać ze strony. Mogą opisywać na przykład nazwę przycisku lub to, czy menu jest otwarte.</dd><dt id="interfejs">Interfejs i UI</dt>
+        <dd>Część programu, z której korzysta człowiek: ekrany, przyciski i pola do wpisywania danych. UI to angielski skrót od User Interface.</dd><dt id="ux">UX</dt>
+        <dd>User Experience — doświadczenie korzystania ze strony lub aplikacji. Obejmuje na przykład to, czy łatwo znaleźć informację i wykonać zadanie.</dd><dt id="komponent">Komponent</dt>
+        <dd>Powtarzalna część strony, na przykład przycisk, menu lub formularz.</dd><dt id="kompatybilnosc">Kompatybilność i interoperacyjność</dt>
+        <dd>Zdolność strony do współpracy z innymi programami i urządzeniami. Na przykład z przeglądarką i czytnikiem ekranu.</dd><dt id="responsywnosc">Responsywność i RWD</dt>
+        <dd>Dopasowanie układu do wielkości ekranu telefonu, tabletu lub komputera. RWD to Responsive Web Design.</dd><dt id="testy">Testy automatyczne, manualne i regresji</dt>
+        <dd>Test automatyczny wykonuje program. Test manualny wykonuje człowiek. Test regresji sprawdza, czy zmiana zachowała poprawne działanie wcześniej sprawdzonych części strony.</dd><dt id="wdrozenie">Wdrożenie i implementacja</dt>
+        <dd>Wprowadzenie zaplanowanej zmiany do działającej strony lub programu.</dd><dt id="komunikat">Komunikat statusu</dt>
+        <dd>Informacja o tym, co właśnie się stało. Na przykład potwierdzenie wysłania wiadomości lub informacja o błędzie.</dd><dt id="walidacja">Walidacja</dt>
+        <dd>Sprawdzenie, czy wpisane dane spełniają wymagania. Na przykład czy podany adres e-mail ma właściwy zapis.</dd><dt id="cel-dotykowy">Cel dotykowy i pole klikania</dt>
+        <dd>Obszar, który można nacisnąć palcem albo wskazać myszą. Może być większy od samego napisu lub ikony.</dd><dt id="nawigacja">Nawigacja</dt>
+        <dd>Sposoby poruszania się po stronie. Należą do nich menu, odnośniki i spisy treści.</dd><dt id="hierarchia">Hierarchia treści</dt>
+        <dd>Uporządkowanie tekstu od najważniejszego tematu do jego części. Pomagają w tym tytuły i nagłówki.</dd><dt id="transkrypcja">Transkrypcja</dt>
+        <dd>Zapis słów i ważnych dźwięków z nagrania w postaci tekstu.</dd><dt id="audiodeskrypcja">Audiodeskrypcja</dt>
+        <dd>Głosowy opis ważnych informacji widocznych w filmie. Pomaga osobie, która nie widzi obrazu.</dd><dt id="multimedia">Multimedia</dt>
+        <dd>Materiały łączące różne formy przekazu, na przykład film z obrazem i dźwiękiem.</dd><dt id="pjm">PJM</dt>
+        <dd>Polski język migowy — język, w którym znaczenie przekazuje się między innymi ruchami rąk, twarzy i ciała.</dd><dt id="eaa">EAA</dt>
+        <dd>European Accessibility Act — Europejski Akt o Dostępności. To unijne przepisy dotyczące dostępności wybranych produktów i usług.</dd><dt id="pad">PAD</dt>
+        <dd>Polski Akt o Dostępności — potoczna nazwa polskiej ustawy wdrażającej Europejski Akt o Dostępności. Dotyczy wskazanych produktów i usług oraz określa wyjątki.</dd><dt id="deklaracja">Deklaracja dostępności</dt>
+        <dd>Dokument, w którym podmiot publiczny opisuje dostępność swojej strony lub aplikacji, istniejące trudności i sposób kontaktu. Informacja o dostępności usługi firmy wynika z innych zasad i jest innym dokumentem.</dd><dt id="podmiot-publiczny">Podmiot publiczny</dt>
+        <dd>Instytucja należąca do grupy określonej w przepisach, na przykład urząd. Dokładny zakres zależy od ustawy.</dd><dt id="w3c">W3C</dt>
+        <dd>World Wide Web Consortium — organizacja opracowująca zasady i standardy działania stron internetowych.</dd><dt id="wai">WAI</dt>
+        <dd>Web Accessibility Initiative — inicjatywa organizacji W3C zajmująca się dostępnością internetu.</dd><dt id="wcag2ict">WCAG2ICT</dt>
+        <dd>Wskazówki W3C dotyczące stosowania zasad WCAG do dokumentów i programów innych niż strony internetowe. ICT oznacza Information and Communication Technology, czyli technologie informacyjne i komunikacyjne.</dd><dt id="www">WWW</dt>
+        <dd>World Wide Web — system stron internetowych otwieranych w przeglądarce.</dd><dt id="api">API</dt>
+        <dd>Application Programming Interface — sposób, w jaki dwa programy wymieniają informacje lub zlecają sobie działania.</dd><dt id="https">HTTPS</dt>
+        <dd>Hypertext Transfer Protocol Secure — sposób przesyłania danych między przeglądarką a stroną z użyciem szyfrowania. Szyfrowanie chroni treść podczas przesyłania.</dd><dt id="ip">IP</dt>
+        <dd>Internet Protocol — zasady przesyłania danych w sieci. Adres IP to numer używany do kierowania danych do urządzenia lub połączenia.</dd><dt id="it">IT</dt>
+        <dd>Information Technology — technologie informatyczne, czyli między innymi komputery, programy i systemy.</dd><dt id="rodo">RODO</dt>
+        <dd>Rozporządzenie o Ochronie Danych Osobowych — przepisy dotyczące używania danych pozwalających rozpoznać osobę.</dd><dt id="eog">EOG</dt>
+        <dd>Europejski Obszar Gospodarczy — grupa obejmująca państwa Unii Europejskiej oraz Islandię, Liechtenstein i Norwegię.</dd><dt id="ue">UE</dt>
+        <dd>Unia Europejska — wspólnota państw europejskich.</dd><dt id="eur">EUR</dt>
+        <dd>Euro — waluta używana między innymi w wielu państwach Unii Europejskiej.</dd><dt id="krs">KRS</dt>
+        <dd>Krajowy Rejestr Sądowy — rejestr zawierający między innymi dane spółek i innych organizacji.</dd><dt id="nip">NIP</dt>
+        <dd>Numer Identyfikacji Podatkowej — numer używany do rozpoznawania podatnika.</dd><dt id="regon">REGON</dt>
+        <dd>Rejestr Gospodarki Narodowej — rejestr statystyczny. Numer REGON identyfikuje podmiot w tym rejestrze.</dd><dt id="parp">PARP</dt>
+        <dd>Polska Agencja Rozwoju Przedsiębiorczości — instytucja wspierająca rozwój firm.</dd><dt id="adhd">ADHD</dt>
+        <dd>Attention Deficit Hyperactivity Disorder — zespół nadpobudliwości psychoruchowej z deficytem uwagi. Może wiązać się między innymi z trudnością w skupieniu i potrzebą ograniczenia rozpraszających elementów.</dd><dt id="prywatnosc">Administrator danych i przetwarzanie danych</dt>
+        <dd>Administrator decyduje, po co i w jaki sposób używa danych osobowych. Przetwarzanie to między innymi ich zebranie, zapisanie, odczytanie lub usunięcie.</dd><dt id="profilowanie">Profilowanie</dt>
+        <dd>Automatyczne analizowanie danych, aby ocenić lub przewidzieć na przykład zainteresowania albo zachowanie osoby.</dd><dt id="localstorage">Pamięć lokalna i localStorage</dt>
+        <dd>Miejsce w przeglądarce, w którym strona może zapamiętać ustawienia. W ANM Access są to wybrane kolory, rozmiar tekstu i wysoki kontrast.</dd><dt id="cookies">Cookies</dt>
+        <dd>Małe porcje danych zapisywane przez stronę w przeglądarce. Nazywa się je też plikami cookie lub ciasteczkami.</dd><dt id="konsument">Konsument</dt>
+        <dd>Osoba fizyczna zawierająca z firmą umowę, która nie jest bezpośrednio związana z jej działalnością gospodarczą lub zawodową.</dd><dt id="reklamacja">Reklamacja</dt>
+        <dd>Zgłoszenie problemu z usługą lub produktem i oczekiwanego sposobu rozwiązania.</dd><dt id="odstapienie">Odstąpienie od umowy</dt>
+        <dd>Skorzystanie z prawa do zakończenia umowy na warunkach określonych w przepisach lub umowie. Szczegóły i wyjątki opisuje regulamin.</dd><dt id="przedslownikiem">ANM Access i ANM Collective</dt>
+        <dd>ANM Collective to nazwa naszej firmy. ANM Access to nazwa jej serwisu dotyczącego dostępności cyfrowej.</dd>
+      </dl></div></section></main>
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <div class="footer-copy"><strong>ANM Access</strong><p>Platforma ANM Collective do audytu i rozwoju dostępności cyfrowej zgodnie z WCAG 2.2.</p></div>
+      <nav class="footer-nav" aria-label="Nawigacja w stopce">
+        <a href="/audyt.html">Audyt WCAG</a>
+        <a href="/szkolenia.html">Szkolenia</a>
+        <a href="/baza-wiedzy.html">Baza wiedzy</a>
+        <a href="/o-nas.html">O nas</a>
+        <a href="/kontakt.html">Kontakt</a>
+              <a href="/regulamin.html">Regulamin</a>
+        <a href="/polityka-prywatnosci.html">Polityka prywatności</a>
+        <a href="/slownik.html" aria-current="page">Słownik prostych pojęć</a>
+      </nav>
+    </div>
+  </footer>
+  <div class="theme-announcer" data-theme-announcer role="status" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
