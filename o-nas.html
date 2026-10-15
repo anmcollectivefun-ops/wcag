@@ -47,19 +47,19 @@
 <body>
   <a class="skip-link" href="#main">Przejdź do treści</a>
   <header class="site-header">
-    <div class="accessibility-bar" aria-label="Ustawienia dostępności">
+    <div class="accessibility-bar" role="group" aria-label="Ustawienia dostępności">
       <div class="shell accessibility-bar-inner">
-        <div class="language-switcher access-group" aria-label="Język strony">
+        <div class="language-switcher access-group" role="group" aria-label="Język strony">
           <span class="access-group-label" data-icon="languages">Język</span>
-          <button type="button" aria-pressed="true" aria-label="Język polski">PL</button>
-          <button type="button" disabled aria-label="Język angielski — w przygotowaniu">EN</button>
-          <button type="button" disabled aria-label="Język ukraiński — w przygotowaniu">UA</button>
+          <button type="button" aria-pressed="true" aria-label="PL — język polski">PL</button>
+          <button type="button" disabled aria-label="EN — język angielski, w przygotowaniu">EN</button>
+          <button type="button" disabled aria-label="UA — język ukraiński, w przygotowaniu">UA</button>
         </div>
         <div class="text-size-switcher access-group" role="group" aria-label="Rozmiar tekstu">
           <span class="access-group-label" data-icon="text-size">Tekst</span>
-          <button type="button" data-text-size-choice="a" aria-pressed="true" aria-label="Rozmiar tekstu A, 100 procent">A</button>
-          <button type="button" data-text-size-choice="aa" aria-pressed="false" aria-label="Rozmiar tekstu AA, 150 procent">AA</button>
-          <button type="button" data-text-size-choice="aaa" aria-pressed="false" aria-label="Rozmiar tekstu AAA, 200 procent">AAA</button>
+          <button type="button" data-text-size-choice="a" aria-pressed="true" aria-label="Rozmiar tekstu A, 100 procent treści">A</button>
+          <button type="button" data-text-size-choice="aa" aria-pressed="false" aria-label="Rozmiar tekstu AA, 150 procent treści">AA</button>
+          <button type="button" data-text-size-choice="aaa" aria-pressed="false" aria-label="Rozmiar tekstu AAA, 200 procent treści">AAA</button>
         </div>
         <button class="access-tool" type="button" data-contrast-toggle data-icon="eye-contrast" aria-pressed="false">
           <span>Wysoki kontrast</span>
@@ -96,10 +96,10 @@
       <div class="shell home-hero-shell">
         <div class="hero-copy home-hero-copy">
           <p class="kicker" data-reveal>O nas · ANM Access</p>
-          <h1 data-reveal>Budujemy narzędzie, które ma być dostępne tak samo jak strony, które bada.</h1>
-          <p class="hero-lead" data-reveal>ANM Access rozwijamy jako praktyczne narzędzie do pracy z WCAG — od wykrycia bariery, przez poprawkę, po ponowny test.</p>
+          <h1 data-reveal>Pomagamy tworzyć strony, z których łatwiej korzystać.</h1>
+          <p class="hero-lead" data-reveal>Znajdujemy przeszkody na stronie, pomagamy je usunąć i ponownie sprawdzamy efekt. Rozwijamy też własne narzędzie do takich badań.</p>
           <ul class="hero-meta" data-reveal aria-label="Najważniejsze informacje o ANM Access">
-            <li data-icon="check">WCAG 2.1 i 2.2</li>
+            <li data-icon="check"><a class="term-link" href="/slownik.html#wcag">WCAG</a> 2.1 i 2.2</li>
             <li data-icon="check">praktyczne wdrożenia</li>
             <li data-icon="check">audyt, poprawki i weryfikacja</li>
           </ul>
@@ -115,17 +115,17 @@
     </section>
     <section class="section">
       <div class="shell">
-        <div class="section-heading" data-reveal><h2>Nasze podejście</h2><p>Nie chcemy sprowadzać dostępności do jednego wyniku procentowego. Ważniejsze jest pokazanie, co naprawdę działa, co nie działa i co wymaga oceny człowieka.</p></div>
+        <div class="section-heading" data-reveal><h2>Nasze podejście</h2><p>Sprawdzamy, czy człowiek może wygodnie skorzystać ze strony. Pokazujemy, co działa i co wymaga poprawy.</p></div>
         <div class="grid-3">
-          <article class="card" data-reveal><h3>Najpierw użytkownik</h3><p>Badamy realne zadania: znalezienie informacji, obsługę formularza, nawigację, logowanie czy wykonanie całego procesu.</p></article>
-          <article class="card" data-reveal><h3>Potem dowód</h3><p>Wynik powinien mieć źródło: kryterium WCAG, metodę testu, element strony i informację o ponownej weryfikacji.</p></article>
-          <article class="card" data-reveal><h3>Bez fałszywych skrótów</h3><p>Jeżeli kryterium wymaga oceny manualnej, system ma to jasno powiedzieć zamiast automatycznie oznaczać stronę jako zgodną.</p></article>
+          <article class="card" data-reveal><h3>Najpierw użytkownik</h3><p>Sprawdzamy zwykłe zadania: znalezienie informacji, wysłanie formularza czy zalogowanie się.</p></article>
+          <article class="card" data-reveal><h3>Potem dowód</h3><p>Przy każdym problemie pokazujemy miejsce na stronie, sposób sprawdzenia i wynik ponownego testu.</p></article>
+          <article class="card" data-reveal><h3>Jasny wynik</h3><p>Gdy potrzebny jest test człowieka, wyraźnie to zaznaczamy. Wynik programu opisujemy osobno.</p></article>
         </div>
       </div>
     </section>
     <section class="section section-alt">
       <div class="shell">
-        <div class="section-heading" data-reveal><h2>ANM Collective</h2><p>Tworzymy strony, aplikacje webowe i systemy dla firm. ANM Access rozwijamy jako własny produkt oraz zaplecze do audytów i wdrożeń dostępności.</p></div>
+        <div class="section-heading" data-reveal><h2>ANM Collective</h2><p>Tworzymy strony, aplikacje i programy dla firm. ANM Access pomaga nam sprawdzać i poprawiać ich dostępność.</p></div>
         <a class="button button-secondary" href="https://anmcollective.pl">Przejdź do ANM Collective</a>
       </div>
     </section>
@@ -141,6 +141,7 @@
         <a href="/kontakt.html">Kontakt</a>
               <a href="/regulamin.html">Regulamin</a>
         <a href="/polityka-prywatnosci.html">Polityka prywatności</a>
+        <a href="/slownik.html">Słownik prostych pojęć</a>
       </nav>
     </div>
   </footer>
