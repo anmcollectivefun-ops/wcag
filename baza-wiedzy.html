@@ -47,19 +47,19 @@
 <body>
   <a class="skip-link" href="#main">Przejdź do treści</a>
   <header class="site-header">
-    <div class="accessibility-bar" aria-label="Ustawienia dostępności">
+    <div class="accessibility-bar" role="group" aria-label="Ustawienia dostępności">
       <div class="shell accessibility-bar-inner">
-        <div class="language-switcher access-group" aria-label="Język strony">
+        <div class="language-switcher access-group" role="group" aria-label="Język strony">
           <span class="access-group-label" data-icon="languages">Język</span>
-          <button type="button" aria-pressed="true" aria-label="Język polski">PL</button>
-          <button type="button" disabled aria-label="Język angielski — w przygotowaniu">EN</button>
-          <button type="button" disabled aria-label="Język ukraiński — w przygotowaniu">UA</button>
+          <button type="button" aria-pressed="true" aria-label="PL — język polski">PL</button>
+          <button type="button" disabled aria-label="EN — język angielski, w przygotowaniu">EN</button>
+          <button type="button" disabled aria-label="UA — język ukraiński, w przygotowaniu">UA</button>
         </div>
         <div class="text-size-switcher access-group" role="group" aria-label="Rozmiar tekstu">
           <span class="access-group-label" data-icon="text-size">Tekst</span>
-          <button type="button" data-text-size-choice="a" aria-pressed="true" aria-label="Rozmiar tekstu A, 100 procent">A</button>
-          <button type="button" data-text-size-choice="aa" aria-pressed="false" aria-label="Rozmiar tekstu AA, 150 procent">AA</button>
-          <button type="button" data-text-size-choice="aaa" aria-pressed="false" aria-label="Rozmiar tekstu AAA, 200 procent">AAA</button>
+          <button type="button" data-text-size-choice="a" aria-pressed="true" aria-label="Rozmiar tekstu A, 100 procent treści">A</button>
+          <button type="button" data-text-size-choice="aa" aria-pressed="false" aria-label="Rozmiar tekstu AA, 150 procent treści">AA</button>
+          <button type="button" data-text-size-choice="aaa" aria-pressed="false" aria-label="Rozmiar tekstu AAA, 200 procent treści">AAA</button>
         </div>
         <button class="access-tool" type="button" data-contrast-toggle data-icon="eye-contrast" aria-pressed="false">
           <span>Wysoki kontrast</span>
@@ -95,12 +95,12 @@
     <section class="page-hero home-hero">
       <div class="shell home-hero-shell">
         <div class="hero-copy home-hero-copy">
-          <p class="kicker" data-reveal>Baza wiedzy · WCAG 2.1 i 2.2</p>
+          <p class="kicker" data-reveal>Baza wiedzy · <a class="term-link" href="/slownik.html#wcag">WCAG</a> 2.1 i 2.2</p>
           <h1 data-reveal>WCAG bez języka, który trzeba tłumaczyć drugi raz.</h1>
           <p class="hero-lead" data-reveal>Praktyczne materiały o dostępności cyfrowej: błędy, sposoby naprawy i jasne wyjaśnienia dla właścicieli stron, projektantów i programistów.</p>
           <ul class="hero-meta" data-reveal aria-label="Zakres bazy wiedzy">
             <li data-icon="check">WCAG 2.1 i 2.2</li>
-            <li data-icon="check">A · AA · AAA</li>
+            <li data-icon="check">A · <a class="term-link" href="/slownik.html#poziomy">AA</a> · AAA</li>
             <li data-icon="check">praktyczne przykłady i naprawy</li>
           </ul>
         </div>
@@ -128,8 +128,8 @@
           <div>
             <p class="kicker">Prawo i dostępność</p>
             <h3>Deklaracja dostępności a EAA — czym się różnią i czego wymaga prawo?</h3>
-            <p>Wyjaśniamy, czym jest Deklaracja dostępności, co oznacza EAA i Polski Akt o Dostępności, jakie informacje trzeba publikować oraz jakie mogą być konsekwencje braku dostępności.</p>
-            <a class="button button-secondary" href="/baza-wiedzy/deklaracja-dostepnosci-eaa.html" data-icon="arrow-right">Czytaj artykuł</a>
+            <p>Wyjaśniamy, czym jest Deklaracja dostępności, co oznacza <a class="term-link" href="/slownik.html#eaa">EAA</a> i Polski Akt o Dostępności, jakie informacje trzeba publikować oraz jakie mogą być konsekwencje braku dostępności.</p>
+            <a class="button button-secondary" href="/baza-wiedzy/deklaracja-dostepnosci-eaa.html" data-icon="arrow-right" aria-label="Czytaj artykuł: Deklaracja dostępności a EAA — czym się różnią i czego wymaga prawo?">Czytaj artykuł</a>
           </div>
         </article>
 
@@ -141,7 +141,7 @@
             <p class="kicker">Podstawy WCAG</p>
             <h3>WCAG 2.1 — czym jest i co oznacza dla strony?</h3>
             <p>Porządkujemy podstawy WCAG 2.1: cztery zasady, poziomy A, AA i AAA oraz wymagania, które nadal mają znaczenie dla stron i aplikacji.</p>
-            <a class="button button-secondary" href="/baza-wiedzy/wcag-2-1.html" data-icon="arrow-right">Czytaj artykuł</a>
+            <a class="button button-secondary" href="/baza-wiedzy/wcag-2-1.html" data-icon="arrow-right" aria-label="Czytaj artykuł: WCAG 2.1 — czym jest i co oznacza dla strony?">Czytaj artykuł</a>
           </div>
         </article>
 
@@ -153,7 +153,7 @@
             <p class="kicker">WCAG 2.2</p>
             <h3>WCAG 2.2 — co zmieniło się względem WCAG 2.1?</h3>
             <p>Wyjaśniamy nowe kryteria WCAG 2.2 i pokazujemy, co zmieniło się względem wersji 2.1 oraz co oznacza to w praktycznym audycie.</p>
-            <a class="button button-secondary" href="/baza-wiedzy/wcag-2-2.html" data-icon="arrow-right">Czytaj artykuł</a>
+            <a class="button button-secondary" href="/baza-wiedzy/wcag-2-2.html" data-icon="arrow-right" aria-label="Czytaj artykuł: WCAG 2.2 — co zmieniło się względem WCAG 2.1?">Czytaj artykuł</a>
           </div>
         </article>
 
@@ -165,7 +165,7 @@
             <p class="kicker">Przyszłość WCAG</p>
             <h3>WCAG 3.0 — co wiemy o planowanym standardzie?</h3>
             <p>Zbieramy w jednym miejscu to, co wiadomo dziś o WCAG 3.0: kierunek zmian, nowy model oceny i różnice względem rodziny WCAG 2.x.</p>
-            <a class="button button-secondary" href="/baza-wiedzy/wcag-3-0.html" data-icon="arrow-right">Czytaj artykuł</a>
+            <a class="button button-secondary" href="/baza-wiedzy/wcag-3-0.html" data-icon="arrow-right" aria-label="Czytaj artykuł: WCAG 3.0 — co wiemy o planowanym standardzie?">Czytaj artykuł</a>
           </div>
         </article>
 
@@ -177,7 +177,7 @@
             <p class="kicker">Obowiązki</p>
             <h3>Kogo obowiązuje WCAG dzisiaj?</h3>
             <p>Porządkujemy, kiedy dostępność cyfrowa jest obowiązkiem, kogo dotyczą wymagania i dlaczego WCAG ma znaczenie także poza sektorem publicznym.</p>
-            <a class="button button-secondary" href="/baza-wiedzy/kogo-obowiazuje-wcag.html" data-icon="arrow-right">Czytaj artykuł</a>
+            <a class="button button-secondary" href="/baza-wiedzy/kogo-obowiazuje-wcag.html" data-icon="arrow-right" aria-label="Czytaj artykuł: Kogo obowiązuje WCAG dzisiaj?">Czytaj artykuł</a>
           </div>
         </article>
 
@@ -189,7 +189,7 @@
             <p class="kicker">Poziomy zgodności</p>
             <h3>Poziomy WCAG A, AA i AAA — czym się różnią?</h3>
             <p>Wyjaśniamy, co oznaczają poziomy A, AA i AAA, jak czytać wyniki audytu i jaki poziom ma znaczenie w praktyce.</p>
-            <a class="button button-secondary" href="/baza-wiedzy/poziomy-wcag-a-aa-aaa.html" data-icon="arrow-right">Czytaj artykuł</a>
+            <a class="button button-secondary" href="/baza-wiedzy/poziomy-wcag-a-aa-aaa.html" data-icon="arrow-right" aria-label="Czytaj artykuł: Poziomy WCAG A, AA i AAA — czym się różnią?">Czytaj artykuł</a>
           </div>
         </article>
 
@@ -201,7 +201,7 @@
             <p class="kicker">Urządzenia samoobsługowe</p>
             <h3>WCAG a kioski i urządzenia samoobsługowe</h3>
             <p>Pokazujemy, jak patrzeć na dostępność kiosków, terminali i ekranów samoobsługowych oraz jakie bariery pojawiają się najczęściej.</p>
-            <a class="button button-secondary" href="/baza-wiedzy/wcag-kioski-urzadzenia-samoobslugowe.html" data-icon="arrow-right">Czytaj artykuł</a>
+            <a class="button button-secondary" href="/baza-wiedzy/wcag-kioski-urzadzenia-samoobslugowe.html" data-icon="arrow-right" aria-label="Czytaj artykuł: WCAG a kioski i urządzenia samoobsługowe">Czytaj artykuł</a>
           </div>
         </article>
 
@@ -212,8 +212,8 @@
           <div>
             <p class="kicker">Dla programistów</p>
             <h3>WCAG dla programisty — jak wdrażać dostępność w kodzie?</h3>
-            <p>Semantyczny HTML, klawiatura, fokus, formularze i ARIA — bez zbędnej teorii, za to z naciskiem na praktyczne wdrożenie.</p>
-            <a class="button button-secondary" href="/baza-wiedzy/wcag-dla-programisty.html" data-icon="arrow-right">Czytaj artykuł</a>
+            <p>Jak zbudować stronę, którą łatwo obsłużyć klawiaturą i odczytać programem czytającym tekst.</p>
+            <a class="button button-secondary" href="/baza-wiedzy/wcag-dla-programisty.html" data-icon="arrow-right" aria-label="Czytaj artykuł: WCAG dla programisty — jak wdrażać dostępność w kodzie?">Czytaj artykuł</a>
           </div>
         </article>
 
@@ -225,7 +225,7 @@
             <p class="kicker">Odpowiedzialność</p>
             <h3>Kto odpowiada za dostępność strony?</h3>
             <p>Rozdzielamy odpowiedzialność między właściciela serwisu, projektanta, programistę i osoby publikujące treści.</p>
-            <a class="button button-secondary" href="/baza-wiedzy/kto-odpowiada-za-dostepnosc-strony.html" data-icon="arrow-right">Czytaj artykuł</a>
+            <a class="button button-secondary" href="/baza-wiedzy/kto-odpowiada-za-dostepnosc-strony.html" data-icon="arrow-right" aria-label="Czytaj artykuł: Kto odpowiada za dostępność strony?">Czytaj artykuł</a>
           </div>
         </article>
 
@@ -237,7 +237,7 @@
             <p class="kicker">Koszty wdrożenia</p>
             <h3>Ile kosztuje wdrożenie WCAG?</h3>
             <p>Wyjaśniamy, od czego zależy koszt audytu i poprawek oraz co najbardziej wpływa na budżet wdrożenia dostępności.</p>
-            <a class="button button-secondary" href="/baza-wiedzy/ile-kosztuje-wdrozenie-wcag.html" data-icon="arrow-right">Czytaj artykuł</a>
+            <a class="button button-secondary" href="/baza-wiedzy/ile-kosztuje-wdrozenie-wcag.html" data-icon="arrow-right" aria-label="Czytaj artykuł: Ile kosztuje wdrożenie WCAG?">Czytaj artykuł</a>
           </div>
         </article>
 
@@ -249,7 +249,7 @@
             <p class="kicker">Audyt i wdrożenie</p>
             <h3>Dlaczego sam audyt nie zastąpi dobrego programisty?</h3>
             <p>Audyt wskazuje bariery i kierunek poprawek, ale dopiero dobre wdrożenie w kodzie zamienia raport w realną dostępność.</p>
-            <a class="button button-secondary" href="/baza-wiedzy/dlaczego-audyt-nie-zastapi-dobrego-programisty.html" data-icon="arrow-right">Czytaj artykuł</a>
+            <a class="button button-secondary" href="/baza-wiedzy/dlaczego-audyt-nie-zastapi-dobrego-programisty.html" data-icon="arrow-right" aria-label="Czytaj artykuł: Dlaczego sam audyt nie zastąpi dobrego programisty?">Czytaj artykuł</a>
           </div>
         </article>
 
@@ -261,7 +261,7 @@
             <p class="kicker">Dobry programista</p>
             <h3>Czym wyróżnia się najlepszy programista budujący dostępne strony i aplikacje?</h3>
             <p>Pokazujemy, jakie umiejętności i sposób pracy odróżniają programistę, który naprawdę potrafi wdrażać dostępność.</p>
-            <a class="button button-secondary" href="/baza-wiedzy/najlepszy-programista-dostepnosci.html" data-icon="arrow-right">Czytaj artykuł</a>
+            <a class="button button-secondary" href="/baza-wiedzy/najlepszy-programista-dostepnosci.html" data-icon="arrow-right" aria-label="Czytaj artykuł: Czym wyróżnia się najlepszy programista budujący dostępne strony i aplikacje?">Czytaj artykuł</a>
           </div>
         </article>
 
@@ -273,7 +273,7 @@
             <p class="kicker">Audyt automatyczny</p>
             <h3>Dlaczego strona może przejść automatyczny audyt WCAG i nadal być niedostępna?</h3>
             <p>Pokazujemy, czego nie wykryje automat i dlaczego test manualny jest niezbędny do oceny realnej dostępności strony.</p>
-            <a class="button button-secondary" href="/baza-wiedzy/automatyczny-audyt-wcag-a-niedostepna-strona.html" data-icon="arrow-right">Czytaj artykuł</a>
+            <a class="button button-secondary" href="/baza-wiedzy/automatyczny-audyt-wcag-a-niedostepna-strona.html" data-icon="arrow-right" aria-label="Czytaj artykuł: Dlaczego strona może przejść automatyczny audyt WCAG i nadal być niedostępna?">Czytaj artykuł</a>
           </div>
         </article>
 
@@ -285,7 +285,7 @@
             <p class="kicker">Jakość kodu</p>
             <h3>Dostępność jako część jakości kodu, a nie dodatkowa funkcja</h3>
             <p>Wyjaśniamy, dlaczego dostępność powinna wynikać z jakości komponentów i architektury, a nie być dopisywana na końcu projektu.</p>
-            <a class="button button-secondary" href="/baza-wiedzy/dostepnosc-jako-czesc-jakosci-kodu.html" data-icon="arrow-right">Czytaj artykuł</a>
+            <a class="button button-secondary" href="/baza-wiedzy/dostepnosc-jako-czesc-jakosci-kodu.html" data-icon="arrow-right" aria-label="Czytaj artykuł: Dostępność jako część jakości kodu, a nie dodatkowa funkcja">Czytaj artykuł</a>
           </div>
         </article>
       </div>
@@ -302,6 +302,7 @@
         <a href="/kontakt.html">Kontakt</a>
               <a href="/regulamin.html">Regulamin</a>
         <a href="/polityka-prywatnosci.html">Polityka prywatności</a>
+        <a href="/slownik.html">Słownik prostych pojęć</a>
       </nav>
     </div>
   </footer>
