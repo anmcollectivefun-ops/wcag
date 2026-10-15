@@ -1,4 +1,6 @@
 :root{
+  --high-contrast-text:#000000;
+
   --promo-bg:#5A2430;
   --promo-text:#FFFFFF;
 
@@ -10,15 +12,15 @@
   --theme-light-muted:#444444;
   --theme-light-gold:#5A2430;
   --theme-light-border:#767676;
-  --theme-light-danger:#8B1E1E;
+  --theme-light-danger:#771818;
 
   --theme-dark-bg:#281014;
   --theme-dark-surface:#35151A;
   --theme-dark-surface-alt:#431921;
   --theme-dark-text:#FDF2F4;
   --theme-dark-text-2:#E6C8CF;
-  --theme-dark-muted:#CBA1AB;
-  --theme-dark-gold:#DCA373;
+  --theme-dark-muted:#DEBAC3;
+  --theme-dark-gold:#E6B98C;
   --theme-dark-border:#AD6376;
   --theme-dark-danger:#FFB0A8;
 
@@ -27,10 +29,10 @@
   --theme-reading-surface-alt:#E9D9BC;
   --theme-reading-text:#2A2117;
   --theme-reading-text-2:#413426;
-  --theme-reading-muted:#544431;
+  --theme-reading-muted:#493B2A;
   --theme-reading-gold:#5A2430;
   --theme-reading-border:#7D6849;
-  --theme-reading-danger:#8B1E1E;
+  --theme-reading-danger:#771818;
 }
 :root,[data-theme="light"]{
   color-scheme:light;
@@ -107,7 +109,7 @@ body,.site-header,.topbar,.footer,footer,.panel,.stat,.feature,.ticket-card,.inp
 .site-header,.topbar,.footer,footer{border-color:var(--border)}
 a,.brand-accent,.blue-text,.eyebrow,.text-link,.ticket-details summary,.evidence-list strong{color:var(--gold)}
 .subtle,.lead,.field-hint,.counter,.results-info,.ticket-meta,.preview-caption,.hint,.compare-label p,.brand small,.footer p{color:var(--muted)}
-:focus-visible{outline-color:var(--focus)!important}
+:focus-visible{outline-color:var(--focus-on-surface,var(--focus))!important}
 ::selection{background:var(--gold);color:var(--on-gold)}
 input,textarea,select{background:var(--surface)!important;color:var(--text)!important;border-color:var(--border)!important}
 input::placeholder,textarea::placeholder{color:var(--muted);opacity:1}
