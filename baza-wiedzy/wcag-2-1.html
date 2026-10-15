@@ -20,19 +20,19 @@
 <body>
   <a class="skip-link" href="#main">Przejdź do treści</a>
   <header class="site-header">
-    <div class="accessibility-bar" aria-label="Ustawienia dostępności">
+    <div class="accessibility-bar" role="group" aria-label="Ustawienia dostępności">
       <div class="shell accessibility-bar-inner">
-        <div class="language-switcher access-group" aria-label="Język strony">
+        <div class="language-switcher access-group" role="group" aria-label="Język strony">
           <span class="access-group-label" data-icon="languages">Język</span>
-          <button type="button" aria-pressed="true" aria-label="Język polski">PL</button>
-          <button type="button" disabled aria-label="Język angielski — w przygotowaniu">EN</button>
-          <button type="button" disabled aria-label="Język ukraiński — w przygotowaniu">UA</button>
+          <button type="button" aria-pressed="true" aria-label="PL — język polski">PL</button>
+          <button type="button" disabled aria-label="EN — język angielski, w przygotowaniu">EN</button>
+          <button type="button" disabled aria-label="UA — język ukraiński, w przygotowaniu">UA</button>
         </div>
         <div class="text-size-switcher access-group" role="group" aria-label="Rozmiar tekstu">
           <span class="access-group-label" data-icon="text-size">Tekst</span>
-          <button type="button" data-text-size-choice="a" aria-pressed="true" aria-label="Rozmiar tekstu A, 100 procent">A</button>
-          <button type="button" data-text-size-choice="aa" aria-pressed="false" aria-label="Rozmiar tekstu AA, 150 procent">AA</button>
-          <button type="button" data-text-size-choice="aaa" aria-pressed="false" aria-label="Rozmiar tekstu AAA, 200 procent">AAA</button>
+          <button type="button" data-text-size-choice="a" aria-pressed="true" aria-label="Rozmiar tekstu A, 100 procent treści">A</button>
+          <button type="button" data-text-size-choice="aa" aria-pressed="false" aria-label="Rozmiar tekstu AA, 150 procent treści">AA</button>
+          <button type="button" data-text-size-choice="aaa" aria-pressed="false" aria-label="Rozmiar tekstu AAA, 200 procent treści">AAA</button>
         </div>
         <button class="access-tool" type="button" data-contrast-toggle data-icon="eye-contrast" aria-pressed="false">
           <span>Wysoki kontrast</span>
@@ -69,9 +69,9 @@
     <section class="page-hero home-hero">
       <div class="shell home-hero-shell">
         <div class="hero-copy home-hero-copy">
-          <p class="kicker" data-reveal>Baza wiedzy · WCAG 2.1</p>
+          <p class="kicker" data-reveal>Baza wiedzy · <a class="term-link" href="/slownik.html#wcag">WCAG</a> 2.1</p>
           <h1 data-reveal>WCAG 2.1 — czym jest i co oznacza dla strony?</h1>
-          <p class="hero-lead" data-reveal>Porządkujemy podstawy WCAG 2.1: zasady, poziomy A, AA i AAA oraz najważniejsze wymagania dla stron i aplikacji.</p>
+          <p class="hero-lead" data-reveal>Porządkujemy podstawy WCAG 2.1: zasady, poziomy A, <a class="term-link" href="/slownik.html#poziomy">AA</a> i AAA oraz najważniejsze wymagania dla stron i aplikacji.</p>
           <ul class="hero-meta" data-reveal aria-label="Najważniejsze informacje o artykule">
             <li data-icon="check">4 zasady WCAG</li>
             <li data-icon="check">poziomy A · AA · AAA</li>
@@ -92,10 +92,10 @@
       <div class="shell article-shell">
         <section class="article-opening" aria-labelledby="wcag21-summary">
           <div class="article-summary">
-            <p class="kicker">Najważniejsze</p>
-            <h2 id="wcag21-summary">WCAG 2.1 opisuje, jak tworzyć treści cyfrowe, z których może korzystać więcej osób.</h2>
-            <p>To nie jest poradnik dotyczący jednego rodzaju niepełnosprawności. WCAG 2.1 porządkuje wiele różnych potrzeb: osób niewidomych i słabowidzących, osób korzystających z klawiatury, osób z trudnościami poznawczymi czy użytkowników urządzeń mobilnych.</p>
-            <p><strong>Najłatwiej myśleć o WCAG nie jak o liście zakazów, ale jak o zasadach dobrej komunikacji między stroną a człowiekiem.</strong></p>
+            <p class="kicker">Prosto i w skrócie</p>
+            <h2 id="wcag21-summary">WCAG 2.1 pomaga tworzyć łatwiejsze w obsłudze strony.</h2>
+            <ul><li>To zestaw zasad dotyczących tekstu, obrazów, przycisków i innych części strony.</li><li>Uwzględnia między innymi korzystanie z telefonu, powiększanie treści i obsługę klawiaturą.</li><li>Spełnienie zasad pomaga osobom z różnymi potrzebami korzystać ze strony.</li></ul>
+            <p>Szczegóły i przykłady znajdziesz poniżej. Trudniejsze słowa wyjaśnia <a href="/slownik.html">słownik prostych pojęć</a>.</p>
           </div>
           <nav class="article-toc" aria-label="Spis treści">
             <strong>W tym artykule</strong>
@@ -114,7 +114,7 @@
           <div class="article-copy">
             <p class="kicker">Od podstaw</p>
             <h2 id="wcag21-co-to-title">Co oznacza WCAG 2.1?</h2>
-            <p>WCAG to skrót od <strong>Web Content Accessibility Guidelines</strong>, czyli Wytycznych dla dostępności treści internetowych. Tworzy je W3C — organizacja rozwijająca standardy, na których opiera się współczesny internet.</p>
+            <p>WCAG to skrót od <strong>Web Content Accessibility Guidelines</strong>, czyli Wytycznych dla dostępności treści internetowych. Tworzy je <a class="term-link" href="/slownik.html#w3c">W3C</a> — organizacja rozwijająca standardy, na których opiera się współczesny internet.</p>
             <p>WCAG nie mówi, jak strona ma wyglądać. Nie narzuca jednego koloru, układu ani technologii. Określa natomiast, <strong>jaki efekt powinien otrzymać użytkownik</strong>.</p>
             <p>Jeżeli na stronie znajduje się ważne zdjęcie, osoba niewidoma powinna otrzymać jego sens w inny sposób. Jeżeli ktoś nie korzysta z myszy, powinien móc dotrzeć do potrzebnej funkcji klawiaturą. Jeżeli formularz zawiera błąd, użytkownik powinien dostać jasną informację, co poprawić.</p>
             <p>Wersja 2.1 została opublikowana jako rekomendacja W3C w 2018 roku. Rozszerzyła wcześniejsze WCAG 2.0 o nowe potrzeby związane szczególnie z urządzeniami mobilnymi, słabym widzeniem oraz trudnościami poznawczymi i w uczeniu się.</p>
@@ -229,6 +229,7 @@
         <a href="/kontakt.html">Kontakt</a>
               <a href="/regulamin.html">Regulamin</a>
         <a href="/polityka-prywatnosci.html">Polityka prywatności</a>
+        <a href="/slownik.html">Słownik prostych pojęć</a>
       </nav>
     </div>
   </footer>
