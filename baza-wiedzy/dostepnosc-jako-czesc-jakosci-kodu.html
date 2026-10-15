@@ -20,19 +20,19 @@
 <body>
   <a class="skip-link" href="#main">Przejdź do treści</a>
   <header class="site-header">
-    <div class="accessibility-bar" aria-label="Ustawienia dostępności">
+    <div class="accessibility-bar" role="group" aria-label="Ustawienia dostępności">
       <div class="shell accessibility-bar-inner">
-        <div class="language-switcher access-group" aria-label="Język strony">
+        <div class="language-switcher access-group" role="group" aria-label="Język strony">
           <span class="access-group-label" data-icon="languages">Język</span>
-          <button type="button" aria-pressed="true" aria-label="Język polski">PL</button>
-          <button type="button" disabled aria-label="Język angielski — w przygotowaniu">EN</button>
-          <button type="button" disabled aria-label="Język ukraiński — w przygotowaniu">UA</button>
+          <button type="button" aria-pressed="true" aria-label="PL — język polski">PL</button>
+          <button type="button" disabled aria-label="EN — język angielski, w przygotowaniu">EN</button>
+          <button type="button" disabled aria-label="UA — język ukraiński, w przygotowaniu">UA</button>
         </div>
         <div class="text-size-switcher access-group" role="group" aria-label="Rozmiar tekstu">
           <span class="access-group-label" data-icon="text-size">Tekst</span>
-          <button type="button" data-text-size-choice="a" aria-pressed="true" aria-label="Rozmiar tekstu A, 100 procent">A</button>
-          <button type="button" data-text-size-choice="aa" aria-pressed="false" aria-label="Rozmiar tekstu AA, 150 procent">AA</button>
-          <button type="button" data-text-size-choice="aaa" aria-pressed="false" aria-label="Rozmiar tekstu AAA, 200 procent">AAA</button>
+          <button type="button" data-text-size-choice="a" aria-pressed="true" aria-label="Rozmiar tekstu A, 100 procent treści">A</button>
+          <button type="button" data-text-size-choice="aa" aria-pressed="false" aria-label="Rozmiar tekstu AA, 150 procent treści">AA</button>
+          <button type="button" data-text-size-choice="aaa" aria-pressed="false" aria-label="Rozmiar tekstu AAA, 200 procent treści">AAA</button>
         </div>
         <button class="access-tool" type="button" data-contrast-toggle data-icon="eye-contrast" aria-pressed="false">
           <span>Wysoki kontrast</span>
@@ -73,8 +73,8 @@
           <h1 data-reveal>Dostępność jako część jakości kodu, a nie dodatkowa funkcja</h1>
           <p class="hero-lead" data-reveal>Dobra dostępność nie powinna być łatą na końcu projektu. Pokazujemy, dlaczego powinna wynikać z jakości komponentów, semantyki i sposobu budowania całego produktu.</p>
           <ul class="hero-meta" data-reveal aria-label="Najważniejsze informacje o artykule">
-            <li data-icon="check">semantyczny kod</li>
-            <li data-icon="check">przewidywalne komponenty</li>
+            <li data-icon="check"><a class="term-link" href="/slownik.html#semantyka">semantyczny</a> kod</li>
+            <li data-icon="check">przewidywalne <a class="term-link" href="/slownik.html#komponent">komponenty</a></li>
             <li data-icon="check">dostępność od początku</li>
           </ul>
         </div>
@@ -92,9 +92,10 @@
       <div class="shell article-shell">
         <section class="article-opening" aria-labelledby="quality-najwazniejsze">
           <div class="article-summary">
-            <p class="kicker">Najważniejsze</p>
-            <h2 id="quality-najwazniejsze">Dostępność nie jest dodatkiem do dobrego kodu. Jest jednym z jego znaków jakości.</h2>
-            <p>Strona może być szybka, nowoczesna i efektowna, a jednocześnie trudna w użyciu dla części osób. Dobre oprogramowanie powinno działać nie tylko na naszym komputerze, ale dla różnych ludzi, urządzeń i sposobów obsługi.</p>
+            <p class="kicker">Prosto i w skrócie</p>
+            <h2 id="quality-najwazniejsze">Wygodną stronę warto budować od początku.</h2>
+            <ul><li>Proste przyciski, jasne opisy i uporządkowana treść pomagają ludziom korzystać ze strony.</li><li>Programista powinien myśleć o tym już podczas budowy.</li><li>Sprawdzanie małych zmian na bieżąco pomaga szybciej znaleźć i poprawić problem.</li></ul>
+            <p>Szczegóły i przykłady znajdziesz poniżej. Trudniejsze słowa wyjaśnia <a href="/slownik.html">słownik prostych pojęć</a>.</p>
           </div>
 
           <nav class="article-toc" aria-label="Spis treści">
@@ -142,7 +143,7 @@
           <div class="article-copy">
             <p class="kicker">Wcześniej znaczy prościej</p>
             <h2 id="quality-wczesnie-title">Im wcześniej zespół myśli o dostępności, tym mniej trzeba później przebudowywać.</h2>
-            <p>W3C zaleca włączać dostępność w cały proces tworzenia produktu i oceniać ją regularnie, a nie dopiero na końcu.</p>
+            <p><a class="term-link" href="/slownik.html#w3c">W3C</a> zaleca włączać dostępność w cały proces tworzenia produktu i oceniać ją regularnie, a nie dopiero na końcu.</p>
             <p>To ma bardzo praktyczny sens. Na początku zmiana projektu formularza może zająć chwilę. Po wdrożeniu formularza w kilkunastu miejscach ta sama decyzja może oznaczać znacznie większą przebudowę.</p>
             <p>Wczesne myślenie o dostępności pomaga też uniknąć sytuacji, w której zespół musi wybierać między terminem publikacji a poprawkami, które powinny być częścią projektu od początku.</p>
 
@@ -203,7 +204,7 @@
             <p class="kicker">ANM Collective</p>
             <h2 id="quality-anm-title">Jak rozumiemy jakość kodu w ANM?</h2>
             <p>Nie chcemy budować stron, które są „dostępne po poprawkach”. Chcemy budować rozwiązania, w których dostępność jest jedną z cech dobrej jakości od początku.</p>
-            <p>Dlatego uczymy się WCAG, rozwijamy wiedzę projektową i techniczną oraz sprawdzamy własne rozwiązania. Interesuje nas nie tylko to, czy kod przechodzi test, ale także czy użytkownik rozumie stronę i potrafi wykonać swoje zadanie.</p>
+            <p>Dlatego uczymy się <a class="term-link" href="/slownik.html#wcag">WCAG</a>, rozwijamy wiedzę projektową i techniczną oraz sprawdzamy własne rozwiązania. Interesuje nas nie tylko to, czy kod przechodzi test, ale także czy użytkownik rozumie stronę i potrafi wykonać swoje zadanie.</p>
             <p>Śledzimy aktualne wytyczne i zmiany standardów. Pracujemy z WCAG 2.2, rozwijamy własne narzędzia do audytów i uczymy się dalej, bo dostępność zmienia się razem z technologią.</p>
             <p>Dla nas to naturalne przedłużenie dobrego developmentu: <strong>kod ma być stabilny, bezpieczny, czytelny, możliwy do rozwijania i dostępny dla możliwie szerokiej grupy użytkowników.</strong></p>
             <p>Jeśli chcesz zobaczyć, dlaczego sama ocena nie wystarcza bez dobrego wdrożenia, przeczytaj też <a href="/baza-wiedzy/dlaczego-audyt-nie-zastapi-dobrego-programisty.html">„Dlaczego sam audyt WCAG nie zastąpi dobrego programisty?”</a>.</p>
@@ -245,6 +246,7 @@
         <a href="/kontakt.html">Kontakt</a>
               <a href="/regulamin.html">Regulamin</a>
         <a href="/polityka-prywatnosci.html">Polityka prywatności</a>
+        <a href="/slownik.html">Słownik prostych pojęć</a>
       </nav>
     </div>
   </footer>
