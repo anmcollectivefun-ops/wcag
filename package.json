@@ -11,11 +11,16 @@
     "dev": "node server.mjs",
     "start": "node server.mjs",
     "test": "node --test tests/*.test.mjs",
-    "check": "node --check server.mjs && node --check scripts/install-font.mjs && node --check src/theme.mjs && node --check src/site.mjs && node --check src/contrast.mjs && npm test",
-    "postinstall": "node scripts/install-font.mjs"
+    "check": "node --check server.mjs && node --check scripts/install-font.mjs && node --check src/theme.mjs && node --check src/site.mjs && node --check src/contrast.mjs && node --check scripts/audit.mjs && node --check scripts/public-pages.mjs && node --check scripts/check-focus.mjs && npm test",
+    "postinstall": "node scripts/install-font.mjs",
+    "audit": "node scripts/audit.mjs"
   },
   "dependencies": {
     "@fontsource-variable/atkinson-hyperlegible-next": "5.3.0",
     "gsap": "^3.13.0"
+  },
+  "devDependencies": {
+    "playwright": "^1.64.1",
+    "@axe-core/playwright": "^4.13.0"
   }
 }
