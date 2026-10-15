@@ -20,19 +20,19 @@
 <body>
   <a class="skip-link" href="#main">Przejdź do treści</a>
   <header class="site-header">
-    <div class="accessibility-bar" aria-label="Ustawienia dostępności">
+    <div class="accessibility-bar" role="group" aria-label="Ustawienia dostępności">
       <div class="shell accessibility-bar-inner">
-        <div class="language-switcher access-group" aria-label="Język strony">
+        <div class="language-switcher access-group" role="group" aria-label="Język strony">
           <span class="access-group-label" data-icon="languages">Język</span>
-          <button type="button" aria-pressed="true" aria-label="Język polski">PL</button>
-          <button type="button" disabled aria-label="Język angielski — w przygotowaniu">EN</button>
-          <button type="button" disabled aria-label="Język ukraiński — w przygotowaniu">UA</button>
+          <button type="button" aria-pressed="true" aria-label="PL — język polski">PL</button>
+          <button type="button" disabled aria-label="EN — język angielski, w przygotowaniu">EN</button>
+          <button type="button" disabled aria-label="UA — język ukraiński, w przygotowaniu">UA</button>
         </div>
         <div class="text-size-switcher access-group" role="group" aria-label="Rozmiar tekstu">
           <span class="access-group-label" data-icon="text-size">Tekst</span>
-          <button type="button" data-text-size-choice="a" aria-pressed="true" aria-label="Rozmiar tekstu A, 100 procent">A</button>
-          <button type="button" data-text-size-choice="aa" aria-pressed="false" aria-label="Rozmiar tekstu AA, 150 procent">AA</button>
-          <button type="button" data-text-size-choice="aaa" aria-pressed="false" aria-label="Rozmiar tekstu AAA, 200 procent">AAA</button>
+          <button type="button" data-text-size-choice="a" aria-pressed="true" aria-label="Rozmiar tekstu A, 100 procent treści">A</button>
+          <button type="button" data-text-size-choice="aa" aria-pressed="false" aria-label="Rozmiar tekstu AA, 150 procent treści">AA</button>
+          <button type="button" data-text-size-choice="aaa" aria-pressed="false" aria-label="Rozmiar tekstu AAA, 200 procent treści">AAA</button>
         </div>
         <button class="access-tool" type="button" data-contrast-toggle data-icon="eye-contrast" aria-pressed="false">
           <span>Wysoki kontrast</span>
@@ -93,10 +93,10 @@
       <div class="shell article-shell">
         <section class="article-opening" aria-labelledby="najwazniejsze">
           <div class="article-summary">
-            <p class="kicker">Najważniejsze</p>
-            <h2 id="najwazniejsze">Audyt ocenia to, co już powstało. Dostępność tworzy się wcześniej.</h2>
-            <p>Audyt WCAG jest potrzebny, bo pokazuje, gdzie gotowa strona lub aplikacja stawia użytkownikowi bariery. Nie zastępuje jednak ludzi, którzy tę stronę projektują, piszą i programują.</p>
-            <p><strong>Najlepsza sytuacja jest wtedy, gdy zespół zna zasady dostępności jeszcze zanim powstanie pierwsza wersja serwisu.</strong> Wtedy audyt staje się sprawdzeniem jakości, a nie początkiem kosztownej przebudowy.</p>
+            <p class="kicker">Prosto i w skrócie</p>
+            <h2 id="najwazniejsze">Raport pokazuje problem. Poprawka go usuwa.</h2>
+            <ul><li>Audyt to sprawdzenie strony i lista znalezionych przeszkód.</li><li>Programista wprowadza potrzebne zmiany.</li><li>Potem ponownie sprawdzamy stronę. Dopiero ten test pokazuje, czy poprawka działa.</li></ul>
+            <p>Szczegóły i przykłady znajdziesz poniżej. Trudniejsze słowa wyjaśnia <a href="/slownik.html">słownik prostych pojęć</a>.</p>
           </div>
 
           <nav class="article-toc" aria-label="Spis treści">
@@ -116,7 +116,7 @@
           <div class="article-copy">
             <p class="kicker">Ocena gotowego produktu</p>
             <h2 id="czym-jest-audyt-title">Czym naprawdę jest audyt WCAG?</h2>
-            <p>Audyt WCAG to <strong>ocena strony lub aplikacji, która już istnieje</strong>. Audytor sprawdza, jak działa gotowy produkt i czy różni użytkownicy mogą z niego korzystać.</p>
+            <p>Audyt <a class="term-link" href="/slownik.html#wcag">WCAG</a> to <strong>ocena strony lub aplikacji, która już istnieje</strong>. Audytor sprawdza, jak działa gotowy produkt i czy różni użytkownicy mogą z niego korzystać.</p>
             <p>Może analizować wygląd, treść, zachowanie elementów, sposób obsługi strony, a także strukturę techniczną. Może zajrzeć do kodu, ale jego główną rolą nie jest przebudowanie tego kodu. <strong>Rolą audytu jest ocena efektu.</strong></p>
             <p>Audyt odpowiada więc na pytania: Czy użytkownik może wykonać swoje zadanie? Gdzie napotyka przeszkodę? Co jest niezgodne z wymaganiami? Co wymaga poprawy?</p>
             <p>Na końcu powstaje raport. To zapis tego, co audytor znalazł. Raport może być bardzo dokładny, ale nadal pozostaje opisem stanu strony w danym momencie.</p>
@@ -133,7 +133,7 @@
             <p class="kicker">Raport to informacja</p>
             <h2 id="raport-title">Dlaczego nawet bardzo dobry raport nie naprawi strony?</h2>
             <p>Raport może wskazać problem bardzo precyzyjnie. Może napisać, że użytkownik nie widzi fokusu, że kolejność przechodzenia po stronie jest nieprawidłowa albo że formularz nie przekazuje ważnego komunikatu.</p>
-            <p>Dla osoby, która na co dzień nie zajmuje się tworzeniem stron, część takich określeń może brzmieć obco. Słowo <strong>„fokus”</strong> oznacza po prostu widoczne zaznaczenie elementu, na którym w danej chwili znajduje się użytkownik korzystający z klawiatury. <strong>Tabulator</strong> to klawisz, którym wiele osób przechodzi po kolejnych linkach, przyciskach i polach formularza bez używania myszy.</p>
+            <p>Dla osoby, która na co dzień nie zajmuje się tworzeniem stron, część takich określeń może brzmieć obco. Słowo <strong>„<a class="term-link" href="/slownik.html#fokus">fokus</a>”</strong> oznacza po prostu widoczne zaznaczenie elementu, na którym w danej chwili znajduje się użytkownik korzystający z klawiatury. <strong>Tabulator</strong> to klawisz, którym wiele osób przechodzi po kolejnych linkach, przyciskach i polach formularza bez używania myszy.</p>
             <p>To pokazuje ważną rzecz: <strong>raport trzeba jeszcze umieć przełożyć na działanie</strong>.</p>
             <p>Ktoś musi zrozumieć, skąd problem się wziął, znaleźć odpowiednie miejsce w projekcie lub kodzie i wprowadzić zmianę. Czasem poprawka jest prosta. Innym razem jeden błąd wynika z tego, jak zbudowano cały komponent albo cały proces.</p>
             <p>Dlatego audyt i wdrożenie to dwa różne etapy. Pierwszy mówi, <em>co</em> trzeba poprawić. Drugi odpowiada na pytanie, <em>jak</em> zrobić to dobrze.</p>
@@ -285,6 +285,7 @@
         <a href="/kontakt.html">Kontakt</a>
               <a href="/regulamin.html">Regulamin</a>
         <a href="/polityka-prywatnosci.html">Polityka prywatności</a>
+        <a href="/slownik.html">Słownik prostych pojęć</a>
       </nav>
     </div>
   </footer>

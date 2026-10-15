@@ -20,19 +20,19 @@
 <body>
   <a class="skip-link" href="#main">Przejdź do treści</a>
   <header class="site-header">
-    <div class="accessibility-bar" aria-label="Ustawienia dostępności">
+    <div class="accessibility-bar" role="group" aria-label="Ustawienia dostępności">
       <div class="shell accessibility-bar-inner">
-        <div class="language-switcher access-group" aria-label="Język strony">
+        <div class="language-switcher access-group" role="group" aria-label="Język strony">
           <span class="access-group-label" data-icon="languages">Język</span>
-          <button type="button" aria-pressed="true" aria-label="Język polski">PL</button>
-          <button type="button" disabled aria-label="Język angielski — w przygotowaniu">EN</button>
-          <button type="button" disabled aria-label="Język ukraiński — w przygotowaniu">UA</button>
+          <button type="button" aria-pressed="true" aria-label="PL — język polski">PL</button>
+          <button type="button" disabled aria-label="EN — język angielski, w przygotowaniu">EN</button>
+          <button type="button" disabled aria-label="UA — język ukraiński, w przygotowaniu">UA</button>
         </div>
         <div class="text-size-switcher access-group" role="group" aria-label="Rozmiar tekstu">
           <span class="access-group-label" data-icon="text-size">Tekst</span>
-          <button type="button" data-text-size-choice="a" aria-pressed="true" aria-label="Rozmiar tekstu A, 100 procent">A</button>
-          <button type="button" data-text-size-choice="aa" aria-pressed="false" aria-label="Rozmiar tekstu AA, 150 procent">AA</button>
-          <button type="button" data-text-size-choice="aaa" aria-pressed="false" aria-label="Rozmiar tekstu AAA, 200 procent">AAA</button>
+          <button type="button" data-text-size-choice="a" aria-pressed="true" aria-label="Rozmiar tekstu A, 100 procent treści">A</button>
+          <button type="button" data-text-size-choice="aa" aria-pressed="false" aria-label="Rozmiar tekstu AA, 150 procent treści">AA</button>
+          <button type="button" data-text-size-choice="aaa" aria-pressed="false" aria-label="Rozmiar tekstu AAA, 200 procent treści">AAA</button>
         </div>
         <button class="access-tool" type="button" data-contrast-toggle data-icon="eye-contrast" aria-pressed="false">
           <span>Wysoki kontrast</span>
@@ -71,7 +71,7 @@
         <div class="hero-copy home-hero-copy">
           <p class="kicker" data-reveal>Baza wiedzy · poziomy zgodności</p>
           <h1 data-reveal>Poziomy WCAG A, AA i AAA — czym się różnią?</h1>
-          <p class="hero-lead" data-reveal>Wyjaśniamy, co oznaczają poziomy A, AA i AAA, jak czytać wyniki audytu i dlaczego wyższy poziom nie zawsze oznacza po prostu „więcej punktów”.</p>
+          <p class="hero-lead" data-reveal>Wyjaśniamy, co oznaczają poziomy A, <a class="term-link" href="/slownik.html#poziomy">AA</a> i AAA, jak czytać wyniki audytu i dlaczego wyższy poziom nie zawsze oznacza po prostu „więcej punktów”.</p>
           <ul class="hero-meta" data-reveal aria-label="Najważniejsze informacje o artykule">
             <li data-icon="check">poziom A</li>
             <li data-icon="check">poziom AA</li>
@@ -92,10 +92,10 @@
       <div class="shell article-shell">
         <section class="article-opening" aria-labelledby="levels-summary">
           <div class="article-summary">
-            <p class="kicker">Najważniejsze</p>
-            <h2 id="levels-summary">A, AA i AAA to trzy poziomy zgodności WCAG.</h2>
-            <p>Poziom A zawiera wymagania podstawowe. AA obejmuje wszystkie wymagania A oraz kolejne kryteria poziomu AA. AAA obejmuje A, AA i kryteria najwyższego poziomu.</p>
-            <p><strong>Nie są to trzy osobne wersje dostępności. Każdy kolejny poziom buduje się na poprzednim.</strong></p>
+            <p class="kicker">Prosto i w skrócie</p>
+            <h2 id="levels-summary">A, AA i AAA to trzy poziomy zasad.</h2>
+            <ul><li>Poziom A obejmuje podstawowe wymagania.</li><li>Poziom AA obejmuje A i kolejne ułatwienia.</li><li>Poziom AAA obejmuje A, AA i najbardziej wymagające ułatwienia. Zgodność oceniamy dla całej strony i wszystkich zasad, które jej dotyczą.</li></ul>
+            <p>Szczegóły i przykłady znajdziesz poniżej. Trudniejsze słowa wyjaśnia <a href="/slownik.html">słownik prostych pojęć</a>.</p>
           </div>
 
           <nav class="article-toc" aria-label="Spis treści">
@@ -115,7 +115,7 @@
           <div class="article-copy">
             <p class="kicker">Jedna idea, różny zakres</p>
             <h2 id="levels-po-co-title">Po co WCAG dzieli wymagania na A, AA i AAA?</h2>
-            <p>WCAG opisuje wiele różnych barier. Niektóre mogą całkowicie uniemożliwić korzystanie ze strony. Inne utrudniają ją określonej grupie użytkowników albo wymagają bardziej rozbudowanych rozwiązań.</p>
+            <p><a class="term-link" href="/slownik.html#wcag">WCAG</a> opisuje wiele różnych barier. Niektóre mogą całkowicie uniemożliwić korzystanie ze strony. Inne utrudniają ją określonej grupie użytkowników albo wymagają bardziej rozbudowanych rozwiązań.</p>
             <p>Dlatego kryteria podzielono na trzy poziomy zgodności. Dzięki temu organizacja może jasno określić, jaki zakres wymagań spełnia jej strona lub aplikacja.</p>
             <p>Ważne jest jednak, żeby nie myśleć o nich jak o szkolnych ocenach. <strong>A nie oznacza „jedynki”, AA „czwórki”, a AAA „szóstki”.</strong> To po prostu coraz szerszy zestaw wymagań.</p>
 
@@ -171,7 +171,7 @@
           <div class="article-copy">
             <p class="kicker">Poziom AA</p>
             <h2 id="levels-aa-title">Poziom AA idzie dalej i odpowiada na wiele barier spotykanych w codziennym korzystaniu ze strony.</h2>
-            <p>AA jest dziś bardzo ważnym punktem odniesienia. W3C wskazuje, że wiele organizacji właśnie do tego poziomu dąży w swoich politykach dostępności.</p>
+            <p>AA jest dziś bardzo ważnym punktem odniesienia. <a class="term-link" href="/slownik.html#w3c">W3C</a> wskazuje, że wiele organizacji właśnie do tego poziomu dąży w swoich politykach dostępności.</p>
             <p>Na tym poziomie pojawiają się wymagania dotyczące między innymi czytelności tekstu, kontrastu, możliwości powiększania treści, widoczności fokusu i wygodniejszej obsługi interfejsu.</p>
             <p>W praktyce chodzi o sytuacje, które wiele osób spotyka każdego dnia.</p>
 
@@ -182,7 +182,7 @@
             <p>Użytkownik może potrzebować znacznie większego tekstu. Nie powinien wtedy tracić dostępu do przycisków, formularzy czy ważnych informacji.</p>
 
             <h3>Użytkownik klawiatury musi wiedzieć, gdzie się znajduje</h3>
-            <p>Widoczny fokus pokazuje aktualnie wybrany element. W WCAG 2.2 poziom AA dodatkowo chroni go przed zasłonięciem przez inne części interfejsu.</p>
+            <p>Widoczny <a class="term-link" href="/slownik.html#fokus">fokus</a> pokazuje aktualnie wybrany element. W WCAG 2.2 poziom AA dodatkowo chroni go przed zasłonięciem przez inne części interfejsu.</p>
 
             <p><strong>AA nie sprowadza się więc do „większej liczby punktów”. To kolejna warstwa zabezpieczeń, dzięki którym więcej osób może samodzielnie korzystać z produktu.</strong></p>
           </div>
@@ -288,6 +288,7 @@
         <a href="/kontakt.html">Kontakt</a>
               <a href="/regulamin.html">Regulamin</a>
         <a href="/polityka-prywatnosci.html">Polityka prywatności</a>
+        <a href="/slownik.html">Słownik prostych pojęć</a>
       </nav>
     </div>
   </footer>

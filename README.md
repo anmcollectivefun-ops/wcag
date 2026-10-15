@@ -1,35 +1,30 @@
 # ANM Access
 
-ANM Access to rozwijana przez ANM Collective platforma do audytu dostępności cyfrowej pod kątem WCAG 2.2, w tym kryteriów poziomów A, AA i AAA.
+Serwis ANM Collective o dostępności stron i aplikacji. Cel projektu obejmuje WCAG 2.2 A, AA i właściwe kryteria AAA. Wyniki automatyczne oraz wymagane oceny manualne opisuje [plan testów](docs/PLAN-TESTOW-DOSTEPNOSCI.md).
 
-## Publiczne strony
+## Strony
 
-- Strona główna: `/`
-- Audyt WCAG: `/audyt.html`
-- Szkolenia: `/szkolenia.html`
-- Baza wiedzy: `/baza-wiedzy.html`
-- O nas: `/o-nas.html`
-- Kontakt: `/kontakt.html`
+Strona główna, audyt, szkolenia, baza wiedzy i jej artykuły, o nas, kontakt, regulamin, polityka prywatności oraz słownik prostych pojęć. Skrypt audytu znajduje wszystkie pliki HTML bez ręcznej listy podstron.
 
-Wszystkie strony korzystają z jednego systemu kolorów, trzech motywów (jasny, ciemny, czytanie), Atkinson Hyperlegible Next oraz globalnego skalowania tekstu A / AA / AAA = 100% / 150% / 200%.
+Wspólne ustawienia obejmują trzy motywy (jasny, ciemny i czytanie), wysoki kontrast, dodatkowe powiększenie treści i odczyt strony na głos. Przyciski A / AA / AAA oznaczają ustawienia wielkości treści 100% / 150% / 200%; nie są potwierdzeniem poziomu zgodności i zachowują kompaktową nawigację. Natywny zoom przeglądarki działa niezależnie.
 
 ## Uruchomienie
 
-Wymagany Node.js 20 lub nowszy.
+Node.js 20 lub nowszy:
 
 ```bash
-npm install
-npm run dev
+npm ci
+npm start
 ```
 
-Aplikacja działa domyślnie pod `http://127.0.0.1:4173`.
+Serwis działa pod `http://127.0.0.1:4173`. Instalacja przygotowuje lokalne fonty Atkinson Hyperlegible Next i GSAP.
 
 ## Testy
 
 ```bash
 npm run check
+npx playwright install chromium
+npm run audit
 ```
 
-Workflow audytu przeglądarkowego sprawdza wszystkie publiczne strony przy 1280 i 320 CSS px, reguły axe-core oraz reflow przy globalnym trybie AAA/200%.
-
-Pełna deklaracja zgodności WCAG 2.2 AAA będzie możliwa dopiero po zakończeniu całej checklisty oraz testów manualnych wymaganych dla odpowiednich kryteriów.
+Raport automatyczny: `audit-artifacts/report.json`. Obejmuje reguły axe-core A/AA/AAA, trzy motywy, 1280 i 320 CSS px oraz dodatkowe ustawienia tekstu. Pole `incomplete` i plan testów wskazują dalszą ocenę. Pełne AA lub AAA wymaga oceny całych stron i wszystkich właściwych kryteriów; sam wynik bez naruszeń automatycznych nie wystarcza.

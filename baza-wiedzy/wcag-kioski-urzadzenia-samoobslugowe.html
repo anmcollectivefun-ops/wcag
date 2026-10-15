@@ -20,19 +20,19 @@
 <body>
   <a class="skip-link" href="#main">Przejdź do treści</a>
   <header class="site-header">
-    <div class="accessibility-bar" aria-label="Ustawienia dostępności">
+    <div class="accessibility-bar" role="group" aria-label="Ustawienia dostępności">
       <div class="shell accessibility-bar-inner">
-        <div class="language-switcher access-group" aria-label="Język strony">
+        <div class="language-switcher access-group" role="group" aria-label="Język strony">
           <span class="access-group-label" data-icon="languages">Język</span>
-          <button type="button" aria-pressed="true" aria-label="Język polski">PL</button>
-          <button type="button" disabled aria-label="Język angielski — w przygotowaniu">EN</button>
-          <button type="button" disabled aria-label="Język ukraiński — w przygotowaniu">UA</button>
+          <button type="button" aria-pressed="true" aria-label="PL — język polski">PL</button>
+          <button type="button" disabled aria-label="EN — język angielski, w przygotowaniu">EN</button>
+          <button type="button" disabled aria-label="UA — język ukraiński, w przygotowaniu">UA</button>
         </div>
         <div class="text-size-switcher access-group" role="group" aria-label="Rozmiar tekstu">
           <span class="access-group-label" data-icon="text-size">Tekst</span>
-          <button type="button" data-text-size-choice="a" aria-pressed="true" aria-label="Rozmiar tekstu A, 100 procent">A</button>
-          <button type="button" data-text-size-choice="aa" aria-pressed="false" aria-label="Rozmiar tekstu AA, 150 procent">AA</button>
-          <button type="button" data-text-size-choice="aaa" aria-pressed="false" aria-label="Rozmiar tekstu AAA, 200 procent">AAA</button>
+          <button type="button" data-text-size-choice="a" aria-pressed="true" aria-label="Rozmiar tekstu A, 100 procent treści">A</button>
+          <button type="button" data-text-size-choice="aa" aria-pressed="false" aria-label="Rozmiar tekstu AA, 150 procent treści">AA</button>
+          <button type="button" data-text-size-choice="aaa" aria-pressed="false" aria-label="Rozmiar tekstu AAA, 200 procent treści">AAA</button>
         </div>
         <button class="access-tool" type="button" data-contrast-toggle data-icon="eye-contrast" aria-pressed="false">
           <span>Wysoki kontrast</span>
@@ -92,10 +92,10 @@
       <div class="shell article-shell">
         <section class="article-opening" aria-labelledby="kiosk-summary">
           <div class="article-summary">
-            <p class="kicker">Najważniejsze</p>
-            <h2 id="kiosk-summary">Kiosk samoobsługowy też jest interfejsem. Użytkownik musi móc go zobaczyć, zrozumieć i obsłużyć.</h2>
-            <p>Automat biletowy, bankomat, terminal płatniczy czy urządzenie do odprawy nie jest zwykłym ekranem. Łączy oprogramowanie z fizycznym urządzeniem, dlatego dostępność trzeba oceniać szerzej niż na stronie internetowej.</p>
-            <p><strong>Nie każdy kiosk podlega tym samym przepisom, ale określone terminale samoobsługowe są objęte Polskim Aktem o Dostępności.</strong></p>
+            <p class="kicker">Prosto i w skrócie</p>
+            <h2 id="kiosk-summary">Ekran w urządzeniu też powinien być łatwy w obsłudze.</h2>
+            <ul><li>Kiosk to na przykład urządzenie do kupowania biletu lub pobierania numerka w kolejce.</li><li>Liczą się czytelne napisy, wygodne przyciski i zrozumiałe instrukcje.</li><li>Znaczenie ma też samo urządzenie: jego położenie, wysokość i dostępne sposoby obsługi. <a class="term-link" href="/slownik.html#wcag">WCAG</a> opisuje tylko część potrzebnych wymagań.</li></ul>
+            <p>Szczegóły i przykłady znajdziesz poniżej. Trudniejsze słowa wyjaśnia <a href="/slownik.html">słownik prostych pojęć</a>.</p>
           </div>
           <nav class="article-toc" aria-label="Spis treści">
             <strong>W tym artykule</strong>
@@ -160,7 +160,7 @@
             <p class="kicker">Interfejs</p>
             <h2 id="kiosk-ekran-title">Ekran kiosku powinien być czytelny, przewidywalny i możliwy do obsługi różnymi sposobami.</h2>
             <p>Tu przydają się zasady znane z dostępności stron: dobry kontrast, czytelny tekst, jasne komunikaty, odpowiednia wielkość elementów i logiczna kolejność kroków.</p>
-            <p>Ale kiosk może wymagać dodatkowych rozwiązań. W3C w dokumencie WCAG2ICT opisuje sposób odnoszenia zasad WCAG do technologii innych niż typowe strony internetowe. Wskazuje też urządzenia o „zamkniętej funkcjonalności”, do których należą między innymi kioski, bankomaty i terminale samoobsługowe.</p>
+            <p>Ale kiosk może wymagać dodatkowych rozwiązań. <a class="term-link" href="/slownik.html#w3c">W3C</a> w dokumencie <a class="term-link" href="/slownik.html#wcag2ict">WCAG2ICT</a> opisuje sposób odnoszenia zasad WCAG do technologii innych niż typowe strony internetowe. Wskazuje też urządzenia o „zamkniętej funkcjonalności”, do których należą między innymi kioski, bankomaty i terminale samoobsługowe.</p>
             <p>W takim urządzeniu użytkownik może nie mieć możliwości podłączenia własnej technologii wspomagającej. Dlatego część wsparcia musi zapewnić samo urządzenie.</p>
 
             <div class="article-checklist">
@@ -178,7 +178,7 @@
             <h2 id="kiosk-fizyczne-title">Dostępny interfejs nic nie da, jeśli użytkownik nie może dosięgnąć do urządzenia.</h2>
             <p>To najprostszy przykład pokazujący, dlaczego sam test ekranu nie wystarcza.</p>
             <p>Znaczenie ma wysokość elementów, miejsce na podjazd wózkiem, możliwość odczytania ekranu z różnych pozycji, dostęp do klawiatury lub czytnika kart i warunki otoczenia.</p>
-            <p>W praktyce dostępność kiosku trzeba więc analizować jako całość: urządzenie, interfejs, lokalizację i przebieg całego zadania.</p>
+            <p>W praktyce dostępność kiosku trzeba więc analizować jako całość: urządzenie, <a class="term-link" href="/slownik.html#interfejs">interfejs</a>, lokalizację i przebieg całego zadania.</p>
           </div>
           <figure class="article-figure article-figure-wide">
             <img src="/assets/images/grupa2.webp" alt="Osoby o różnych potrzebach korzystają z przestrzeni i technologii." width="1200" height="800" loading="lazy" decoding="async">
@@ -232,6 +232,7 @@
         <a href="/kontakt.html">Kontakt</a>
               <a href="/regulamin.html">Regulamin</a>
         <a href="/polityka-prywatnosci.html">Polityka prywatności</a>
+        <a href="/slownik.html">Słownik prostych pojęć</a>
       </nav>
     </div>
   </footer>

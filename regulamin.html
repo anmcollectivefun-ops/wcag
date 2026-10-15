@@ -48,20 +48,20 @@
   <a class="skip-link" href="#main">Przejdź do treści</a>
 
   <header class="site-header">
-    <div class="accessibility-bar" aria-label="Ustawienia dostępności">
+    <div class="accessibility-bar" role="group" aria-label="Ustawienia dostępności">
       <div class="shell accessibility-bar-inner">
-        <div class="language-switcher access-group" aria-label="Język strony">
+        <div class="language-switcher access-group" role="group" aria-label="Język strony">
           <span class="access-group-label" data-icon="languages">Język</span>
-          <button type="button" aria-pressed="true" aria-label="Język polski">PL</button>
-          <button type="button" disabled aria-label="Język angielski — w przygotowaniu">EN</button>
-          <button type="button" disabled aria-label="Język ukraiński — w przygotowaniu">UA</button>
+          <button type="button" aria-pressed="true" aria-label="PL — język polski">PL</button>
+          <button type="button" disabled aria-label="EN — język angielski, w przygotowaniu">EN</button>
+          <button type="button" disabled aria-label="UA — język ukraiński, w przygotowaniu">UA</button>
         </div>
 
         <div class="text-size-switcher access-group" role="group" aria-label="Rozmiar tekstu">
           <span class="access-group-label" data-icon="text-size">Tekst</span>
-          <button type="button" data-text-size-choice="a" aria-pressed="true" aria-label="Rozmiar tekstu A, 100 procent">A</button>
-          <button type="button" data-text-size-choice="aa" aria-pressed="false" aria-label="Rozmiar tekstu AA, 150 procent">AA</button>
-          <button type="button" data-text-size-choice="aaa" aria-pressed="false" aria-label="Rozmiar tekstu AAA, 200 procent">AAA</button>
+          <button type="button" data-text-size-choice="a" aria-pressed="true" aria-label="Rozmiar tekstu A, 100 procent treści">A</button>
+          <button type="button" data-text-size-choice="aa" aria-pressed="false" aria-label="Rozmiar tekstu AA, 150 procent treści">AA</button>
+          <button type="button" data-text-size-choice="aaa" aria-pressed="false" aria-label="Rozmiar tekstu AAA, 200 procent treści">AAA</button>
         </div>
 
         <button class="access-tool" type="button" data-contrast-toggle data-icon="eye-contrast" aria-pressed="false">
@@ -128,10 +128,10 @@
             <p class="kicker">Regulamin w skrócie</p>
             <h2 id="terms-summary">Najpierw ustalamy zakres. Potem rozpoczynamy pracę.</h2>
             <ul>
-              <li><strong>Serwis ANM Access ma charakter informacyjny.</strong> Nie ma tutaj koszyka ani automatycznego zakupu płatnej usługi.</li>
+              <li><strong>ANM Access przedstawia nasze usługi.</strong> Zamówienie ustalamy z Tobą w osobnym kontakcie.</li>
               <li><strong>Płatne zlecenie rozpoczynamy po ustaleniu zakresu, ceny i terminu</strong> oraz po akceptacji oferty, zlecenia albo umowy.</li>
-              <li><strong>Zakres indywidualnej oferty lub umowy jest ważniejszy od ogólnych zapisów regulaminu</strong>, jeśli strony uzgodnią inne zasady dla konkretnego projektu.</li>
-              <li><strong>Audyt opisuje konkretny zakres i stan produktu w czasie badania.</strong> Późniejsze zmiany na stronie mogą wymagać ponownego testu.</li>
+              <li><strong>Osobna oferta lub umowa może określać inne zasady dla Twojego projektu.</strong> Wtedy stosujemy te uzgodnione zasady.</li>
+              <li><strong>Audyt pokazuje wynik sprawdzenia ustalonej części strony w danym czasie.</strong> Po zmianach na stronie może być potrzebny kolejny test.</li>
               <li><strong>Reklamacje można składać elektronicznie.</strong> Konsument otrzyma odpowiedź nie później niż w ustawowym terminie 14 dni.</li>
             </ul>
             <p class="meta">Wersja 1.0 · obowiązuje od 26 września 2026 r.</p>
@@ -165,9 +165,9 @@
             <h2 id="terms-provider-title">Kto świadczy usługi?</h2>
             <p>Usługodawcą i właścicielem serwisu ANM Access jest <strong>ANM Collective Sp. z o.o.</strong> z siedzibą pod adresem Włodzimierz 5A, 98-105 Wodzierady, Polska.</p>
             <ul>
-              <li>KRS: 0001219850,</li>
-              <li>NIP: 8311649267,</li>
-              <li>REGON: 543820292,</li>
+              <li><a class="term-link" href="/slownik.html#krs">KRS</a>: 0001219850,</li>
+              <li><a class="term-link" href="/slownik.html#nip">NIP</a>: 8311649267,</li>
+              <li><a class="term-link" href="/slownik.html#regon">REGON</a>: 543820292,</li>
               <li>telefon: <a href="tel:+48572069851">+48 572 069 851</a>,</li>
               <li>kontakt ogólny: <a href="mailto:kontakt@anmcollective.pl">kontakt@anmcollective.pl</a>,</li>
               <li>zapytania ofertowe: <a href="mailto:kontakt@anmcollectivemail.pl">kontakt@anmcollectivemail.pl</a>.</li>
@@ -202,7 +202,7 @@
             <p>Umowa o bezpłatne korzystanie z publicznej części Serwisu zostaje zawarta w chwili rozpoczęcia korzystania z Serwisu i kończy się w chwili opuszczenia strony lub zamknięcia przeglądarki.</p>
 
             <h3>Wymagania techniczne</h3>
-            <p>Do korzystania z Serwisu potrzebne są: urządzenie z dostępem do internetu, aktualna przeglądarka internetowa oraz obsługa standardowych technologii HTML i CSS. JavaScript jest potrzebny do części funkcji interaktywnych, takich jak przełączanie motywu, rozmiaru tekstu, wysokiego kontrastu i czytanie strony.</p>
+            <p>Do korzystania z Serwisu potrzebne są: urządzenie z dostępem do internetu, aktualna przeglądarka internetowa oraz obsługa standardowych technologii <a class="term-link" href="/slownik.html#html">HTML</a> i <a class="term-link" href="/slownik.html#css">CSS</a>. <a class="term-link" href="/slownik.html#javascript">JavaScript</a> jest potrzebny do części funkcji interaktywnych, takich jak przełączanie motywu, rozmiaru tekstu, wysokiego kontrastu i czytanie strony.</p>
             <p>Do kontaktu e-mail potrzebny jest dostęp do poczty elektronicznej. ANM nie wymaga założenia konta użytkownika do przeglądania publicznej części Serwisu.</p>
 
             <h3>Bezpieczne i zgodne z prawem korzystanie</h3>
@@ -218,7 +218,7 @@
             <h2 id="terms-services-title">Jakie usługi może obejmować współpraca?</h2>
             <p>Dokładny zakres zawsze wynika z Oferty lub Umowy. W zależności od projektu ANM może świadczyć między innymi:</p>
             <ul>
-              <li>audyty dostępności cyfrowej według uzgodnionej wersji i poziomu WCAG,</li>
+              <li>audyty dostępności cyfrowej według uzgodnionej wersji i poziomu <a class="term-link" href="/slownik.html#wcag">WCAG</a>,</li>
               <li>testy automatyczne i manualne stron, aplikacji oraz procesów cyfrowych,</li>
               <li>analizę kodu, treści, formularzy i sposobu obsługi interfejsu,</li>
               <li>przygotowanie raportu i zaleceń wdrożeniowych,</li>
@@ -292,7 +292,7 @@
           <div class="article-copy">
             <p class="kicker">§ 9</p>
             <h2 id="terms-audit-title">Jak rozumieć wynik audytu WCAG?</h2>
-            <p>Audyt jest oceną produktu w <strong>konkretnym zakresie i w konkretnym momencie</strong>. Raport opisuje strony, widoki, komponenty, procesy i kryteria objęte zleceniem.</p>
+            <p>Audyt jest oceną produktu w <strong>konkretnym zakresie i w konkretnym momencie</strong>. Raport opisuje strony, widoki, <a class="term-link" href="/slownik.html#komponent">komponenty</a>, procesy i kryteria objęte zleceniem.</p>
             <p>Jeżeli audyt obejmuje próbę reprezentatywną zamiast całego serwisu, informacja o tym znajduje się w zakresie badania lub Raporcie.</p>
             <p>Test automatyczny jest elementem pomocniczym. Sam wynik narzędzia automatycznego nie stanowi potwierdzenia pełnej zgodności z WCAG.</p>
             <p>Po zakończeniu audytu Klient lub osoba trzecia może zmienić kod, treść, wtyczkę, motyw, integrację albo konfigurację. Taka zmiana może wpłynąć na dostępność i nie jest objęta wcześniejszym wynikiem, jeśli nie została ponownie sprawdzona.</p>
@@ -305,7 +305,7 @@
             <p class="kicker">§ 10</p>
             <h2 id="terms-certificate-title">Co oznacza Certyfikat ANM Access?</h2>
             <p>Certyfikat ANM Access jest <strong>firmowym potwierdzeniem ANM Collective</strong> dotyczącym zakresu wskazanego w certyfikacie lub powiązanym Raporcie.</p>
-            <p>Nie jest certyfikatem wydawanym przez W3C, organ państwowy ani jednostkę akredytowaną, chyba że dokument wyraźnie stanowi inaczej.</p>
+            <p>Nie jest certyfikatem wydawanym przez <a class="term-link" href="/slownik.html#w3c">W3C</a>, organ państwowy ani jednostkę akredytowaną, chyba że dokument wyraźnie stanowi inaczej.</p>
             <p>Certyfikat może zostać wystawiony po zakończeniu uzgodnionych testów i potwierdzeniu wyniku dla wskazanego zakresu. Nie potwierdza dostępności elementów, podstron lub procesów, które nie były objęte badaniem.</p>
             <p>Jeżeli po wydaniu certyfikatu serwis zostanie istotnie zmieniony, wynik może wymagać ponownej weryfikacji. Klient nie powinien przedstawiać certyfikatu w sposób sugerujący szerszy zakres niż faktycznie sprawdzony.</p>
           </div>
@@ -330,7 +330,7 @@
             <p>Gwarancja obejmuje usunięcie usterki wynikającej z wykonania ANM. Nie obejmuje nowych funkcji ani problemów powstałych wskutek:</p>
             <ul>
               <li>zmian wykonanych po odbiorze przez Klienta lub osoby trzecie,</li>
-              <li>aktualizacji, awarii albo zmiany działania zewnętrznej platformy, wtyczki, API, hostingu lub innego dostawcy,</li>
+              <li>aktualizacji, awarii albo zmiany działania zewnętrznej platformy, wtyczki, <a class="term-link" href="/slownik.html#api">API</a>, hostingu lub innego dostawcy,</li>
               <li>nieprawidłowej administracji, utraty danych dostępowych, złośliwego oprogramowania lub naruszenia bezpieczeństwa niezależnego od ANM,</li>
               <li>zmiany prawa, standardu lub wytycznych po odbiorze projektu,</li>
               <li>rozbudowy serwisu poza zakres objęty odbiorem.</li>
@@ -436,6 +436,7 @@
         <a href="/kontakt.html">Kontakt</a>
         <a href="/regulamin.html" aria-current="page">Regulamin</a>
         <a href="/polityka-prywatnosci.html">Polityka prywatności</a>
+        <a href="/slownik.html">Słownik prostych pojęć</a>
       </nav>
     </div>
   </footer>

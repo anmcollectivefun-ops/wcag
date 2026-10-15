@@ -20,19 +20,19 @@
 <body>
   <a class="skip-link" href="#main">Przejdź do treści</a>
   <header class="site-header">
-    <div class="accessibility-bar" aria-label="Ustawienia dostępności">
+    <div class="accessibility-bar" role="group" aria-label="Ustawienia dostępności">
       <div class="shell accessibility-bar-inner">
-        <div class="language-switcher access-group" aria-label="Język strony">
+        <div class="language-switcher access-group" role="group" aria-label="Język strony">
           <span class="access-group-label" data-icon="languages">Język</span>
-          <button type="button" aria-pressed="true" aria-label="Język polski">PL</button>
-          <button type="button" disabled aria-label="Język angielski — w przygotowaniu">EN</button>
-          <button type="button" disabled aria-label="Język ukraiński — w przygotowaniu">UA</button>
+          <button type="button" aria-pressed="true" aria-label="PL — język polski">PL</button>
+          <button type="button" disabled aria-label="EN — język angielski, w przygotowaniu">EN</button>
+          <button type="button" disabled aria-label="UA — język ukraiński, w przygotowaniu">UA</button>
         </div>
         <div class="text-size-switcher access-group" role="group" aria-label="Rozmiar tekstu">
           <span class="access-group-label" data-icon="text-size">Tekst</span>
-          <button type="button" data-text-size-choice="a" aria-pressed="true" aria-label="Rozmiar tekstu A, 100 procent">A</button>
-          <button type="button" data-text-size-choice="aa" aria-pressed="false" aria-label="Rozmiar tekstu AA, 150 procent">AA</button>
-          <button type="button" data-text-size-choice="aaa" aria-pressed="false" aria-label="Rozmiar tekstu AAA, 200 procent">AAA</button>
+          <button type="button" data-text-size-choice="a" aria-pressed="true" aria-label="Rozmiar tekstu A, 100 procent treści">A</button>
+          <button type="button" data-text-size-choice="aa" aria-pressed="false" aria-label="Rozmiar tekstu AA, 150 procent treści">AA</button>
+          <button type="button" data-text-size-choice="aaa" aria-pressed="false" aria-label="Rozmiar tekstu AAA, 200 procent treści">AAA</button>
         </div>
         <button class="access-tool" type="button" data-contrast-toggle data-icon="eye-contrast" aria-pressed="false">
           <span>Wysoki kontrast</span>
@@ -71,7 +71,7 @@
         <div class="hero-copy home-hero-copy">
           <p class="kicker" data-reveal>Baza wiedzy · dla programistów</p>
           <h1 data-reveal>WCAG dla programisty — jak wdrażać dostępność w kodzie?</h1>
-          <p class="hero-lead" data-reveal>Zbieramy najważniejsze zasady dla developera: semantyczny HTML, klawiatura, fokus, formularze, komunikaty i ARIA bez zbędnej teorii.</p>
+          <p class="hero-lead" data-reveal>Zbieramy najważniejsze zasady dla developera: <a class="term-link" href="/slownik.html#semantyka">semantyczny</a> <a class="term-link" href="/slownik.html#html">HTML</a>, klawiatura, <a class="term-link" href="/slownik.html#fokus">fokus</a>, formularze, komunikaty i <a class="term-link" href="/slownik.html#aria">ARIA</a> bez zbędnej teorii.</p>
           <ul class="hero-meta" data-reveal aria-label="Najważniejsze informacje o artykule">
             <li data-icon="check">semantyczny HTML</li>
             <li data-icon="check">klawiatura i fokus</li>
@@ -92,10 +92,10 @@
       <div class="shell article-shell">
         <section class="article-opening" aria-labelledby="dev-summary">
           <div class="article-summary">
-            <p class="kicker">Najważniejsze</p>
-            <h2 id="dev-summary">Dostępny kod zaczyna się od zwykłych, dobrych decyzji programistycznych.</h2>
-            <p>Nie trzeba od razu znać każdego numeru kryterium WCAG na pamięć. Trzeba rozumieć, jak przeglądarka, klawiatura i technologie wspomagające odczytują to, co budujemy.</p>
-            <p><strong>Im mniej programista musi „naprawiać dostępność” na końcu, tym lepiej została uwzględniona w samym sposobie tworzenia produktu.</strong></p>
+            <p class="kicker">Prosto i w skrócie</p>
+            <h2 id="dev-summary">Buduj stronę, którą można łatwo odczytać i obsłużyć.</h2>
+            <ul><li>Używaj prawdziwych przycisków, odnośników i nagłówków. Przeglądarka rozpoznaje ich zadania.</li><li>Sprawdź, czy wszystko działa przy użyciu samej klawiatury.</li><li>Dodaj jasne nazwy i wskazówki przy formularzach. Testuj zmiany także programem czytającym stronę.</li></ul>
+            <p>Szczegóły i przykłady znajdziesz poniżej. Trudniejsze słowa wyjaśnia <a href="/slownik.html">słownik prostych pojęć</a>.</p>
           </div>
           <nav class="article-toc" aria-label="Spis treści">
             <strong>W tym artykule</strong>
@@ -233,6 +233,7 @@
         <a href="/kontakt.html">Kontakt</a>
               <a href="/regulamin.html">Regulamin</a>
         <a href="/polityka-prywatnosci.html">Polityka prywatności</a>
+        <a href="/slownik.html">Słownik prostych pojęć</a>
       </nav>
     </div>
   </footer>

@@ -20,19 +20,19 @@
 <body>
   <a class="skip-link" href="#main">Przejdź do treści</a>
   <header class="site-header">
-    <div class="accessibility-bar" aria-label="Ustawienia dostępności">
+    <div class="accessibility-bar" role="group" aria-label="Ustawienia dostępności">
       <div class="shell accessibility-bar-inner">
-        <div class="language-switcher access-group" aria-label="Język strony">
+        <div class="language-switcher access-group" role="group" aria-label="Język strony">
           <span class="access-group-label" data-icon="languages">Język</span>
-          <button type="button" aria-pressed="true" aria-label="Język polski">PL</button>
-          <button type="button" disabled aria-label="Język angielski — w przygotowaniu">EN</button>
-          <button type="button" disabled aria-label="Język ukraiński — w przygotowaniu">UA</button>
+          <button type="button" aria-pressed="true" aria-label="PL — język polski">PL</button>
+          <button type="button" disabled aria-label="EN — język angielski, w przygotowaniu">EN</button>
+          <button type="button" disabled aria-label="UA — język ukraiński, w przygotowaniu">UA</button>
         </div>
         <div class="text-size-switcher access-group" role="group" aria-label="Rozmiar tekstu">
           <span class="access-group-label" data-icon="text-size">Tekst</span>
-          <button type="button" data-text-size-choice="a" aria-pressed="true" aria-label="Rozmiar tekstu A, 100 procent">A</button>
-          <button type="button" data-text-size-choice="aa" aria-pressed="false" aria-label="Rozmiar tekstu AA, 150 procent">AA</button>
-          <button type="button" data-text-size-choice="aaa" aria-pressed="false" aria-label="Rozmiar tekstu AAA, 200 procent">AAA</button>
+          <button type="button" data-text-size-choice="a" aria-pressed="true" aria-label="Rozmiar tekstu A, 100 procent treści">A</button>
+          <button type="button" data-text-size-choice="aa" aria-pressed="false" aria-label="Rozmiar tekstu AA, 150 procent treści">AA</button>
+          <button type="button" data-text-size-choice="aaa" aria-pressed="false" aria-label="Rozmiar tekstu AAA, 200 procent treści">AAA</button>
         </div>
         <button class="access-tool" type="button" data-contrast-toggle data-icon="eye-contrast" aria-pressed="false">
           <span>Wysoki kontrast</span>
@@ -71,7 +71,7 @@
         <div class="hero-copy home-hero-copy">
           <p class="kicker" data-reveal>Baza wiedzy · obowiązki</p>
           <h1 data-reveal>Kogo obowiązuje WCAG dzisiaj?</h1>
-          <p class="hero-lead" data-reveal>Porządkujemy, kiedy dostępność cyfrowa jest obowiązkiem, kogo dotyczą wymagania i dlaczego WCAG ma znaczenie także poza sektorem publicznym.</p>
+          <p class="hero-lead" data-reveal>Porządkujemy, kiedy dostępność cyfrowa jest obowiązkiem, kogo dotyczą wymagania i dlaczego <a class="term-link" href="/slownik.html#wcag">WCAG</a> ma znaczenie także poza sektorem publicznym.</p>
           <ul class="hero-meta" data-reveal aria-label="Najważniejsze informacje o artykule">
             <li data-icon="check">kogo dotyczą wymagania</li>
             <li data-icon="check">sektor publiczny i firmy</li>
@@ -92,10 +92,10 @@
       <div class="shell article-shell">
         <section class="article-opening" aria-labelledby="who-summary">
           <div class="article-summary">
-            <p class="kicker">Najważniejsze</p>
-            <h2 id="who-summary">WCAG nie jest ustawą. To standard, z którego korzysta prawo.</h2>
-            <p>Wytyczne WCAG powstały po to, żeby internet był możliwy do używania przez osoby o różnych potrzebach. Z czasem część tych zasad została włączona do przepisów dotyczących sektora publicznego, a później także wybranych produktów i usług oferowanych przez firmy.</p>
-            <p><strong>Nie każda prywatna strona ma dziś taki sam obowiązek prawny. Każda może jednak zostać zaprojektowana dostępnie.</strong></p>
+            <p class="kicker">Prosto i w skrócie</p>
+            <h2 id="who-summary">Wymagania zależą od rodzaju strony i usługi.</h2>
+            <ul><li>Urzędy i inne podmioty publiczne mają obowiązki dotyczące dostępności.</li><li>Część firm także musi spełniać wymagania. Dotyczy to wskazanych w przepisach produktów i usług.</li><li>Rodzaj działalności, zakres usługi i przewidziane wyjątki decydują o obowiązkach. Poniżej wyjaśniamy szczegóły.</li></ul>
+            <p>Szczegóły i przykłady znajdziesz poniżej. Trudniejsze słowa wyjaśnia <a href="/slownik.html">słownik prostych pojęć</a>.</p>
           </div>
 
           <nav class="article-toc" aria-label="Spis treści">
@@ -114,7 +114,7 @@
           <div class="article-copy">
             <p class="kicker">Najpierw był standard</p>
             <h2 id="who-start-title">Od czego zaczęło się WCAG?</h2>
-            <p>WCAG nie powstało jako polski przepis ani obowiązek dla firm. To międzynarodowe wytyczne tworzone przez W3C — organizację, która rozwija standardy wykorzystywane w internecie.</p>
+            <p>WCAG nie powstało jako polski przepis ani obowiązek dla firm. To międzynarodowe wytyczne tworzone przez <a class="term-link" href="/slownik.html#w3c">W3C</a> — organizację, która rozwija standardy wykorzystywane w internecie.</p>
             <p>Pierwsza wersja WCAG została opublikowana w 1999 roku. Kolejne wersje rozwijały zasady dostępności wraz ze zmianą technologii i sposobu korzystania z sieci.</p>
             <p>Cel od początku był podobny: <strong>treści i funkcje internetowe powinny być możliwe do odebrania i obsługi przez osoby o różnych możliwościach wzroku, słuchu, ruchu i rozumienia informacji.</strong></p>
             <p>Z czasem dostępność przestała być wyłącznie dobrą praktyką techniczną. Państwa i instytucje zaczęły wykorzystywać WCAG jako punkt odniesienia w prawie.</p>
@@ -277,6 +277,7 @@
         <a href="/kontakt.html">Kontakt</a>
               <a href="/regulamin.html">Regulamin</a>
         <a href="/polityka-prywatnosci.html">Polityka prywatności</a>
+        <a href="/slownik.html">Słownik prostych pojęć</a>
       </nav>
     </div>
   </footer>

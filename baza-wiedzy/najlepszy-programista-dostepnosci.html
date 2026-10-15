@@ -20,19 +20,19 @@
 <body>
   <a class="skip-link" href="#main">Przejdź do treści</a>
   <header class="site-header">
-    <div class="accessibility-bar" aria-label="Ustawienia dostępności">
+    <div class="accessibility-bar" role="group" aria-label="Ustawienia dostępności">
       <div class="shell accessibility-bar-inner">
-        <div class="language-switcher access-group" aria-label="Język strony">
+        <div class="language-switcher access-group" role="group" aria-label="Język strony">
           <span class="access-group-label" data-icon="languages">Język</span>
-          <button type="button" aria-pressed="true" aria-label="Język polski">PL</button>
-          <button type="button" disabled aria-label="Język angielski — w przygotowaniu">EN</button>
-          <button type="button" disabled aria-label="Język ukraiński — w przygotowaniu">UA</button>
+          <button type="button" aria-pressed="true" aria-label="PL — język polski">PL</button>
+          <button type="button" disabled aria-label="EN — język angielski, w przygotowaniu">EN</button>
+          <button type="button" disabled aria-label="UA — język ukraiński, w przygotowaniu">UA</button>
         </div>
         <div class="text-size-switcher access-group" role="group" aria-label="Rozmiar tekstu">
           <span class="access-group-label" data-icon="text-size">Tekst</span>
-          <button type="button" data-text-size-choice="a" aria-pressed="true" aria-label="Rozmiar tekstu A, 100 procent">A</button>
-          <button type="button" data-text-size-choice="aa" aria-pressed="false" aria-label="Rozmiar tekstu AA, 150 procent">AA</button>
-          <button type="button" data-text-size-choice="aaa" aria-pressed="false" aria-label="Rozmiar tekstu AAA, 200 procent">AAA</button>
+          <button type="button" data-text-size-choice="a" aria-pressed="true" aria-label="Rozmiar tekstu A, 100 procent treści">A</button>
+          <button type="button" data-text-size-choice="aa" aria-pressed="false" aria-label="Rozmiar tekstu AA, 150 procent treści">AA</button>
+          <button type="button" data-text-size-choice="aaa" aria-pressed="false" aria-label="Rozmiar tekstu AAA, 200 procent treści">AAA</button>
         </div>
         <button class="access-tool" type="button" data-contrast-toggle data-icon="eye-contrast" aria-pressed="false">
           <span>Wysoki kontrast</span>
@@ -71,9 +71,9 @@
         <div class="hero-copy home-hero-copy">
           <p class="kicker" data-reveal>Baza wiedzy · dobry programista</p>
           <h1 data-reveal>Czym wyróżnia się najlepszy programista budujący dostępne strony i aplikacje?</h1>
-          <p class="hero-lead" data-reveal>Dobry programista dostępności nie tylko zna WCAG — potrafi przełożyć wymagania na semantyczny kod, przewidywalne interakcje i wygodne doświadczenie użytkownika.</p>
+          <p class="hero-lead" data-reveal>Dobry programista buduje stronę, na której człowiek łatwo znajdzie informację i wykona potrzebne zadanie. Potem sprawdza, czy wszystko działa.</p>
           <ul class="hero-meta" data-reveal aria-label="Najważniejsze informacje o artykule">
-            <li data-icon="check">semantyczny kod</li>
+            <li data-icon="check">uporządkowana strona</li>
             <li data-icon="check">myślenie o użytkowniku</li>
             <li data-icon="check">testowanie i odpowiedzialność</li>
           </ul>
@@ -86,6 +86,14 @@
           </svg>
         </figure>
       </div>
+    </section>
+    <section class="section simple-summary" aria-labelledby="developer-simple">
+      <div class="shell"><h2 id="developer-simple">Po czym poznać dobrą pracę?</h2>
+      <p>Wyobraź sobie osobę, która chce wysłać wiadomość przez stronę. Powinna łatwo znaleźć formularz, wiedzieć, co wpisać, i móc nacisnąć przycisk wysyłania. Dobry programista sprawdza całą tę drogę.</p>
+      <h3>Sprawdza różne sposoby korzystania ze strony</h3><p>Sprawdza telefon i komputer. Próbuje obsłużyć stronę samą klawiaturą. Bada też działanie z programem, który czyta tekst na głos.</p>
+      <h3>Pomaga zrozumieć, co zrobić</h3><p>Przyciski mają jasne nazwy. Pola formularza mają opisy. Gdy pojawi się błąd, strona wyjaśnia, jak go poprawić.</p>
+      <h3>Pokazuje wynik testu</h3><p>Wyjaśnia, co sprawdził i co wymaga dalszej pracy. Po zmianach powtarza test. Taki wynik pomaga właścicielowi strony ocenić gotową pracę.</p>
+      <p>Wyjaśnienia skrótów i trudniejszych słów znajdziesz w <a href="/slownik.html">słowniku prostych pojęć</a>.</p></div>
     </section>
   </main>
 
@@ -100,6 +108,7 @@
         <a href="/kontakt.html">Kontakt</a>
               <a href="/regulamin.html">Regulamin</a>
         <a href="/polityka-prywatnosci.html">Polityka prywatności</a>
+        <a href="/slownik.html">Słownik prostych pojęć</a>
       </nav>
     </div>
   </footer>

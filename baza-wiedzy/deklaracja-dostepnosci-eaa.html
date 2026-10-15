@@ -20,19 +20,19 @@
 <body>
   <a class="skip-link" href="#main">Przejdź do treści</a>
   <header class="site-header">
-    <div class="accessibility-bar" aria-label="Ustawienia dostępności">
+    <div class="accessibility-bar" role="group" aria-label="Ustawienia dostępności">
       <div class="shell accessibility-bar-inner">
-        <div class="language-switcher access-group" aria-label="Język strony">
+        <div class="language-switcher access-group" role="group" aria-label="Język strony">
           <span class="access-group-label" data-icon="languages">Język</span>
-          <button type="button" aria-pressed="true" aria-label="Język polski">PL</button>
-          <button type="button" disabled aria-label="Język angielski — w przygotowaniu">EN</button>
-          <button type="button" disabled aria-label="Język ukraiński — w przygotowaniu">UA</button>
+          <button type="button" aria-pressed="true" aria-label="PL — język polski">PL</button>
+          <button type="button" disabled aria-label="EN — język angielski, w przygotowaniu">EN</button>
+          <button type="button" disabled aria-label="UA — język ukraiński, w przygotowaniu">UA</button>
         </div>
         <div class="text-size-switcher access-group" role="group" aria-label="Rozmiar tekstu">
           <span class="access-group-label" data-icon="text-size">Tekst</span>
-          <button type="button" data-text-size-choice="a" aria-pressed="true" aria-label="Rozmiar tekstu A, 100 procent">A</button>
-          <button type="button" data-text-size-choice="aa" aria-pressed="false" aria-label="Rozmiar tekstu AA, 150 procent">AA</button>
-          <button type="button" data-text-size-choice="aaa" aria-pressed="false" aria-label="Rozmiar tekstu AAA, 200 procent">AAA</button>
+          <button type="button" data-text-size-choice="a" aria-pressed="true" aria-label="Rozmiar tekstu A, 100 procent treści">A</button>
+          <button type="button" data-text-size-choice="aa" aria-pressed="false" aria-label="Rozmiar tekstu AA, 150 procent treści">AA</button>
+          <button type="button" data-text-size-choice="aaa" aria-pressed="false" aria-label="Rozmiar tekstu AAA, 200 procent treści">AAA</button>
         </div>
         <button class="access-tool" type="button" data-contrast-toggle data-icon="eye-contrast" aria-pressed="false">
           <span>Wysoki kontrast</span>
@@ -71,7 +71,7 @@
         <div class="hero-copy home-hero-copy">
           <p class="kicker" data-reveal>Baza wiedzy · prawo i dostępność</p>
           <h1 data-reveal>Deklaracja dostępności a EAA — czym się różnią i czego wymaga prawo?</h1>
-          <p class="hero-lead" data-reveal>Wyjaśniamy, czym różni się deklaracja dostępności od obowiązków wynikających z EAA i Polskiego Aktu o Dostępności oraz kogo dotyczą.</p>
+          <p class="hero-lead" data-reveal>Wyjaśniamy, czym różni się deklaracja dostępności od obowiązków wynikających z <a class="term-link" href="/slownik.html#eaa">EAA</a> i Polskiego Aktu o Dostępności oraz kogo dotyczą.</p>
           <ul class="hero-meta" data-reveal aria-label="Informacje o artykule">
             <li data-icon="check">deklaracja dostępności</li>
             <li data-icon="check">EAA i Polski Akt o Dostępności</li>
@@ -92,13 +92,10 @@
       <div class="shell article-shell">
         <section class="article-opening" aria-labelledby="w-skrocie">
           <div class="article-summary">
-            <p class="kicker">Najważniejsze</p>
-            <h2 id="w-skrocie">W 30 sekund: deklaracja dostępności i EAA to dwa różne obowiązki.</h2>
-            <ul>
-              <li><strong>Podmiot publiczny</strong> publikuje Deklarację dostępności dla swojej strony internetowej i aplikacji mobilnej.</li>
-              <li><strong>Firma objęta Polskim Aktem o Dostępności</strong> podaje publicznie informację o usłudze oraz o tym, jak spełnia ona wymagania dostępności.</li>
-              <li><strong>Cel jest podobny:</strong> użytkownik ma wiedzieć, z czego może skorzystać, jakie bariery może spotkać i jak uzyskać pomoc.</li>
-            </ul>
+            <p class="kicker">Prosto i w skrócie</p>
+            <h2 id="w-skrocie">Który dokument opisuje dostępność?</h2>
+            <ul><li>Urzędy i inne wskazane w przepisach podmioty publiczne publikują deklarację dostępności.</li><li>Firmy objęte przepisami o dostępności opisują, jak ich usługa spełnia wymagania.</li><li>Właściwy dokument zależy od tego, kto prowadzi stronę i jaką usługę oferuje. Oba pomagają odbiorcy uzyskać potrzebne informacje.</li></ul>
+            <p>Szczegóły i przykłady znajdziesz poniżej. Trudniejsze słowa wyjaśnia <a href="/slownik.html">słownik prostych pojęć</a>.</p>
           </div>
 
           <nav class="article-toc" aria-label="Spis treści">
@@ -119,7 +116,7 @@
             <p class="kicker">Podstawy</p>
             <h2 id="czym-jest-title">Czym jest Deklaracja dostępności?</h2>
             <p><strong>Deklaracja dostępności to czytelny opis stanu dostępności.</strong> Podmiot publiczny informuje w niej, jak działa jego strona internetowa lub aplikacja mobilna, jakie elementy są dostępne oraz gdzie występują bariery.</p>
-            <p>Deklaracja pomaga też przygotować się do wizyty w siedzibie. Użytkownik może sprawdzić dostępność wejścia, schodów, windy, podjazdu, parkingu, pętli indukcyjnej, tłumacza PJM lub możliwość wejścia z psem asystującym.</p>
+            <p>Deklaracja pomaga też przygotować się do wizyty w siedzibie. Użytkownik może sprawdzić dostępność wejścia, schodów, windy, podjazdu, parkingu, pętli indukcyjnej, tłumacza <a class="term-link" href="/slownik.html#pjm">PJM</a> lub możliwość wejścia z psem asystującym.</p>
             <p><strong>To praktyczna informacja przed kontaktem z urzędem lub instytucją.</strong> Osoba korzystająca z wózka może sprawdzić drogę do wejścia. Osoba niewidoma może znaleźć informacje o sposobie obsługi. Osoba głucha może sprawdzić dostępne formy kontaktu.</p>
           </div>
 
@@ -146,7 +143,7 @@
             <section>
               <span aria-hidden="true">02</span>
               <h3>Firma objęta EAA i PAD</h3>
-              <p>Europejski Akt o Dostępności (EAA) został wdrożony w Polsce przez <strong>Polski Akt o Dostępności (PAD)</strong>. Przepisy obowiązują od 28 czerwca 2025 r.</p>
+              <p>Europejski Akt o Dostępności (EAA) został wdrożony w Polsce przez <strong>Polski Akt o Dostępności (<a class="term-link" href="/slownik.html#pad">PAD</a>)</strong>. Przepisy obowiązują od 28 czerwca 2025 r.</p>
               <p>Usługodawca objęty ustawą podaje w regulaminie lub równoważnym dokumencie informacje o usłudze, sposobie korzystania z niej i o tym, jak spełnia wymagania dostępności.</p>
             </section>
           </div>
@@ -344,7 +341,7 @@
           <div>
             <p class="kicker">ANM Access</p>
             <h2>Potrzebujesz sprawdzić dostępność przed przygotowaniem dokumentu?</h2>
-            <p>Audyt WCAG pokazuje stan strony, listę barier i konkretne poprawki. Wynik może być podstawą do rzetelnego opisania dostępności serwisu.</p>
+            <p>Audyt <a class="term-link" href="/slownik.html#wcag">WCAG</a> pokazuje stan strony, listę barier i konkretne poprawki. Wynik może być podstawą do rzetelnego opisania dostępności serwisu.</p>
           </div>
           <a class="button button-primary" href="/audyt.html" data-icon="arrow-right">Zobacz audyt WCAG</a>
         </section>
@@ -363,6 +360,7 @@
         <a href="/kontakt.html">Kontakt</a>
               <a href="/regulamin.html">Regulamin</a>
         <a href="/polityka-prywatnosci.html">Polityka prywatności</a>
+        <a href="/slownik.html">Słownik prostych pojęć</a>
       </nav>
     </div>
   </footer>

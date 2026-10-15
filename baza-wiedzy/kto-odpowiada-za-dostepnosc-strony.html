@@ -20,19 +20,19 @@
 <body>
   <a class="skip-link" href="#main">Przejdź do treści</a>
   <header class="site-header">
-    <div class="accessibility-bar" aria-label="Ustawienia dostępności">
+    <div class="accessibility-bar" role="group" aria-label="Ustawienia dostępności">
       <div class="shell accessibility-bar-inner">
-        <div class="language-switcher access-group" aria-label="Język strony">
+        <div class="language-switcher access-group" role="group" aria-label="Język strony">
           <span class="access-group-label" data-icon="languages">Język</span>
-          <button type="button" aria-pressed="true" aria-label="Język polski">PL</button>
-          <button type="button" disabled aria-label="Język angielski — w przygotowaniu">EN</button>
-          <button type="button" disabled aria-label="Język ukraiński — w przygotowaniu">UA</button>
+          <button type="button" aria-pressed="true" aria-label="PL — język polski">PL</button>
+          <button type="button" disabled aria-label="EN — język angielski, w przygotowaniu">EN</button>
+          <button type="button" disabled aria-label="UA — język ukraiński, w przygotowaniu">UA</button>
         </div>
         <div class="text-size-switcher access-group" role="group" aria-label="Rozmiar tekstu">
           <span class="access-group-label" data-icon="text-size">Tekst</span>
-          <button type="button" data-text-size-choice="a" aria-pressed="true" aria-label="Rozmiar tekstu A, 100 procent">A</button>
-          <button type="button" data-text-size-choice="aa" aria-pressed="false" aria-label="Rozmiar tekstu AA, 150 procent">AA</button>
-          <button type="button" data-text-size-choice="aaa" aria-pressed="false" aria-label="Rozmiar tekstu AAA, 200 procent">AAA</button>
+          <button type="button" data-text-size-choice="a" aria-pressed="true" aria-label="Rozmiar tekstu A, 100 procent treści">A</button>
+          <button type="button" data-text-size-choice="aa" aria-pressed="false" aria-label="Rozmiar tekstu AA, 150 procent treści">AA</button>
+          <button type="button" data-text-size-choice="aaa" aria-pressed="false" aria-label="Rozmiar tekstu AAA, 200 procent treści">AAA</button>
         </div>
         <button class="access-tool" type="button" data-contrast-toggle data-icon="eye-contrast" aria-pressed="false">
           <span>Wysoki kontrast</span>
@@ -92,10 +92,10 @@
       <div class="shell article-shell">
         <section class="article-opening" aria-labelledby="resp-summary">
           <div class="article-summary">
-            <p class="kicker">Najważniejsze</p>
-            <h2 id="resp-summary">Za dostępność nie odpowiada jedna osoba. Odpowiada cały proces.</h2>
-            <p>Właściciel strony podejmuje decyzje i odpowiada za to, jaki standard ma spełniać serwis. Projektant, programista, autor treści i osoby później rozwijające stronę wpływają na to, czy ten standard rzeczywiście zostanie utrzymany.</p>
-            <p><strong>Dostępność najczęściej psuje się wtedy, gdy każdy odpowiada tylko za swój fragment, a nikt nie pilnuje całości.</strong></p>
+            <p class="kicker">Prosto i w skrócie</p>
+            <h2 id="resp-summary">Za wygodną stronę odpowiada kilka osób.</h2>
+            <ul><li>Właściciel organizuje pracę i pilnuje, aby strona spełniała dotyczące jej wymagania.</li><li>Projektant, programista i osoba dodająca treści mają swoje zadania.</li><li>Jasny podział pracy i ponowne testy pomagają dopilnować efektu. Umowa określa obowiązki wykonawcy.</li></ul>
+            <p>Szczegóły i przykłady znajdziesz poniżej. Trudniejsze słowa wyjaśnia <a href="/slownik.html">słownik prostych pojęć</a>.</p>
           </div>
           <nav class="article-toc" aria-label="Spis treści">
             <strong>W tym artykule</strong>
@@ -127,7 +127,7 @@
             <h2 id="resp-owner-title">Właściciel serwisu decyduje, czy dostępność będzie częścią projektu od początku.</h2>
             <p>To po jego stronie najczęściej zapadają decyzje o budżecie, terminach, wykonawcach i zakresie prac.</p>
             <p>Jeżeli dostępność pojawia się dopiero w ostatnim tygodniu przed publikacją, zespół ma znacznie mniej możliwości. Jeżeli jest wpisana do założeń od początku, może wpływać na projekt, treść i sposób budowania komponentów.</p>
-            <p>Właściciel nie musi sam znać każdego kryterium WCAG. Powinien jednak wiedzieć, że dostępność wymaga czasu, testów i odpowiednich kompetencji po stronie wykonawców.</p>
+            <p>Właściciel nie musi sam znać każdego kryterium <a class="term-link" href="/slownik.html#wcag">WCAG</a>. Powinien jednak wiedzieć, że dostępność wymaga czasu, testów i odpowiednich kompetencji po stronie wykonawców.</p>
             <p><strong>Najważniejszą decyzją właściciela jest więc nie „jak samemu zrobić WCAG”, ale „czy zatrudniam ludzi, którzy potrafią o dostępność zadbać”.</strong></p>
           </div>
           <figure class="article-figure article-figure-wide">
@@ -140,8 +140,8 @@
           <div class="article-copy">
             <p class="kicker">Projekt i treść</p>
             <h2 id="resp-design-title">UX, grafika i treść mogą stworzyć barierę zanim programista napisze pierwszą linię kodu.</h2>
-            <p>Projektant UX decyduje, jak użytkownik przechodzi przez proces. UI i grafik decydują o kolorach, wielkości elementów i sposobie prezentacji informacji. Copywriter i redaktor odpowiadają za nagłówki, instrukcje, etykiety i komunikaty.</p>
-            <p>Jeżeli formularz jest niezrozumiały, programista nie naprawi tego samym kodem. Jeżeli istotna informacja istnieje tylko w kolorze, problem powstał już na etapie projektu. Jeżeli nagłówki nic nie mówią o treści, sam technicznie poprawny HTML nie wystarczy.</p>
+            <p>Projektant <a class="term-link" href="/slownik.html#ux">UX</a> decyduje, jak użytkownik przechodzi przez proces. <a class="term-link" href="/slownik.html#interfejs">UI</a> i grafik decydują o kolorach, wielkości elementów i sposobie prezentacji informacji. Copywriter i redaktor odpowiadają za nagłówki, instrukcje, etykiety i komunikaty.</p>
+            <p>Jeżeli formularz jest niezrozumiały, programista nie naprawi tego samym kodem. Jeżeli istotna informacja istnieje tylko w kolorze, problem powstał już na etapie projektu. Jeżeli nagłówki nic nie mówią o treści, sam technicznie poprawny <a class="term-link" href="/slownik.html#html">HTML</a> nie wystarczy.</p>
 
             <div class="article-checklist">
               <div><strong>UX</strong><span>Układa proces tak, aby użytkownik wiedział, gdzie jest i co ma zrobić dalej.</span></div>
@@ -156,7 +156,7 @@
           <div class="article-copy">
             <p class="kicker">Programista</p>
             <h2 id="resp-dev-title">Programista odpowiada za to, jak decyzje projektowe działają w prawdziwej stronie lub aplikacji.</h2>
-            <p>To kluczowa rola techniczna. Developer zamienia projekt w działający produkt i właśnie wtedy okazuje się, czy menu da się obsłużyć klawiaturą, formularz prawidłowo informuje o błędzie, fokus jest widoczny, a czytnik ekranu rozumie strukturę interfejsu.</p>
+            <p>To kluczowa rola techniczna. Developer zamienia projekt w działający produkt i właśnie wtedy okazuje się, czy menu da się obsłużyć klawiaturą, formularz prawidłowo informuje o błędzie, <a class="term-link" href="/slownik.html#fokus">fokus</a> jest widoczny, a czytnik ekranu rozumie strukturę interfejsu.</p>
             <p>Dobry programista potrafi też zauważyć problem wcześniej i wrócić z nim do projektanta. Nie powinien wykonywać projektu bezrefleksyjnie, jeżeli widzi, że dane rozwiązanie utrudni korzystanie ze strony.</p>
             <p><strong>Programista nie jest jedyną osobą odpowiedzialną za dostępność, ale bardzo często jest ostatnią osobą, która może zatrzymać złą decyzję zanim trafi ona do użytkownika.</strong></p>
             <p>Więcej o roli wdrożenia opisujemy w artykule <a href="/baza-wiedzy/dlaczego-audyt-nie-zastapi-dobrego-programisty.html">„Dlaczego sam audyt WCAG nie zastąpi dobrego programisty?”</a>.</p>
@@ -215,6 +215,7 @@
         <a href="/kontakt.html">Kontakt</a>
               <a href="/regulamin.html">Regulamin</a>
         <a href="/polityka-prywatnosci.html">Polityka prywatności</a>
+        <a href="/slownik.html">Słownik prostych pojęć</a>
       </nav>
     </div>
   </footer>

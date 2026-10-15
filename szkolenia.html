@@ -47,19 +47,19 @@
 <body>
   <a class="skip-link" href="#main">Przejdź do treści</a>
   <header class="site-header">
-    <div class="accessibility-bar" aria-label="Ustawienia dostępności">
+    <div class="accessibility-bar" role="group" aria-label="Ustawienia dostępności">
       <div class="shell accessibility-bar-inner">
-        <div class="language-switcher access-group" aria-label="Język strony">
+        <div class="language-switcher access-group" role="group" aria-label="Język strony">
           <span class="access-group-label" data-icon="languages">Język</span>
-          <button type="button" aria-pressed="true" aria-label="Język polski">PL</button>
-          <button type="button" disabled aria-label="Język angielski — w przygotowaniu">EN</button>
-          <button type="button" disabled aria-label="Język ukraiński — w przygotowaniu">UA</button>
+          <button type="button" aria-pressed="true" aria-label="PL — język polski">PL</button>
+          <button type="button" disabled aria-label="EN — język angielski, w przygotowaniu">EN</button>
+          <button type="button" disabled aria-label="UA — język ukraiński, w przygotowaniu">UA</button>
         </div>
         <div class="text-size-switcher access-group" role="group" aria-label="Rozmiar tekstu">
           <span class="access-group-label" data-icon="text-size">Tekst</span>
-          <button type="button" data-text-size-choice="a" aria-pressed="true" aria-label="Rozmiar tekstu A, 100 procent">A</button>
-          <button type="button" data-text-size-choice="aa" aria-pressed="false" aria-label="Rozmiar tekstu AA, 150 procent">AA</button>
-          <button type="button" data-text-size-choice="aaa" aria-pressed="false" aria-label="Rozmiar tekstu AAA, 200 procent">AAA</button>
+          <button type="button" data-text-size-choice="a" aria-pressed="true" aria-label="Rozmiar tekstu A, 100 procent treści">A</button>
+          <button type="button" data-text-size-choice="aa" aria-pressed="false" aria-label="Rozmiar tekstu AA, 150 procent treści">AA</button>
+          <button type="button" data-text-size-choice="aaa" aria-pressed="false" aria-label="Rozmiar tekstu AAA, 200 procent treści">AAA</button>
         </div>
         <button class="access-tool" type="button" data-contrast-toggle data-icon="eye-contrast" aria-pressed="false">
           <span>Wysoki kontrast</span>
@@ -95,12 +95,12 @@
     <section class="page-hero home-hero">
       <div class="shell home-hero-shell">
         <div class="hero-copy home-hero-copy">
-          <p class="kicker" data-reveal>Szkolenia · WCAG 2.1 i 2.2</p>
-          <h1 data-reveal>Dostępność, którą zespół potrafi stosować w codziennej pracy.</h1>
-          <p class="hero-lead" data-reveal>Łączymy wymagania WCAG z praktyką: projektowaniem, treścią, programowaniem i pracą na rzeczywistych elementach strony.</p>
+          <p class="kicker" data-reveal>Szkolenia · <a class="term-link" href="/slownik.html#wcag">WCAG</a> 2.1 i 2.2</p>
+          <h1 data-reveal>Pokażemy Twojemu zespołowi, jak tworzyć strony łatwiejsze w obsłudze.</h1>
+          <p class="hero-lead" data-reveal>Na przykładach pokażemy, jak pisać proste teksty, dobierać czytelne kolory i budować wygodne przyciski oraz formularze.</p>
           <ul class="hero-meta" data-reveal aria-label="Najważniejsze elementy szkoleń">
             <li data-icon="check">WCAG 2.1 i 2.2</li>
-            <li data-icon="check">praktyka zamiast teorii</li>
+            <li data-icon="check">ćwiczenia krok po kroku</li>
             <li data-icon="check">praca na realnych przykładach</li>
           </ul>
         </div>
@@ -115,17 +115,17 @@
     </section>
     <section class="section">
       <div class="shell">
-        <div class="section-heading" data-reveal><h2>Dla kogo</h2><p>Zakres szkolenia będzie można dopasować do roli zespołu i poziomu odpowiedzialności za dostępność.</p></div>
+        <div class="section-heading" data-reveal><h2>Dla kogo</h2><p>Dopasujemy ćwiczenia do pracy Twojego zespołu.</p></div>
         <div class="grid-3">
-          <article class="card" data-reveal><h3>Właściciele i zespoły firmowe</h3><p>Jak rozpoznawać bariery, zlecać poprawki i odbierać prace związane z dostępnością.</p></article>
-          <article class="card" data-reveal><h3>Projektanci i twórcy treści</h3><p>Kontrast, hierarchia, komponenty, teksty, formularze i materiały publikowane na stronie.</p></article>
-          <article class="card" data-reveal><h3>Programiści</h3><p>Semantyczny HTML, klawiatura, fokus, ARIA, komunikaty statusu i testowanie komponentów.</p></article>
+          <article class="card" data-reveal><h3>Właściciele i zespoły firmowe</h3><p>Dowiesz się, jak znaleźć trudności na stronie, zlecić poprawki i sprawdzić gotową pracę.</p></article>
+          <article class="card" data-reveal><h3>Projektanci i twórcy treści</h3><p>Pokażemy, jak dobierać czytelne kolory, porządkować treść i pisać zrozumiałe instrukcje.</p></article>
+          <article class="card" data-reveal><h3>Programiści</h3><p>Pokażemy, jak budować stronę obsługiwaną klawiaturą i rozpoznawaną przez program czytający tekst. Przećwiczymy też sprawdzanie przycisków i formularzy.</p></article>
         </div>
       </div>
     </section>
     <section class="section section-alt">
       <div class="shell split-section">
-        <div class="section-heading" data-reveal><h2>Szkolenie może być połączone z audytem</h2><p>Zespół może pracować na własnej stronie lub aplikacji. Dzięki temu szkolenie nie kończy się na przykładach — uczestnicy widzą problemy w swoim produkcie i uczą się je poprawiać.</p></div>
+        <div class="section-heading" data-reveal><h2>Szkolenie może być połączone z audytem</h2><p>Możemy pracować na Waszej stronie. Zespół zobaczy konkretne problemy i przećwiczy ich naprawę.</p></div>
         <a class="button button-primary" href="/kontakt.html">Zapytaj o szkolenie</a>
       </div>
     </section>
@@ -141,6 +141,7 @@
         <a href="/kontakt.html">Kontakt</a>
               <a href="/regulamin.html">Regulamin</a>
         <a href="/polityka-prywatnosci.html">Polityka prywatności</a>
+        <a href="/slownik.html">Słownik prostych pojęć</a>
       </nav>
     </div>
   </footer>

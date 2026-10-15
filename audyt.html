@@ -47,19 +47,19 @@
 <body>
   <a class="skip-link" href="#main">Przejdź do treści</a>
   <header class="site-header">
-    <div class="accessibility-bar" aria-label="Ustawienia dostępności">
+    <div class="accessibility-bar" role="group" aria-label="Ustawienia dostępności">
       <div class="shell accessibility-bar-inner">
-        <div class="language-switcher access-group" aria-label="Język strony">
+        <div class="language-switcher access-group" role="group" aria-label="Język strony">
           <span class="access-group-label" data-icon="languages">Język</span>
-          <button type="button" aria-pressed="true" aria-label="Język polski">PL</button>
-          <button type="button" disabled aria-label="Język angielski — w przygotowaniu">EN</button>
-          <button type="button" disabled aria-label="Język ukraiński — w przygotowaniu">UA</button>
+          <button type="button" aria-pressed="true" aria-label="PL — język polski">PL</button>
+          <button type="button" disabled aria-label="EN — język angielski, w przygotowaniu">EN</button>
+          <button type="button" disabled aria-label="UA — język ukraiński, w przygotowaniu">UA</button>
         </div>
         <div class="text-size-switcher access-group" role="group" aria-label="Rozmiar tekstu">
           <span class="access-group-label" data-icon="text-size">Tekst</span>
-          <button type="button" data-text-size-choice="a" aria-pressed="true" aria-label="Rozmiar tekstu A, 100 procent">A</button>
-          <button type="button" data-text-size-choice="aa" aria-pressed="false" aria-label="Rozmiar tekstu AA, 150 procent">AA</button>
-          <button type="button" data-text-size-choice="aaa" aria-pressed="false" aria-label="Rozmiar tekstu AAA, 200 procent">AAA</button>
+          <button type="button" data-text-size-choice="a" aria-pressed="true" aria-label="Rozmiar tekstu A, 100 procent treści">A</button>
+          <button type="button" data-text-size-choice="aa" aria-pressed="false" aria-label="Rozmiar tekstu AA, 150 procent treści">AA</button>
+          <button type="button" data-text-size-choice="aaa" aria-pressed="false" aria-label="Rozmiar tekstu AAA, 200 procent treści">AAA</button>
         </div>
         <button class="access-tool" type="button" data-contrast-toggle data-icon="eye-contrast" aria-pressed="false">
           <span>Wysoki kontrast</span>
@@ -95,13 +95,13 @@
     <section class="page-hero home-hero">
       <div class="shell home-hero-shell">
         <div class="hero-copy home-hero-copy">
-          <p class="kicker" data-reveal>Audyt WCAG · 2.1 i 2.2</p>
-          <h1 data-reveal>Sprawdzamy nie tylko błędy. Sprawdzamy cały sposób korzystania ze strony.</h1>
-          <p class="hero-lead" data-reveal>Łączymy testy automatyczne i manualne, a wyniki pokazujemy jasno wraz z informacją, co zostało sprawdzone i jak.</p>
+          <p class="kicker" data-reveal>Audyt <a class="term-link" href="/slownik.html#wcag">WCAG</a> · 2.1 i 2.2</p>
+          <h1 data-reveal>Sprawdzimy, co utrudnia korzystanie z Twojej strony.</h1>
+          <p class="hero-lead" data-reveal>Sprawdzimy stronę programem i ręcznie. Dostaniesz listę problemów oraz wskazówki, jak je poprawić.</p>
           <ul class="hero-meta" data-reveal aria-label="Najważniejsze elementy audytu">
             <li data-icon="check">WCAG 2.1 i 2.2</li>
             <li data-icon="check">testy automatyczne i ręczne</li>
-            <li data-icon="check">poziomy A, AA i AAA</li>
+            <li data-icon="check">poziomy A, <a class="term-link" href="/slownik.html#poziomy">AA</a> i AAA</li>
           </ul>
         </div>
 
@@ -116,27 +116,27 @@
     <section class="section">
       <div class="shell audit-overview">
         <div>
-          <div class="section-heading" data-reveal><h2>Zakres audytu</h2><p>Każdy wynik ma wskazywać konkretną regułę, element strony, metodę testu i sposób naprawy.</p></div>
+          <div class="section-heading" data-reveal><h2>Zakres audytu</h2><p>Pokażemy, gdzie jest problem, komu przeszkadza i jak go naprawić.</p></div>
           <dl class="definition-list">
-            <dt>Poziom A</dt><dd>Podstawowe kryteria dostępności, bez których część użytkowników może w ogóle nie móc skorzystać z treści lub funkcji.</dd>
-            <dt>Poziom AA</dt><dd>Kryteria A i AA — najczęściej stosowany poziom wymagań dla usług cyfrowych.</dd>
-            <dt>Poziom AAA</dt><dd>Kryteria A, AA i AAA — najbardziej rozbudowany poziom WCAG 2.2, sprawdzany tam, gdzie dane kryterium ma zastosowanie.</dd>
+            <dt>Poziom A</dt><dd>Podstawowe zasady. Pomagają usunąć przeszkody, które mogą całkiem zablokować korzystanie ze strony.</dd>
+            <dt>Poziom AA</dt><dd>Zasady poziomu A i kolejne ułatwienia. To często wymagany poziom dostępności stron.</dd>
+            <dt>Poziom AAA</dt><dd>Zasady A, AA i dodatkowe ułatwienia, na przykład mocniejszy kontrast i prostsza treść. To najwyższy poziom WCAG.</dd>
           </dl>
         </div>
         <aside class="audit-panel" data-reveal aria-labelledby="audit-panel-title">
           <h2 id="audit-panel-title">Poziomy raportu</h2>
-          <div class="audit-levels" aria-label="Poziomy WCAG"><span class="audit-level">A</span><span class="audit-level">AA</span><span class="audit-level">AAA</span></div>
-          <p>Silnik audytu dołączymy do tej strony w kolejnych etapach budowy. Obecnie przygotowujemy jego reguły, strukturę wyników i testy samego ANM Access.</p>
+          <div class="audit-levels" role="group" aria-label="Poziomy WCAG"><span class="audit-level">A</span><span class="audit-level">AA</span><span class="audit-level">AAA</span></div>
+          <p>Skaner online jest w przygotowaniu. Już teraz możesz napisać do nas i zapytać o audyt strony.</p>
         </aside>
       </div>
     </section>
     <section class="section section-alt">
       <div class="shell">
-        <div class="section-heading" data-reveal><h2>Co będzie sprawdzane</h2><p>Automatyzujemy to, co można zmierzyć wiarygodnie, a pozostałe kryteria kierujemy do testu manualnego zamiast zgadywać wynik.</p></div>
+        <div class="section-heading" data-reveal><h2>Co będzie sprawdzane</h2><p>Program pomaga znaleźć część błędów. Pozostałe sprawdzamy ręcznie, tak jak osoba korzystająca ze strony.</p></div>
         <div class="grid-3">
-          <article class="card" data-reveal><h3>Postrzegalność</h3><p>Kontrast, tekst alternatywny, struktura treści, reflow, powiększenie i sposób prezentacji informacji.</p></article>
-          <article class="card" data-reveal><h3>Funkcjonalność</h3><p>Klawiatura, fokus, kolejność nawigacji, cele dotykowe, limity czasu i zachowanie elementów interaktywnych.</p></article>
-          <article class="card" data-reveal><h3>Zrozumiałość i kompatybilność</h3><p>Formularze, błędy, przewidywalność interfejsu, semantyka i współpraca z technologiami wspomagającymi.</p></article>
+          <article class="card" data-reveal><h3>Czy wszystko widać i można odczytać?</h3><p>Sprawdzimy, czy tekst jest czytelny, zdjęcia mają potrzebne opisy, a strona mieści się na ekranie po powiększeniu.</p></article>
+          <article class="card" data-reveal><h3>Czy stronę łatwo obsłużyć?</h3><p>Sprawdzimy, czy stronę można obsłużyć klawiaturą, czy widać wybrany przycisk i czy łatwo go nacisnąć.</p></article>
+          <article class="card" data-reveal><h3>Czy wiadomo, co zrobić?</h3><p>Sprawdzimy, czy instrukcje są jasne, formularze pomagają poprawić błąd, a program czytający stronę rozpoznaje jej elementy.</p></article>
         </div>
       </div>
     </section>
@@ -152,6 +152,7 @@
         <a href="/kontakt.html">Kontakt</a>
               <a href="/regulamin.html">Regulamin</a>
         <a href="/polityka-prywatnosci.html">Polityka prywatności</a>
+        <a href="/slownik.html">Słownik prostych pojęć</a>
       </nav>
     </div>
   </footer>

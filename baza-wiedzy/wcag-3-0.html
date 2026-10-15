@@ -20,19 +20,19 @@
 <body>
   <a class="skip-link" href="#main">Przejdź do treści</a>
   <header class="site-header">
-    <div class="accessibility-bar" aria-label="Ustawienia dostępności">
+    <div class="accessibility-bar" role="group" aria-label="Ustawienia dostępności">
       <div class="shell accessibility-bar-inner">
-        <div class="language-switcher access-group" aria-label="Język strony">
+        <div class="language-switcher access-group" role="group" aria-label="Język strony">
           <span class="access-group-label" data-icon="languages">Język</span>
-          <button type="button" aria-pressed="true" aria-label="Język polski">PL</button>
-          <button type="button" disabled aria-label="Język angielski — w przygotowaniu">EN</button>
-          <button type="button" disabled aria-label="Język ukraiński — w przygotowaniu">UA</button>
+          <button type="button" aria-pressed="true" aria-label="PL — język polski">PL</button>
+          <button type="button" disabled aria-label="EN — język angielski, w przygotowaniu">EN</button>
+          <button type="button" disabled aria-label="UA — język ukraiński, w przygotowaniu">UA</button>
         </div>
         <div class="text-size-switcher access-group" role="group" aria-label="Rozmiar tekstu">
           <span class="access-group-label" data-icon="text-size">Tekst</span>
-          <button type="button" data-text-size-choice="a" aria-pressed="true" aria-label="Rozmiar tekstu A, 100 procent">A</button>
-          <button type="button" data-text-size-choice="aa" aria-pressed="false" aria-label="Rozmiar tekstu AA, 150 procent">AA</button>
-          <button type="button" data-text-size-choice="aaa" aria-pressed="false" aria-label="Rozmiar tekstu AAA, 200 procent">AAA</button>
+          <button type="button" data-text-size-choice="a" aria-pressed="true" aria-label="Rozmiar tekstu A, 100 procent treści">A</button>
+          <button type="button" data-text-size-choice="aa" aria-pressed="false" aria-label="Rozmiar tekstu AA, 150 procent treści">AA</button>
+          <button type="button" data-text-size-choice="aaa" aria-pressed="false" aria-label="Rozmiar tekstu AAA, 200 procent treści">AAA</button>
         </div>
         <button class="access-tool" type="button" data-contrast-toggle data-icon="eye-contrast" aria-pressed="false">
           <span>Wysoki kontrast</span>
@@ -69,7 +69,7 @@
     <section class="page-hero home-hero">
       <div class="shell home-hero-shell">
         <div class="hero-copy home-hero-copy">
-          <p class="kicker" data-reveal>Baza wiedzy · WCAG 3.0</p>
+          <p class="kicker" data-reveal>Baza wiedzy · <a class="term-link" href="/slownik.html#wcag">WCAG</a> 3.0</p>
           <h1 data-reveal>WCAG 3.0 — co wiemy o planowanym standardzie?</h1>
           <p class="hero-lead" data-reveal>Pokazujemy kierunek prac nad WCAG 3.0, czym ma różnić się od WCAG 2.x i dlaczego nie jest jeszcze finalnym standardem.</p>
           <ul class="hero-meta" data-reveal aria-label="Najważniejsze informacje o artykule">
@@ -92,10 +92,10 @@
       <div class="shell article-shell">
         <section class="article-opening" aria-labelledby="wcag30-summary">
           <div class="article-summary">
-            <p class="kicker">Najważniejsze</p>
-            <h2 id="wcag30-summary">WCAG 3.0 pokazuje kierunek przyszłości, ale dziś nie jest jeszcze gotowym standardem.</h2>
-            <p>Najnowszy Working Draft został opublikowany przez W3C 10 września 2026 roku. To dokument rozwijany i konsultowany. W3C wyraźnie zaznacza, że zawarte w nim wymagania, struktura i sposób oceny będą się jeszcze zmieniać.</p>
-            <p><strong>WCAG 3 warto obserwować. Nie należy jednak przedstawiać jego obecnej wersji jako obowiązującego następcy WCAG 2.2.</strong></p>
+            <p class="kicker">Prosto i w skrócie</p>
+            <h2 id="wcag30-summary">WCAG 3.0 to praca nad przyszłymi zasadami.</h2>
+            <ul><li>Powstaje nowy sposób opisywania i sprawdzania dostępności.</li><li>Projekt może się zmieniać. Jego propozycje trzeba odróżniać od obowiązujących wymagań.</li><li>Przy ocenie konkretnej strony trzeba wskazać wersję zasad, według której wykonano test.</li></ul>
+            <p>Szczegóły i przykłady znajdziesz poniżej. Trudniejsze słowa wyjaśnia <a href="/slownik.html">słownik prostych pojęć</a>.</p>
           </div>
           <nav class="article-toc" aria-label="Spis treści">
             <strong>W tym artykule</strong>
@@ -115,7 +115,7 @@
             <p class="kicker">Stan na wrzesień 2026</p>
             <h2 id="wcag30-status-title">WCAG 3.0 jest nadal projektem roboczym W3C.</h2>
             <p>W internecie łatwo spotkać określenie „WCAG 3.0” napisane tak, jakby była to po prostu kolejna gotowa wersja po 2.2. Na dziś tak nie jest.</p>
-            <p>10 września 2026 roku W3C opublikowało kolejny <strong>Working Draft</strong>, czyli roboczą wersję dokumentu przeznaczoną do dalszego rozwoju i opiniowania.</p>
+            <p>10 września 2026 roku <a class="term-link" href="/slownik.html#w3c">W3C</a> opublikowało kolejny <strong>Working Draft</strong>, czyli roboczą wersję dokumentu przeznaczoną do dalszego rozwoju i opiniowania.</p>
             <p>W3C zaznacza wprost, że finalne wymagania WCAG 3 będą inne niż te widoczne w obecnym projekcie. Część zapisów może zostać zmieniona, połączona, dodana albo usunięta.</p>
             <aside class="article-note">
               <strong>Co z tego wynika?</strong>
@@ -156,7 +156,7 @@
           <div class="article-copy">
             <p class="kicker">Nowy model zgodności</p>
             <h2 id="wcag30-ocena-title">Jedną z największych zmian ma być sposób oceniania dostępności.</h2>
-            <p>WCAG 2 kojarzymy z poziomami A, AA i AAA oraz kryteriami, które są spełnione albo niespełnione.</p>
+            <p>WCAG 2 kojarzymy z poziomami A, <a class="term-link" href="/slownik.html#poziomy">AA</a> i AAA oraz kryteriami, które są spełnione albo niespełnione.</p>
             <p>W projekcie WCAG 3 twórcy pracują nad innym modelem. Najnowszy draft proponuje jedno zasadnicze pojęcie zgodności oraz dodatkowe oznaczenia pozwalające dokładniej raportować wynik poniżej i powyżej tego poziomu.</p>
             <p>To nadal część aktywnych prac. W3C prosi obecnie społeczność o opinie właśnie na temat modelu zgodności, a dokument pokazuje także alternatywne podejścia.</p>
             <p><strong>Dlatego dziś ważniejsze od zapamiętywania projektu punktacji jest zrozumienie kierunku: przyszła ocena ma mówić o dostępności produktu bardziej szczegółowo niż jedno proste „zaliczone / niezaliczone”.</strong></p>
@@ -224,6 +224,7 @@
         <a href="/kontakt.html">Kontakt</a>
               <a href="/regulamin.html">Regulamin</a>
         <a href="/polityka-prywatnosci.html">Polityka prywatności</a>
+        <a href="/slownik.html">Słownik prostych pojęć</a>
       </nav>
     </div>
   </footer>

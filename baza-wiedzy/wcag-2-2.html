@@ -20,19 +20,19 @@
 <body>
   <a class="skip-link" href="#main">Przejdź do treści</a>
   <header class="site-header">
-    <div class="accessibility-bar" aria-label="Ustawienia dostępności">
+    <div class="accessibility-bar" role="group" aria-label="Ustawienia dostępności">
       <div class="shell accessibility-bar-inner">
-        <div class="language-switcher access-group" aria-label="Język strony">
+        <div class="language-switcher access-group" role="group" aria-label="Język strony">
           <span class="access-group-label" data-icon="languages">Język</span>
-          <button type="button" aria-pressed="true" aria-label="Język polski">PL</button>
-          <button type="button" disabled aria-label="Język angielski — w przygotowaniu">EN</button>
-          <button type="button" disabled aria-label="Język ukraiński — w przygotowaniu">UA</button>
+          <button type="button" aria-pressed="true" aria-label="PL — język polski">PL</button>
+          <button type="button" disabled aria-label="EN — język angielski, w przygotowaniu">EN</button>
+          <button type="button" disabled aria-label="UA — język ukraiński, w przygotowaniu">UA</button>
         </div>
         <div class="text-size-switcher access-group" role="group" aria-label="Rozmiar tekstu">
           <span class="access-group-label" data-icon="text-size">Tekst</span>
-          <button type="button" data-text-size-choice="a" aria-pressed="true" aria-label="Rozmiar tekstu A, 100 procent">A</button>
-          <button type="button" data-text-size-choice="aa" aria-pressed="false" aria-label="Rozmiar tekstu AA, 150 procent">AA</button>
-          <button type="button" data-text-size-choice="aaa" aria-pressed="false" aria-label="Rozmiar tekstu AAA, 200 procent">AAA</button>
+          <button type="button" data-text-size-choice="a" aria-pressed="true" aria-label="Rozmiar tekstu A, 100 procent treści">A</button>
+          <button type="button" data-text-size-choice="aa" aria-pressed="false" aria-label="Rozmiar tekstu AA, 150 procent treści">AA</button>
+          <button type="button" data-text-size-choice="aaa" aria-pressed="false" aria-label="Rozmiar tekstu AAA, 200 procent treści">AAA</button>
         </div>
         <button class="access-tool" type="button" data-contrast-toggle data-icon="eye-contrast" aria-pressed="false">
           <span>Wysoki kontrast</span>
@@ -69,7 +69,7 @@
     <section class="page-hero home-hero">
       <div class="shell home-hero-shell">
         <div class="hero-copy home-hero-copy">
-          <p class="kicker" data-reveal>Baza wiedzy · WCAG 2.2</p>
+          <p class="kicker" data-reveal>Baza wiedzy · <a class="term-link" href="/slownik.html#wcag">WCAG</a> 2.2</p>
           <h1 data-reveal>WCAG 2.2 — co zmieniło się względem WCAG 2.1?</h1>
           <p class="hero-lead" data-reveal>Wyjaśniamy, co dodaje WCAG 2.2, które wymagania są nowe i co te zmiany oznaczają w praktyce dla strony lub aplikacji.</p>
           <ul class="hero-meta" data-reveal aria-label="Najważniejsze informacje o artykule">
@@ -92,10 +92,10 @@
       <div class="shell article-shell">
         <section class="article-opening" aria-labelledby="wcag22-summary">
           <div class="article-summary">
-            <p class="kicker">Najważniejsze</p>
-            <h2 id="wcag22-summary">WCAG 2.2 nie burzy poprzedniego standardu. Rozwija go o kolejne realne bariery.</h2>
-            <p>Wersja 2.2 zachowuje prawie wszystkie wymagania WCAG 2.1 i dodaje dziewięć nowych kryteriów sukcesu. Duża część zmian dotyczy widocznego fokusu, wygodniejszej obsługi elementów, logowania oraz formularzy.</p>
-            <p><strong>To ewolucja, a nie rozpoczęcie wszystkiego od zera.</strong></p>
+            <p class="kicker">Prosto i w skrócie</p>
+            <h2 id="wcag22-summary">WCAG 2.2 dodaje kolejne ułatwienia.</h2>
+            <ul><li>Nowe zasady pomagają między innymi łatwiej nacisnąć przycisk i znaleźć wybrany element.</li><li>Obejmują też łatwiejsze logowanie oraz dostęp do pomocy.</li><li>Przy sprawdzaniu strony trzeba uwzględnić cały zestaw zasad, które mają do niej zastosowanie.</li></ul>
+            <p>Szczegóły i przykłady znajdziesz poniżej. Trudniejsze słowa wyjaśnia <a href="/slownik.html">słownik prostych pojęć</a>.</p>
           </div>
           <nav class="article-toc" aria-label="Spis treści">
             <strong>W tym artykule</strong>
@@ -114,7 +114,7 @@
           <div class="article-copy">
             <p class="kicker">Nowsza wersja WCAG 2</p>
             <h2 id="wcag22-czym-jest-title">WCAG 2.2 to obecnie najnowsza opublikowana wersja standardu z rodziny WCAG 2.</h2>
-            <p>W3C opublikowało WCAG 2.2 jako rekomendację internetowego standardu 5 października 2023 roku. Standard nadal opiera się na tych samych czterech zasadach: postrzegalności, funkcjonalności, zrozumiałości i solidności.</p>
+            <p><a class="term-link" href="/slownik.html#w3c">W3C</a> opublikowało WCAG 2.2 jako rekomendację internetowego standardu 5 października 2023 roku. Standard nadal opiera się na tych samych czterech zasadach: postrzegalności, funkcjonalności, zrozumiałości i solidności.</p>
             <p>Nie zmienia więc podstawowego sposobu myślenia o dostępności. Dodaje natomiast wymagania wynikające z kolejnych lat obserwowania, jak ludzie korzystają ze stron i aplikacji.</p>
             <p>Najprościej można powiedzieć: <strong>WCAG 2.2 bierze dobrze znany fundament i doprecyzowuje miejsca, w których użytkownicy nadal napotykali bariery.</strong></p>
           </div>
@@ -138,7 +138,7 @@
           <div class="article-copy">
             <p class="kicker">Widać, gdzie jesteś</p>
             <h2 id="wcag22-focus-title">WCAG 2.2 mocniej chroni użytkownika korzystającego z klawiatury.</h2>
-            <p>Gdy poruszasz się po stronie klawiszem Tab, jeden element jest w danej chwili aktywny. To właśnie <strong>fokus</strong>. Powinien być widoczny, żeby użytkownik wiedział, na którym przycisku, linku lub polu formularza się znajduje.</p>
+            <p>Gdy poruszasz się po stronie klawiszem Tab, jeden element jest w danej chwili aktywny. To właśnie <strong><a class="term-link" href="/slownik.html#fokus">fokus</a></strong>. Powinien być widoczny, żeby użytkownik wiedział, na którym przycisku, linku lub polu formularza się znajduje.</p>
             <p>WCAG 2.2 dodaje kryteria dotyczące sytuacji, w których fokus może zostać zasłonięty przez inny element strony. Na najwyższym poziomie pojawia się także dokładniejsze wymaganie dotyczące jego wyglądu.</p>
             <p>To pozornie mały szczegół. Dla osoby obsługującej stronę bez myszy jest jednak odpowiednikiem kursora. Jeżeli go nie widać, trudno wiedzieć, co stanie się po naciśnięciu Enter.</p>
           </div>
@@ -154,7 +154,7 @@
             <h2 id="wcag22-ruch-title">Przeciąganie i małe przyciski nie powinny być jedyną drogą do wykonania zadania.</h2>
             <p>Nie każdy użytkownik potrafi precyzyjnie przeciągnąć element po ekranie. Dla osoby z drżeniem rąk albo ograniczoną sprawnością ruchową prosty gest „przeciągnij i upuść” może być bardzo trudny.</p>
             <p>WCAG 2.2 wprowadza kryterium dotyczące ruchów przeciągania. Jeżeli funkcja opiera się na takim geście, użytkownik powinien mieć także prostszą alternatywę, o ile przeciąganie nie jest istotą samej funkcji.</p>
-            <p>Nowe kryterium dotyczy także minimalnego rozmiaru celów dotykowych na poziomie AA. Chodzi o to, żeby ważne elementy nie były tak małe i ciasno ustawione, że trudno w nie trafić.</p>
+            <p>Nowe kryterium dotyczy także minimalnego rozmiaru celów dotykowych na poziomie <a class="term-link" href="/slownik.html#poziomy">AA</a>. Chodzi o to, żeby ważne elementy nie były tak małe i ciasno ustawione, że trudno w nie trafić.</p>
           </div>
         </section>
 
@@ -184,7 +184,7 @@
             <p class="kicker">Co z poprzednią wersją?</p>
             <h2 id="wcag22-21-title">WCAG 2.2 zawiera wymagania WCAG 2.1 i dodaje kolejne.</h2>
             <p>W3C zaprojektowało kolejne wersje WCAG 2 tak, aby były kompatybilne wstecznie. Oznacza to, że przejście na 2.2 nie wymaga porzucenia wiedzy z 2.1.</p>
-            <p>Jest jeden ważny wyjątek: kryterium 4.1.1 Parsing zostało w WCAG 2.2 usunięte jako przestarzałe. Współczesne standardy HTML inaczej rozwiązują problemy, które to kryterium miało pierwotnie kontrolować.</p>
+            <p>Jest jeden ważny wyjątek: kryterium 4.1.1 Parsing zostało w WCAG 2.2 usunięte jako przestarzałe. Współczesne standardy <a class="term-link" href="/slownik.html#html">HTML</a> inaczej rozwiązują problemy, które to kryterium miało pierwotnie kontrolować.</p>
             <p><strong>Dla nowego projektu WCAG 2.2 jest więc naturalnym punktem odniesienia.</strong> Zawiera fundament WCAG 2.1 i rozszerza go o nowsze wymagania.</p>
             <p>Warto też pamiętać, że WCAG 3.0 jest już rozwijane, ale na dziś pozostaje projektem roboczym, a nie następcą gotowym do stosowania zamiast WCAG 2.2. Więcej: <a href="/baza-wiedzy/wcag-3-0.html">„WCAG 3.0 — co wiemy o planowanym standardzie?”</a>.</p>
           </div>
@@ -225,6 +225,7 @@
         <a href="/kontakt.html">Kontakt</a>
               <a href="/regulamin.html">Regulamin</a>
         <a href="/polityka-prywatnosci.html">Polityka prywatności</a>
+        <a href="/slownik.html">Słownik prostych pojęć</a>
       </nav>
     </div>
   </footer>
