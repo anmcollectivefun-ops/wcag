@@ -4,12 +4,11 @@ on:
   push:
     branches: [main]
     paths:
-      - '*.html'
+      - '**/*.html'
       - 'src/**'
       - 'server.mjs'
       - 'package.json'
-      - 'scripts/install-font.mjs'
-      - 'scripts/audit.mjs'
+      - 'scripts/**'
       - '.github/workflows/audit.yml'
 permissions:
   contents: read
