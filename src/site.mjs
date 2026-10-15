@@ -137,7 +137,7 @@ function setupAuditVisual() {
 function collectReadableContent() {
   const selector = [
     'main h1','main h2','main h3','main h4',
-    'main p','main li','main summary','main figcaption',
+    'main p','main li','main dt','main dd','main summary','main figcaption',
     'main a.button','main img[alt]:not([alt=""])'
   ].join(',');
   return [...document.querySelectorAll(selector)]
